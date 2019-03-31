@@ -1,6 +1,6 @@
 # Development
 
-This is the future of Micro.
+This is the future development of Micro.
 
 # Overview 
 
