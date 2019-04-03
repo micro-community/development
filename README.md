@@ -15,6 +15,40 @@ This repo serves as an open forum for long term design ideas, collaboration and 
 
 We'll add this real soon!
 
+## Philosophy
+
+Micro is the simplest way to build microservices. We have a developer first focus. Our goal is to make developers incredibly productive, 
+to remove friction from their workflow and abstract away the complexities of distributed systems and cloud-native technology. 
+
+Our approach to this is very clear. Any new project or any change that we make must come from a developer's perspective. 
+Here's how we approach taking on new problems.
+
+1. Engage the community about the problem and how we need to solve it.
+	- Discussions lead to clarity in thinking
+	- We can work through ideas before actually spending significant time writing code
+	- We can understand if we're even solving a problem
+1. Define the overall scope of the project and name it.
+	-  e.g Auth, Config, Debug. This is the domain boundary
+	- Go Micro deals with inter-service communication
+	- Go Config deals with dynamic configuration
+	- Micro API is an API gateway for HTTP requests
+2. Start with a Go library, this is always our starting point, we want to solve for the developer in Go first. 
+	- Define separate packages in the Go library for sub-scopes of the domain
+	- Start with the interfaces that can then be implemented and be made pluggable
+3. Ship quickly and iterate, test the ideas with the community.
+	- Go Micro was being used 2 weeks after the first line of code was written. It was called something else back then.
+4. Encapsulate as a command/service in the Micro toolkit so that it solves the problem across all languages
+	- Go Micro is at the core of all the toolkit components for discovery and inter-service communication
+	- Go API is the basis for the Micro api
+	- Go Config will be turned into a dynamic config server with a gRPC or HTTP api
+5. Everything that we do focuses on simplifying the experience for the developer
+	- Provide a zero dependency default experience while being pluggable
+	- Abstract away cloud-native and distributed systems. Operations is a separate concern
+6. Build on our own foundations rather than those of others.
+	- CNCF projects are fast moving, breaking and we have no control over their long term goals
+	- We want to own the foundations so we can build on them and focus on making developers productive
+	
+
 ## Contributing
 
 - Open an [Issue](https://github.com/micro/development/issues) to start a discussion with the community
