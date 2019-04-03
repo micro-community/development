@@ -48,7 +48,7 @@ Here's how we approach taking on new problems.
 6. Build on our own foundations rather than those of others.
 	- CNCF projects are fast moving, breaking and we have no control over their long term goals
 	- We want to own the foundations so we can build on them and focus on making developers productive
-	
+	- Where other tools solve complex problems we offload with plugins or abstract them away
 
 ## Contributing
 
