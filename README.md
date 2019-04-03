@@ -21,6 +21,7 @@ Micro is the simplest way to build microservices. We have a developer first focu
 to remove friction from their workflow and abstract away the complexities of distributed systems and cloud-native technology. 
 
 Our approach to this is very clear. Any new project or any change that we make must come from a developer's perspective. 
+
 Here's how we approach taking on new problems.
 
 1. Engage the community about the problem and how we need to solve it.
