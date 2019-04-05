@@ -13,7 +13,16 @@ This repo serves as an open forum for long term design ideas, collaboration and 
 
 ## Roadmap
 
-We'll add this real soon!
+This is a rough plan but we'll provide something more detailed soon
+
+- gRPC API for the micro proxy
+- go, java, typescript, ruby, python client libraries
+- better documentation and end to end tutorials
+- simpler kubernetes integration by default
+- pluggable wrappers for go-micro itself
+- more flexible options dynamically defined as flags and env vars
+- vault support for go-config
+- improved micro api configuration 
 
 ## Philosophy
 
