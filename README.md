@@ -21,7 +21,6 @@ This is a rough plan but we'll provide something more detailed soon
 - simpler kubernetes integration by default
 - pluggable wrappers for go-micro itself
 - more flexible options dynamically defined as flags and env vars
-- vault support for go-config
 - improved micro api configuration 
 
 ## Philosophy
