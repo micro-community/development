@@ -22,6 +22,10 @@ This is a rough plan but we'll provide something more detailed soon
 - pluggable wrappers for go-micro itself
 - more flexible options dynamically defined as flags and env vars
 - improved micro api configuration 
+- graphql handler for api
+- standalone micro server
+- quic as a default transport
+- nats as a default broker
 
 ## Philosophy
 
