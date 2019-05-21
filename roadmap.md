@@ -21,3 +21,10 @@ Soon...
 ## Q2 2020
 
 - Multi-Cloud
+
+12 month goals
+
+- Micro-Server {Network, ...}
+- Multi-Cloud {AWS, Azure, GCP, DO}
+- Multi-Client {Go, Python, Ruby, Javascript, Rust}
+- Services {Platform, Orchestration, Web}
