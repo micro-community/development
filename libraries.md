@@ -11,7 +11,8 @@ Library	|	Function	|	Description
 [Go Micro](https://github.com/micro/go-micro)	|	Communication	| Request/Response, Streaming, PubSub
 [Go Config](https://github.com/micro/go-config)	|	Configuration	|	Dynamic config, safe fallbacks, etc
 [Go Sync](https://github.com/micro/go-sync)	|	Synchronisation	|	Data, time, locking
-Go Debug	|	Debugging	|	Logging, tracing, metrics
-Go Monitor	|	Monitoring	|	Healthchecks
+[Go Run](https://github.com/micro/go-run)	|	Runtime	|	Service runtime
+[Go Debug](https://github.com/micro/go-debug)	|	Debugging	|	Logging, tracing, metrics, healthchecks
+Go Monitor	|	Monitoring	|	Debug analysis and resolution
 Go Auth	|	Authentication	|	Authentication, authorization, identity
-Go Run	|	Runtime	|	Service runtime
+Go Flow |	Orchestration	|	State machine for managing complex flows of business logic
