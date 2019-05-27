@@ -17,6 +17,8 @@ A non-comprehensive list of high-level services:
 - Payment
 - Notification
 - Email
+- User
+- Search
 
 Platform layer services:
 
