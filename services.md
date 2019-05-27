@@ -19,6 +19,7 @@ A non-comprehensive list of high-level services:
 - Email
 - User
 - Search
+- Event
 
 Platform layer services:
 
