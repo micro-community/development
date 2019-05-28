@@ -6,7 +6,7 @@ A non-comprehensive list of high-level services:
 
 - Message
 - Location
-- Greeting
+- Status
 - Image
 - Stream
 - Voice
@@ -20,6 +20,12 @@ A non-comprehensive list of high-level services:
 - User
 - Search
 - Event
+
+- Review (hyper local ephemeral reviews)
+- Reward (points / tokens)
+- Gamify (scores / leaderboard)
+- Popup (locations)
+- Food (markets)
 
 Platform layer services:
 
