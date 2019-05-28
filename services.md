@@ -20,7 +20,6 @@ A non-comprehensive list of high-level services:
 - User
 - Search
 - Event
-
 - Review (hyper local ephemeral reviews)
 - Reward (points / tokens)
 - Gamify (scores / leaderboard)
