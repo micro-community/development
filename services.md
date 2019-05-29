@@ -25,6 +25,9 @@ A non-comprehensive list of high-level services:
 - Gamify (scores / leaderboard)
 - Popup (locations)
 - Food (markets)
+- i18n
+- geocoding
+- translation
 
 Platform layer services:
 
