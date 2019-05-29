@@ -28,6 +28,7 @@ A non-comprehensive list of high-level services:
 - i18n
 - geocoding
 - translation
+- notes / todo / lists
 
 Platform layer services:
 
