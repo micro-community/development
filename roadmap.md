@@ -15,7 +15,6 @@ Soon...
   * Evolve the platform => build, run, manage
   * Establish go-micro as micro server
   * Enable connectivity beyond the cloud
-
 - Debugging {Logging, tracing, metrics}
   * Build in observability features
 
@@ -23,7 +22,6 @@ Soon...
 
 - Clients {Go, Python, Ruby, Javascript, Rust}
  * Enable multi-language through micro server + grpc
-
 - Mu spec
  * Flesh out the mu spec for single file definition
  * Move beyond proto and go
@@ -32,7 +30,6 @@ Soon...
 
 - Services {Platform, Utility, Orchestration, Web}
  * Continue key service development to 30+ services
-
 - Multi-Cloud
  * Run on DO, AWS, Azure, GCP
 
