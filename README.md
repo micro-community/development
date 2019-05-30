@@ -27,6 +27,8 @@ This is a rough plan but we'll provide something more detailed soon
 - standalone micro server
 - quic as a default transport
 - nats as a default broker
+- define the mucp protocol
+- define the mu definition
 
 ## Philosophy
 
