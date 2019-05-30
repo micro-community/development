@@ -18,6 +18,7 @@ Library	|	Function	|	Description
 Go Monitor	|	Monitoring	|	Debug analysis and resolution
 Go Auth	|	Authentication	|	Authentication, authorization, identity
 Go Flow |	Orchestration	|	State machine for managing complex flows of business logic
+Go Init |	Initialisation	|	Manages initialisation of options, flags and env vars
 
 ## Micro
 
@@ -70,3 +71,71 @@ Supported packagers:
 Supported runtimes:
 - Linux process
 - Kubernetes API
+
+## Init
+
+Init is for initialising options
+
+### Overview
+
+Micro is a pluggable ecosystem and the majority of its tooling has bespoke options per plugin. 
+These are easily initialised in code but difficult to add via env var and flags. Go Init 
+look to solve this problem tying options to flags/envvars automatically.
+
+### Design 
+
+```go
+type Options interface {
+  // Initialise options based on context
+  Init(Context) error
+  // Name of options e.g registry
+  String() string
+}
+
+type Context interface {
+  // Get a value
+  Get(name string) Value
+  // Set a value
+  Set(name, option func(Value) error)
+  // Scope to namespace
+  Namespace(name string) Context
+  // Namespace of context
+  String() string
+}
+
+// A value retrieved from env/flags
+type Value interface {
+  Scan(v interface) error
+  Bytes() []byte
+  Int() int
+  String() string
+  Bool() bool
+}
+```
+
+### usage
+
+```go
+type Options struct {
+  Foo string
+}
+
+// Initialise values based on context
+func (o *Options) Init(ctx Context) error {
+  ctx.Namespace("registry").Set("foo", func(v Value) error {
+    o.Foo = v.String()
+  })
+}
+
+func (o *Options) String() {
+  return "registry" 
+}
+```
+
+### flag/env
+
+```
+--registry_foo=bar
+REGISTRY_FOO=bar
+```
+
