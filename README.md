@@ -15,6 +15,7 @@ This repo serves as an open forum for long term design ideas, collaboration and 
 
 This is a rough plan but we'll provide something more detailed soon
 
+- consolidate all libraries into go-micro
 - gRPC API for the micro proxy
 - go, java, typescript, ruby, python client libraries
 - better documentation and end to end tutorials

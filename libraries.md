@@ -6,6 +6,8 @@ Micro primarily starts as a set of libraries with strongly defined interfaces th
 
 Below are the libraries which we're developing or planning to add in the future.
 
+Note: Libraries will be consolidated into go-micro.
+
 Library	|	Function	|	Description
 -------	|	--------	|	-----------
 [Go Micro](https://github.com/micro/go-micro)	|	Communication	| Request/Response, Streaming, PubSub
