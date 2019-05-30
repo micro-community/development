@@ -20,7 +20,7 @@ Soon...
 
 ## Q4 2019
 
-- Clients {Go, Python, Ruby, Javascript, Rust}
+- Clients {Go, Python, Ruby, Javascript}
   * Enable multi-language through micro server + grpc
 - Mu spec
   * Flesh out the mu spec for single file definition
@@ -30,10 +30,13 @@ Soon...
 
 - Services {Platform, Utility, Orchestration, Web}
   * Continue key service development to 30+ services
-- Multi-Cloud
-  * Run on DO, AWS, Azure, GCP
 
 ## Q2 2020
+
+- Multi-Cloud
+  * Run on DO, AWS, Azure, GCP
+- Multi-Client
+  * Add additional languages (rust, java, etc}
 
 12 month goals
 
