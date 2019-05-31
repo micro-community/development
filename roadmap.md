@@ -1,6 +1,6 @@
 # Roadmap
 
-We're tracking and continually evoling the high level roadmap
+We're tracking and continually evolving the high level roadmap
 
 ## Q2 2019
 
