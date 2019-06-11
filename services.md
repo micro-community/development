@@ -9,7 +9,9 @@ A non-comprehensive list of high-level services:
 - Status
 - Image
 - Stream
+- Audio
 - Voice
+- Video
 - Place
 - Timeline
 - Maps
@@ -29,6 +31,7 @@ A non-comprehensive list of high-level services:
 - geocoding
 - translation
 - notes / todo / lists
+- Personalisation
 
 Platform layer services:
 
