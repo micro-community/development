@@ -32,6 +32,10 @@ A non-comprehensive list of high-level services:
 - translation
 - notes / todo / lists
 - Personalisation
+- Support
+- Customer
+- Store/Item/Basket/Checkout
+- Fraud/Risk
 
 Platform layer services:
 
