@@ -10,6 +10,25 @@ We're tracking and continually evolving the high level roadmap
   * Consolidate learnings into roadmap and bug-feature list
   * Introduce invite-only service to community at end of quarter
 
+Our Q2 (end of July) goal is to deliver the MVP of the platform. We're taking the open source micro toolkit 
+and running it as a service in the cloud. The end state should be a runtime which offers an API, web dashboard, 
+CLI, slack bot and service proxy all hosted so that developers don't have to host it themselves. We'll 
+provide interconnectivity via a transport, broker and service registry which can be accessed by running 
+local `micro servers` which connect to the service in the cloud. Hosting is a non-concern at this point for end users 
+but we'll provide a `micro run` experience for ourselves and potentially for the local runtimes.
+
+We'll be dogfooding these efforts on an ongoing basis by writing microservices which run on the platform 
+and are entirely open source for others to consume. Ultimately our goal is to see the network with 
+base level services that don't have to be written or run by anyone else. 
+
+We want to introduce this in August in an invite-only beta mode for our community to test. Most of this 
+software will be entirely open source and available to run so anyone can likely connect but we'll 
+look to build identity and api tokens in for access control.
+
+The 3 months should give us enough information to drive the rest of the roadmap.
+
+Ultimately we'll provide a Micro Services Network as a global platform for open source services.
+
 ## Q3 2019
 
 - **Platform** {Micro Server, Proxy, Runtime, Sync, Network}
@@ -19,6 +38,13 @@ We're tracking and continually evolving the high level roadmap
   * Continue development of core services
 - **Debugging** {Logging, tracing, metrics}
   * Build in observability features
+
+The Q3 (end of October) goal is to deliver additional functionality in the network for observability and management. 
+This should include services which handle running services, synchronizing data and provide debugging info at 
+the service level.
+
+We want to expand on the build, run, manage effort along with observability and ensure a smooth getting started 
+experience.
 
 ## Q4 2019
 
