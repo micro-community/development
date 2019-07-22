@@ -13,11 +13,13 @@ This repo serves as an open forum for long term design ideas, collaboration and 
 
 ## Roadmap
 
-This is a rough plan but we'll provide something more detailed soon
+This is a high level overview. See the detailed [roadmap](roadmap.md).
 
 - [X] consolidate all [libraries](libraries.md) into go-micro
-- [gRPC](grpc.md) integration and interop
 - [X] gRPC API for the micro proxy
+- [X] quic as a default transport
+- [X] nats as a default broker
+- [gRPC](grpc.md) integration and interop
 - go, java, typescript, ruby, python [client](clients.md) libraries
 - better documentation and end to end tutorials
 - simpler kubernetes integration by default
@@ -26,11 +28,9 @@ This is a rough plan but we'll provide something more detailed soon
 - improved micro api configuration 
 - graphql handler for api
 - standalone micro server
-- [X] quic as a default transport
-- [X] nats as a default broker
 - define the mucp [protocol](protocol.md)
-- define the mu definition
 - reusable foundation [services](services.md) 
+- define the mu definition
 
 ## Philosophy
 
@@ -50,15 +50,15 @@ Here's how we approach taking on new problems.
 	- Go Micro deals with inter-service communication
 	- Go Config deals with dynamic configuration
 	- Micro API is an API gateway for HTTP requests
-2. Start with a Go library, this is always our starting point, we want to solve for the developer in Go first. 
-	- Define separate packages in the Go library for sub-scopes of the domain
-	- Start with the interfaces that can then be implemented and be made pluggable
+2. Start with a Go library/package, this is always our starting point, we want to solve for the developer in Go first. 
+	- Define separate packages for sub-scopes of the domain
+	- Start with the high level interface that will be used. Implement it and make it pluggable
 3. Ship quickly and iterate, test the ideas with the community.
 	- Go Micro was being used 2 weeks after the first line of code was written. It was called something else back then.
 4. Encapsulate as a command/service in the Micro toolkit so that it solves the problem across all languages
 	- Go Micro is at the core of all the toolkit components for discovery and inter-service communication
-	- Go API is the basis for the Micro api
-	- Go Config will be turned into a dynamic config server with a gRPC or HTTP api
+	- go-micro/api is the basis for the Micro api
+	- go-micro/config will be turned into a dynamic config server with a gRPC or HTTP api
 5. Everything that we do focuses on simplifying the experience for the developer
 	- Provide a zero dependency default experience while being pluggable
 	- Abstract away cloud-native and distributed systems. Operations is a separate concern
