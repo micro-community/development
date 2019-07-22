@@ -26,7 +26,7 @@ This is a rough plan but we'll provide something more detailed soon
 - improved micro api configuration 
 - graphql handler for api
 - standalone micro server
-- quic as a default transport
+- [X] quic as a default transport
 - [X] nats as a default broker
 - define the mucp [protocol](protocol.md)
 - define the mu definition
