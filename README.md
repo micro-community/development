@@ -19,7 +19,7 @@ This is a high level overview. See the detailed [roadmap](roadmap.md).
 - [X] gRPC API for the micro proxy
 - [X] quic as a default transport
 - [X] nats as a default broker
-- [gRPC](grpc.md) integration and interop
+- [x] [gRPC](grpc.md) integration and interop
 - go, java, typescript, ruby, python [client](clients.md) libraries
 - better documentation and end to end tutorials
 - simpler kubernetes integration by default
