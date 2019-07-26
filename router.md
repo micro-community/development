@@ -5,7 +5,7 @@ The router is the micro routing control plane. It manages intelligent routing on
 ## Overview
 
 The router is a layer on top of the micro registry which provides intelligent routing based on metrics, feedback 
-and other router information. The registry is a dumb database of sorts. The router enables use to build 
+and other router information. The registry is a dumb database of sorts. The router enables us to build 
 a network topology that morphs and flows based on changing traffic patterns.
 
 ## Usage
