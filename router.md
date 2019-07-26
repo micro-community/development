@@ -37,4 +37,12 @@ type Router interface {
 	// Get router status
 	Status() (Info, error)
 }
+
+type Route struct {
+	Service string
+	Address string
+	Metadata map[string]string
+	Metric float64
+}
 ```
+
