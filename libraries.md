@@ -11,7 +11,7 @@ Note: Libraries will be consolidated into go-micro.
 
 Library	|	Function	|	Description
 -------	|	--------	|	-----------
-[Service](https://godoc.org/github.com/micro/go-micro#service)	|	Communication	| Request/Response, Streaming, PubSub
+[Service](https://godoc.org/github.com/micro/go-micro#Service)	|	Communication	| Request/Response, Streaming, PubSub
 [Config](https://godoc.org/github.com/micro/go-micro/config)	|	Configuration	|	Dynamic config, safe fallbacks, etc
 [Sync](https://godoc.org/github.com/micro/go-micro/sync)	|	Synchronisation	|	Data, time, locking
 [Runtime](https://godoc.org/github.com/micro/go-micro/runtime)	|	Runtime	|	Service runtime
