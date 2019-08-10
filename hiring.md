@@ -55,3 +55,13 @@ The solution should be built as microservices using go-micro. User and auth mana
 We should be able to validate sessions and check if users are logged in.
 
 Demonstrate how this can be interacted with via the micro toolkit (api, web ui, cli)
+
+### Peer Interface
+
+Write a p2p interface for go-micro and demonstrate its use.
+
+Go micro contains strongly defined interfaces for distributed system requirements. We include client/server interfaces 
+that are combined to provide a service. P2P is another form of distributed system architecture where every peer is both a 
+client and server.
+
+Demonstrate how a **Peer** interface would be defined within go-micro and provide a basic implementation.
