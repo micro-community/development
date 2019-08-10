@@ -37,7 +37,7 @@ We'll do the following:
 
 Pick one of the following tests
 
-### Logging
+### Logging Service
 
 Write a centralised logging solution which ingests logs from files, stores them and makes them available for searching.
 
@@ -47,3 +47,11 @@ each service are running.
 
 Demonstrate how this can be interacted with via the micro toolkit (api, web ui, cli)
 
+### Auth Service
+
+Write an authentication system that includes user creation, login and sessions.
+
+The solution should be built as microservices using go-micro. User and auth management should be separate services. 
+We should be able to validate sessions and check if users are logged in.
+
+Demonstrate how this can be interacted with via the micro toolkit (api, web ui, cli)
