@@ -9,7 +9,7 @@ If you're interested in being hired join the **#hiring** channel on [slack](http
 
 We're currently hiring for two roles
 
-- Software engineer - focused primarily on the open source side and continuing the active development of micro and go-micro
+- Software engineer - focused on the open source side continuing the development of micro and go-micro
 - Services engineer - building microservices to power the platform and network
 
 ## Apply
