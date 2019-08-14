@@ -128,3 +128,4 @@ We are looking at optional extra headers for routing
 - `Micro-Protocol` to specify the protocol for the endpoint. 
 - `Micro-Stream` to segregate streams on the same connection.
 - `Micro-Channel` or `Micro-Queue` to specify a specific queue to segregate by.
+- `Micro-Method` to indicate a request, response, stream or message
