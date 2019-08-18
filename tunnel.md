@@ -51,5 +51,6 @@ connect
 close
 keepalive
 broadcast
+message
 link-id
 ```
