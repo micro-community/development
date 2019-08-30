@@ -25,6 +25,7 @@ The micro network looks to solve this problem using a shared global network for 
   * [Value Exchange](#value-exchange)
 - [Economics](#economics)
 - [Glossary](#glossary-of-terms)
+- [Notes](#notes)
 
 ## Architecture
 
@@ -220,3 +221,12 @@ Coming soon
 ## Contribute
 
 Join the [slack](https://micro.mu/slack/) or [reddit](https://www.reddit.com/r/micronet/) community to discuss
+
+## Notes
+
+There are certain ideas yet to be formulated or in the midst of being worked on
+
+- When receiving route announcements should we be verifying routes bidirectionally based both on the advert.id == route.Router 
+and neighbour[route.Router] has advert.id as a neighbour. 
+- How should we be thinking about larger scale route management and hop count. How many hops should we store routes for?
+
