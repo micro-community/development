@@ -35,7 +35,9 @@ Goals
 
 ## Micro as a service
 
-Ultimately we want to deliver micro as a service in the following ways
+Ultimately we want to deliver micro as a service as a shared platform for microservice development.
+
+Summarised view
 
 - [ ] Micro services network - a shared platform for service development
 - [ ] Multi-Cloud {AWS, Azure, GCP, DO} - highly available and invisible to the user
