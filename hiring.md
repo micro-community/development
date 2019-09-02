@@ -36,7 +36,6 @@ We'll do the following:
 ## Code Test 
 
 Build a food popup recommendation service consisting of three microservices which can be searched by geolocation, name or keyword.
-
 The solution should allow new popup locations to be stored and expired, searched via location or keyword and hold reviews.
 
 Service breakdown may be as follows:
@@ -45,5 +44,5 @@ Service breakdown may be as follows:
 - Review service - to store reviews associated with a place
 - Geolocation service - which tracks the location of places and allows it to be searched
 
-The solution should be built using go-micro. Demonstrate how it can be interacted with via the micro toolkit (api, web ui, cli)
+The solution should use go-micro. Demonstrate how it can be interacted with via the micro toolkit (api, web ui, cli)
 
