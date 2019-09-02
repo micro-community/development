@@ -33,18 +33,30 @@ Goals
 - [ ] Tokenized access control
 - [ ] Introduce invite-only service to community 
 
+## Beyond the MVP
+
+Beyond the MVP we want to move on to hosting services to further simplify the developer experience and a full fledged platform 
+for microservices. Our goal there will be to allow developers to push services and then observe and interact via the 
+managed API, web UI, etc. We'll look to build team based features in after this point along with observability.
+
+- [ ] Hosting services
+- [ ] Observability and debugging
+- [ ] Team based access control
+
 ## Micro as a service
 
-Ultimately we want to deliver micro as a service as a shared platform for microservice development.
+Ultimately we want to deliver micro as a service as a shared platform for microservice development. Anything a company 
+ends up building themselves should be available as a shared runtime for all developers everywhere in the world. This should 
+not exclude those who want to self host and access the system as if it were part of their own.
 
-Summarised view
+### Summarised view
 
 - [ ] Micro services network - a shared platform for service development
 - [ ] Multi-Cloud {AWS, Azure, GCP, DO} - highly available and invisible to the user
 - [ ] Multi-Client {Go, Python, Ruby, Javascript, Rust} - empower developers in any language
 - [ ] Services {Platform, Utility, Orchestration, Web} - base level services delivered by micro itself
 
-Further breakdown
+### Further breakdown
 
 - [ ] **Network** {Micro Services Network}
   * Global service network
