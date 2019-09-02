@@ -35,33 +35,15 @@ We'll do the following:
 
 ## Code Test 
 
-Pick one of the following tests
+Build a food popup recommendation service consisting of three microservices which can be searched by geolocation, name or keyword.
 
-### Logging Service
+The solution should allow new popup locations to be stored and expired, searched via location or keyword and hold reviews.
 
-Write a centralised logging solution which ingests logs from files, stores them and makes them available for searching.
+Service breakdown may be as follows:
 
-The solution should be built as microservices using go-micro. The ingesting, storage and search should be separate 
-services. No external database should be used. The solution must work consistently where multiple instances of 
-each service are running.
+- Place service - to store the place, name and keywords/tags
+- Review service - to store reviews associated with a place
+- Geolocation service - which tracks the location of places and allows it to be searched
 
-Demonstrate how this can be interacted with via the micro toolkit (api, web ui, cli)
+The solution should be built using go-micro. Demonstrate how it can be interacted with via the micro toolkit (api, web ui, cli)
 
-### Auth Service
-
-Write an authentication system that includes user creation, login and sessions.
-
-The solution should be built as microservices using go-micro. User and auth management should be separate services. 
-We should be able to validate sessions and check if users are logged in.
-
-Demonstrate how this can be interacted with via the micro toolkit (api, web ui, cli)
-
-### Peer Interface
-
-Write a p2p interface for go-micro and demonstrate its use.
-
-Go micro contains strongly defined interfaces for distributed system requirements. We include client/server interfaces 
-that are combined to provide a service. P2P is another form of distributed system architecture where every peer is both a 
-client and server.
-
-Demonstrate how a **Peer** interface would be defined within go-micro and provide a basic implementation.
