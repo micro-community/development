@@ -226,8 +226,12 @@ Join the [slack](https://micro.mu/slack/) or [reddit](https://www.reddit.com/r/m
 
 There are certain ideas yet to be formulated or in the midst of being worked on
 
+- **net.Close blocks:** the close message is not sent and the tunnel blocks
+- **routes are not pruned:** after a node disappears
+- **neighbour of neighbour of neighbour:** (metric 1000) is unseen
+- **unique network addressing:** every network node should be uniquely addressed
+- **funging local addresses:** local addresses of services should not be leaked
 - **Neighbour Route Validation**: When receiving route announcements should we be verifying routes bidirectionally based both on the advert.id == route.Router 
 and neighbour[route.Router] has advert.id as a neighbour. 
 - **Routing Table Size**: How should we be thinking about larger scale route management and hop count. How many hops should we store routes for?
-- **Routing Hop Count**: Currently we only store routes within the metric 100 e.g the neighbour of my neighbour. Should routes be stored based on some hop count like 
-or metric like 1000 or 10000? Should we be able to configure longer distance hops of 3, 4 or 5? Otherwise effectively limit how far we can route.
+- **Routing Hop Count**: Currently we only store routes within the metric 100 e.g the neighbour of my neighbour. Should routes be stored based on some hop count like or metric like 1000 or 10000? Should we be able to configure longer distance hops of 3, 4 or 5? Otherwise effectively limit how far we can route.
