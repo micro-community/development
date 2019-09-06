@@ -79,4 +79,5 @@ not exclude those who want to self host and access the system as if it were part
 - [ ] **Mu spec**
   * Flesh out the mu spec for single file definition
   * Move beyond proto and go
-
+- [ ] **Commands**
+  * Auto generate CLI commands based on available services
