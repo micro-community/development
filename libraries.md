@@ -15,11 +15,11 @@ Library	|	Function	|	Description
 [Config](https://godoc.org/github.com/micro/go-micro/config)	|	Configuration	|	Dynamic config, safe fallbacks, etc
 [Sync](https://godoc.org/github.com/micro/go-micro/sync)	|	Synchronisation	|	Data, time, locking
 [Runtime](https://godoc.org/github.com/micro/go-micro/runtime)	|	Runtime	|	Service runtime
-Debug	|	Debugging	|	Logging, tracing, metrics, healthchecks
-Monitor	|	Monitoring	|	Debug analysis and resolution
+[Debug](https://godoc.org/github.com/micro/go-micro/debug)	|	Debugging	|	Logging, tracing, metrics, healthchecks
+[Monitor](https://godoc.org/github.com/micro/go-micro/monitor)	|	Monitoring	|	Debug analysis and resolution
+[Network](https://godoc.org/github.com/micro/go-micro/network) |	Networking	|	Multi-DC networking
 Auth	|	Authentication	|	Authentication, authorization, identity
 Flow |	Orchestration	|	State machine for managing complex flows of business logic
-Network |	Networking	|	Multi-DC networking
 
 ## Micro
 
