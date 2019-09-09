@@ -226,6 +226,8 @@ Join the [slack](https://micro.mu/slack/) or [reddit](https://www.reddit.com/r/m
 
 There are certain ideas yet to be formulated or in the midst of being worked on
 
+- **Events Service:** We need a broker service so pubsub is propagated via the network using the tunnel
+- **Registry Service:** Use an RPC based registry service as part of the discovery
 - **DNS over HTTP:** use DNS over HTTP for network node discovery
 - **Prune Routes:** after a node disappears
 - **Neighbour of neighbour of neighbour:** (metric 1000) is unseen
