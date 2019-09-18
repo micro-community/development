@@ -101,10 +101,12 @@ Services
 Extras
 
 - --network=local to pin to local network (optional opt-out of network)
-- --token= to specify private routing for tunnel segment
+- --token= to specify private routing for tunnel segments e.g dark routing
+- AES tunnel packet level encryption
 - label based routing
   * add node/service metadata to routing table
   * allow proxy to accept label selection
 - github actions to generate release binaries and docker image
 - dockerhub webhook for micro latest commit build
 - replace quic with kcp?
+- multi-cloud deployment across DO, GCP, Alibaba
