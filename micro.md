@@ -6,10 +6,10 @@ Largely we want to enable collaborative development through a shared platform an
 
 ## Getting Started
 
-- [Download](download-micro)
-- [Connect](connect-to-network)
-- [Explore](Explore-the-network)
-- [Create](Create-new-service)
+- [Download](#download-micro)
+- [Connect](#connect-to-network)
+- [Explore](#explore-the-network)
+- [Create](#create-new-service)
 
 ### Download micro
 
