@@ -102,6 +102,7 @@ Extras
 
 - --network=local to pin to local network (optional opt-out of network)
 - --token= to specify private routing for tunnel segments e.g dark routing
+- dns over http as the resolver: query https://micro.mu/network for the nodes
 - AES tunnel packet level encryption
 - label based routing
   * add node/service metadata to routing table
