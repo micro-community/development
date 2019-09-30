@@ -42,15 +42,17 @@ micro tunnel --address=:8090 --server=:8083
 MICRO_PROXY=go.micro.tunnel go run myservice.go
 ```
 
-## Control
+## Protocol
 
-Control messages specified by Micro-Tunnel header
+The protocol is state machine as defined by the Micro-Tunnel header. 
+
+Possible message types
 
 ```
 connect
 close
 keepalive
-broadcast
+open
+listen
 message
-link-id
 ```
