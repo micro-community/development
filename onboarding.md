@@ -25,7 +25,7 @@ If you're new to Go walk through the tour [https://tour.golang.org/welcome/1](ht
 ## Install Micro
 
 ```
-go get -u github.com/micro/go-micro
+go get github.com/micro/go-micro
 ```
 
 ## Kick the tyres
@@ -85,12 +85,23 @@ View at http://localhost:8082
 
 Walk through the examples at [https://github.com/micro/examples](https://github.com/micro/examples)
 
-And services here [https://github.com/microhq](https://github.com/microhq)
+
+- Start with the basic [helloworld](https://github.com/micro/examples/blob/master/helloworld/main.go)
+- See the end to end app example with the [greeter](https://github.com/micro/examples/tree/master/greeter)
+- How to do bidirectional [streaming](https://github.com/micro/examples/tree/master/stream)
+- Simple [pubsub](https://github.com/micro/examples/tree/master/pubsub) via the go-micro/broker
 
 ## Build some services
 
 Write some services using [https://github.com/micro/go-micro](https://github.com/micro/go-micro) to explore the framework.
 
+Example services can be found here [https://github.com/microhq](https://github.com/microhq)
+
+One potential idea is user/service authentication:
+
+- Write an identity service which handles user and service accounts
+- Write an auth service which handles authentication and check against the identities
+ 
 ## Deploy to the platform
 
-Get credentials from the team
+Get credentials from the team to deploy to the micro platform
