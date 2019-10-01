@@ -22,60 +22,84 @@ Download and install Go from [https://golang.org/dl/](https://golang.org/dl/)
 
 If you're new to Go walk through the tour [https://tour.golang.org/welcome/1](https://tour.golang.org/welcome/1)
 
+Ensure go modules are enabled and your PATH is set:
+
+```bash
+export GO111MODULE=on
+export PATH=$PATH:$(go env GOPATH)/bin
+```
+
 ## Install Micro
 
-```
+```bash
 go get github.com/micro/go-micro
+go get github.com/micro/micro
+```
+
+Also, install protobuf and the relevant generators:
+
+```bash
+brew install protobuf
+go get -u github.com/golang/protobuf/{proto,protoc-gen-go}
+go get -u github.com/micro/protoc-gen-micro
 ```
 
 ## Kick the tyres
 
 Create a new service
 
+```bash
+# Skip GOPATH as we're using Go modules
+micro new github.com/micro/mynewservice --gopath=false
 ```
-micro new github.com/micro/service
+
+Compile the proto file
+
+```bash
+cd github.com/micro/mynewservice/
+protoc --proto_path=. --go_out=. --micro_out=. proto/mynewservice/mynewservice.proto
 ```
 
 Run the service
 
-```
-cd github.com/micro/service
+```bash
+cd github.com/micro/mynewservice
 go run main.go
 ```
 
 Lookup the service
 
-```
+```bash
 micro list services
 ```
 
 Get the service
 
-```
-micro get service go.micro.srv.service
+```bash
+micro get service go.micro.srv.mynewservice
 ```
 
 Call the service
 
-```
-micro call go.micro.srv.service Example.Call '{"Name": "John"}'
+```bash
+micro call go.micro.srv.mynewservice Mynewservice.Call '{"name": "John"}'
 ```
 
 Start the API
 
-```
+```bash
 micro api --namespace=go.micro.srv
 ```
 
 Call via the api
 
-```
-curl -XPOST -d '{"name": "John"}' http://localhost:8080/example/call
+```bash
+curl -XPOST -d '{"name": "John"}' http://localhost:8080/mynewservice/call
 ```
 
 Start the web app
 
-```
+```bash
 micro web
 ```
 
