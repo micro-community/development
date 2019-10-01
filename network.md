@@ -226,14 +226,14 @@ Join the [slack](https://micro.mu/slack/) or [reddit](https://www.reddit.com/r/m
 
 There are certain ideas yet to be formulated or in the midst of being worked on
 
-- **Events Service:** We need a broker service so pubsub is propagated via the network using the tunnel
-- **Registry Service:** Use an RPC based registry service as part of the discovery
-- **DNS over HTTP:** use DNS over HTTP for network node discovery
-- **Prune Routes:** after a node disappears
-- **Neighbour of neighbour of neighbour:** (metric 1000) is unseen
-- **Unique network addressing:** every network node should be uniquely addressed
-- **Funging local addresses:** local addresses of services should not be leaked
-- **Neighbour Route Validation**: When receiving route announcements should we be verifying routes bidirectionally based both on the advert.id == route.Router 
+- [ ] **Events Service:** We need a broker service so pubsub is propagated via the network using the tunnel
+- [ ] **Registry Service:** Use an RPC based registry service as part of the discovery
+- [ ] **DNS over HTTP:** use DNS over HTTP for network node discovery
+- [x] **Prune Routes:** after a node disappears
+- [x] **Neighbour of neighbour of neighbour:** (metric 1000) is unseen
+- [ ] **Unique network addressing:** every network node should be uniquely addressed
+- [x] **Funging local addresses:** local addresses of services should not be leaked
+- [x] **Neighbour Route Validation**: When receiving route announcements should we be verifying routes bidirectionally based both on the advert.id == route.Router 
 and neighbour[route.Router] has advert.id as a neighbour. 
-- **Routing Table Size**: How should we be thinking about larger scale route management and hop count. How many hops should we store routes for?
-- **Routing Hop Count**: Currently we only store routes within the metric 100 e.g the neighbour of my neighbour. Should routes be stored based on some hop count like or metric like 1000 or 10000? Should we be able to configure longer distance hops of 3, 4 or 5? Otherwise effectively limit how far we can route.
+- [x] **Routing Table Size**: How should we be thinking about larger scale route management and hop count. How many hops should we store routes for?
+- [x] **Routing Hop Count**: Currently we only store routes within the metric 100 e.g the neighbour of my neighbour. Should routes be stored based on some hop count like or metric like 1000 or 10000? Should we be able to configure longer distance hops of 3, 4 or 5? Otherwise effectively limit how far we can route.
