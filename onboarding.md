@@ -12,6 +12,7 @@ to get into the depths of working on micro and be a productive contributor to th
 - Setup your Go environment
 - Install Micro
 - Kick the tyres
+- Read the docs
 - Walk through examples
 - Build some services
 - Deploy to the platform
@@ -104,6 +105,12 @@ micro web
 ```
 
 View at http://localhost:8082
+
+## Read the docs
+
+Skim through the docs at [https://micro.mu/docs/](https://micro.mu/docs/) to get an overview.
+
+Make a note of missing or stale content.
 
 ## Walk through examples
 
