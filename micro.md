@@ -92,11 +92,11 @@ Tooling
 
 Services
 
-- Registry - global registry service
-- Events - proxy equivalent for broker
-- Runtime - service manager based on go-micro/runtime
-- Database - store key-value data
-- Sync - handle synchronization
+- [x] Registry - global registry service
+- [ ] Events - proxy equivalent for broker
+- [ ] Runtime - service manager based on go-micro/runtime
+- [ ] Store - datastore for key-value data
+- [ ] Sync - handle synchronization e.g locking, cron, etc
 
 Extras
 
