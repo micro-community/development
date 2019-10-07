@@ -85,7 +85,7 @@ What we need to do to get there
 
 Tooling
 
-- `micro` single boot command for platform
+- [x] `micro` single boot command for platform
 - `micro run` command to run the service
 - `micro env` command to describe the environment`
 - sync local state across the network
