@@ -205,6 +205,12 @@ system into the network to provide this resource usage model via exchange of tok
 
 Here's a good explanation of [Token Economics](https://www.investinblockchain.com/token-economics/).
 
+## Concepts
+
+- Core - Backbone of the network in the Cloud
+- Edge - Peers of the core network
+- Dev - Devices consuming the network
+
 ## Glossary of Terms
 
 - **Network** - is the entire system for communication and coordination
