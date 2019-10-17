@@ -14,6 +14,9 @@ The micro network looks to solve this problem using a shared global network for 
 ## Contents
 
 - [Getting Started](#getting-started)
+  * [Install](#install)
+  * [Connect](#connect)
+  * [Query](#query)
 - [Architecture](#architecture)
   * [Features](#features)
   * [Services](#services)
@@ -30,19 +33,33 @@ The micro network looks to solve this problem using a shared global network for 
 
 ## Getting Started
 
-Install micro
+Below is a quick guide to getting started.
+
+### Install
+
+From source
 
 ```
 go get github.com/micro/micro
 ```
 
-Bootup micro
+Docker image
+
+```
+docker pull micro/micro
+```
+
+### Connect
+
+Bootup micro and connect to the network
 
 ```
 micro
 ```
 
-Query the network
+### Query
+
+Once you've joined you should be able to see other nodes, services and routes on the network.
 
 ```
 # Proxy all calls through the network
