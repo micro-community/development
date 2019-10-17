@@ -232,12 +232,13 @@ Join the [slack](https://micro.mu/slack/) or [reddit](https://www.reddit.com/r/m
 
 There are certain ideas yet to be formulated or in the midst of being worked on
 
+- [ ] **Registry Federation:** The registry is localised as we need a way to see service info globally
 - [ ] **Events Service:** We need a broker service so pubsub is propagated via the network using the tunnel
-- [ ] **Registry Service:** Use an RPC based registry service as part of the discovery
-- [ ] **DNS over HTTP:** use DNS over HTTP for network node discovery
+- [ ] **Network addressing:** every network node should be uniquely addressed
+- [x] **Registry Service:** Use an RPC based registry service as part of the discovery
+- [x] **DNS over HTTP:** use DNS over HTTP for network node discovery
 - [x] **Prune Routes:** after a node disappears
 - [x] **Neighbour of neighbour of neighbour:** (metric 1000) is unseen
-- [ ] **Unique network addressing:** every network node should be uniquely addressed
 - [x] **Funging local addresses:** local addresses of services should not be leaked
 - [x] **Neighbour Route Validation**: When receiving route announcements should we be verifying routes bidirectionally based both on the advert.id == route.Router 
 and neighbour[route.Router] has advert.id as a neighbour. 
