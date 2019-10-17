@@ -13,6 +13,7 @@ The micro network looks to solve this problem using a shared global network for 
 
 ## Contents
 
+- [Getting Started](#getting-started)
 - [Architecture](#architecture)
   * [Features](#features)
   * [Services](#services)
@@ -26,6 +27,39 @@ The micro network looks to solve this problem using a shared global network for 
 - [Economics](#economics)
 - [Glossary](#glossary-of-terms)
 - [Notes](#notes)
+
+## Getting Started
+
+# Install and run micro
+
+```
+go get github.com/micro/micro
+```
+
+# Bootup micro
+
+```
+micro
+```
+
+Query the network
+
+```
+# Proxy all calls through the network
+export MICRO_PROXY=go.micro.network
+
+# List nodes
+micro network nodes
+
+# List services
+micro network services
+
+# List routes
+micro network routes
+
+# Peer graph
+micro network graph
+```
 
 ## Architecture
 
