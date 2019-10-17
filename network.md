@@ -30,13 +30,13 @@ The micro network looks to solve this problem using a shared global network for 
 
 ## Getting Started
 
-# Install and run micro
+Install micro
 
 ```
 go get github.com/micro/micro
 ```
 
-# Bootup micro
+Bootup micro
 
 ```
 micro
