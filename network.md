@@ -273,7 +273,7 @@ Here's a good explanation of [Token Economics](https://www.investinblockchain.co
 
 ## Release
 
-Coming soon
+Initial experimental release is now in v1.12.0
 
 ## Contribute
 
