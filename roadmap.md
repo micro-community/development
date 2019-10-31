@@ -28,7 +28,7 @@ Goals
 - [x] Bootstrap Micro OSS in the cloud aka Micro as a service
 - [x] Dogfood by writing services or a complete end-to-end service
 - [x] Consolidate learnings into roadmap and bug-feature list
-- [ ] Develop the network to allow connectivity from anywhere
+- [x] Develop the network to allow connectivity from anywhere
 - [ ] Enable sharing of services and discovery
 - [ ] Tokenized access control
 - [ ] Introduce invite-only service to community 
