@@ -43,6 +43,3 @@ Service breakdown may be as follows:
 - Place service - to store the place, name and keywords/tags
 - Review service - to store reviews associated with a place
 - Geolocation service - which tracks the location of places and allows it to be searched
-
-The solution should use go-micro. Demonstrate how it can be interacted with via the micro toolkit (api, web ui, cli)
-
