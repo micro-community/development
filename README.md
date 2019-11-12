@@ -1,6 +1,6 @@
 # Development
 
-This is the Micro development roadmap.
+This is the Micro development roadmap and contribution guide.
 
 # Overview 
 
