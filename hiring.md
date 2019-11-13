@@ -7,10 +7,11 @@ If you're interested in being hired join the **#hiring** channel on [slack](http
 
 ## Roles
 
-We're currently hiring for two roles
+We're currently hiring for three roles (in London):
 
-- Software engineer - focused on the open source side continuing the development of micro and go-micro
-- Services engineer - building microservices to power the platform and network
+- SWE - focused on the open source side continuing the development of micro and go-micro
+- SRE - developing and managing the core platform that powers micro in the cloud for everyone
+- Dev UX - streamlining the developer experience of micro and providing a frictionless path to adoption
 
 ## Apply
 
