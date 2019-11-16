@@ -73,3 +73,11 @@ Here's how we approach taking on new problems.
 - Open a [Pull Request](https://github.com/micro/development/pulls) to add a design doc where you've already got strong ideas
 - Help shape the roadmap for Micro and be a part of the microservice movement
 - Take any real time conversations to the [#development](https://micro-services.slack.com/messages/CJ544CH8W/) channel on Slack
+
+## Style Guide
+
+The coding style guide is fairly straightforward.
+
+- **Brevity is key** - Don't use long variable names where a comment would suffice. Do the minimal work.
+- **Consistency is key** - See the surrounding packages, variables and types as a guide for how you write code.
+- **Keep it simple** - Don't use complex algorithms where a for-loop would do. Just keep it simple. We'll fix perf later. 
