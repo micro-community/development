@@ -40,7 +40,7 @@ Below is a quick guide to getting started.
 From source
 
 ```
-go get github.com/micro/micro
+GO111MODULE=on go get github.com/micro/micro
 ```
 
 Docker image
