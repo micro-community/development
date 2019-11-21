@@ -37,6 +37,13 @@ A non-comprehensive list of high-level services:
 - Store/Item/Basket/Checkout
 - Fraud/Risk
 
+
+Testing & security services:
+
+- Fuzzing
+- Chaos
+- End to End (E2E)
+
 Platform layer services:
 
 - Server
