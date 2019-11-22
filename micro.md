@@ -86,28 +86,28 @@ What we need to do to get there
 Tooling
 
 - [x] `micro` single boot command for platform
-- `micro run` command to run the service
-- `micro env` command to describe the environment`
-- sync local state across the network
+- [x] `micro run` command to run the service
+- [ ] `micro env` command to describe the environment`
+- [ ] sync local state across the network
 
 Services
 
 - [x] Registry - global registry service
+- [x] Runtime - service manager based on go-micro/runtime
+- [x] Store - datastore for key-value data
 - [ ] Events - proxy equivalent for broker
-- [ ] Runtime - service manager based on go-micro/runtime
-- [ ] Store - datastore for key-value data
 - [ ] Sync - handle synchronization e.g locking, cron, etc
 
 Extras
 
-- --network=local to pin to local network (optional opt-out of network)
-- --token= to specify private routing for tunnel segments e.g dark routing
-- dns over http as the resolver: query https://micro.mu/network for the nodes
-- AES tunnel packet level encryption
-- label based routing
+- [x] --local to pin to local network (optional opt-out of network)
+- [x] dns over http as the resolver: query https://micro.mu/network for the nodes
+- [x] github actions to generate release binaries and docker image
+- [x] dockerhub webhook for micro latest commit build
+- [x] multi-cloud deployment across DO, GCP, Alibaba
+- [ ] --token= to specify private routing for tunnel segments e.g dark routing
+- [ ] AES tunnel packet level encryption
+- [ ] label based routing
   * add node/service metadata to routing table
   * allow proxy to accept label selection
-- github actions to generate release binaries and docker image
-- dockerhub webhook for micro latest commit build
-- replace quic with kcp?
-- multi-cloud deployment across DO, GCP, Alibaba
+- [ ] auth/identity when joining the network
