@@ -62,15 +62,16 @@ Runtime is the basis for `micro run service`. The library implements the ability
 Ideally a service should be able to declare its own dependencies and they should bootstrap as a DAG. 
 
 Supported sources:
-- Git URL
+- [x] Git URL
 
 Supported packagers:
-- Go binary
-- Docker container
-- WASM
+- [x] Go binary
+- [x] Docker container
+- [ ] WASM
 
 Supported runtimes:
-- Linux process
-- Kubernetes API
+- [x] Linux process
+- [ ] Docker
+- [x] Kubernetes API
 
 
