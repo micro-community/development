@@ -29,7 +29,8 @@ Goals
 - [x] Dogfood by writing services or a complete end-to-end service
 - [x] Consolidate learnings into roadmap and bug-feature list
 - [x] Develop the network to allow connectivity from anywhere
-- [ ] Enable sharing of services and discovery
+- [x] Enable sharing of services and discovery
+- [ ] Running services on the platform
 - [ ] Tokenized access control
 - [ ] Introduce invite-only service to community 
 
@@ -42,6 +43,7 @@ managed API, web UI, etc. We'll look to build team based features in after this 
 - [ ] Hosting services
 - [ ] Observability and debugging
 - [ ] Team based access control
+- [ ] Paid hosting and team features
 
 ## Micro as a service
 
@@ -51,14 +53,14 @@ not exclude those who want to self host and access the system as if it were part
 
 ### Summarised view
 
-- [ ] Micro services network - a shared platform for service development
-- [ ] Multi-Cloud {AWS, Azure, GCP, DO} - highly available and invisible to the user
+- [x] Micro services network - a shared platform for service development
+- [x] Multi-Cloud {AWS, Azure, GCP, DO} - highly available and invisible to the user
 - [ ] Multi-Client {Go, Python, Ruby, Javascript, Rust} - empower developers in any language
 - [ ] Services {Platform, Utility, Orchestration, Web} - base level services delivered by micro itself
 
 ### Further breakdown
 
-- [ ] **Network** {Micro Services Network}
+- [x] **Network** {Micro Services Network}
   * Global service network
   * Shared system for building microservices
 - [ ] **Platform** {Micro Server, Proxy, Runtime, Sync, Network}
@@ -72,7 +74,7 @@ not exclude those who want to self host and access the system as if it were part
   * Continue key service development to 30+ services
 - [ ] **Clients** {Go, Python, Ruby, Javascript}
   * Enable multi-language through micro server + grpc
-- [ ] **Multi-Cloud**
+- [x] **Multi-Cloud**
   * Run on DO, AWS, Azure, GCP
 - [ ] **Multi-Client**
   * Add additional languages (rust, java, etc}
