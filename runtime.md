@@ -34,8 +34,8 @@ The `--local` flag will be used to only run as local processes.
 
 Related to runtime tasks
 
-- micro init - the init (operator) to manage core service which simply calls runtime.Update
-- Service Notifier - the notifier which fires individual updates after receiving a new build change
-- go-micro docker image - an image specifically for pulling and running from source
-- cli commands - implementing the cli commands for run/kill/status
+- [x] micro init - the init (operator) to manage core service which simply calls runtime.Update
+- [x] Service Notifier - the notifier which fires individual updates after receiving a new build change
+- [x] go-micro docker image - an image specifically for pulling and running from source
+- [x] cli commands - implementing the cli commands for run/kill/ps
 
