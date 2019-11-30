@@ -56,6 +56,8 @@ docker pull micro/micro
 Bootup micro and connect to the network
 
 ```
+export MICRO_NETWORK_TOKEN=micro.mu
+
 micro
 ```
 
