@@ -76,8 +76,10 @@ not exclude those who want to self host and access the system as if it were part
   * Enable multi-language through micro server + grpc
 - [x] **Multi-Cloud**
   * Run on DO, AWS, Azure, GCP
-- [ ] **Multi-Client**
+- [ ] **Multi-Lang**
   * Add additional languages (rust, java, etc}
+  * Concept of 'cells' to encapsulate code
+  * Use 'micro service' command to turn into a service
 - [ ] **Mu spec**
   * Flesh out the mu spec for single file definition
   * Move beyond proto and go
