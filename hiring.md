@@ -13,6 +13,8 @@ We're currently hiring for three roles (in London):
 - SRE - developing and managing the core platform that powers micro in the cloud for everyone
 - Dev UX - streamlining the developer experience of micro and providing a frictionless path to adoption
 
+We're now thinking about remote first roles. Get in touch if interested.
+
 ## Apply
 
 Our hiring process is fairly straight forward:
