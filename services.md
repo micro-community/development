@@ -2,7 +2,9 @@
 
 Micro services to be built and run in the network
 
-Platform layer services:
+## Platform
+
+Core runtime services
 
 - [x] Network
 - [x] Runtime
@@ -16,13 +18,17 @@ Platform layer services:
 - [ ] Server
 - [ ] Sync
 
-Entry points:
+## Entrypoints
+
+External entrypoint services
 
 - [x] API
 - [x] Web
 - [x] CLI
 - [x] Bot
 - [x] Proxy
+
+## Services
 
 A non-comprehensive list of high-level services:
 
