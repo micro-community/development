@@ -2,6 +2,28 @@
 
 Micro services to be built and run in the network
 
+Platform layer services:
+
+- [x] Network
+- [x] Runtime
+- [x] Store
+- [x] Debug
+- [ ] Auth
+- [ ] Monitor
+- [ ] Identity
+- [ ] Token
+- [ ] Config
+- [ ] Server
+- [ ] Sync
+
+Entry points:
+
+- [x] API
+- [x] Web
+- [x] CLI
+- [x] Bot
+- [x] Proxy
+
 A non-comprehensive list of high-level services:
 
 - Message
@@ -37,29 +59,9 @@ A non-comprehensive list of high-level services:
 - Store/Item/Basket/Checkout
 - Fraud/Risk
 
-
 Testing & security services:
 
 - Fuzzing
 - Chaos
 - End to End (E2E)
 
-Platform layer services:
-
-- Server
-- Auth
-- Monitor
-- Runtime
-- Identity
-- Token
-- Config
-- Sync
-
-Entry points:
-
-- API
-- Web
-- CLI
-- Bot
-- Proxy
-- Terminal
