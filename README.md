@@ -20,17 +20,17 @@ This is a high level overview. See the detailed [roadmap](roadmap.md).
 - [X] quic as a default transport
 - [X] nats as a default broker
 - [x] [gRPC](grpc.md) integration and interop
-- go, java, typescript, ruby, python [client](clients.md) libraries
-- better documentation and end to end tutorials
-- simpler kubernetes integration by default
-- pluggable wrappers for go-micro itself
-- more flexible options dynamically defined as flags and env vars
-- improved micro api configuration 
-- graphql handler for api
-- standalone micro server
-- define the mucp [protocol](protocol.md)
-- reusable foundation [services](services.md) 
-- define the mu definition
+- [ ] go, java, typescript, ruby, python [client](clients.md) libraries
+- [ ] better documentation and end to end tutorials
+- [ ] simpler kubernetes integration by default
+- [ ] pluggable wrappers for go-micro itself
+- [ ] more flexible options dynamically defined as flags and env vars
+- [ ] improved micro api configuration 
+- [ ] graphql handler for api
+- [ ] standalone micro server
+- [ ] define the mucp [protocol](protocol.md)
+- [ ] reusable foundation [services](services.md) 
+- [ ] define the mu definition
 
 ## Philosophy
 
