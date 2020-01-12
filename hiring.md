@@ -3,7 +3,7 @@
 Micro is a globally distributed technology company focused on building developer first focused tools to simplify 
 microservice development. We're actively hiring in a global and remote fashion.
 
-If you're interested in being hired join the **#hiring** channel on [slack](https://micro.mu/slack/) or [email us](hello@micro.mu).
+If you're interested in being hired join the **#hiring** channel on [slack](https://micro.mu/slack/) or [email us](mailto:hello@micro.mu).
 
 ## Roles
 
