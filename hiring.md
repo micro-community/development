@@ -20,7 +20,7 @@ We're now thinking about remote first roles. Get in touch if interested.
 Our hiring process is fairly straight forward:
 
 - Get in touch via Email or Slack
-  * Tell us why you want to work for micro
+  * Tell us why you want to work on micro
   * Tell us one thing missing from micro 
   * Tell us where you can contribute the most
 - Provide us links to github/linkedin, etc
