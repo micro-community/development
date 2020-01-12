@@ -7,7 +7,7 @@ If you're interested in being hired join the **#hiring** channel on [slack](http
 
 ## Roles
 
-We're currently hiring for three roles (in London):
+We're currently hiring for three types of roles:
 
 - SWE - focused on the open source side continuing the development of micro and go-micro
 - SRE - developing and managing the core platform that powers micro in the cloud for everyone
