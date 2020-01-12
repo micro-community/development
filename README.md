@@ -1,11 +1,11 @@
-# Development
+# Micro Development
 
-This is the Micro development roadmap and contribution guide.
+The Micro development roadmap, team and contribution guide.
 
 # Overview 
 
-Micro is the simplest way to build microservices. Our goal is to continue on this mission in an open and collaborative way 
-with the community. Up until now most of our ideas and development have revolved around discussions in [Slack](https://micro.mu/slack/). 
+Micro is the simplest way to build microservices. Our goal is to continue on this mission in an open and collaborative way, both as a team and community. Up until now most of our ideas and development have revolved around discussions in [Slack](https://micro.mu/slack/).
+
 This useful for realtime collaboration so we can move quickly but often means not everyone gets to contribute or we don't 
 have a history for others to go back and look at to understand how we got to where we are.
 
