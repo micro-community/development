@@ -304,3 +304,4 @@ and neighbour[route.Router] has advert.id as a neighbour.
 - [ ] Network when receiving events/routes should check if it has direct connections to a peer and rewrite the routes
   - Network should be intelligent about how it stores routes and update them accordingly based on network topology
 - [ ] Already observed events should not be processed
+- [ ] Intelligence is moving into the network - remove Advertise/Solicit from router
