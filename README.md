@@ -20,9 +20,9 @@ This is a high level overview. See the detailed [roadmap](roadmap.md).
 - [X] quic as a default transport
 - [X] nats as a default broker
 - [x] [gRPC](grpc.md) integration and interop
+- [x] embedded nats as the default broker
 - [ ] standalone micro server
 - [ ] go, java, typescript, ruby, python [client](clients.md) libraries
-- [ ] embedded nats as the default broker
 - [ ] better documentation and end to end tutorials
 - [ ] simpler kubernetes integration by default
 - [ ] pluggable wrappers for go-micro itself
