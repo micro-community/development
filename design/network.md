@@ -336,7 +336,7 @@ Query the greeter service
 
 ```
 while true; do
-	time MICRO_PROXY=:8081 micro call go.micro.srv.greeter Say.Hello
+	time MICRO_PROXY_ADDRESS=:8081 micro call go.micro.srv.greeter Say.Hello
 done
 ```
 
