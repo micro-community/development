@@ -82,3 +82,14 @@ The coding style guide is fairly straightforward.
 - **Brevity is key** - Don't use long variable names where a comment would suffice. Do the minimal work.
 - **Consistency is key** - See the surrounding packages, variables and types as a guide for how you write code.
 - **Keep it simple** - Don't use complex algorithms where a for-loop would do. Just keep it simple. We'll fix perf later. 
+
+## Workflow
+
+When you are contributing whether it be bugs or features you are the owner of that through to completion.
+
+The workflow is as follows:
+
+- Discuss: Talk about the the bug or feature in #development with others first
+- Document: Create an issue and todo note to track starting and progressing the task
+- Deliver: Create a PR for your bug of feature and engage at least 2 other team members to review
+- Validate: You should be testing throughout but once delivered its your responsibility to validate full functionality
