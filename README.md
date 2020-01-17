@@ -20,24 +20,24 @@ This repo serves as an open forum for long term design ideas, collaboration and 
 
 ## Roadmap
 
-This is a high level overview. See the detailed [roadmap](roadmap.md).
+This is a high level overview. See the detailed [roadmap](roadmap).
 
-- [X] consolidate all [libraries](libraries.md) into go-micro
+- [X] consolidate all [libraries](design/libraries.md) into go-micro
 - [X] gRPC API for the micro proxy
 - [X] quic as a default transport
 - [X] nats as a default broker
 - [x] [gRPC](grpc.md) integration and interop
 - [x] embedded nats as the default broker
 - [ ] standalone micro server
-- [ ] go, java, typescript, ruby, python [client](clients.md) libraries
+- [ ] go, java, typescript, ruby, python [client](design/clients.md) libraries
 - [ ] better documentation and end to end tutorials
 - [ ] simpler kubernetes integration by default
 - [ ] pluggable wrappers for go-micro itself
 - [ ] more flexible options dynamically defined as flags and env vars
 - [ ] improved micro api configuration 
 - [ ] graphql handler for api
-- [ ] define the mucp [protocol](protocol.md)
-- [ ] reusable foundation [services](services.md) 
+- [ ] define the mucp [protocol](design/protocol.md)
+- [ ] reusable foundation [services](design/services.md) 
 - [ ] define the mu definition
 
 ## Philosophy
