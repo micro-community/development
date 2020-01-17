@@ -11,6 +11,13 @@ have a history for others to go back and look at to understand how we got to whe
 
 This repo serves as an open forum for long term design ideas, collaboration and ultimately the roadmap for Micro.
 
+## Contents
+
+- [design](design) - where the design docs live
+- [roadmap](roadmap) - where the full roadmap lives
+- [issues](issues) - where we track work
+- [pull requests](pulls) - where we start new docs
+
 ## Roadmap
 
 This is a high level overview. See the detailed [roadmap](roadmap.md).
