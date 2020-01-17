@@ -299,7 +299,6 @@ There are certain ideas yet to be formulated or in the midst of being worked on
 and neighbour[route.Router] has advert.id as a neighbour.
 - [x] **Routing Table Size**: How should we be thinking about larger scale route management and hop count. How many hops should we store routes for?
 - [x] **Routing Hop Count**: Currently we only store routes within the metric 100 e.g the neighbour of my neighbour. Should routes be stored based on some hop count like or metric like 1000 or 10000? Should we be able to configure longer distance hops of 3, 4 or 5? Otherwise effectively limit how far we can route.
-
 - [x] Network Sync should only send best routes in line with its Advertisement Strategy
 - [ ] Network when receiving events/routes should check if it has direct connections to a peer and rewrite the routes
   - Network should be intelligent about how it stores routes and update them accordingly based on network topology
@@ -307,3 +306,9 @@ and neighbour[route.Router] has advert.id as a neighbour.
 - [ ] Intelligence is moving into the network - remove Advertise/Solicit from router
   - [x] Solicit
   - [ ] Advertise
+
+Fixes needed
+
+- [ ] On start a default route is returned by the network but when calling something we still get "route not found" so this default route is not used
+- [ ] Routes are not synced on start. Maybe because connect is not received. Maybe because the local node is not advertising any routes.
+- [ ] Route metrics are inaccurate as they're not modified before being synced like adverts were. 
