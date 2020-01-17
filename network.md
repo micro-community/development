@@ -30,6 +30,7 @@ The micro network looks to solve this problem using a shared global network for 
 - [Economics](#economics)
 - [Glossary](#glossary-of-terms)
 - [Notes](#notes)
+- [Testing](#testing)
 
 ## Getting Started
 
@@ -312,3 +313,40 @@ Fixes needed
 - [ ] On start a default route is returned by the network but when calling something we still get "route not found" so this default route is not used
 - [ ] Routes are not synced on start. Maybe because connect is not received. Maybe because the local node is not advertising any routes.
 - [ ] Route metrics are inaccurate as they're not modified before being synced like adverts were. 
+
+## Testing
+
+When any changes are made to the network we need to go through a test procedure to ensure its functioning
+
+### Quick test
+
+Wait for rollout of changes to be deployed. In future we may need a way to similate production elsewhere
+
+Connect via a local node
+
+```
+MICRO_SERVER_ADDRESS=:8081
+MICRO_LOG_LEVEL=trace \
+MICRO_NETWORK_TOKEN=micro.mu \
+MICRO_NETWORK_NODES=network.micro.mu \
+micro network
+```
+
+Query the greeter service
+
+```
+while true; do
+	time MICRO_PROXY=:8081 micro call go.micro.srv.greeter Say.Hello
+done
+```
+
+### Performance
+
+Ensure there's no performance degradation
+
+- Test querying end to end and benchmark
+- Ideally we need a long running service doing this continously
+
+### End to End
+
+We need something continuously testing and more importantly USING the network all the time
