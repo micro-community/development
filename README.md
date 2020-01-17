@@ -79,9 +79,9 @@ Here's how we approach taking on new problems.
 
 The coding style guide is fairly straightforward.
 
-- **Brevity is key** - Don't use long variable names where a comment would suffice. Do the minimal work.
-- **Consistency is key** - See the surrounding packages, variables and types as a guide for how you write code.
-- **Keep it simple** - Don't use complex algorithms where a for-loop would do. Just keep it simple. We'll fix perf later. 
+- **KISS:** - Don't use complex algorithms where a for-loop would do. Just keep it simple. We'll fix perf later. 
+- **Brevity:** - Don't use long variable names where a comment would suffice. Do the minimal work.
+- **Consistency:** - See the surrounding packages, variables and types as a guide for how you write code.
 
 ## Workflow
 
