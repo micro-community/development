@@ -15,8 +15,8 @@ This repo serves as an open forum for long term design ideas, collaboration and 
 
 - [design](design) - where the design docs live
 - [roadmap](roadmap) - where the full roadmap lives
-- [issues](issues) - where we track work
-- [pull requests](pulls) - where we start new docs
+- [issues](https://github.com/micro/development/issues) - where we track work
+- [pull requests](https://github.com/micro/development/pulls) - where we start new docs
 
 ## Roadmap
 
