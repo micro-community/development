@@ -13,10 +13,16 @@ This repo serves as an open forum for long term design ideas, collaboration and 
 
 ## Contents
 
+- [collaboration](collaboration.md) - the tools we use or will use for collaboration
+- [content](content.md) - types of content we need e.g examples, posts, tutorials
 - [design](design) - where the design docs live
+- [hiring](hiring.md) - the interview process for hiring
+- [onboarding](onboarding.md) - onboarding guide for new developers
+- [productivity](productivity.md) - how to split work and time to be productive
 - [roadmap](roadmap) - where the full roadmap lives
 - [issues](https://github.com/micro/development/issues) - where we track work
 - [pull requests](https://github.com/micro/development/pulls) - where we start new docs
+- [team](team.md) - a checklist of resources to provide access to for new team members
 
 ## Roadmap
 
