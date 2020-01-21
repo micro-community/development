@@ -5,6 +5,7 @@ This place serves as the knowledge base for all micro design and architecture.
 ## Contents
 
 - [clients](clients.md)
+- [cloud](cloud.md)
 - [content](content.md)
 - [grpc](grpc.md)
 - [hiring](hiring.md)
