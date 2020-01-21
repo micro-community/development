@@ -6,7 +6,6 @@ This place serves as the knowledge base for all micro design and architecture.
 
 - [clients](clients.md)
 - [cloud](cloud.md)
-- [content](content.md)
 - [grpc](grpc.md)
 - [libraries](libraries.md)
 - [micro](micro.md)
