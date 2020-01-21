@@ -14,3 +14,5 @@ global load balancing along with KV storage for anything that needs global state
 ## Architecture
 
 TODO by jake
+
+<img src="../images/cloud.jpg" />
