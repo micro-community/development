@@ -2,6 +2,8 @@
 
 We're tracking and continually evolving the high level roadmap for Micro as a service.
 
+See the [Product Roadmap](product.md) for more business related info.
+
 ## MVP 
 
 Our MVP goal is to deliver micro as a service. We're taking the open source micro toolkit 
