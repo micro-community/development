@@ -33,7 +33,7 @@ Ideally we want to standardise around JWT tokens, oauth and/or rbac.
 
 This is one potential design for auth
 
-```
+```go
 type Auth interface {
 	// Generate a new account
 	Generate(id string, ...GenerateOption) (*Account, error)
