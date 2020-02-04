@@ -13,7 +13,7 @@ experience and provide strongly defined APIs that are understood by the develope
 Our philosophy for plugins and the ecosystem in general is as follows
 
 - Define a go-micro interface. This becomes the building block e.g Registry
-- Define a zero dep default implementation e.g memory of mdns
+- Define a zero dep default implementation e.g memory or mdns
 - Define a highly available external implementation e.g etcd
 - Define a "service" implementation using the runtime and implement service e.g micro registry
 
