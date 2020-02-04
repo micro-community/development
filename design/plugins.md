@@ -17,6 +17,7 @@ Our philosophy for plugins and the ecosystem in general is as follows
 - Define a highly available external implementation e.g etcd
 - Define a "service" implementation using the runtime and implement service e.g micro registry
 
+## Feature Matrix
 
 Here's our list of implementations or preferred list
 
