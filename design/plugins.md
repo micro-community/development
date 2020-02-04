@@ -23,11 +23,14 @@ Here's our list of implementations or preferred list
 
 Interface | Default | Highly-Available | Service
 --------- | ------- | ---------------- | -------
+Auth | None | X (casbin?) | micro auth
 Broker | E-NATS | NATS | micro broker
+Config | memory | X (github?) | micro config
 Registry | mDNS | etcd | micro registry
 Store | memory | cockroachdb | micro store
 
 TODO: complete table
+
 
 ## Roadmap
 
