@@ -44,3 +44,6 @@ the plugins file and regen as necessary.
 ```
 micro run service --plugins=broker/rabbitmq ./...
 ```
+
+Additionally what we'd like to do is generate teh shared objects using GitHub actions against predefined micro/go-micro go.mod deps 
+so we can load modules on the fly.
