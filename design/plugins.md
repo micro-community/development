@@ -23,6 +23,10 @@ Here's our list of implementations or preferred list
 Interface | Default | Highly-Available | Service
 --------- | ------- | ---------------- | -------
 Broker | E-NATS | NATS | micro broker
+Registry | mDNS | etcd | micro registry
+Store | memory | cockroachdb | micro store
+
+TODO: complete table
 
 ## Roadmap
 
