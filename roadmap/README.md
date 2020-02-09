@@ -1,51 +1,59 @@
 # Roadmap
 
-We're tracking and continually evolving the high level roadmap for Micro as a service.
+We're tracking and continually evolving the high level roadmap for Micro as a Service.
 
 See the [Product Roadmap](product.md) for more business related info.
 
-## MVP 
+## Overview
 
-Our MVP goal is to deliver micro as a service. We're taking the open source micro toolkit 
+Micro is focused on being the simplest way to build, share and collaborate on microservices. This started 
+as a framework and now moves into a platform which continues to remove friction from the path of the developer. 
+We'll keep climbing the stack to continue on this journey. From platform to services and beyond.
+
+## MVP
+
+Our MVP goal is to deliver Micro as a Service. We're taking the open source micro toolkit 
 and running it as a service in the cloud. The end state should be a runtime which offers an API, web dashboard, 
 CLI, slack bot and service proxy all hosted so that developers don't have to host it themselves. We'll 
 provide interconnectivity via a transport, broker and service registry which can be accessed by running 
 local `micro` instance which connects to the service in the cloud. 
 
-Hosting is a non-concern at this point for end users but we'll provide a `micro run` experience for ourselves 
-and potentially for the local runtimes.
+Hosting will be provided by global deployments in every region using the `micro run` command.
 
 We'll be dogfooding these efforts on an ongoing basis by writing microservices which run on the platform 
 and are entirely open source for others to consume. Ultimately our goal is to see the network with 
 base level services that don't have to be written or run by anyone else. 
 
-We want to introduce this by end of year as an invite-only beta mode for our community to test. Most of this 
+We want to introduce this by end of Q1 2020 as an invite-only beta mode for our community to test. Most of this 
 software will be entirely open source and available to run so anyone can likely connect but we'll 
 look to build identity and api tokens in for access control.
 
-Ultimately we'll provide a Micro Services Network as a global platform for open source services.
+Ultimately we'll provide a **M3O** (pronounced ehm-three-oh) as a global platform for Micro services.
 
-Goals
+## Goals
+
+We have the following high level goals:
 
 - [x] Bootstrap Micro OSS in the cloud aka Micro as a service
 - [x] Dogfood by writing services or a complete end-to-end service
 - [x] Consolidate learnings into roadmap and bug-feature list
 - [x] Develop the network to allow connectivity from anywhere
 - [x] Enable sharing of services and discovery
-- [ ] Running services on the platform
+- [ ] Hosting services on the platform
+- [ ] Auto configuration of services
+- [ ] Observability and debugging; stats, logs, trace
 - [ ] Tokenized access control
-- [ ] Introduce invite-only service to community 
+- [ ] Invite-only service for the community using Github
 
-## Beyond the MVP
+## Beyond MVP
 
-Beyond the MVP we want to move on to hosting services to further simplify the developer experience and a full fledged platform 
-for microservices. Our goal there will be to allow developers to push services and then observe and interact via the 
-managed API, web UI, etc. We'll look to build team based features in after this point along with observability.
+Beyond the MVP we want to move into focusing on extending the platform, including team based collaboration and private hosting.
 
-- [ ] Hosting services
-- [ ] Observability and debugging
-- [ ] Team based access control
-- [ ] Paid hosting and team features
+- [ ] Privately hosted Micro platform
+- [ ] Team based features and access control
+- [ ] Paid personal and team subscription
+- [ ] Licensed self-managed platform
+- [ ] Base level services beyond the runtime
 
 ## Micro as a service
 
