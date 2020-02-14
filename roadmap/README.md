@@ -39,11 +39,11 @@ We have the following high level goals:
 - [x] Consolidate learnings into roadmap and bug-feature list
 - [x] Develop the network to allow connectivity from anywhere
 - [x] Enable sharing of services and discovery
-- [ ] Hosting services on the platform
-- [ ] Auto configuration of services
-- [ ] Observability and debugging; stats, logs, trace
-- [ ] Tokenized access control
-- [ ] Invite-only service for the community using Github
+- [x] Hosting services on the platform
+- [x] Auto configuration of services
+- [x] Observability and debugging; stats, logs, trace
+- [x] Tokenized access control
+- [x] Invite-only service for the community using Github
 
 ## Beyond MVP
 
@@ -54,6 +54,14 @@ Beyond the MVP we want to move into focusing on extending the platform, includin
 - [ ] Paid personal and team subscription
 - [ ] Licensed self-managed platform
 - [ ] Base level services beyond the runtime
+
+Open source related requirements beyond MVP is a new developer experience
+
+- [ ] Micro as a single process daemon
+- [ ] Code generated gRPC clients
+- [ ] Clean idiomatic libraries wrapping the gRPC clients
+- [ ] Angular based web templates
+- [ ] API service interface and code generation 
 
 ## Micro as a service
 
@@ -73,15 +81,23 @@ not exclude those who want to self host and access the system as if it were part
 - [x] **Network** {Micro Services Network}
   * Global service network
   * Shared system for building microservices
-- [ ] **Platform** {Micro Server, Proxy, Runtime, Sync, Network}
+- [x] **Platform** {Micro Server, Proxy, Runtime, Sync, Network}
   * Evolve the platform => build, run, manage
   * Establish go-micro as micro server
   * Enable connectivity beyond the cloud
   * Continue development of core services
-- [ ] **Debugging** {Logging, tracing, metrics}
+- [x] **Debugging** {Logging, tracing, metrics}
   * Build in observability features
+  * Runtime stats; cpu, mem, threads, requests, errors
+  * Logs; historic logs for a finite time
+  * Distributed tracing for the call graph
 - [ ] **Services** {Platform, Utility, Orchestration, Web}
   * Continue key service development to 30+ services
+- [ ] **Alerting**
+  * Monitoring of services
+  * Ability to define healthchecks
+  * Events, emails and paging where necessary
+  * Scheduling of on-call (stretch goal 6-12 months)
 - [ ] **Clients** {Go, Python, Ruby, Javascript}
   * Enable multi-language through micro server + grpc
 - [x] **Multi-Cloud**
@@ -95,3 +111,8 @@ not exclude those who want to self host and access the system as if it were part
   * Move beyond proto and go
 - [ ] **Commands**
   * Auto generate CLI commands based on available services
+- [ ] **Namespaces**
+  * Namespacing services for separate teams
+  * Owner/group baked in at runtime
+  * Controlled ability to expose on per service basis
+
