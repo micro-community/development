@@ -8,13 +8,13 @@ Micro is effectively a developer first focused product. Our primary goal is to e
 to build, share and collaborate on microservices. We do this via an open source Go framework 
 and ultimately our end product, M3O, a serverless platform for microservices development.
 
-Contents
+## Contents
 
 - [2020](#2020-milestones)
-  * [Q1](#q1-delivery)
-  * [Q2](#q2-delivery)
-  * [Q3](#q3-delivery)
-  * [Q4](#q4-delivery)
+  * [Q1](#q1-delivery) - M3O platform
+  * [Q2](#q2-delivery) - Paid product
+  * [Q3](#q3-delivery) - Services
+  * [Q4](#q4-delivery) - Marketplace
 - [2021](#2021)
 
 ## 2020 Milestones
