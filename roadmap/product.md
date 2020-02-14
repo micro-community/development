@@ -49,6 +49,7 @@ Delivery by end of August 2020 (Enabled in September)
   * Monitoring and alerting
   * Payments, sms, email
   * See [services.md](https://github.com/micro/development/blob/master/design/services.md)
+  * Products; Portfolio, Therapy, Gaming
 
 ## Q4 delivery
 
