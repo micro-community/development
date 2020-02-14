@@ -14,19 +14,26 @@ High level goals
 
 ### Q1 delivery
 
+Delivery by end of February 2020 (Onboarding through March)
+
 - MVP **M3O** Platform
   * A microservices platform
   * Invite only for community
-  * Public cloud hosting
+  * Public cloud hosting (free)
+  * Onboard users 10 at a time
 
 ### Q2 delivery
 
-- Paid product
+Delivery by end of May 2020 (Onboarding through June)
+
+- Paid product (fully managed private platform)
   * Subscription based $20/service/month
   * Licensed self-hosted platform
   * SaaS Personal and Team tiers
 
 ### Q3 delivery
+
+Delivery by end of August 2020 (Enabled in September)
 
 - Services
   * End-to-end testing
@@ -36,8 +43,15 @@ High level goals
 
 ### Q4 delivery
 
+Delivery by end of year 2020 (Launch end of January 2021)
+
 - Marketplace
   * Ability to buy and sell services
   * Transactional percentage per request
   * Percentage pay per service
+  * Ability to run external "Resources"
 
+## 2021
+
+As delivery of the platform is executed on in 2020 we continue cyclically through delivery of platform, services, products and the marketplace. 
+In 2021 we launch the marketplace with the ability to buy/sell services. The 2021 technical and product roadmap will be defined near end of 2020.
