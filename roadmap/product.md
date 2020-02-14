@@ -8,11 +8,11 @@ Micro is effectively a developer first focused product. Our primary goal is to e
 to build, share and collaborate on microservices. We do this via an open source Go framework 
 and ultimately our end product, M3O, a serverless platform for microservices development.
 
-## Milestones
+## 2020 Milestones
 
-High level goals
+High level goals defined for each quarter. We don't go into detail because reasons.
 
-### Q1 delivery
+## Q1 delivery
 
 Delivery by end of February 2020 (Onboarding through March)
 
@@ -22,7 +22,7 @@ Delivery by end of February 2020 (Onboarding through March)
   * Public cloud hosting (free)
   * Onboard users 10 at a time
 
-### Q2 delivery
+## Q2 delivery
 
 Delivery by end of May 2020 (Onboarding through June)
 
@@ -31,7 +31,7 @@ Delivery by end of May 2020 (Onboarding through June)
   * Licensed self-hosted platform
   * SaaS Personal and Team tiers
 
-### Q3 delivery
+## Q3 delivery
 
 Delivery by end of August 2020 (Enabled in September)
 
@@ -41,7 +41,7 @@ Delivery by end of August 2020 (Enabled in September)
   * Payments, sms, email
   * See [services.md](https://github.com/micro/development/blob/master/design/services.md)
 
-### Q4 delivery
+## Q4 delivery
 
 Delivery by end of year 2020 (Launch end of January 2021)
 
