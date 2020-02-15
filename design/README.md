@@ -7,6 +7,7 @@ This place serves as the knowledge base for all micro design and architecture.
 - [auth](auth.md)
 - [clients](clients.md)
 - [cloud](cloud.md)
+- [debug](debug.md)
 - [framework](framework.md)
 - [grpc](grpc.md)
 - [micro](micro.md)
