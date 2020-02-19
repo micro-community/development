@@ -1,4 +1,4 @@
-# Cloud
+# Platform
 
 The micro platform (M3O) is a cloud based serverless platform for microservices development.
 
@@ -11,11 +11,32 @@ We're operating on all major cloud providers (AWS, Azure, GCP) in a multi-cloud 
 deployment across US, EU and Asia. We're leveraging DO as a control plane and CloudFlare for 
 global load balancing along with KV storage for anything that needs global state.
 
+## Design
+
+The platform exists in the repository [micro/platform](https://github.com/micro/platform) and builds on
+the [Micro](https://github.com/micro/micro) runtime.
+
+<img src="../images/platform.png" />
+
 ## Architecture
 
 TODO by @jake
 
 <img src="../images/cloud.jpg" />
+
+## Features
+
+The features which will be included in the platform
+
+- **Cloud Automation** - Full terraform automation to bootstrap platform
+- **Account Management** - GitHub account management via teams
+- **Alerting** - Event notification and alerting via email/sms/slack
+- **Billing** - Metered billing of services used
+- **Dashboard** - A full UX experience via a web dashboard
+- **Multi-Cloud** - Ability to manage and deploy services across multiple clouds and regions
+- **GitOps** - Source to Running via GitHub actions
+- **K8s Native** - Built to run on Kubernetes
+- More soon...
 
 ## Components
 
