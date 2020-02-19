@@ -25,7 +25,7 @@ to abstract away the underlying infrastructure and further usage through the sur
 
 - Zero dep - likely noop because it does not need to be included by default
 - JWT tokens - a distributed method of managing authentication
-- Casbin or Hydra - these are becoming open source standards for oauth/rbac and make the most sense here
+- Casbin, Hydra, OPA - these are becoming open source standards for oauth/rbac and make the most sense here
 
 Ideally we want to standardise around JWT tokens, oauth and/or rbac.
 
