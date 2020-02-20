@@ -16,6 +16,7 @@ The Distributed service includes the following features:
 
 - Live streaming (video and audio)
 - Messaging, comments and threads
+- Interactive Whiteboard with history
 - TODO, notes, reminder sharing/tracking
 - Screen sharing
 - ... more to come
