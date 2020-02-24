@@ -71,7 +71,7 @@ A non-comprehensive list of high-level services:
 
 Testing & security services:
 
-- Fuzzing
-- Chaos
-- End to End (E2E)
+- **Fuzzing** - Sends random garbage to rpc endpoints
+- **Chaos** - Attempts to destroy the runtime by stopping or killing things
+- **End to End (E2E)** - Allows end-to-end flows for real world product tests
 
