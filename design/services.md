@@ -10,13 +10,13 @@ Core runtime services
 - [x] Runtime
 - [x] Store
 - [x] Debug
-- [ ] Auth
+- [x] Auth
+- [x] Config
+- [ ] Server
+- [ ] Sync
 - [ ] Monitor
 - [ ] Identity
 - [ ] Token
-- [ ] Config
-- [ ] Server
-- [ ] Sync
 
 ## Entrypoints
 
