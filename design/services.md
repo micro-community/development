@@ -30,6 +30,7 @@ External entrypoint services
 - [x] CLI
 - [x] Bot
 - [x] Proxy
+- [ ] Voice
 
 ## Services
 
