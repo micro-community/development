@@ -6,12 +6,15 @@ Micro services to be built and run in the network
 
 Core runtime services
 
+- [x] Auth
+- [x] Broker
+- [x] Config
+- [x] Debug
+- [x] Events
 - [x] Network
+- [x] Registry
 - [x] Runtime
 - [x] Store
-- [x] Debug
-- [x] Auth
-- [x] Config
 - [ ] Server
 - [ ] Sync
 - [ ] Monitor
