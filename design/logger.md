@@ -85,3 +85,35 @@ We need to implements all stuff for sugarLogger that present in SugarLogger inte
 ## Benefits
 
 We don't need to implemet such features in all loggers, but internally use only one method Logf
+
+## Expected usage
+
+/main.go:
+
+```go
+    ctx, cancel := context.WitchCancel(context.Bacground())
+    defer cancel()
+
+    ...
+    log := zerolog.NewLogger(logger.WithOutput(os.Stdout), logger.WithLevel(logger.DebugLevel))
+    logger.NewContext(ctx, log)
+
+    ...
+    handler.RegisterHelloHandler(service.Server(), new(handler.Hello))
+    ....
+```
+
+/handler/hello.go:
+
+```go
+    ...
+    func (h *Hello) Call(ctx context.Context, req *xx, rsp *yy) error {
+        log := logger.FromContext(ctx)
+        l := logger.NewSugarLogger(log.Fileds(map[string]interace{}{"reqid":req.Id}))
+        ...
+        l.Debug("process request")
+        ...
+        return nil
+    }
+
+```
