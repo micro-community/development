@@ -44,7 +44,7 @@ We have the following high level goals:
 - [x] Observability and debugging; stats, logs, trace
 - [x] Tokenized access control
 - [x] Invite-only service for the community using Github
-- [ ] Onboard users and iterate based on the feedback
+- [x] Onboard users and iterate based on the feedback
 
 ## Beyond MVP
 
