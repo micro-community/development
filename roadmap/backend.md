@@ -18,4 +18,9 @@ who want to build Micro services, Backend goes a step further to focus on the fr
 - Email marketing
 - ...
 
+## API
 
+Backend provides a standard http/json API via `api.micro.mu/backend` and web ui at `web.micro.mu/backend` to be 
+later hosted at `backend.micro.mu`. We may in future support other query mechanisms.
+
+The API will then be used for the basis of an npm backend by the same name at @microhq/backend
