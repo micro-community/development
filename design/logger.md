@@ -53,34 +53,20 @@ But not specify always log-level, and use helper functions (Warnf/Errorf etc).
 
 ## Proposed changes
 
-Create in logger new functions NewSugarLoggar (name may be changed) with following signature:
+Create in logger new function NewHelper with following signature:
 ```go
-type sugarLogger struct {
-    log Logger
-}
 
-type Helper interface {
-    Info(args ...interface{})
-    Infof(template string, args ...interface{})
-    .....
-}
-
-type SugarLogger interface {
+type Helper struct {
     Logger
-    Helper
 }
 
-func NewSugarLogger(log Logger) SugarLogger {
-    return &sugarLogger{log: log}
+func NewHelper(log Logger) *Helper {
+    return &Helper{log: log}
 }
 
-func (sugarlogger) Info(args...interface{}) {}
+func (h *Helper) Info(args...interface{}) {}
 .....
 ```
-
-## Drawbacks
-
-We need to implements all stuff for sugarLogger that present in SugarLogger interface
 
 ## Benefits
 
