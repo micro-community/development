@@ -5,12 +5,11 @@ logger interface for end-user.
 
 ## Overview
 
-Logger must provide minimal interface to write logs at specific levels with specific fields. Now blows up with many helper
-funcs that all logger implementations needs to support.
+Logger must provide minimal interface to write logs at specific levels with specific fields.
 
 ## Implemenations
 
-Now we have 4 implemntations:
+We have 4 implemntations:
 * micro internal that writes to console and also to internal in-memory ring buffer
 * zap
 * logrus
@@ -18,16 +17,12 @@ Now we have 4 implemntations:
 
 ## Design
 
-Currently we have simple design
-
 ```go
 type Logger interface {
     // Init initialises options
     Init(options ...Option) error
     // The Logger options
     Options() Options
-    // Error set `error` field to be logged
-    Error(err error) Logger
     // Fields set fields to always be logged
     Fields(fields map[string]interface{}) Logger
     // Log writes a log entry
@@ -47,13 +42,8 @@ Also we have helper functions that automatic uses specified log-level:
 * Fatal/Fatalf
 * Trace/Tracef
 
-This is enought for internal micro usage. But after rethinking this is not so usable for end-user.
-Most of the time user wants to create new logger with specific fields and write messages from it.
-But not specify always log-level, and use helper functions (Warnf/Errorf etc).
+This is enought for internal micro usage. Additional helper functions implemented via Helper struct and interface inheritance.
 
-## Proposed changes
-
-Create in logger new function NewHelper with following signature:
 ```go
 
 type Helper struct {
@@ -70,7 +60,7 @@ func (h *Helper) Info(args...interface{}) {}
 
 ## Benefits
 
-We don't need to implemet such features in all loggers, but internally use only one method Logf
+We don't need to implemet helper functions in all all loggers, but internally helper uses only one Log/Logf
 
 ## Expected usage
 
@@ -95,7 +85,7 @@ We don't need to implemet such features in all loggers, but internally use only 
     ...
     func (h *Hello) Call(ctx context.Context, req *xx, rsp *yy) error {
         log := logger.FromContext(ctx)
-        l := logger.NewSugarLogger(log.Fileds(map[string]interace{}{"reqid":req.Id}))
+        l := logger.NewHelper(log.Fileds(map[string]interace{}{"reqid":req.Id}))
         ...
         l.Debug("process request")
         ...
