@@ -91,6 +91,8 @@ not exclude those who want to self host and access the system as if it were part
 
 ### Further breakdown
 
+- [x] **Multi-Cloud**
+  * Run on DO, AWS, Azure, GCP
 - [x] **Network** {Micro Services Network}
   * Global service network
   * Shared system for building microservices
@@ -106,19 +108,24 @@ not exclude those who want to self host and access the system as if it were part
   * Distributed tracing for the call graph
 - [ ] **Services** {Platform, Utility, Orchestration, Web}
   * Continue key service development to 30+ services
-- [ ] **Alerting**
+- [ ] **Clients** {Go, Python, Ruby, Javascript}
+  * Enable multi-language through micro server + grpc
+- [ ] **Monitoring / Alerting**
   * Monitoring of services
   * Ability to define healthchecks
   * Events, emails and paging where necessary
   * Scheduling of on-call (stretch goal 6-12 months)
-- [ ] **Clients** {Go, Python, Ruby, Javascript}
-  * Enable multi-language through micro server + grpc
+- [ ] **Billing**
+  * Usage tracking
+  * Accounts and payments
+  * Subscriptions
+- [ ] **Access Control**
+  * Team based access control
+  * User / Service / Admin scopes
 - [ ] **Routing**
   * Label based routing (Micro-X Headers route via metadata)
   * URL Versioning routes to service versions
   * Per web app sub domains
-- [x] **Multi-Cloud**
-  * Run on DO, AWS, Azure, GCP
 - [ ] **Multi-Lang**
   * Add additional languages (rust, java, etc}
   * Concept of 'cells' to encapsulate code in containers
