@@ -16,8 +16,8 @@ The products and services we're building
 - [Platform](platform.md) - A microservices platform (Micro as a Service)
 - [Distributed](distributed.md) - A collaboration tool for distributed teams
 - [Backend](backend.md) - Backend as a Service for Frontend devs
-- [Dev](dev.md) - A full Dev environment
 - [Cloud](cloud.md) - Cloud infrastructure management as a service
+- [Dev](dev.md) - A full Dev environment
 
 ## Timelines
 
