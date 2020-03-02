@@ -8,6 +8,20 @@ The Micro platform is focused on being the simplest way to build, share and coll
 as a framework and now moves into a platform which continues to remove friction from the path of the developer. 
 We'll keep climbing the stack to continue on this journey. From platform to services and beyond.
 
+## Features
+
+The features which will be included in the platform
+
+- **Cloud Automation** - Full terraform automation to bootstrap platform
+- **Account Management** - GitHub account management via teams
+- **Alerting** - Event notification and alerting via email/sms/slack
+- **Billing** - Metered billing of services used
+- **Dashboard** - A full UX experience via a web dashboard
+- **GitOps** - Source to Running via GitHub actions
+- **K8s Native** - Built to run on Kubernetes
+- **Multi-Cloud** - Ability to manage and deploy services across multiple clouds and regions
+- More soon...
+
 ## MVP
 
 Our MVP goal is to deliver Micro as a Service. We're taking the open source micro toolkit 
