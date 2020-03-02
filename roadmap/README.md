@@ -12,7 +12,8 @@ and ultimately our end product, M3O, a serverless platform for microservices dev
 
 The products and services we're building
 
-- [Platform](platform.md) - A microservices platform
+- [Framework](framework.md) - The open source Go Micro framework
+- [Platform](platform.md) - A microservices platform (Micro as a Service)
 - [Distributed](distributed.md) - A collaboration tool for distributed teams
 - [Backend](backend.md) - Backend as a Service for Frontend devs
 - [Dev](dev.md) - A full Dev environment
