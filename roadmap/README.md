@@ -101,6 +101,10 @@ not exclude those who want to self host and access the system as if it were part
   * Scheduling of on-call (stretch goal 6-12 months)
 - [ ] **Clients** {Go, Python, Ruby, Javascript}
   * Enable multi-language through micro server + grpc
+- [ ] **Routing**
+  * Label based routing (Micro-X Headers route via metadata)
+  * URL Versioning routes to service versions
+  * Per web app sub domains
 - [x] **Multi-Cloud**
   * Run on DO, AWS, Azure, GCP
 - [ ] **Multi-Lang**
