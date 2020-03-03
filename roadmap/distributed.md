@@ -26,10 +26,10 @@ The Distributed service includes the following features:
 
 Distributed is designs as a Micro services product with services themselves defined by their domain boundaries.
 
-- Streaming
-- Messaging
+- Streaming ([webRTC](https://webrtc.org/) or https://github.com/pion/webrtc)
+- Messaging 
 - Reminders
-- ...
+- Notes
 
 Distributed is built on the M3O platform
 
