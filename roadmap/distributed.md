@@ -14,6 +14,7 @@ that experience. Right now we have a disparate set of tools to do this.
 
 The Distributed service includes the following features:
 
+- Sprint planning (dealing with non verbal queues and allowing people to speak)
 - Live streaming (video and audio)
 - Messaging, comments and threads
 - Interactive Whiteboard with history
@@ -31,3 +32,17 @@ Distributed is designs as a Micro services product with services themselves defi
 - ...
 
 Distributed is built on the M3O platform
+
+## Sprint Planning
+
+Sprint planning is a massive pain point in a distributed team. Especially where people are in the room and on a conference call. 
+Trying to speak when someone else is speaking is difficult without non verbal queues. This is really a planning or 
+design discussion oriented thing rather than a conference call itself. Unclear if its more generic than that but it's 
+specifically for this purpose.
+
+Features
+
+- Simple collaborative realtime planning
+- Non verbal queues for when someone wants to speak
+- Potential notes / messages / comments to be read inline
+
