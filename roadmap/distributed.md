@@ -48,7 +48,7 @@ Features
 
 ## Compensating for the lack of non verbal cues
 
-We could compensate for the lack of non verbal cues for example when one wants to speak up is with ephemeral emojis.
+We could compensate for the lack of non verbal cues for example when one wants to speak up with ephemeral emojis.
 Like how in school pupils put their hands up to talk, an "I want to speak" emoji could appear on the screen next to the person issuing it and it could slowly disappear.
 
 The ephemeral nature would enable both the spamming of the given emoji which is playful, but also gives a visual cue to when it was issued (ie. older emojis would be more faded/in an other position etc.)
