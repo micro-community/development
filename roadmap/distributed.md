@@ -15,6 +15,8 @@ that experience. Right now we have a disparate set of tools to do this.
 The Distributed service includes the following features:
 
 - Sprint planning - notes, issue tracking, discussion (dealing with non verbal queues and allowing people to speak)
+- [OKRs](https://en.wikipedia.org/wiki/OKR) (objective and key results)
+- Time tracking (aka when your team overlaps with you for synchronous work)
 - Live streaming (webRTC)
 - Video and audio clips (whatsapp style)
 - Messaging, comments and threads
