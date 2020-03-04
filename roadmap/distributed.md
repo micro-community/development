@@ -14,8 +14,9 @@ that experience. Right now we have a disparate set of tools to do this.
 
 The Distributed service includes the following features:
 
-- Sprint planning (dealing with non verbal queues and allowing people to speak)
-- Live streaming (video and audio)
+- Sprint planning - notes, issue tracking, discussion (dealing with non verbal queues and allowing people to speak)
+- Live streaming (webRTC)
+- Video and audio clips (whatsapp style)
 - Messaging, comments and threads
 - Interactive Whiteboard with history
 - TODO, notes, reminder sharing/tracking
@@ -31,7 +32,14 @@ Distributed is designs as a Micro services product with services themselves defi
 - Reminders
 - Notes
 
-Distributed is built on the M3O platform
+## MVP
+
+The MVP starts with note taking but will focus on sprint planning as the first problem to solve.
+
+- Define a Sprint
+- Define issues in a sprint
+- Attach notes and comments
+- Discussion during planning
 
 ## Sprint Planning
 
@@ -49,6 +57,8 @@ Features
 ## Compensating for the lack of non verbal cues
 
 We could compensate for the lack of non verbal cues for example when one wants to speak up with ephemeral emojis.
-Like how in school pupils put their hands up to talk, an "I want to speak" emoji could appear on the screen next to the person issuing it and it could slowly disappear.
+Like how in school pupils put their hands up to talk, an "I want to speak" emoji could appear on the screen next 
+to the person issuing it and it could slowly disappear.
 
-The ephemeral nature would enable both the spamming of the given emoji which is playful, but also gives a visual cue to when it was issued (ie. older emojis would be more faded/in an other position etc.)
+The ephemeral nature would enable both the spamming of the given emoji which is playful, but also gives a visual 
+cue to when it was issued (ie. older emojis would be more faded/in an other position etc.)
