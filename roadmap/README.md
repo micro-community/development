@@ -17,6 +17,7 @@ The products and services we're building
 - [Platform](platform.md) - A microservices platform (Micro as a Service)
 - [Distributed](distributed.md) - A collaboration tool for distributed teams
 - [Backend](backend.md) - Backend as a Service for Frontend devs
+- [Subscribe](subscribe.md) - An embeddable subscribe form for (not just) static sites.
 - [Cloud](cloud.md) - Cloud infrastructure management as a service
 - [Dev](dev.md) - A full Dev environment
 - [Mobile](mobile.md) - Mobile is the Micro services experience brought to mobile
