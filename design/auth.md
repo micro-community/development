@@ -31,7 +31,17 @@ Ideally we want to standardise around JWT tokens, oauth and/or rbac.
 
 ## Design
 
-This is one potential design for auth
+Auth needs to operate the same whether we're generating user accounts or service accounts. This should be 
+driven by an identity, whether thats defined as public/private key pair, unique url or email address. 
+This is the basis for identity and what we generate accounts and tokens based on.
+
+Once we have strong identity we can move on to account generation. This is a one time global account per 
+service or user based on that identity. When this is issued a user's identity is always referencing this 
+account and the roles/scopes they are permitted with.
+
+## Interface
+
+The potential interface design we're working towards
 
 ```go
 type Auth interface {
