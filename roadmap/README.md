@@ -21,6 +21,7 @@ The products and services we're building
 - [Cloud](cloud.md) - Cloud infrastructure management as a service
 - [Dev](dev.md) - A full Dev environment
 - [Mobile](mobile.md) - Mobile is the Micro services experience brought to mobile
+- [Network](network.md) - An open network for services
 
 ## Timelines
 
