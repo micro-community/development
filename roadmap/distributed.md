@@ -23,6 +23,7 @@ The Distributed service includes the following features:
 - Interactive Whiteboard with history
 - TODO, notes, reminder sharing/tracking
 - Screen sharing
+- Syncing with GitHub
 - ... more to come
 
 ## Design
