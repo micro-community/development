@@ -33,6 +33,7 @@ Distributed is designs as a Micro services product with services themselves defi
 - Messaging 
 - Reminders
 - Notes
+- Sync
 
 ## MVP
 
@@ -42,6 +43,14 @@ The MVP starts with note taking but will focus on sprint planning as the first p
 - Define issues in a sprint
 - Attach notes and comments
 - Discussion during planning
+- Sync sprint/issues to GitHub
+
+## Sync to Github
+
+GitHub is still ultimately the source of truth 
+And we want to sync back or even load sprints and issues.
+
+We're working on a micro sync service which may be relevant. 
 
 ## Sprint Planning
 
