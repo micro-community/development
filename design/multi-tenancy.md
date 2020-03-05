@@ -21,6 +21,7 @@ go.micro.auth.*.social
 Auth services that support different social logins by config, all oauth handler are same
 e.GET("/auth/:provider/callback/", handler.AuthProviderCallback, middleware.TranslationMiddleware())
 e.GET("/auth/:provider/", handler.AuthWithProvider) we can parse provider name and use any login. 
+
 For example I use https://github.com/markbates/goth we need to configure it to use our internal Store 
 (where ttl is needed) there is super simple exmaple btw https://github.com/markbates/goth/blob/master/examples/main.go 
 also project is search for maintainers https://blog.gobuffalo.io/goth-needs-a-new-maintainer-626cd47ca37b we can create service that use goth for login. Also it can auth user by email and password from User service.  Auth store session params like token in Store. 
@@ -47,8 +48,8 @@ Store tenants in Namespace. For Organaza tenants will be client1.organaza.com cl
 go.micro.tenant.*.tenant-user
 ```
 
-Map global user to tenant user to check is user have access to tenant and store tenant specific info. (this can be generic service to extend)
-If this all service work fine all that I need is create site web service with landing page and allow new user to register their tenants.
+Map global user to tenant user to check is user have access to tenant and store tenant specific info. (this can be generic service to extend). If this all service work fine all that I need is create site web service with landing page and allow new user to register their tenants.
+
 To be DRY all this service can be used by Micro Platform itself:
 
 We can create web site service with registration with different tenants for example organaza.micro.mu. After login it redirect me to current web application with services/dashboards/etc. And from dashboard I spin up new namespace for project. Also I can have a dev/stage namespaces with different settings.
