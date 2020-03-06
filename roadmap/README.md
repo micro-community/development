@@ -10,9 +10,11 @@ and ultimately our end product, M3O, a serverless platform for microservices dev
 
 ## Contents
 
-The products and services we're building
+- [Open Source](#open-source-software) - Open source tools
+- [Products](#products-and-services) - Products and services
+- [Timeline](#timeline) - Roadmap timeline
 
-### Open source software
+## Open source software
 
 Available in [GitHub](https://github.com/micro)
 
@@ -22,7 +24,7 @@ Available in [GitHub](https://github.com/micro)
 - [Network](network.md) - Mulit-cloud networking and federation
 - [Mobile](mobile.md) - Mobile is the Micro services experience through mobile
 
-### Products and services
+## Products and services
 
 Available via **M3O**
 
@@ -33,7 +35,7 @@ Available via **M3O**
 - [Backend](backend.md) - Backend as a Service for Frontend devs
   * [Subscribe](subscribe.md) - An embeddable subscribe form for (not just) static sites (part of Backend)
 
-## Timelines
+## Timeline
 
 - [2020](#2020-milestones)
   * [Q1](#q1-delivery) - M3O platform
