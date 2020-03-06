@@ -10,7 +10,7 @@ who want to build Micro services, Backend goes a step further to focus on the fr
 
 ## Features
 
-- Database storage
+- Document storage
 - File storage
 - User authentication
 - Push notifications
