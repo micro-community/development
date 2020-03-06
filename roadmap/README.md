@@ -14,6 +14,8 @@ The products and services we're building
 
 Open source software:
 
+Available in [GitHub](https://github.com/micro)
+
 - [Framework](framework.md) - Go microservices development framework
 - [Runtime](runtime.md) -  A microservice runtime environment (aka operating system)
 - [Platform](platform.md) - Automated Micro deployment via terraform
@@ -21,6 +23,8 @@ Open source software:
 - [Mobile](mobile.md) - Mobile is the Micro services experience through mobile
 
 Products and services:
+
+Available via **M3O**
 
 - [Cloud](cloud.md) - Micro as a Service - fully managed serverless platform
 - [Edge](edge.md) - A global edge network for Micro services
