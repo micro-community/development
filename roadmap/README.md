@@ -12,7 +12,7 @@ and ultimately our end product, M3O, a serverless platform for microservices dev
 
 The products and services we're building
 
-Open source software:
+### Open source software
 
 Available in [GitHub](https://github.com/micro)
 
@@ -22,7 +22,7 @@ Available in [GitHub](https://github.com/micro)
 - [Network](network.md) - Mulit-cloud networking and federation
 - [Mobile](mobile.md) - Mobile is the Micro services experience through mobile
 
-Products and services:
+### Products and services
 
 Available via **M3O**
 
