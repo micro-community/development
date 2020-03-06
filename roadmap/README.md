@@ -12,16 +12,22 @@ and ultimately our end product, M3O, a serverless platform for microservices dev
 
 The products and services we're building
 
-- [Framework](framework.md) - The open source Go Micro framework
-- [Runtime](runtime.md) - A microservice runtime environment aka operating system
-- [Platform](platform.md) - A microservices platform (Micro as a Service)
+Open source software:
+
+- [Framework](framework.md) - Go microservices development framework
+- [Runtime](runtime.md) -  A microservice runtime environment (aka operating system)
+- [Platform](platform.md) - Automated Micro deployment via terraform
+- [Network](network.md) - Mulit-cloud networking and federation
+- [Mobile](mobile.md) - Mobile is the Micro services experience through mobile
+
+Products and services:
+
+- [Cloud](cloud.md) - Micro as a Service - fully managed serverless platform
+- [Edge](edge.md) - A global edge network for Micro services
+- [Dev](dev.md) - A full cloud based Dev environment
 - [Distributed](distributed.md) - A collaboration tool for distributed teams
 - [Backend](backend.md) - Backend as a Service for Frontend devs
-- [Subscribe](subscribe.md) - An embeddable subscribe form for (not just) static sites.
-- [Cloud](cloud.md) - Cloud infrastructure management as a service
-- [Dev](dev.md) - A full Dev environment
-- [Mobile](mobile.md) - Mobile is the Micro services experience brought to mobile
-- [Network](network.md) - An open network for services
+  * [Subscribe](subscribe.md) - An embeddable subscribe form for (not just) static sites (part of Backend)
 
 ## Timelines
 
