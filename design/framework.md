@@ -1,15 +1,17 @@
-# Libraries
+# Framework
 
-Micro primarily starts as a set of libraries with strongly defined interfaces that are pluggable. 
-We've consolidated this effort into the [go-micro](https://github.com/micro/go-micro) framework.
+Go Micro is a framework for microservices development
 
-## Development
+## Overview
+
+Go Micro provides the fundamental building blocks for creating distributed systems. It serves primarily for writing microservices but can be used to construct any kind of low level distributed system such as a database or network. Go Micro 
+is a pluggable framework using Go interfaces.
+
+## Design
 
 Below are the packages and interfaces which we're developing or planning to add in the future.
 
-Note: Libraries will be consolidated into go-micro.
-
-Library	|	Function	|	Description
+Package	|	Function	|	Description
 -------	|	--------	|	-----------
 [Service](https://godoc.org/github.com/micro/go-micro#Service)	|	Communication	| Request/Response, Streaming, PubSub
 [Config](https://godoc.org/github.com/micro/go-micro/config)	|	Configuration	|	Dynamic config, safe fallbacks, etc
@@ -18,7 +20,7 @@ Library	|	Function	|	Description
 [Debug](https://godoc.org/github.com/micro/go-micro/debug)	|	Debugging	|	Logging, tracing, metrics, healthchecks
 [Monitor](https://godoc.org/github.com/micro/go-micro/monitor)	|	Monitoring	|	Debug analysis and resolution
 [Network](https://godoc.org/github.com/micro/go-micro/network) |	Networking	|	Multi-DC networking
-Auth	|	Authentication	|	Authentication, authorization, identity
+[Auth](https://godoc.org/github.com/micro/go-micro/auth)	|	Authentication	|	Authentication, authorization, identity
 Flow |	Orchestration	|	State machine for managing complex flows of business logic
 
 ## Micro
