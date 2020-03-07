@@ -24,7 +24,6 @@ The Distributed service includes the following features:
 - TODO, notes, reminder sharing/tracking
 - Screen sharing
 - Syncing with GitHub
-- ... more to come
 
 ## Design
 
@@ -74,3 +73,19 @@ to the person issuing it and it could slowly disappear.
 
 The ephemeral nature would enable both the spamming of the given emoji which is playful, but also gives a visual 
 cue to when it was issued (ie. older emojis would be more faded/in an other position etc.)
+
+## Communication cadence Async vs Sync
+
+Being in an office has largely made us interrupt driven and reactive. Slack now mimics this behaviour as we 
+maintain a constant stream of communication. What should have become a true async experience is just further 
+anxiety inducing stuff.
+
+Distributed should enforce work cadence.
+
+- 1-2 Weekly team meetings
+- 1-2 daily check-ins for sync comms
+- 1:1 scheduled post sync comm check-in
+- Time blocked out for real work
+- Everything else async
+
+See Jason Fried on Basecamp's model.
