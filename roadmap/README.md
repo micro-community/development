@@ -14,7 +14,7 @@ and ultimately our end product, M3O, a serverless platform for microservices dev
 - [Services](#products-and-services) - Products and services
 - [Timeline](#timeline) - Roadmap timeline
 
-## Open source software
+## Open source
 
 Available in [GitHub](https://github.com/micro)
 
