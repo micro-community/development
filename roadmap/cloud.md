@@ -13,6 +13,14 @@ Micro Cloud deals with providing managed Micro as a Service through cloud automa
 abstracts away the underlying cloud envs, providing a single way of managing multiple 
 systems in a multi-cloud env.
 
+## Services
+
+Cloud offers the following services
+
+  * Infra - Infrastructure as a service
+  * Platform - Fully managed micro runtime
+  * Monitor - Monitoring, healthchecks and alerting
+
 ## Design
 
 Located at cloud.micro.mu or web.micro.mu/cloud. The dashboard is the location where you go to manage 
@@ -25,4 +33,4 @@ RPC calls. It will provide abstracted information about different regions and th
 
 ## Owners
 
-Cloud is a service owned by Jake.
+Cloud is a service owned by Jake Sanders.

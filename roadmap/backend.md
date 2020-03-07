@@ -18,6 +18,19 @@ who want to build Micro services, Backend goes a step further to focus on the fr
 - Email marketing
 - ...
 
+## Services
+
+- [Subscribe](subscribe.md) - An embeddable subscribe form for (not just) static sites (part of Backend) 
+- Database
+- Document
+- Push
+- Users
+- Location
+
+## Document Storage
+
+Document storage will be provided by a Document service. This is a layer of abstraction on top of the Store
+
 ## API
 
 Backend provides a standard http/json API via `api.micro.mu/backend` and web ui at `web.micro.mu/backend` to be 

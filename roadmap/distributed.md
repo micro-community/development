@@ -10,10 +10,12 @@ that experience. Right now we have a disparate set of tools to do this.
 
 **Distributed** is a collaboration tool for distributed teams powered by Micro.
 
-## Features
+## Services
 
-The Distributed service includes the following features:
+The Distributed includes the following services:
 
+- Notes for tracking todos, ideas and sharing tasks/lists
+- Reminders for standups, check-ins and meetings
 - Sprint planning - notes, issue tracking, discussion (dealing with non verbal queues and allowing people to speak)
 - [OKRs](https://en.wikipedia.org/wiki/OKR) (objective and key results)
 - Time tracking (aka when your team overlaps with you for synchronous work)
@@ -21,7 +23,6 @@ The Distributed service includes the following features:
 - Video and audio clips (whatsapp style)
 - Messaging, comments and threads
 - Interactive Whiteboard with history
-- TODO, notes, reminder sharing/tracking
 - Screen sharing
 - Syncing with GitHub
 
@@ -29,11 +30,11 @@ The Distributed service includes the following features:
 
 Distributed is designs as a Micro services product with services themselves defined by their domain boundaries.
 
+- Notes
+- Reminders
+- Sprints
 - Streaming ([webRTC](https://webrtc.org/) or https://github.com/pion/webrtc)
 - Messaging 
-- Reminders
-- Notes
-- Sync
 
 ## MVP
 

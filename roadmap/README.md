@@ -29,21 +29,10 @@ Available in [GitHub](https://github.com/micro)
 Available on the **M3O** platform
 
 - [Cloud](cloud.md) - Micro as a Service - fully managed serverless platform
-  * Infra - Infrastructure as a service
-  * Platform - Fully managed micro runtime
-  * Monitor - Monitoring, healthchecks and alerting
 - [Edge](edge.md) - A global edge network for Micro services
 - [Dev](dev.md) - A full cloud based Dev environment
 - [Distributed](distributed.md) - A collaboration tool for distributed teams
-  * Notes - a note taking app like evernote ([pricing](https://evernote.com/compare-plans))
-  * Sprints - sprint planning app
-  * Scheduling - maintain a schedule for standups, check-ins and meetings
 - [Backend](backend.md) - Backend as a Service for Frontend devs
-  * [Subscribe](subscribe.md) - An embeddable subscribe form for (not just) static sites (part of Backend)
-  * Database - simple json storage via document store
-  * User management
-  * Push notifications
-  * Web app hosting
 
 ## Timeline
 
