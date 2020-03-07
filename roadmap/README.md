@@ -24,7 +24,7 @@ Available in [GitHub](https://github.com/micro)
 - [Network](network.md) - Mulit-cloud networking and federation
 - [Mobile](mobile.md) - Mobile is the Micro services experience through mobile
 
-## Products and services
+## Services
 
 Available on the **M3O** platform
 
