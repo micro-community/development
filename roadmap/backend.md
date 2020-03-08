@@ -14,11 +14,13 @@ It's like Firebase https://firebase.google.com/products
 
 - **Subscribe**: Subscription mailing lists
 - **Database**: Document data storage
+- **Files**: Basic file storage
 - **Users**: User authentication and management
 - **Notifications**: Push notifications via sms, email, websocket and mobile
 - **Location**: Geolocation tracking
 - **CRM**: Email marketing management
 - **Functions**: Ability to define snippets of code to be executed
+- **Hosting**: Hosting of static html/js apps
 
 ## Services
 
