@@ -14,27 +14,31 @@ that experience. Right now we have a disparate set of tools to do this.
 
 The Distributed includes the following services:
 
-- Notes for tracking todos, ideas and sharing tasks/lists
-- Reminders for standups, check-ins and meetings
-- Sprint planning - notes, issue tracking, discussion (dealing with non verbal queues and allowing people to speak)
-- [OKRs](https://en.wikipedia.org/wiki/OKR) (objective and key results)
-- Time tracking (aka when your team overlaps with you for synchronous work)
-- Live streaming (webRTC)
-- Video and audio clips (whatsapp style)
-- Messaging, comments and threads
-- Interactive Whiteboard with history
-- Screen sharing
-- Syncing with GitHub
+- **Sprints**: Sprint planning - notes, issue tracking, discussion (dealing with non verbal queues and allowing people to speak)
+- **Tasks**: Notes for tracking todos, ideas and sharing tasks/lists
+- **Reminders**: Scheduling for standups, check-ins and meetings
+- **Objectives**: [OKRs](https://en.wikipedia.org/wiki/OKR) (objective and key results)
+- **Timezones**: Time tracking (aka when your team overlaps with you for synchronous work) - https://timezone.io/
+- **Calls**: Live streaming (webRTC)
+- **Clips**: Video and audio clips (whatsapp style)
+- **Messages**: Messaging, comments and threads
+- **Canvas**: Interactive Whiteboard with history
+- **Source**: Syncing with GitHub
 
 ## Design
 
 Distributed is designs as a Micro services product with services themselves defined by their domain boundaries.
 
-- Notes
-- Reminders
 - Sprints
+  ** Built on Issues
+- Tasks
+  ** Built on Notes
+- Reminders
+  ** Built on Calendar
 - Streaming ([webRTC](https://webrtc.org/) or https://github.com/pion/webrtc)
-- Messaging 
+  ** Built on Stream
+- Messaging
+  ** Built on Messages
 
 ## MVP
 
@@ -46,19 +50,35 @@ The MVP starts with note taking but will focus on sprint planning as the first p
 - Discussion during planning
 - Sync sprint/issues to GitHub
 
-## Sync to Github
-
-GitHub is still ultimately the source of truth 
-And we want to sync back or even load sprints and issues.
-
-We're working on a micro sync service which may be relevant. 
-
-## Sprint Planning
+## Sprints: Planning
 
 Sprint planning is a massive pain point in a distributed team. Especially where people are in the room and on a conference call. 
 Trying to speak when someone else is speaking is difficult without non verbal queues. This is really a planning or 
 design discussion oriented thing rather than a conference call itself. Unclear if its more generic than that but it's 
 specifically for this purpose.
+
+## Tasks: TODOs
+
+Tasks are basically the assignment of issues from Sprints into separate tasks that can be moved around kanban board or 
+just ticked off on a checklist. This is a basic list of issues that someone needs to take on.
+
+## Reminders: Scheduling of meetings and work
+
+Reminders are a way of keeping track of what needs to happen without worrying about checking your calendar. Reminders 
+pings you in slack or via notifications 5-10 minutes before an event e.g standups, check-ins, meetings and office hours.
+
+## Timezones: Tracking time overlap
+
+Timezone tracking is pretty vital in a distributed team. This is what let's you know when you have "office hours" for people 
+to be able to communicate synchronously and overlap in common pieces of work that requires collaboration. It's a simple 
+tool that lets people set their timezones and preferred sync hours.
+
+## Source: Sync to Github
+
+GitHub is still ultimately the source of truth 
+And we want to sync back or even load sprints and issues.
+
+We're working on a micro sync service which may be relevant. 
 
 Features
 
