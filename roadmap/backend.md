@@ -8,15 +8,17 @@ Backend provides Backend as a Service for frontend developers. It's focused on g
 applications without having to worry about infrastructure. While M3O provides Micro as a Service for those 
 who want to build Micro services, Backend goes a step further to focus on the frontend developers needs.
 
+It's like Firebase https://firebase.google.com/products
+
 ## Features
 
-- Document storage
-- File storage
-- User authentication
-- Push notifications
-- Geolocation
-- Email marketing
-- ...
+- **Subscribe**: Subscription mailing lists
+- **Database**: Document data storage
+- **Users**: User authentication and management
+- **Notifications**: Push notifications via sms, email, websocket and mobile
+- **Location**: Geolocation tracking
+- **CRM**: Email marketing management
+- **Functions**: Ability to define snippets of code to be executed
 
 ## Services
 
