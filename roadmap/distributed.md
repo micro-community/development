@@ -45,11 +45,10 @@ Distributed is designs as a Micro services product with services themselves defi
 
 The MVP starts with note taking but will focus on sprint planning as the first problem to solve.
 
-- Define a Sprint
-- Define issues in a sprint
-- Attach notes and comments
-- Discussion during planning
-- Sync sprint/issues to GitHub
+- Define a *Sprint* and associated *Tasks*
+- Attach *Notes* and add *Comments*
+- *Discuss* during planning
+- *Sync* with others for "office-hours" overlap
 
 ## Sprints: Planning
 
@@ -68,7 +67,7 @@ just ticked off on a checklist. This is a basic list of issues that someone need
 Reminders are a way of keeping track of what needs to happen without worrying about checking your calendar. Reminders 
 pings you in slack or via notifications 5-10 minutes before an event e.g standups, check-ins, meetings and office hours.
 
-## Timezones: Tracking time overlap
+## Sync: Sychronized office-hours
 
 Timezone tracking is pretty vital in a distributed team. This is what let's you know when you have "office hours" for people 
 to be able to communicate synchronously and overlap in common pieces of work that requires collaboration. It's a simple 
