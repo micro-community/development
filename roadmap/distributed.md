@@ -14,14 +14,15 @@ that experience. Right now we have a disparate set of tools to do this.
 
 The Distributed includes the following services:
 
-- **Sprints**: Sprint planning - notes, issue tracking, discussion (dealing with non verbal queues and allowing people to speak)
-- **Tasks**: Notes for tracking todos, ideas and sharing tasks/lists
+- **Sprints**: Sprint planning - Mapping out 2 week sprints of team based work
+- **Tasks**: Tracking todos as part of the sprint
+- **Notes**: Simple lists which can be shared in sprints, tasks or kept individually
+- **Messages**: A inbox for messages. Less like slack, more like mail
 - **Reminders**: Scheduling for standups, check-ins and meetings
 - **Objectives**: [OKRs](https://en.wikipedia.org/wiki/OKR) (objective and key results)
-- **Timezones**: Time tracking (aka when your team overlaps with you for synchronous work) - https://timezone.io/
+- **Sync**: Synchronizing with your team (aka when your team overlaps) - https://timezone.io/
 - **Calls**: Live streaming (webRTC)
 - **Clips**: Video and audio clips (whatsapp style)
-- **Messages**: Messaging, comments and threads
 - **Canvas**: Interactive Whiteboard with history
 - **Source**: Syncing with GitHub
 
