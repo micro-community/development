@@ -132,4 +132,6 @@ If Prefix and / or Suffix are set, the returned list is limited to keys that hav
 
 Caching is a layer to be built on top of the store in store/cache much like registry/cache.
 
-
+Caching needs to take into consideration cache coherence and invalidation
+- https://en.m.wikipedia.org/wiki/Cache_coherence
+- https://en.m.wikipedia.org/wiki/Cache_invalidation
