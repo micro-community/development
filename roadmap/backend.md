@@ -35,6 +35,10 @@ It's like Firebase https://firebase.google.com/products
 
 Document storage will be provided by a Document service. This is a layer of abstraction on top of the Store
 
+  * github.com/micro/services/document/service
+  * go.micro.service.document
+  * make use of github.com/micro/go-micro/model/document
+
 ## API
 
 Backend provides a standard http/json API via `api.micro.mu/backend` and web ui at `web.micro.mu/backend` to be 
