@@ -17,9 +17,11 @@ systems in a multi-cloud env.
 
 Cloud offers the following services
 
-  * Infra - Infrastructure as a service
-  * Platform - Fully managed micro runtime
-  * Monitor - Monitoring, healthchecks and alerting
+- Serverless - spinup apps on demand
+- Infra - Infrastructure as a service
+- Environments - Micro in k8s namespaces
+- Platform - Fully managed micro runtime
+- Monitor - Monitoring, healthchecks and alerting
 
 ## Design
 
