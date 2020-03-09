@@ -31,15 +31,15 @@ The Distributed includes the following services:
 Distributed is designs as a Micro services product with services themselves defined by their domain boundaries.
 
 - Sprints
-  ** Built on Issues
+  * Built on Issues
 - Tasks
-  ** Built on Notes
+  * Built on Notes
 - Reminders
-  ** Built on Calendar
+  * Built on Calendar
 - Streaming ([webRTC](https://webrtc.org/) or https://github.com/pion/webrtc)
-  ** Built on Stream
+  * Built on Stream
 - Messaging
-  ** Built on Messages
+  * Built on Messages
 
 ## MVP
 
