@@ -14,14 +14,15 @@ that experience. Right now we have a disparate set of tools to do this.
 
 The Distributed includes the following services:
 
-- **Sprints**: Sprint planning - notes, issue tracking, discussion (dealing with non verbal queues and allowing people to speak)
-- **Tasks**: Notes for tracking todos, ideas and sharing tasks/lists
+- **Sprints**: Sprint planning - Mapping out 2 week sprints of team based work
+- **Tasks**: Tracking todos as part of the sprint
+- **Notes**: Simple lists which can be shared in sprints, tasks or kept individually
+- **Messages**: A inbox for messages. Less like slack, more like mail
 - **Reminders**: Scheduling for standups, check-ins and meetings
 - **Objectives**: [OKRs](https://en.wikipedia.org/wiki/OKR) (objective and key results)
-- **Timezones**: Time tracking (aka when your team overlaps with you for synchronous work) - https://timezone.io/
+- **Sync**: Synchronizing with your team (aka when your team overlaps) - https://timezone.io/
 - **Calls**: Live streaming (webRTC)
 - **Clips**: Video and audio clips (whatsapp style)
-- **Messages**: Messaging, comments and threads
 - **Canvas**: Interactive Whiteboard with history
 - **Source**: Syncing with GitHub
 
@@ -30,25 +31,24 @@ The Distributed includes the following services:
 Distributed is designs as a Micro services product with services themselves defined by their domain boundaries.
 
 - Sprints
-  ** Built on Issues
+  * Built on Issues
 - Tasks
-  ** Built on Notes
+  * Built on Notes
 - Reminders
-  ** Built on Calendar
+  * Built on Calendar
 - Streaming ([webRTC](https://webrtc.org/) or https://github.com/pion/webrtc)
-  ** Built on Stream
+  * Built on Stream
 - Messaging
-  ** Built on Messages
+  * Built on Messages
 
 ## MVP
 
 The MVP starts with note taking but will focus on sprint planning as the first problem to solve.
 
-- Define a Sprint
-- Define issues in a sprint
-- Attach notes and comments
-- Discussion during planning
-- Sync sprint/issues to GitHub
+- Define a *Sprint* and associated *Tasks*
+- Attach *Notes* and add *Comments*
+- *Discuss* during planning
+- *Sync* with others for "office-hours" overlap
 
 ## Sprints: Planning
 
@@ -67,7 +67,7 @@ just ticked off on a checklist. This is a basic list of issues that someone need
 Reminders are a way of keeping track of what needs to happen without worrying about checking your calendar. Reminders 
 pings you in slack or via notifications 5-10 minutes before an event e.g standups, check-ins, meetings and office hours.
 
-## Timezones: Tracking time overlap
+## Sync: Sychronized office-hours
 
 Timezone tracking is pretty vital in a distributed team. This is what let's you know when you have "office hours" for people 
 to be able to communicate synchronously and overlap in common pieces of work that requires collaboration. It's a simple 
