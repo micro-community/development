@@ -1,6 +1,6 @@
 # Roadmap
 
-This is the product and business related roadmap for Micro Services.
+This is the product for Micro.
 
 ## Overview
 
