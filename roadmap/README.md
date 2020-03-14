@@ -12,7 +12,7 @@ and ultimately our end product, M3O, a serverless platform for microservices dev
 
 - [Open Source](#open-source-software) - Open source tools
 - [Services](#products-and-services) - Products and services
-- [Timeline](#timeline) - Roadmap timeline
+- [Timeline](#timeline) - Timelines and OKRs
 
 ## Open source
 
@@ -36,7 +36,7 @@ Available on the **M3O** platform
 
 ## Timeline
 
-Timeline and objectives
+Timeline, objectives and key results
 
 - [2020](#2020-milestones)
   * [Q1](#q1-delivery) - M3O platform
