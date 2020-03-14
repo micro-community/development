@@ -36,6 +36,8 @@ Available on the **M3O** platform
 
 ## Timeline
 
+Timeline and objectives
+
 - [2020](#2020-milestones)
   * [Q1](#q1-delivery) - M3O platform
   * [Q2](#q2-delivery) - Paid product
@@ -47,7 +49,7 @@ Available on the **M3O** platform
 
 High level goals defined for each quarter. We don't go into detail because reasons.
 
-## Q1 delivery
+## Q1 OKRs
 
 Delivery by end of February 2020 (Onboarding through March)
 
@@ -57,16 +59,16 @@ Delivery by end of February 2020 (Onboarding through March)
   * Public cloud hosting (free)
   * Onboard users 10 at a time
 
-## Q2 delivery
+## Q2 OKRs
 
 Delivery by end of May 2020 (Onboarding through June)
 
-- Paid product (fully managed private platform)
+- Paid product (M3O fully managed private platform)
+  * Micro as a Service
   * Subscription based $20/service/month
-  * Licensed self-hosted platform
   * SaaS Personal and Team tiers
 
-## Q3 delivery
+## Q3 OKRs
 
 Delivery by end of August 2020 (Enabled in September)
 
@@ -75,9 +77,9 @@ Delivery by end of August 2020 (Enabled in September)
   * Monitoring and alerting
   * Payments, sms, email
   * See [services.md](https://github.com/micro/development/blob/master/design/services.md)
-  * Products; Distributed, Backend, Portfolio, Therapy, Gaming
+  * Products; Cloud, Distributed, Backend, Dev,
 
-## Q4 delivery
+## Q4 OKRs
 
 Delivery by end of year 2020 (Launch end of January 2021)
 
