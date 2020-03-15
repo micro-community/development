@@ -79,8 +79,7 @@ Delivery by end of August 2020 (Enabled in September)
   * All services in [micro/services](https://github.com/micro/services)
   * Comprehensive list of [services](https://github.com/micro/development/blob/master/design/services.md)
 
-Examples:
-
+- Examples:
   * End-to-end testing
   * Monitoring and alerting
   * Payments, sms, email
