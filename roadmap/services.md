@@ -1,10 +1,18 @@
 # Services
 
-Micro services to be built and run in the network
+Micro Services are services offered on the M3O platform
+
+## Overview
+
+M3O is a serverless platform for microservices development. It is host to services offered by Micro to the world. 
+Services are Go Micro based services serving a specific domain boundary via an RPC interface. Services provide 
+some value but also act as building blocks for other services to be built on.
+
+Services can extend beyond RPC to also provide an API, Web or Mobile apps.
 
 ## Platform
 
-Core runtime services
+Services provided by the core Micro Runtime
 
 - [x] **Auth** - Authentication and Authorization of users and services
 - [x] **Broker** - Async publish and subscribe messaging
@@ -15,7 +23,6 @@ Core runtime services
 - [x] **Registry** - Service registry, endpoint and metadata explorer
 - [x] **Runtime** - Service provisioning and lifecycle management
 - [x] **Store** - Distributed key value storage service
-- [ ] **Server** - ???
 - [ ] **Sync** - Distributed synchronisation; locking, leadership election, maps, events, cron, workers
 - [ ] **Monitor** - Healthchecking, services monitoring and user defined checks
 - [ ] **Identity** - Distributed CA and strong identity
@@ -23,7 +30,7 @@ Core runtime services
 
 ## Entrypoints
 
-External entrypoint services
+External entrypoints also within the Micro Runtime
 
 - [x] **API** - API gateway for http/json api construction
 - [x] **Web** - Web dashboard and proxy for web apps as microservices
