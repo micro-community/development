@@ -1,6 +1,6 @@
 # Platform
 
-The platform is a serverless platform for microservices development.
+The platform is a serverless platform for Micro services development.
 
 ## Overview
 

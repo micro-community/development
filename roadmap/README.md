@@ -10,8 +10,8 @@ and ultimately our end product, M3O, a serverless platform for microservices dev
 
 ## Contents
 
-- [Open Source](#open-source-software) - Open source tools
-- [Services](#products-and-services) - Products and services
+- [Open Source](#open-source) - Open source tools
+- [Services](#services) - Products and services
 - [Timeline](#timeline) - Timelines and OKRs
 
 ## Open source
@@ -53,18 +53,20 @@ High level goals defined for each quarter. We don't go into detail because reaso
 
 Delivery by end of February 2020 (Onboarding through March)
 
-- MVP **M3O** Platform
-  * A microservices platform
+- MVP **M3O** Platform - a serverless platform for microservices development
+  * Provides "Micro as a Service"
   * Invite only for community
   * Public cloud hosting (free)
   * Onboard users 10 at a time
+  * Global and multi-cloud
 
 ## Q2 OKRs
 
 Delivery by end of May 2020 (Onboarding through June)
 
-- Paid product (M3O fully managed private platform)
-  * Micro as a Service
+- Paid product - M3O fully managed private platform
+  * Provides "Micro as a Service" to customers
+  * Namespace per customer in Kubernetes
   * Subscription based $20/service/month
   * SaaS Personal and Team tiers
 
@@ -72,22 +74,26 @@ Delivery by end of May 2020 (Onboarding through June)
 
 Delivery by end of August 2020 (Enabled in September)
 
-- Services
+- Services - Micro services on the M3O platform
+  * Free and paid services to consume
+  * All services in [micro/services](https://github.com/micro/services)
+  * Comprehensive list of [services](https://github.com/micro/development/blob/master/design/services.md)
+
+Examples:
+
   * End-to-end testing
   * Monitoring and alerting
   * Payments, sms, email
-  * See [services.md](https://github.com/micro/development/blob/master/design/services.md)
   * Products; Cloud, Distributed, Backend, Dev,
 
 ## Q4 OKRs
 
 Delivery by end of year 2020 (Launch end of January 2021)
 
-- Marketplace
-  * Ability to buy and sell services
-  * Transactional percentage per request
-  * Percentage pay per service
-  * Ability to run external "Resources"
+- Marketplace - Sharing and selling services
+  * Ability to buy and sell services on the M3O platform
+  * Transactional model: Percentage per request/service or flat 30%
+  * Ability to run external "Resources" such as redis, postgres, etc
 
 ## 2021
 
