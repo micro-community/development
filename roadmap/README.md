@@ -53,7 +53,7 @@ High level goals defined for each quarter. We don't go into detail because reaso
 
 Delivery by end of February 2020 (Onboarding through March)
 
-- MVP **M3O** Platform - a serverless platform for microservices development
+- **M3O** [Platform](platform.md) - a serverless platform for microservices development
   * Provides "Micro as a Service"
   * Invite only for community
   * Public cloud hosting (free)
@@ -74,10 +74,12 @@ Delivery by end of May 2020 (Onboarding through June)
 
 Delivery by end of August 2020 (Enabled in September)
 
-- Services - Micro services on the M3O platform
+- [Services](services.md) - Micro services on the M3O platform
   * Free and paid services to consume
-  * All services in [micro/services](https://github.com/micro/services)
-  * Comprehensive list of [services](https://github.com/micro/development/blob/master/design/services.md)
+  * All services built in [micro/services](https://github.com/micro/services)
+  * Comprehensive list of [services](services.md)
+  * Leveraging existing APIs (Stripe, Twilio, etc)
+  * Single API account for providers managed by Micro
 
 - Examples:
   * End-to-end testing
@@ -89,7 +91,7 @@ Delivery by end of August 2020 (Enabled in September)
 
 Delivery by end of year 2020 (Launch end of January 2021)
 
-- Marketplace - Sharing and selling services
+- [Marketplace](marketplace.md) - Sharing and selling services
   * Ability to buy and sell services on the M3O platform
   * Transactional model: Percentage per request/service or flat 30%
   * Ability to run external "Resources" such as redis, postgres, etc
