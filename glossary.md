@@ -75,3 +75,14 @@ platform and network. Key pieces of the ecosystem.
 - Community - a shared place to collaborate
 - Platform - a place to run and reuse services
 - Marketplace - a way to buy, sell and share services
+
+## Apps vs Services
+
+We are continuously evolving the meaning of Service where today it stands for a backend Micro service consumed by other services 
+but in future will be far more business and consumer centric in that we offer Services to end users. For the time being 
+we are creating a line between Apps and Services.
+
+- Apps - are User centric services consumed via Web or Mobile
+- Services - are a Dev centric services consumed via RPC or APIs
+
+Apps can also reference serverless Apps thought of as applications.
