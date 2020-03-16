@@ -18,8 +18,8 @@ and ultimately our end product, M3O, a serverless platform for microservices dev
 
 Available in [GitHub](https://github.com/micro)
 
-- [Framework](framework.md) - Go microservices development framework
-- [Runtime](runtime.md) -  A microservice runtime environment (aka operating system)
+- [Framework](framework.md) - Go Micro services development framework
+- [Runtime](runtime.md) -  A Micro service runtime environment (aka operating system)
 - [Platform](platform.md) - Platform automation for managed Micro as a Service
 
 ## Objectives
