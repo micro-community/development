@@ -10,9 +10,9 @@ and ultimately our end product, M3O, a serverless platform for microservices dev
 
 ## Contents
 
-- [Open Source](#open-source) - Open source tools
-- [Services](#services) - Products and services
-- [Timeline](#timeline) - Timelines and OKRs
+- [Open Source](#open-source) - Open source software on GitHub
+- [Objectives](#objectives) - Objectives for the product
+- [Timeline](#timeline) - Timelines of delivery
 
 ## Open source
 
@@ -20,19 +20,16 @@ Available in [GitHub](https://github.com/micro)
 
 - [Framework](framework.md) - Go microservices development framework
 - [Runtime](runtime.md) -  A microservice runtime environment (aka operating system)
-- [Platform](platform.md) - Automated Micro deployment via terraform
-- [Network](network.md) - Mulit-cloud networking and federation
-- [Mobile](mobile.md) - Mobile is the Micro services experience through mobile
+- [Platform](platform.md) - Platform automation for managed Micro as a Service
 
-## Services
+## Objectives
 
-Available on the **M3O** platform
+Our goals for 2020
 
-- [Cloud](cloud.md) - Micro as a Service - fully managed serverless platform
-- [Edge](edge.md) - A global edge network for Micro services
-- [Dev](dev.md) - A full cloud based Dev environment
-- [Distributed](distributed.md) - A collaboration tool for distributed teams
-- [Backend](backend.md) - Backend as a Service for Frontend devs
+- Bootstrap **M3O** - A Micro services platform - fully managed, free hosting and value add services
+- Onboard Community - Invite Micro Community to build services for free on the platform and use M3O services
+- Micro Services - Create Micro services on the M3O platform for platform users to leverage
+- Marketplace - Offer Micro Services to the world to consume from anywhere
 
 ## Timeline
 
@@ -82,10 +79,10 @@ Delivery by end of August 2020 (Enabled in September)
   * Single API account for providers managed by Micro
 
 - Examples:
+  * Database service
   * End-to-end testing
   * Monitoring and alerting
   * Payments, sms, email
-  * Products; Cloud, Distributed, Backend, Dev,
 
 ## Q4 OKRs
 
