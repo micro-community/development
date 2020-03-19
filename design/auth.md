@@ -39,6 +39,10 @@ Once we have strong identity we can move on to account generation. This is a one
 service or user based on that identity. When this is issued a user's identity is always referencing this 
 account and the roles/scopes they are permitted with.
 
+Authorization based on RBAC doing via wrapper for each services. This wrapper must receive service name via
+server.Name option and . Before or when service starts wrapper needs to load own rules and cache them, with
+periodic update. Underground wrapper uses store.Store to load rules.
+
 ## Interface
 
 The potential interface design we're working towards
@@ -75,6 +79,8 @@ type Resource struct {
 	Name string
 	// Type of resource e.g service
 	Type string
+	// Endpoint resource id e.g NotesService.Create
+	Endpoint string
 }
 
 // Token is used to access resources
