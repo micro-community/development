@@ -106,4 +106,13 @@ func WithRoles(roles ...string) GenerateOption {
 func WithMetadata(md map[string]string) GenerateOption {
 	...
 }
+
+func NewAuthWrapper(service string, ...Option) server.HandlerWrapper {
+  ...
+}
+
+
+Where Option can be
+permissive, enforce, disable
+
 ```
