@@ -52,15 +52,13 @@ type Auth interface {
 	// Generate a new account
 	Generate(id string, ...GenerateOption) (*Account, error)
 	// Grant access to a resource
-	Grant(*Account, *Resource) error
+	Grant(role string, res *Resource) error
 	// Revoke access to a resource
-	Revoke(*Account, *Resource) error
+	Revoke(role string, res *Resource) error
 	// Verify an account has access to a resource
 	Verify(*Account, *Resource) error
-	// Login to an account
-	Login(*Account, ...LoginOption) (*Token, error)
-	// Logout from an account
-	Logout(*Account, *Token) error
+	// Inspect a token
+	Inspect(token string) (*Account, error)
 }
 
 // Account represents a user or service account
@@ -71,6 +69,8 @@ type Account struct {
 	Roles []string
 	// any other metadata
 	Metadata map[string]string
+	// Token which can be used to authenticate
+	Token Token
 }
 
 // Resource represents a service or endpoint
@@ -85,9 +85,14 @@ type Resource struct {
 
 // Token is used to access resources
 type Token struct {
-	// Associated account id
-	Id string
-	...
+	// Token
+	Token string
+	// Time of Token creation
+	Created time.Time
+	// Time of Token expiry
+	Expiry time.Time
+	// Type of token, e.g. JWT
+	Type string
 }
 
 type GenerateOptions struct {
