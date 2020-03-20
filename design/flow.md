@@ -106,9 +106,9 @@ type Step struct {
   // Where to place output
   Output string
   // Steps IDs that runs after this step
-  After []string
+  After []*Step
   // Steps IDs that runs before this step
-  Before []string
+  Before []*Step
   // Step operation to execute in case of error
   Fallback Operation
 }                                                                                  
