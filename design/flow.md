@@ -37,7 +37,7 @@ type Flow interface {
   // Lookup specific flow
   Lookup(flow string) ([]*Step, error)
   // Execute specific floa via Executor and returns request id and error, optionally fills rsp in case of sync execution
-  Execute(flow string, req interface{}, rsp interface{}, opts ...ExecuteOption) (string, error)
+  Execute(steps []*Step, req interface{}, rsp interface{}, opts ...ExecuteOption) (string, error)
 }                                                                                                
 ```
 
@@ -60,7 +60,7 @@ type Executor interface {
   // Get flow options
   Options() ExecutorOptions
 	// Run execution with sync/async capability
-	Execute(req interface{}, rsp interface{}, opts ...ExecuteOption) (string, error)
+	Execute(steps []*Step, req interface{}, rsp interface{}, opts ...ExecuteOption) (string, error)
 	// Resume specific flow execution by id
 	Resume(flow string, id string) error
 	// Pause specific flow execution by id
