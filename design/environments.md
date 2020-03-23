@@ -9,10 +9,18 @@ these separate environments from the CLI much like you would with k8s clusters.
 
 ## Design
 
-Ideas
+### Ideas
 
-```
+#### Using env
+```sh
 ## Set local proxy
 micro env set local https://localhost:8081
 micro env set platform https://proxy.micro.mu
+
+
+micro login $token # logs in to micro.mu env
+micro login local $token
+
+# Listing, picking etc
+micro env list
 ```
