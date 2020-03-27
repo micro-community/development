@@ -20,7 +20,7 @@ Now we have only one default flow implementation. It uses worker pool to distrib
 
 ## Design
 
-Flow interface
+Flow interface modifies flow
 
 ```go
 type Flow interface {
@@ -36,24 +36,60 @@ type Flow interface {
   ReplaceStep(flow string, oldstep *Step, newstep *Step) error
   // Lookup specific flow
   Lookup(flow string) ([]*Step, error)
-  // Execute specific flow and returns request id and error, optionally fills rsp in case of sync execution
-  Execute(flow string, req interface{}, rsp interface{}, opts ...ExecuteOption) (string, error)
-  // Resume specific paused flow execution by request id
-  Resume(flow string, reqID string) error
-  // Pause specific flow execution by request id
-  Pause(flow string, reqID string) error
-  // Abort specific flow execution by request id
-  Abort(flow string, reqID string) error
-  // Status show status specific flow execution by request id
-  Status(flow string, reqID string) (Status, error)
-  // Result get result of the flow step
-  Result(flow string, reqID string, step *Step) ([]byte, error)
-  // Stop executor and drain active workers
-  Stop() error
+  // Execute specific floa via Executor and returns request id and error, optionally fills rsp in case of sync execution
+  Execute(steps []*Step, req interface{}, rsp interface{}, opts ...ExecuteOption) (string, error)
 }                                                                                                
 ```
 
-step definition
+Flow options
+```go
+type Options struct {
+  // Executor used to execute steps in flow
+  Executor Executor
+  // Context is used for storing non default options
+  Context context.Context
+}
+```
+
+Executor interface provides steps execution 
+
+```go
+type Executor interface {
+  // Init flow with options
+  Init(...ExecutorOption) error
+  // Get flow options
+  Options() ExecutorOptions
+	// Run execution with sync/async capability
+	Execute(steps []*Step, req interface{}, rsp interface{}, opts ...ExecuteOption) (string, error)
+	// Resume specific flow execution by id
+	Resume(flow string, id string) error
+	// Pause specific flow execution by id
+	Pause(flow string, id string) error
+	// Abort specific flow execution by id
+	Abort(flow string, id string) error
+	// Status show status specific flow execution by request id
+	Status(flow string, id string) (Status, error)
+	// Result get result of the flow step
+	Result(flow string, id string, step string) ([]byte, error)
+	// Stop executor and drain active workers
+	Stop() error
+}
+```
+
+Executor options
+
+```go
+type ExecutorOptions struct {
+  // Flow is used to be able to run another flow from current execution
+  Flow Flow                                           
+  // ErrorHandler is used for recovery panics
+  ErrorHandler func(interface{})
+  // Context is used for storing non default options
+  Context context.Context
+}
+```
+
+Step definition
 
 ```go
 type Step struct {
@@ -69,13 +105,84 @@ type Step struct {
   Input string
   // Where to place output
   Output string
-  // Steps that are required for this step
-  After []string
-  // Steps for which this step required
-  Before []string
+  // Steps IDs that runs after this step
+  After []*Step
+  // Steps IDs that runs before this step
+  Before []*Step
   // Step operation to execute in case of error
   Fallback Operation
 }                                                                                  
+```
+
+Operation definition
+
+```go
+type Operation interface {
+  Name() string
+  String() string
+  Type() string
+  New() Operation
+  Decode(*pb.Operation)
+  Encode() *pb.Operation
+  Execute(context.Context, []byte, ...ExecuteOption) ([]byte, error)
+  Options() OperationOptions
+}
+```
+
+Execute options
+
+```go
+type ExecuteOptions struct {
+  // Passed flow name
+  Flow string
+  // Passed execution id                                                      
+  ID strinh
+  // Passed step to start from
+  Step string
+  // Step ID to store Output data
+  Output string
+  // Timeout for currenct execution
+  Timeout time.Duration
+  // Async execution run, dont wait for complete
+  Async bool
+  // Concurrency specify count of workers create for steps in flow
+  Concurrency int
+  // Retries specify count of retries for each step in execution
+  Retries int
+  // Client for communication
+  Client client.Client
+  // Context is used for storing non default options
+  Context context.Context
+}
+```
+
+Operation options
+
+```go
+type OperationOptions struct {
+  Timeout   time.Duration
+  Retries   int
+  AllowFail bool
+  Context   context.Context
+}
+```
+
+Step statuses
+
+```go
+
+type Status int
+
+const (                       
+  StatusUnknown Status = iota
+  StatusPending
+  StatusFailure
+  StatusSuccess
+  StatusPaused
+  StatusAborted
+  StatusStopped
+)                             
+
 ```
 
 ## Status
