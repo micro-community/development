@@ -32,7 +32,7 @@ Release binary... soon
 Startup and connect to the network
 
 ```
-micro
+micro server
 ```
 
 ### Explore the network

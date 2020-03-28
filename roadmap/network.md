@@ -57,9 +57,7 @@ docker pull micro/micro
 Bootup micro and connect to the network
 
 ```
-export MICRO_NETWORK_TOKEN=micro.mu
-
-micro
+micro server --peer
 ```
 
 ### Query
@@ -67,9 +65,6 @@ micro
 Once you've joined you should be able to see other nodes, services and routes on the network.
 
 ```
-# Proxy all calls through the network
-export MICRO_PROXY=go.micro.network
-
 # List nodes
 micro network nodes
 
