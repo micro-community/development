@@ -39,6 +39,10 @@ Once we have strong identity we can move on to account generation. This is a one
 service or user based on that identity. When this is issued a user's identity is always referencing this 
 account and the roles/scopes they are permitted with.
 
+Authorization based on RBAC doing via wrapper for each services. This wrapper must receive service name
+option and duration for pull updates. Before or when service starts wrapper needs to load own rules and
+ache them, with periodic update. Underground wrapper uses store.Store to load rules.
+
 ## Interface
 
 The potential interface design we're working towards
@@ -48,15 +52,13 @@ type Auth interface {
 	// Generate a new account
 	Generate(id string, ...GenerateOption) (*Account, error)
 	// Grant access to a resource
-	Grant(*Account, *Resource) error
+	Grant(role string, res *Resource) error
 	// Revoke access to a resource
-	Revoke(*Account, *Resource) error
+	Revoke(role string, res *Resource) error
 	// Verify an account has access to a resource
 	Verify(*Account, *Resource) error
-	// Login to an account
-	Login(*Account, ...LoginOption) (*Token, error)
-	// Logout from an account
-	Logout(*Account, *Token) error
+	// Inspect a token
+	Inspect(token string) (*Account, error)
 }
 
 // Account represents a user or service account
@@ -67,6 +69,8 @@ type Account struct {
 	Roles []string
 	// any other metadata
 	Metadata map[string]string
+	// Token which can be used to authenticate
+	Token Token
 }
 
 // Resource represents a service or endpoint
@@ -75,13 +79,20 @@ type Resource struct {
 	Name string
 	// Type of resource e.g service
 	Type string
+	// Endpoint resource id e.g NotesService.Create
+	Endpoint string
 }
 
 // Token is used to access resources
 type Token struct {
-	// Associated account id
-	Id string
-	...
+	// Token
+	Token string
+	// Time of Token creation
+	Created time.Time
+	// Time of Token expiry
+	Expiry time.Time
+	// Type of token, e.g. JWT
+	Type string
 }
 
 type GenerateOptions struct {
@@ -100,4 +111,13 @@ func WithRoles(roles ...string) GenerateOption {
 func WithMetadata(md map[string]string) GenerateOption {
 	...
 }
+
+func NewAuthWrapper(service string, ...Option) server.HandlerWrapper {
+  ...
+}
+
+
+Where Option can be
+permissive, enforce, disable
+
 ```
