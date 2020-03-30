@@ -36,7 +36,7 @@ This is a high level overview. See the detailed [roadmap](roadmap).
 - [x] [gRPC](grpc.md) integration and interop
 - [x] embedded nats as the default broker
 - [x] go, java, typescript, ruby, python [client](design/clients.md) libraries
-- [ ] standalone micro server
+- [x] standalone micro server
 - [ ] better documentation and end to end tutorials
 - [ ] simpler kubernetes integration by default
 - [ ] pluggable wrappers for go-micro itself
