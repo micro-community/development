@@ -55,7 +55,6 @@ Delivery by end of February 2020 (Onboarding through March)
   * Invite only for community
   * Public cloud hosting (free)
   * Onboard users 10 at a time
-  * Global and multi-cloud
 
 ## Q2 OKRs
 
