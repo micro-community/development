@@ -32,7 +32,7 @@ thing. What this ultimately enables is:
 - /web/ routes to go.micro.web.x
 - /service/ routes to go.micro.service.x
 
-# Proposal for runtime service deployments of local and remote services
+## Deployments
 
 Currently there is a bit of concept conflation goin on with `micro run` and the runtime service.
 The syntax of the `micro run` command is `micro run [service] [version] [--source github.com/micro/services]`.
