@@ -34,10 +34,10 @@ thing. What this ultimately enables is:
 
 ## Deployments
 
-Currently there is a bit of concept conflation goin on with `micro run` and the runtime service.
+Currently there is some overloading of concepts with `micro run` and the runtime service.
 The syntax of the `micro run` command is `micro run [service] [version] [--source github.com/micro/services]`.
 
-I propose to change this to `micro run [source]` for the following reasons:
+We propose to change this to `micro run [source]` for the following reasons:
 - The name of the service is in the service source code.
 - The version can be extracted from git.
 
