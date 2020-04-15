@@ -32,18 +32,19 @@ thing. What this ultimately enables is:
 - /web/ routes to go.micro.web.x
 - /service/ routes to go.micro.service.x
 
-# Proposal for runtime service deployments of local and remote services
+## Deployments
 
-Currently there is a bit of concept conflation goin on with `micro run` and the runtime service.
+Currently there is some overloading of concepts with `micro run` and the runtime service.
 The syntax of the `micro run` command is `micro run [service] [version] [--source github.com/micro/services]`.
 
-I propose to change this to `micro run [source]` for the following reasons:
+We propose to change this to `micro run [source]` for the following reasons:
 - The name of the service is in the service source code.
 - The version can be extracted from git.
 
-The only thing needed is the source, which can be either
-- a local file path
-- git url
-- a relative path to the `github.com/micro/services` repo (ie. `helloworld/web`)
+The only thing we require is the source, which can be either:
+
+- Local path to source
+- Git url
+- Relative path to the `github.com/micro/services` repo (ie. `helloworld/web`)
 
 The runtime service can handle the extraction of the service name and version.
