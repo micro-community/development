@@ -46,14 +46,14 @@ type Provider interface {
 
 ```protobuf
 service Provider {
- 	rpc Verify (VerifyRequest) returns (VerifyResponse) {}; 
+ 	rpc Generate (GenerateRequest) returns (GenerateResponse) {}; 
 }
 
-message VerifyRequest {
+message GenerateResponse {
 	string state = 1;
 }
 
-message VerifyResponse {}
+message GenerateResponse {}
 ```
 
 The micro runtime will implement the identity provider interface for
