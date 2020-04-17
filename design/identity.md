@@ -63,16 +63,11 @@ An example flow for service identity generation is as follows:
 
   1. The runtime service receives a request to run the service `foo`.
   2. Service is started, e.g. by creating a kubernetes deployment with
-     an injected nonce.
+     an injected cert/key pair.
   3. As part of `service.Init()` the service calls the identity provider
-     (runtime in this case) with a callback URI identifying itself: 
-     ```go
-     Provider.Generate("micro://go.micro.foo@100.64.0.1?state=xxxx")
-     ```
-  4. The provider verifies the service is running using an out of band
-     method (such as the k8s api), and validates the service's nonce.
-  5. The provider calls `auth.Generate()` on behalf of the service.
-  6. (Optionally) when the service is deleted, the runtime
+     (runtime in this case) identifying itself with an x.509 certificate.
+  4. The provider calls `auth.Generate()` on behalf of the service.
+  5. (Optionally) when the service is deleted, the runtime
      `auth.Destroy()`s the account
 
 Any errors in the process should be handled gracefully and returned to
