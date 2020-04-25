@@ -26,9 +26,9 @@ Available in [GitHub](https://github.com/micro)
 
 Our goals for 2020
 
-- Bootstrap **M3O** - A Micro services platform - fully managed, free hosting and value add services
-- Onboard Community - Invite Micro Community to build services for free on the platform and use M3O services
-- Micro Services - Create Micro services on the M3O platform for platform users to leverage
+- Bootstrap **M3O** - Micro as a Service - a fully managed microservices platform
+- Onboard Community - Invite Micro Community first to build services on the platform
+- Micro Services - Create value add Micro services on the platform for users to leverage
 - Marketplace - Offer Micro Services to the world to consume from anywhere
 
 ## Timeline
