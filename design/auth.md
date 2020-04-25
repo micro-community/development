@@ -39,6 +39,8 @@ type Auth interface {
 	Options() Options
 	// Generate creates a new auth account. The only required argument is ID, however roles, metadata and a secret can all be set using the GenerateOptions. Secret is not always required since it wouldn't make sense for some resources such services to have passwords.
 	Generate(id string, opts ...GenerateOption) (*Account, error)
+	// Destroy allows an account to be deleted
+	Destroy(id string) error
 	// RBAC (role based access control) is used for auth. Roles can be provided to an account on Generate as an option. Roles can be granted access to a resource, e.g. grant the role "user.finance" access to any endpoint on the service named "go.micro.service.reporting".
 	Grant(role string, res *Resource) error
 	// The inverse of grant, revoke removes a roles access to a resource.
