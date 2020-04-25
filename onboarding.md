@@ -9,14 +9,14 @@ to get into the depths of working on micro and be a productive contributor to th
 
 ## Getting Started
 
-- Add to accounts
-- Setup your Go environment
-- Install Micro
-- Kick the tyres
-- Read the docs
-- Walk through examples
-- Build some services
-- Deploy to the platform
+- [Add to accounts](#add-accounts)
+- [Setup your Go environment](#setup-go-environment)
+- [Install Micro](#install-micro)
+- [Create a service](#create-a-new-service)
+- [Read the docs](#read-the-docs)
+- [Walk through examples](#walk-through-examples)
+- [Build some services](#build-some-services)
+- [Deploy to the platform](#deploy-to-the-platform)
 
 ## Add Accounts
 
@@ -60,7 +60,7 @@ go get -u github.com/golang/protobuf/{proto,protoc-gen-go}
 go get -u github.com/micro/micro/v2/cmd/protoc-gen-micro
 ```
 
-## Kick the tyres
+## Create a new service
 
 Create a new service
 
@@ -124,12 +124,11 @@ View at http://localhost:8082
 
 Skim through the docs at [https://micro.mu/docs/](https://micro.mu/docs/) to get an overview.
 
-Make a note of missing or stale content.
+And the design docs in this repo. Make a note of missing or stale content.
 
 ## Walk through examples
 
 Walk through the examples at [https://github.com/micro/examples](https://github.com/micro/examples)
-
 
 - Start with the basic [helloworld](https://github.com/micro/examples/blob/master/helloworld/main.go)
 - See the end to end app example with the [greeter](https://github.com/micro/examples/tree/master/greeter)
@@ -140,12 +139,7 @@ Walk through the examples at [https://github.com/micro/examples](https://github.
 
 Write some services using [https://github.com/micro/go-micro](https://github.com/micro/go-micro) to explore the framework.
 
-Example services can be found here [https://github.com/microhq](https://github.com/microhq)
-
-One potential idea is user/service authentication:
-
-- Write an identity service which handles user and service accounts
-- Write an auth service which handles authentication and check against the identities
+Example services can be found here [https://github.com/micro/services](https://github.com/micro/services)
  
 ## Deploy to the platform
 
