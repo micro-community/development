@@ -41,6 +41,7 @@ Timeline, objectives and key results
   * [Q3](#q3-delivery) - Services
   * [Q4](#q4-delivery) - Marketplace
 - [2021](#2021)
+  * TBD
 
 ## 2020 Milestones
 
@@ -94,5 +95,4 @@ Delivery by end of year 2020 (Launch end of January 2021)
 
 ## 2021
 
-As delivery of the platform is executed on in 2020 we continue cyclically through delivery of platform, services, products and the marketplace. 
-In 2021 we launch the marketplace with the ability to buy/sell services. The 2021 technical and product roadmap will be defined near end of 2020.
+TBD
