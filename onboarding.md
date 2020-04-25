@@ -1,6 +1,6 @@
 # Onboarding
 
-This is onboarding for anyone working on the development of micro.
+This is onboarding for anyone working at Micro.
 
 ## Overview
 
@@ -9,6 +9,7 @@ to get into the depths of working on micro and be a productive contributor to th
 
 ## Getting Started
 
+- Add to accounts
 - Setup your Go environment
 - Install Micro
 - Kick the tyres
@@ -16,6 +17,20 @@ to get into the depths of working on micro and be a productive contributor to th
 - Walk through examples
 - Build some services
 - Deploy to the platform
+
+## Add to Accounts
+
+Team day 1 onboarding requirements:
+
+- Add to Gmail
+- Add to Slack
+- Add to Cloud {DO, GCP, ...}
+- Add to GitHub
+- Add to DockerHub
+
+### Leaving
+
+Execute the above in reverse
 
 ## Setup Go environment
 
