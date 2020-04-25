@@ -10,6 +10,7 @@ to get into the depths of working on micro and be a productive contributor to th
 ## Getting Started
 
 - [Add to accounts](#add-accounts)
+- [Schedule calls](#schedule-calls)
 - [Setup your Go environment](#setup-go-environment)
 - [Install Micro](#install-micro)
 - [Create a service](#create-a-new-service)
@@ -28,9 +29,9 @@ Team day 1 onboarding requirements:
 - Add to GitHub
 - Add to DockerHub
 
-### Leaving
+## Schedule Calls
 
-Execute the above in reverse
+Reach out to each team member and schedule 1:1 calls to get to know colleagues
 
 ## Setup Go environment
 
