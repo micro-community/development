@@ -18,7 +18,7 @@ to get into the depths of working on micro and be a productive contributor to th
 - Build some services
 - Deploy to the platform
 
-## Add to Accounts
+## Add Accounts
 
 Team day 1 onboarding requirements:
 
