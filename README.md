@@ -17,10 +17,8 @@ This repo serves as an open forum for long term design ideas, collaboration and 
 - [issues](https://github.com/micro/development/issues) - where we track work
 - [glossary](glossary.md) - a glossary of terms and explanation of brand, company, project, product
 - [pull requests](https://github.com/micro/development/pulls) - where we start new docs
-- [onboarding](onboarding.md) - onboarding guide for new developers
-- [productivity](productivity.md) - how to split work and time to be productive
+- [onboarding](onboarding.md) - onboarding guide for new hires
 - [roadmap](roadmap) - where the full roadmap lives
-- [team](team.md) - a checklist of resources to provide access to for new team members
 - [tools](tools.md) - the tools we use or will use for collaboration
 
 ## Roadmap
