@@ -4,8 +4,7 @@ This is onboarding for anyone working at Micro.
 
 ## Overview
 
-We need a set of steps and procedures to bring someone upto speed with micro. This is for anyone who wants 
-to get into the depths of working on micro and be a productive contributor to the project.
+We need a set of steps and procedures to bring someone upto speed with micro. This is for anyone who joins the team and needs.
 
 ## Getting Started
 
