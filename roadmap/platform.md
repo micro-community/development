@@ -65,8 +65,7 @@ Beyond the MVP we want to move into focusing on extending the platform, includin
 - [ ] Privately hosted Micro platform
 - [ ] Team based features and access control
 - [ ] Paid personal and team subscription
-- [ ] Licensed self-managed platform
-- [ ] Base level services beyond the runtime
+- [ ] Value add services beyond the runtime
 
 Open source related requirements beyond MVP is a new developer experience
 
