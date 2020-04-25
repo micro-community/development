@@ -11,8 +11,7 @@ to get into the depths of working on micro and be a productive contributor to th
 
 - [Add to accounts](#add-accounts)
 - [Schedule calls](#schedule-calls)
-- [Setup your Go environment](#setup-go-environment)
-- [Install Micro](#install-micro)
+- [Setup your environment](#setup-environment)
 - [Create a service](#create-a-new-service)
 - [Read the docs](#read-the-docs)
 - [Walk through examples](#walk-through-examples)
@@ -33,7 +32,7 @@ Team day 1 onboarding requirements:
 
 Reach out to each team member and schedule 1:1 calls to get to know colleagues
 
-## Setup Go environment
+## Setup Environment
 
 Download and install Go from [https://golang.org/dl/](https://golang.org/dl/)
 
@@ -46,7 +45,7 @@ export GO111MODULE=on
 export PATH=$PATH:$(go env GOPATH)/bin
 ```
 
-## Install Micro
+### Install Micro
 
 ```bash
 go get github.com/micro/go-micro/v2
