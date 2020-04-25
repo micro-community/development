@@ -33,8 +33,8 @@ export PATH=$PATH:$(go env GOPATH)/bin
 ## Install Micro
 
 ```bash
-go get github.com/micro/go-micro
-go get github.com/micro/micro
+go get github.com/micro/go-micro/v2
+go get github.com/micro/micro/v2
 ```
 
 Also, install protobuf and the relevant generators:
@@ -42,7 +42,7 @@ Also, install protobuf and the relevant generators:
 ```bash
 brew install protobuf
 go get -u github.com/golang/protobuf/{proto,protoc-gen-go}
-go get -u github.com/micro/protoc-gen-micro
+go get -u github.com/micro/micro/v2/cmd/protoc-gen-micro
 ```
 
 ## Kick the tyres
@@ -50,8 +50,7 @@ go get -u github.com/micro/protoc-gen-micro
 Create a new service
 
 ```bash
-# Skip GOPATH as we're using Go modules
-micro new github.com/micro/mynewservice --gopath=false
+micro new github.com/micro/mynewservice
 ```
 
 Compile the proto file
