@@ -99,5 +99,5 @@ The workflow is as follows:
 
 - Discuss: Talk about the the bug or feature in #development with others first
 - Document: Create an issue and todo note to track starting and progressing the task
-- Deliver: Create a PR for your bug of feature and engage at least 2 other team members to review
+- Deliver: Create a PR for your bug or feature and engage at least 2 other team members to review
 - Validate: You should be testing throughout but once delivered its your responsibility to validate full functionality
