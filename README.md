@@ -24,7 +24,7 @@ This repo serves as an open forum for long term design ideas, collaboration and 
 
 ## Roadmap
 
-This is a high level overview. See the detailed [roadmap](roadmap).
+This is a high level overview for the open source. See the detailed product [roadmap](roadmap).
 
 - [X] consolidate all [libraries](design/libraries.md) into go-micro
 - [X] gRPC API for the micro proxy
