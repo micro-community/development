@@ -17,7 +17,9 @@ This repo serves as an open forum for long term design ideas, collaboration and 
 - [glossary](glossary.md) - a glossary of terms and explanation of brand, company, project, product
 - [issues](https://github.com/micro/development/issues) - where we track work
 - [onboarding](onboarding.md) - onboarding guide for new hires
+- [philosophy](#philosophy) - how we design and work
 - [roadmap](roadmap) - where the full roadmap lives
+- [style guide](#style-guide) - coding style guide
 - [tools](tools.md) - the tools we use or will use for collaboration
 
 ## Roadmap
