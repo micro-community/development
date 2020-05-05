@@ -14,20 +14,27 @@ abstraction.
 The interface is:
 
 ```go
+// Store is the interface for data storage
 type Store interface {
-  Init(...Option)                          error
-  Options()                                Options
-  String()                                 string
-  Read(key string, opts ...ReadOption)     ([]*Record, error)
-  Write(*Record, opts ...WriteOption)      error
-  Delete(key string, opts ...DeleteOption) error
-  List(opts ...ListOption)                 ([]string, error)
+	Init(...Option)                          error
+	Options()                                Options
+	Read(key string, opts ...ReadOption)     ([]*Record, error)
+	Write(*Record, opts ...WriteOption)      error
+	Delete(key string, opts ...DeleteOption) error
+	List(opts ...ListOption)                 ([]string, error)
+	String()                                 string
 }
 
+// Record is the data stored by the store
 type Record struct {
-  Key    string
-  Value  []byte
-  Expiry time.Duration
+	// The key for the record
+	Key    string
+	// The encoded database
+	Value  []byte
+	// Associated metadata
+	Metadata map[string]interface{}
+	// Time at which the record expires
+	Expiry time.Duration
 }
 ```
 
@@ -135,3 +142,32 @@ Caching is a layer to be built on top of the store in store/cache much like regi
 Caching needs to take into consideration cache coherence and invalidation
 - https://en.m.wikipedia.org/wiki/Cache_coherence
 - https://en.m.wikipedia.org/wiki/Cache_invalidation
+
+## Indexing
+
+The store supports indexing via metadata field values. These values can be scanned to quickly access 
+records that otherwise might of a larger size and more costly to decode. 
+
+In the case of a system like cockroachdb we store metadata as a separate field that uses JSONB format 
+so that it can be queried. See reference here https://www.cockroachlabs.com/docs/stable/jsonb.html.
+
+Storage and querying would be of the form
+
+```go
+
+type Fields map[string]string
+
+store.Write(&Record{
+	Key: "user:1",
+	Value: []byte(...),
+	Metadata: map[string]interface{
+		"name": "John",
+		"email": "john@example.com",
+	},
+}
+
+
+wrote.Read("", store.ReadWhere(&store.Fields{
+	"name": "john",
+})
+```
