@@ -172,8 +172,6 @@ type usersModel struct {
 }
 
 func (u *usersModel) UpdateEmail(user *User) error {
-	return m.Update(user, model.UpdateField(&model.Field{
-		"email": user.Email,
-	})
+	return m.Update(user, model.UpdateField("email", user.Email))
 }
 ```
