@@ -40,4 +40,4 @@ Micro itself is an abstraction layer for distributed systems and kubernetes acts
 Developers interact with micro and are unaware of the underlying infrastructure of hardware much like 
 Android for smartphones.
 
-
+Locally the `micro server` starts individual processes rather than containers and operates in a zero dep mode where the registry is mdns, the broker is point to point http and the store is file based using bbolt. Our primary objective is always to start with a zero dep local model for any new interfaces and to ensure we prioritise local development first since we are a developer first focused company.
