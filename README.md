@@ -11,6 +11,7 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 ## Contents
 
 - [design](design) - where the design docs live
+- [environments](environments.md) - details our environments and architecture
 - [glossary](glossary.md) - a glossary of terms and explanation of brand, company, project, product
 - [issues](https://github.com/micro/development/issues) - where we track work
 - [onboarding](onboarding.md) - onboarding guide for new hires
