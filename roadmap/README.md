@@ -95,4 +95,5 @@ Delivery by end of year 2020 (Launch end of January 2021)
 
 ## 2021
 
-TBD
+- License M3O
+- Otherwise TBD
