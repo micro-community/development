@@ -10,6 +10,7 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 
 ## Contents
 
+- [collaboration](collaboration.md) - the tools we use or will use for collaboration
 - [design](design) - where the design docs live
 - [environments](environments.md) - details our environments and architecture
 - [glossary](glossary.md) - a glossary of terms and explanation of brand, company, project, product
@@ -18,7 +19,6 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 - [philosophy](#philosophy) - how we design and work
 - [roadmap](roadmap) - where the full roadmap lives
 - [style guide](#style-guide) - coding style guide
-- [tools](tools.md) - the tools we use or will use for collaboration
 - [wishlist](wishlist.md) - things we really want to build but only in the future
 
 ## Roadmap
