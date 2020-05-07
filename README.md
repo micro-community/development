@@ -19,6 +19,7 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 - [roadmap](roadmap) - where the full roadmap lives
 - [style guide](#style-guide) - coding style guide
 - [tools](tools.md) - the tools we use or will use for collaboration
+- [wishlist](wishlist.md) - things we really want to build but only in the future
 
 ## Roadmap
 
