@@ -36,10 +36,10 @@ Our goals for 2020
 Timeline, objectives and key results
 
 - [2020](#2020-milestones)
-  * [Q1](#q1-delivery) - M3O platform
-  * [Q2](#q2-delivery) - Paid product
-  * [Q3](#q3-delivery) - Services
-  * [Q4](#q4-delivery) - Marketplace
+  * [Q1](#q1-okrs) - M3O platform
+  * [Q2](#q2-okrs) - Paid product
+  * [Q3](#q3-okrs) - Services
+  * [Q4](#q4-okrs) - Marketplace
 - [2021](#2021)
   * TBD
 
