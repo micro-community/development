@@ -22,7 +22,7 @@ Micro is a:
 
 ## Brand
 
-As a brand Micro takes simething of a developer centric world view 
+As a brand Micro takes something of a developer centric world view 
 looking to become the focal point for all developer needs and then 
 moving beyond to be seen and used by businesses and consimers.
 
