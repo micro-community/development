@@ -182,6 +182,10 @@ secrets.Load("auth", "token").String("")
 
 In an ideal world we automatically decode secrets when they are found but this may be a future thing. 
 
+Further to this design proposal we assume the config service would include a Secrets rpc endpoint 
+that would enable loading of secrets as and when needed. The config service would be started 
+with a public/private keypair for encoding/decoding secrets.
+
 ## Usage
 
 - [Sample Config](#sample-config)
