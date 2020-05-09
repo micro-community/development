@@ -95,5 +95,5 @@ Delivery by end of year 2020 (Launch end of January 2021)
 
 ## 2021
 
-- License M3O
+- License M3O Services
 - Otherwise TBD
