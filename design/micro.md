@@ -1,7 +1,7 @@
 # Micro v2
 
 Micro v2 is a reimagining of micro itself as a platform rather than standalone open source project. 
-The thesis around this can be found in the [network](https://github.com/micro/development/blob/master/network.md) doc. 
+The thesis around this can be found in the [network](https://github.com/micro/development/blob/master/design/network.md) doc. 
 Largely we want to enable collaborative development through a shared platform and network for microservices.
 
 ## Getting Started
