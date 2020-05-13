@@ -71,7 +71,7 @@ Delivery by end of May 2020 (Onboarding through June)
 
 Delivery by end of August 2020 (Enabled in September)
 
-- [Services](services.md) - Micro services on the M3O platform
+- [Services](services.md) - Value add Micro services on the M3O platform
   * Free and paid services to consume
   * All services built in [micro/services](https://github.com/micro/services)
   * Comprehensive list of [services](services.md)
