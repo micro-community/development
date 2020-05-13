@@ -36,10 +36,10 @@ Our goals for 2020
 Timeline, objectives and key results
 
 - [2020](#2020-milestones)
-  * [Q1](#q1-okrs) - M3O platform
-  * [Q2](#q2-okrs) - Paid product
-  * [Q3](#q3-okrs) - Services
-  * [Q4](#q4-okrs) - Marketplace
+  * [Q1](#q1-okrs) - M3O platform - MVP delivery
+  * [Q2](#q2-okrs) - M3O subscription - Paid offering
+  * [Q3](#q3-okrs) - Services - Value add services
+  * [Q4](#q4-okrs) - Network - Marketplace for services
 - [2021](#2021)
   * TBD
 
@@ -88,7 +88,7 @@ Delivery by end of August 2020 (Enabled in September)
 
 Delivery by end of year 2020 (Launch end of January 2021)
 
-- [Marketplace](marketplace.md) - Sharing and selling services
+- Network - A [marketplace](marketplace.md) for sharing and selling services
   * Ability to buy and sell services on the M3O platform
   * Transactional model: Percentage per request/service or flat 30%
   * Ability to run external "Resources" such as redis, postgres, etc
