@@ -20,7 +20,6 @@ Available in [GitHub](https://github.com/micro)
 
 - [Framework](framework.md) - Go Micro services development framework
 - [Runtime](runtime.md) -  A distributed system runtime for the Cloud
-- [Platform](platform.md) - Platform as a Service aka Micro as a Service
 
 ## Objectives
 
@@ -51,7 +50,7 @@ High level goals defined for each quarter. We don't go into detail because reaso
 
 Delivery by end of February 2020 (Onboarding through March)
 
-- **M3O** [Platform](platform.md) - a serverless platform for microservices development
+- [M3O Platform](platform.md) - a cloud platform for microservices development
   * Provides "Micro as a Service"
   * Invite only for community
   * Public cloud hosting (free)
@@ -71,7 +70,7 @@ Delivery by end of May 2020 (Onboarding through June)
 
 Delivery by end of August 2020 (Enabled in September)
 
-- [Services](services.md) - Micro services on the M3O platform
+- [Services](services.md) - Value add Micro services on the M3O platform
   * Free and paid services to consume
   * All services built in [micro/services](https://github.com/micro/services)
   * Comprehensive list of [services](services.md)
