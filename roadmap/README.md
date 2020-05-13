@@ -20,6 +20,7 @@ Available in [GitHub](https://github.com/micro)
 
 - [Framework](framework.md) - Go Micro services development framework
 - [Runtime](runtime.md) -  A distributed system runtime for the Cloud
+- [Clients](clients.md) - Multi-language clients for the runtime
 
 ## Objectives
 
