@@ -11,7 +11,6 @@ and ultimately our end product, M3O, a serverless platform for microservices dev
 ## Contents
 
 - [Open Source](#open-source) - Open source software on GitHub
-- [Product](#product) - Our product offering
 - [Objectives](#objectives) - Objectives for the product
 - [Timeline](#timeline) - Timelines of delivery
 
@@ -21,10 +20,6 @@ Available in [GitHub](https://github.com/micro)
 
 - [Framework](framework.md) - Go Micro services development framework
 - [Runtime](runtime.md) -  A distributed system runtime for the Cloud
-
-## Product
-
-- [Platform](platform.md) - Platform as a Service aka Micro as a Service
 
 ## Objectives
 
