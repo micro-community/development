@@ -79,7 +79,7 @@ Delivery by end of August 2020 (Enabled in September)
   * Single API account for providers managed by Micro
 
 - Examples:
-  * Database service
+  * Database, secrets, backups
   * End-to-end testing
   * Monitoring and alerting
   * Payments, sms, email
