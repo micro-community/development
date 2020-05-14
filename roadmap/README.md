@@ -64,8 +64,8 @@ Delivery by end of May 2020 (Onboarding through June)
 - Paid product - M3O fully managed private platform
   * Provides "Micro as a Service" to customers
   * Namespace per customer in Kubernetes
-  * Subscription based $20/service/month
-  * SaaS Personal and Team tiers
+  * Subscription based $35/user/month
+  * SaaS Community, Developer and Team tiers
 
 ## Q3 OKRs
 
