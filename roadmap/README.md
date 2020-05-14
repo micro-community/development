@@ -4,7 +4,7 @@ This is the product for Micro.
 
 ## Overview
 
-Micro is effectively a developer first focused product. Our primary goal is to enable developers 
+Micro is a developer first focused product. Our primary goal is to enable developers 
 to build, share and collaborate on microservices. We do this via an open source Go framework 
 and ultimately our end product, M3O, a serverless platform for microservices development.
 
