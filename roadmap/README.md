@@ -16,7 +16,7 @@ runtime and M3O, a cloud platform for Micro services development.
 
 ## Open source
 
-Available in [GitHub](https://github.com/micro)
+Available on [GitHub](https://github.com/micro)
 
 - [Framework](framework.md) - Go Micro services development framework
 - [Runtime](runtime.md) -  A distributed system runtime for the Cloud
