@@ -256,12 +256,6 @@ system into the network to provide this resource usage model via exchange of tok
 
 Here's a good explanation of [Token Economics](https://www.investinblockchain.com/token-economics/).
 
-## Concepts
-
-- Core - Backbone of the network in the Cloud
-- Edge - Peers of the core network
-- Dev - Devices consuming the network
-
 ## Glossary of Terms
 
 - **Network** - is the entire system for communication and coordination
@@ -277,71 +271,4 @@ Initial experimental release is now in v1.12.0
 
 ## Contribute
 
-Join the [slack](https://micro.mu/slack/) or [reddit](https://www.reddit.com/r/micronet/) community to discuss
-
-## Notes
-
-There are certain ideas yet to be formulated or in the midst of being worked on
-
-- [ ] **Registry Federation:** The registry is localised as we need a way to see service info globally
-- [ ] **Events Service:** We need a broker service so pubsub is propagated via the network using the tunnel
-- [ ] **Network addressing:** every network node should be uniquely addressed
-- [x] **Registry Service:** Use an RPC based registry service as part of the discovery
-- [x] **DNS over HTTP:** use DNS over HTTP for network node discovery
-- [x] **Prune Routes:** after a node disappears
-- [x] **Neighbour of neighbour of neighbour:** (metric 1000) is unseen
-- [x] **Funging local addresses:** local addresses of services should not be leaked
-- [x] **Neighbour Route Validation**: When receiving route announcements should we be verifying routes bidirectionally based both on the advert.id == route.Router
-and neighbour[route.Router] has advert.id as a neighbour.
-- [x] **Routing Table Size**: How should we be thinking about larger scale route management and hop count. How many hops should we store routes for?
-- [x] **Routing Hop Count**: Currently we only store routes within the metric 100 e.g the neighbour of my neighbour. Should routes be stored based on some hop count like or metric like 1000 or 10000? Should we be able to configure longer distance hops of 3, 4 or 5? Otherwise effectively limit how far we can route.
-- [x] Network Sync should only send best routes in line with its Advertisement Strategy
-- [ ] Network when receiving events/routes should check if it has direct connections to a peer and rewrite the routes
-  - Network should be intelligent about how it stores routes and update them accordingly based on network topology
-- [ ] Already observed events should not be processed
-- [ ] Intelligence is moving into the network - remove Advertise/Solicit from router
-  - [x] Solicit
-  - [ ] Advertise
-
-Fixes needed
-
-- [ ] On start a default route is returned by the network but when calling something we still get "route not found" so this default route is not used
-- [ ] Routes are not synced on start. Maybe because connect is not received. Maybe because the local node is not advertising any routes.
-- [ ] Route metrics are inaccurate as they're not modified before being synced like adverts were. 
-
-## Testing
-
-When any changes are made to the network we need to go through a test procedure to ensure its functioning
-
-### Quick test
-
-Wait for rollout of changes to be deployed. In future we may need a way to similate production elsewhere
-
-Connect via a local node
-
-```
-MICRO_SERVER_ADDRESS=:8081
-MICRO_LOG_LEVEL=trace \
-MICRO_NETWORK_TOKEN=micro.mu \
-MICRO_NETWORK_NODES=network.micro.mu \
-micro network
-```
-
-Query the greeter service
-
-```
-while true; do
-	time MICRO_PROXY_ADDRESS=:8081 micro call go.micro.srv.greeter Say.Hello
-done
-```
-
-### Performance
-
-Ensure there's no performance degradation
-
-- Test querying end to end and benchmark
-- Ideally we need a long running service doing this continously
-
-### End to End
-
-We need something continuously testing and more importantly USING the network all the time
+Join the #network channel on [slack](https://micro.mu/slack/)
