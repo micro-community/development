@@ -29,8 +29,7 @@ The micro network looks to solve this problem using a shared global network for 
   * [Value Exchange](#value-exchange)
 - [Economics](#economics)
 - [Glossary](#glossary-of-terms)
-- [Notes](#notes)
-- [Testing](#testing)
+
 
 ## Getting Started
 
