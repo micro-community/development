@@ -28,7 +28,7 @@ Our goals for 2020
 
 - Bootstrap **M3O** - Micro as a Service - a fully managed microservices platform
 - Onboard Users - Invite Micro Community first to build services on the platform
-- Micro Services - Create value add Micro services on the platform for users to leverage
+- Micro Services - Create value add services on the platform for users to leverage
 - Marketplace - Offer the ability to buy, sell and share services 
 
 ## Timeline
