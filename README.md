@@ -41,7 +41,7 @@ This is a high level overview for the open source. See the product [roadmap](roa
 - [ ] graphql handler for api
 - [ ] define the mucp [protocol](design/protocol.md)
 - [ ] reusable foundation [services](roadmap/services.md) 
-- [ ] define the [mu](language.md) definition
+- [ ] define the [mu](design/language.md) definition
 
 ## Philosophy
 
