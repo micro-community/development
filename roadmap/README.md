@@ -38,8 +38,8 @@ Timeline, objectives and key results
 - [2020](#2020-milestones)
   * [Q1](#q1-okrs) - M3O platform - MVP delivery
   * [Q2](#q2-okrs) - M3O subscription - Paid offering
-  * [Q3](#q3-okrs) - Services - Value add services
-  * [Q4](#q4-okrs) - Network - Marketplace for services
+  * [Q3](#q3-okrs) - M3O Services - Value add services
+  * [Q4](#q4-okrs) - M3O Network - Marketplace for services
 - [2021](#2021)
   * TBD
 
