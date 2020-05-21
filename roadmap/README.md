@@ -6,7 +6,7 @@ This is the product roadmap for Micro Services, Inc.
 
 Micro is a developer first focused company. Our primary goal is to enable developers 
 to build, share and collaborate on Micro services. We do this via an open source framework, 
-runtime and M3O, a cloud platform for Micro services development.
+runtime and a platform for Micro services development.
 
 ## Contents
 
