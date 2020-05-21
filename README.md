@@ -40,7 +40,7 @@ This is a high level overview for the open source. See the product [roadmap](roa
 - [ ] improved micro api configuration 
 - [ ] graphql handler for api
 - [ ] define the mucp [protocol](design/protocol.md)
-- [ ] reusable foundation [services](design/services.md) 
+- [ ] reusable foundation [services](roadmap/services.md) 
 - [ ] define the mu definition
 
 ## Philosophy
