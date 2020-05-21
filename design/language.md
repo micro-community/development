@@ -37,3 +37,13 @@ others but in lazy loaded fashion as with haskell execution.
 # passing the output to an input
 > input result into broker publish values
 ```
+
+## Potential
+
+The longer term potential for such a language is that it becomes a higher level form of orchestration for services. 
+At a given point when enough services have been written, they become motor functions capable of being combined 
+to perform other forms of execution. Continuing to use existing programming languages to orchestrate these 
+services becomes cumbersome and a dynamic language does not exist to perform operations on services.
+
+By escaping the current programming boundaries we can elevate to a new intermediary representation that can 
+either be leveraged by human beings more easily, spoken as commands or used for other purposes.
