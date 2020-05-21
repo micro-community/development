@@ -22,7 +22,7 @@ Micro API and Web both have a namespace flag, which now can be used to filter th
 
 ### Determining the namespace
 
-Namespaces are set in the request header at the start of the request by the auth wrapper (`micro/auth/wrapper`), which is injected into both the API and Web servers. All runtime services can use the `internal/namespace` package, `NamespaceFromContext` function to determine the current namespace. If the request originated from an external call, the namespace key will be set on the context and this will be returned. If the request was a service=>service request, we will get the namespace from the auth account of the calling serviice. If the namespace is still unknown (an unauthenticated service made a request), we fallback to the default namespace.
+Namespaces are set in the request header at the start of the request by the auth wrapper (`micro/auth/wrapper`), which is injected into both the API and Web servers. All runtime services can use the `internal/namespace` package, `namespace.FromContext` function to determine the current namespace. If the request originated from an external call, the namespace key will be set on the context and this will be returned. If the request was a service=>service request, we will get the namespace from the auth account of the calling serviice. If the namespace is still unknown (an unauthenticated service made a request), we fallback to the default namespace.
 
 
 ### Using the namespace in the runtime
