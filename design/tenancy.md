@@ -51,7 +51,7 @@ Therefore in Go Micro we propose that tenancy is really geared around the suppor
 Below is a non-comprehensive list of how we map namespace/tenancy to configurable options in Go Micro
 
 Interface | Options | Description
---- | ---
+--- | --- | ---
 Auth  | Scopes  | Logical scoping of an account to define is access policy
 Broker | Exchange | The exchange through which the all routing occurs for a topic
 Config | Namespace  | Grouping specific configuration for apps or services
