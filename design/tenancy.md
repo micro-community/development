@@ -47,6 +47,7 @@ Below is a non-comprehensive list of how we map namespace/tenancy to configurabl
 Interface | Options
 --- | ---
 Auth  | Scopes
+Broker | Exchange
 Config | Namespace
 Store | Database/Table
 Registry | Namespace / Prefix
