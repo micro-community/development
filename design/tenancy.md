@@ -35,3 +35,17 @@ Namespaces are set in the request header at the start of the request by the auth
 Whilst core services need to be responsible for managing multi-tenancy, they do not need to know how it's determined. They should simply scope the resources a context can access using the contexts namespace: `namespace.FromContext(ctx)`. Resources should be persisted so that the unique identifiers do not need to be globally unique, but only unique to the namespace. For example, if namespace A writes a config key "foo", it should not conflict with the same key previously written by namespace B, this goes back to services not needing to know about mutli-tenancy.
 
 There is an exception to the above rule: the registry. Because micro service names use the format [namespace,type,alias], we already have the concept of namespace baked into go-micro. Hence, if a service in the "foo" namespace tries to register a service named "bar.web.x", they'll get a forbidden (403) error. In the future, we will likely move away from this as it prevents using mutli-tennancy for staging and test enviroments (in these scenarios the same services could exist in mutliple namespaces with the same name).
+
+## Framework Related Namespacing
+
+One core concern we have is not conflating namespace/tenancy into Go Micro itself. Doing so adds a level of complexity we don't want to have to deal with here. Seeing Go Micro as both a foundational building block for distributed systems and the framework for writing services, neither really has any concern with tenancy of a platform.
+
+Therefore in Go Micro we propose that tenancy is really geared around the support of configurability of interfaces and their domain e.g the Store interface has moved from generic key-value in a single flat namespace to supporting database/table as an option which enables us to scope usage to a specific database and sets of tables.
+
+Below is a non-comprehensive list of how we map namespace/tenancy to configurable options in Go Micro
+
+Interface | Options
+--- | ---
+Store | Database/Table
+Runtime | Namespace (k8s namespaces)
+Auth  | Scopes
