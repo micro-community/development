@@ -36,7 +36,7 @@ Whilst core services need to be responsible for managing multi-tenancy, they do 
 
 There is an exception to the above rule: the registry. Because micro service names use the format [namespace,type,alias], we already have the concept of namespace baked into go-micro. Hence, if a service in the "foo" namespace tries to register a service named "bar.web.x", they'll get a forbidden (403) error. In the future, we will likely move away from this as it prevents using mutli-tennancy for staging and test enviroments (in these scenarios the same services could exist in mutliple namespaces with the same name).
 
-## Framework Related Namespacing
+## Framework Options
 
 One core concern we have is not conflating namespace/tenancy into Go Micro itself. Doing so adds a level of complexity we don't want to have to deal with here. Seeing Go Micro as both a foundational building block for distributed systems and the framework for writing services, neither really has any concern with tenancy of a platform.
 
