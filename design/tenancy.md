@@ -17,7 +17,7 @@ Firstly, multi-tenancy is implemented by Micro and non-concern of the go-micro f
 
 We've found that go-micro has to at the very least support the options to be configured in a way that will enable multi-tenancy in micro itself e.g the store must support specifying database/table at the time of a query rather than just on initialisation. The runtime and registry must support passing through namespace or prefix and the router must be able to segregate networks.
 
-### Cross-Tenant Access
+### Cross-Namespace Access
 
 As a rule, tenants cannot access any services outside their own namespace (each tenant is a "namespace" in micro), however there are some exceptions. All tenants can read/write to the default namespace, but tenants can only call (read) the runtime namespace, not deploy or amend services (write). Whilst the registry will restrict the services returned in a given namespace, it will be the responsibility of auth to enforce the rules noted above.
 
