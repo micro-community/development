@@ -54,7 +54,7 @@ Interface | Options | Description
 --- | --- | ---
 Auth  | Scopes  | Logical scoping of an account to define is access policy
 Broker | Exchange | The exchange through which the all routing occurs for a topic
-Config | Namespace  | Grouping specific configuration for apps or services
+Config | Environment  | The environment specific configuration for apps or services
 Store | Database/Table  | The database or table to read/write from
 Registry | Domain | The domain to which the services belong
 Router | Network  | The isolated network for a set of services
