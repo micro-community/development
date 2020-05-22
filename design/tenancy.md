@@ -46,6 +46,9 @@ Below is a non-comprehensive list of how we map namespace/tenancy to configurabl
 
 Interface | Options
 --- | ---
-Store | Database/Table
-Runtime | Namespace (k8s namespaces)
 Auth  | Scopes
+Config | Namespace
+Store | Database/Table
+Registry | Namespace / Prefix
+Runtime | Namespace (k8s namespaces)
+
