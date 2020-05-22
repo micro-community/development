@@ -11,7 +11,7 @@ to different users, customers and teams paying for isolated platforms.
 
 ## Design
 
-Firstly, multi-tenancy is implemented by Micro and not a concern of the go-micro framework. Micro (the runtime) has an understanding of tenancy and is responsible for it, the services built on top of the runtime however should not need to have any notion of tenancy; whilst the runtime is mutli-tenant, services are single-tenant. Tenant is dependant on identity and therefore requires auth to work. If the auth implementation used is noop, the runtime should assume we're operating in a single tenant mode and default to using the default namespace as defined in `micro/internal/namespace` (at the time of writing this is currently *go.micro*, but we will likely move to just *micro* soon.).
+Firstly, multi-tenancy is implemented by Micro and non-concern of the go-micro framework. Micro (the runtime) has an understanding of tenancy and is responsible for it, the services built on top of the runtime however should not need to have any notion of tenancy; whilst the runtime is mutli-tenant, services are single-tenant. Tenant is dependant on identity and therefore requires auth to work. If the auth implementation used is noop, the runtime should assume we're operating in a single tenant mode and default to using the default namespace as defined in `micro/internal/namespace` (at the time of writing this is currently *go.micro*, but we will likely move to just *micro* soon.).
 
 ### About Go Micro
 
