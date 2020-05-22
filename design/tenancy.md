@@ -12,6 +12,8 @@ and teams paying for isolated platforms.
 
 Firstly, mutli-tenancy is implemented by Micro and not a concern of the go-micro framework. Micro (the runtime) has an understanding of tenancy and is responsible for it, the services built on top of the runtime however should not need to have any notion of tenancy; whilst the runtime is mutli-tenant, services are single-tenant. Tenant is dependant on identity and therefore requires auth to work. If the auth implementation used is noop, the runtime should assume we're operating in a single tenant mode and default to using the default namespace as defined in `micro/internal/namespace` (at the time of writing this is currently *go.micro*, but we will likely move to just *micro* soon.).
 
+We've found that go-micro has to at the very least support the options to be configured in a way that will enable multi-tenancy in micro itself e.g the store must support specifying database/table at the time of a query rather than just on initialisation. The runtime and registry must support passing through namespace or prefix and the router must be able to segregate networks.
+
 ### Cross-Tenant Access
 
 As a rule, tenants cannot access any services outside their own namespace (each tenant is a "namespace" in micro), however there are some exceptions. All tenants can read/write to the default namespace, but tenants can only call (read) the runtime namespace, not deploy or amend services (write). Whilst the registry will restrict the services returned in a given namespace, it will be the responsibility of auth to enforce the rules noted above.
