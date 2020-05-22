@@ -1,12 +1,13 @@
 # Tenancy
 
-Micro is moving to become a multi-tenant system by default.
+Micro is moving towards becoming a multi-tenant system by default.
 
 ## Overview
 
-Micro needs the ability to define multi-tenancy in a clean way that does not require the developer or user 
-to deal with the issue. We should be able to segregate data belonging to different users, customers 
-and teams paying for isolated platforms.
+[Multi-tenancy](https://en.wikipedia.org/wiki/Multitenancy) is the ability to support multiple tenants in a single system. 
+Micro is now moving towards supporting multi-tenancy. We need the ability to define multi-tenancy in a clean way that 
+does not require the developer or user to deal with the issue. We should be able to segregate data and services belonging 
+to different users, customers and teams paying for isolated platforms.
 
 ## Design
 
