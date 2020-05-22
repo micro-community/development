@@ -50,13 +50,13 @@ Therefore in Go Micro we propose that tenancy is really geared around the suppor
 
 Below is a non-comprehensive list of how we map namespace/tenancy to configurable options in Go Micro
 
-Interface | Options
+Interface | Options | Description
 --- | ---
-Auth  | Scopes
-Broker | Exchange
-Config | Namespace
-Store | Database/Table
-Registry | Namespace / Prefix
-Router | Network
-Runtime | Namespace (k8s namespaces)
+Auth  | Scopes  | Logical scoping of an account to define is access policy
+Broker | Exchange | The exchange through which the all routing occurs for a topic
+Config | Namespace  | Grouping specific configuration for apps or services
+Store | Database/Table  | The database or table to read/write from
+Registry | Domain | The domain to which the services belong
+Router | Network  | The isolated network for a set of services
+Runtime | Namespace | The boundary of isolation for processes
 
