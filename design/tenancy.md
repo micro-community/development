@@ -50,5 +50,6 @@ Auth  | Scopes
 Config | Namespace
 Store | Database/Table
 Registry | Namespace / Prefix
+Router | Network
 Runtime | Namespace (k8s namespaces)
 
