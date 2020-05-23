@@ -13,6 +13,7 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 - [collaboration](collaboration.md) - the tools we use or will use for collaboration
 - [design](design) - where the design docs live
 - [environments](environments.md) - details our environments and architecture
+- [office hours](#office-hours) - times we are available to the community
 - [glossary](glossary.md) - a glossary of terms and explanation of brand, company, project, product
 - [issues](https://github.com/micro/development/issues) - where we track work
 - [onboarding](onboarding.md) - onboarding guide for new hires
@@ -103,3 +104,9 @@ The workflow is as follows:
 - Document: Create an issue and todo note to track starting and progressing the task
 - Deliver: Create a PR for your bug or feature and engage at least 2 other team members to review
 - Validate: You should be testing throughout but once delivered its your responsibility to validate full functionality
+
+## Office Hours
+
+Office hours are times we are available to the community. This is an experimental feature we're testing. 
+
+Fridays 2-5pm GMT we'll have an open call anyone can join to chat, ask questions, etc.
