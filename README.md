@@ -39,7 +39,7 @@ This is a high level overview for the open source. See the product [roadmap](roa
 - [ ] pluggable wrappers for go-micro itself
 - [ ] more flexible options dynamically defined as flags and env vars
 - [ ] improved micro api configuration 
-- [ ] graphql handler for api
+- [ ] graphql handler for the micro api
 - [ ] wireguard support in the micro network
 - [ ] define the mucp [protocol](design/protocol.md)
 - [ ] reusable foundation [services](roadmap/services.md) 
