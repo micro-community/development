@@ -10,9 +10,9 @@ some value but also act as building blocks for other services to be built on.
 
 Services can extend beyond RPC to also provide an API, Web or Mobile apps.
 
-## Platform
+## Server
 
-Services provided by the core Micro Runtime
+Services provided by the core runtime
 
 - [x] **Auth** - Authentication and Authorization of users and services
 - [x] **Broker** - Async publish and subscribe messaging
@@ -28,9 +28,9 @@ Services provided by the core Micro Runtime
 - [ ] **Identity** - Distributed CA and strong identity
 - [ ] **Token** - Random opaque token generation for one time usage of APIs
 
-## Entrypoints
+## Clients
 
-External entrypoints also within the Micro Runtime
+External entrypoints also within the micro server
 
 - [x] **API** - API gateway for http/json api construction
 - [x] **Web** - Web dashboard and proxy for web apps as microservices
