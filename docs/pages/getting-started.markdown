@@ -3,20 +3,22 @@ layout: page
 title: Getting Started
 keywords: micro
 tags: [micro]
-permalink: /getting-started.html
+permalink: /getting-started
 summary: A getting started guide for Micro
+nav_order: 2
 ---
 
-## What is Micro?
+# Getting Started
+{: .no_toc }
 
-Micro is a system for building and managing distributed systems.
+## Table of contents
+{: .no_toc .text-delta }
 
-Key components of Micro are as follows:
-* **Runtime**: a runtime environment for managing services including auth, config, discovery, networking, storage. 
-* **Framework**: a Go framework for writing services to be run in the runtime.
-* **Clients**: multi-language clients to enable other programs to access Micro services.
+1. TOC
+{:toc}
+---
 
-## Install
+## Installation
 
 Using Go:
 
