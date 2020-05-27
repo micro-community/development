@@ -1,4 +1,4 @@
-# Service
+# Server
 
 The micro server is a distributed systems runtime for the cloud and beyond.
 
