@@ -12,7 +12,7 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 
 - [collaboration](collaboration.md) - the tools we use or will use for collaboration
 - [design](design) - where the design docs live
-- [docs](docs) - for the public docs
+- [docs](docs) - for the public docs at dev.micro.mu
 - [environments](environments.md) - details our environments and architecture
 - [office hours](#office-hours) - times we are available to the community
 - [glossary](glossary.md) - a glossary of terms and explanation of brand, company, project, product
