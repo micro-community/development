@@ -29,3 +29,7 @@ and Micro itself will take 30% commission for any services sold.
 
 Services can be hosted on the M3O platform. We will charge an additional subscription premium 
 to either the buyer or seller depending on what their needs are.
+
+## Branding
+
+The marketplace will be called "Network" as marketplaces are effectively networks. The word marketplace has also become something of a useless term that no one actually gravitates towards. People feel it cheapens their experience and they are immediately in the mind set of being sold to. A "Network" is to be part of something and considering this creates a new services economy it is fitting.
