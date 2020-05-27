@@ -51,7 +51,7 @@ High level goals defined for each quarter. We don't go into detail because reaso
 
 Delivery by end of February 2020 (Onboarding through March)
 
-- [M3O Platform](platform.md) - a cloud platform for microservices development
+- [Platform](platform.md) - a cloud platform for microservices development
   * Provides "Micro as a Service"
   * Invite only for community
   * Public cloud hosting (free)
