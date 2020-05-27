@@ -43,7 +43,7 @@ This is a high level overview for the open source. See the product [roadmap](roa
 - [ ] wireguard support in the micro network
 - [ ] reusable foundation [services](roadmap/services.md) 
 - [ ] define the mucp [protocol](design/ideas/protocol.md)
-- [ ] define the [mu](design/ideas/language.md) definition
+- [ ] define the [mu](design/ideas/language.md) language
 
 ## Philosophy
 
