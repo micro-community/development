@@ -39,7 +39,7 @@ wget -q  https://raw.githubusercontent.com/micro/micro/master/scripts/install.sh
 powershell -Command "iwr -useb https://raw.githubusercontent.com/micro/micro/master/scripts/install.ps1 | iex"
 ```
 
-## Create a service
+## Creating a service
 
 To create a new service, use the `micro new` command. It should output something reasonably similar to the following:
 
@@ -232,7 +232,7 @@ micro get service go.micro.service.helloworld
 
 You can also browse to the UI at [http://localhost:8082](http://localhost:8082/service/go.micro.service.helloworld) to see live info.
 
-### With a framework
+### With the framework
 
 Let's write a small client we can use to call the helloworld service.
 Normally you'll make a service call inside another service so this is just a sample of a function you may write. We'll [learn how to write a full fledged service soon](#-writing-a-service).
