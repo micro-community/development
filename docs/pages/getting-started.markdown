@@ -232,7 +232,7 @@ micro get service go.micro.service.helloworld
 
 You can also browse to the UI at [http://localhost:8082](http://localhost:8082/service/go.micro.service.helloworld) to see live info.
 
-### With a Client
+### With a framework
 
 Let's write a small client we can use to call the helloworld service.
 Normally you'll make a service call inside another service so this is just a sample of a function you may write. We'll [learn how to write a full fledged service soon](#-writing-a-service).
@@ -370,7 +370,7 @@ key2   val2    None
 
 There are more to the store, but this knowledge already enables us to be dangerous!
 
-#### With the Client
+#### With the framework
 
 Accessing the same data we have just manipulated from our Go Micro services could not be easier.
 First let's create an entry that our service can read. This time we will specify the table for the `micro store write` command too, as each service has its own table in the store:
