@@ -12,15 +12,10 @@ We'll keep climbing the stack to continue on this journey. From platform to serv
 
 The features which will be included in the platform
 
-- **Cloud Automation** - Full terraform automation to bootstrap platform
-- **Account Management** - GitHub account management via teams
-- **Alerting** - Event notification and alerting via email/sms/slack
-- **Billing** - Metered billing of services used
-- **Dashboard** - A full UX experience via a web dashboard
-- **GitOps** - Source to Running via GitHub actions
-- **K8s Native** - Built to run on Kubernetes
-- **Multi-Cloud** - Ability to manage and deploy services across multiple clouds and regions
-- More soon...
+- Managed services - Services will run in the cloud and managed by default.
+- Auto configuration - Services will be auto configured with the required registry, broker, etc
+- Simplified debugging - Stats, logs and tracing will be available in an easy and clean way for every service
+- Connect from anywhere - Ability to connect and extend the network beyond the platform. Run services locally or in your own cloud.
 
 ## MVP
 
