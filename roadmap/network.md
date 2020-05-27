@@ -1,6 +1,6 @@
-# Marketplace
+# Network
 
-The marketplace is an "app store" for Micro services.
+The network is a marketplace to buy, sell and share services
 
 ## Overview
 
