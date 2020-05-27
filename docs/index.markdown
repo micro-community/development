@@ -7,9 +7,9 @@ title: Home
 nav_order: 1
 ---
 
-# A development platform for cloud services
+# Documentation
 
-Micro is a system for building and managing distributed systems.
+Learn the ins and outs of Micro and how to become a Micro services ninja!
 
 
 Key components of Micro are as follows:
