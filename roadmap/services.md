@@ -4,7 +4,7 @@ Micro Services are services offered on the M3O platform
 
 ## Overview
 
-M3O is a serverless platform for microservices development. It is host to services offered by Micro to the world. 
+M3O is a cloud native platform for Micro services development. It is host to services offered by Micro to the world. 
 Services are Go Micro based services serving a specific domain boundary via an RPC interface. Services provide 
 some value but also act as building blocks for other services to be built on.
 
