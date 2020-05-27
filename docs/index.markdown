@@ -21,5 +21,5 @@ Key components of Micro are as follows:
 <br />
 
 [Get Started](/getting-started){: .btn .btn-blue } &nbsp;
-[Github](http://example.com/){: .btn }  &nbsp;
-[Website](htts://micro.mu/){: .btn }
+[Github](https://github.com/micro){: .btn }  &nbsp;
+[Website](https://micro.mu/){: .btn }
