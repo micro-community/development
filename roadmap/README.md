@@ -88,7 +88,7 @@ Delivery by end of August 2020 (Enabled in September)
 
 Delivery by end of year 2020 (Launch end of January 2021)
 
-- Network - A [marketplace](marketplace.md) for sharing and selling services
+- Network - A [marketplace](network.md) to buy, sell and share services
   * Ability to buy and sell services on the M3O platform
   * Transactional model: Percentage per request/service or flat 30%
   * Ability to run external "Resources" such as redis, postgres, etc
