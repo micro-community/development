@@ -105,6 +105,21 @@ not exclude those who want to self host and access the system as if it were part
   * Runtime stats; cpu, mem, threads, requests, errors
   * Logs; historic logs for a finite time
   * Distributed tracing for the call graph
+- [ ] **Billing**
+  * Usage tracking
+  * Accounts and payments
+  * Subscriptions
+- [ ] **Access Control**
+  * Team based access control
+  * User / Service / Admin scopes
+- [ ] **Namespaces**
+  * Namespacing services for separate teams
+  * Owner/group baked in at runtime
+  * Controlled ability to expose on per service basis
+- [ ] **Routing**
+  * Label based routing (Micro-X Headers route via metadata)
+  * URL Versioning routes to service versions
+  * Per web app sub domains
 - [ ] **Services** {Platform, Utility, Orchestration, Web}
   * Continue key service development to 30+ services
 - [ ] **Clients** {Go, Python, Ruby, Javascript}
@@ -114,28 +129,13 @@ not exclude those who want to self host and access the system as if it were part
   * Ability to define healthchecks
   * Events, emails and paging where necessary
   * Scheduling of on-call (stretch goal 6-12 months)
-- [ ] **Billing**
-  * Usage tracking
-  * Accounts and payments
-  * Subscriptions
-- [ ] **Access Control**
-  * Team based access control
-  * User / Service / Admin scopes
-- [ ] **Routing**
-  * Label based routing (Micro-X Headers route via metadata)
-  * URL Versioning routes to service versions
-  * Per web app sub domains
-- [ ] **Multi-Lang**
+- [ ] **Commands**
+  * Auto generate CLI commands based on available services
+ - [ ] **Multi-Lang Apps**
   * Add additional languages (rust, java, etc}
   * Concept of 'cells' to encapsulate code in containers
   * Use 'micro service' command to turn into a service
 - [ ] **Mu spec**
   * Flesh out the mu spec for single file definition
   * Move beyond proto and go
-- [ ] **Commands**
-  * Auto generate CLI commands based on available services
-- [ ] **Namespaces**
-  * Namespacing services for separate teams
-  * Owner/group baked in at runtime
-  * Controlled ability to expose on per service basis
 
