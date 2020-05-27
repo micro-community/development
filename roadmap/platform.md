@@ -12,10 +12,10 @@ We'll keep climbing the stack to continue on this journey. From platform to serv
 
 The features which will be included in the platform
 
-- Managed services - Services will run in the cloud and managed by default.
-- Auto configuration - Services will be auto configured with the required registry, broker, etc
-- Simplified debugging - Stats, logs and tracing will be available in an easy and clean way for every service
-- Connect from anywhere - Ability to connect and extend the network beyond the platform. Run services locally or in your own cloud.
+- **Managed services** - Services will run in the cloud and managed by default.
+- **Auto configuration** - Services will be auto configured with the required registry, broker, etc
+- **Simplified debugging** - Stats, logs and tracing will be available in an easy and clean way for every service
+- **Connect from anywhere** - Ability to connect and extend the network beyond the platform. Run services locally or in your own cloud.
 
 ## MVP
 
