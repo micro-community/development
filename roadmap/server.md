@@ -1,18 +1,18 @@
-# Runtime
+# Service
 
-The Runtime is a microservice runtime environment.
+The micro server is a distributed systems runtime for the cloud and beyond.
 
 ## Overview
 
-The Micro Runtime is a microservice runtime environment or better known as a microservice operating system. 
-The Runtime builds on the Go Micro Framework, providing service level abstractions of the interfaces 
-as RPC. The Runtime started as a toolkit for entrypoints such as CLI, API Gateway and Web dashboard. 
+The Micro Server is a distributed systems runtime or also known as a cloud services operating system. 
+The server builds on the Go Micro framework, providing service level abstractions of the interfaces 
+as RPC. The server started as a toolkit for entrypoints such as CLI, API Gateway and Web dashboard. 
 It's since evolved into a full operating environment for microservices which abstracts away the 
 complexity of the underlying infrastructure.
 
 ## Design
 
-The Runtime starts as a single binary called `micro` available at github.com/micro/micro. It takes 
+The server starts as a single binary called `micro` available at github.com/micro/micro. It takes 
 every Go Micro interface and provides it as a service with RPC endpoints equivalent to the interface. 
 These RPC services then leverage the Go Micro interfaces internally making them entirely pluggable. 
 So creating a runtime agnostic operating system and anti-corruption layer that forms the basis 
