@@ -41,9 +41,9 @@ This is a high level overview for the open source. See the product [roadmap](roa
 - [ ] improved micro api configuration 
 - [ ] graphql handler for the micro api
 - [ ] wireguard support in the micro network
-- [ ] define the mucp [protocol](design/ideas/protocol.md)
 - [ ] reusable foundation [services](roadmap/services.md) 
-- [ ] define the [mu](design/language.md) definition
+- [ ] define the mucp [protocol](design/ideas/protocol.md)
+- [ ] define the [mu](design/ideas/language.md) definition
 
 ## Philosophy
 
