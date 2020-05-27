@@ -9,8 +9,9 @@ nav_order: 1
 
 # Documentation
 
-Learn the ins and outs of Micro and how to become a Micro services ninja!
+## Learn the ins and outs of Micro and how to become a Micro services ninja!
 
+Micro is a development platform for Cloud services.
 
 Key components of Micro are as follows:
 
