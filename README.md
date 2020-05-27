@@ -1,4 +1,4 @@
-# Micro Development
+# Micro Dev
 
 The Micro development roadmap, team and contribution guide.
 
