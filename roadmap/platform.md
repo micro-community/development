@@ -62,14 +62,6 @@ Beyond the MVP we want to move into focusing on extending the platform, includin
 - [ ] Paid personal and team subscription
 - [ ] Value add services beyond the runtime
 
-Open source related requirements beyond MVP is a new developer experience
-
-- [ ] Micro as a single process daemon
-- [ ] Code generated gRPC clients
-- [ ] Clean idiomatic libraries wrapping the gRPC clients
-- [ ] Angular based web templates
-- [ ] API service interface and code generation 
-
 ## Micro as a service
 
 Ultimately we want to deliver micro as a service as a shared platform for microservice development. Anything a company 
