@@ -4,7 +4,7 @@ The Micro development roadmap, team and contribution guide.
 
 # Overview 
 
-Micro is the fastest way to build microservices in the Cloud and beyond. Our goal is to continue on this mission in an open and collaborative way, both as a team and community. Up until now most of our ideas and development have revolved around discussions in [Slack](https://micro.mu/slack/).
+Micro is the fastest way to build microservices in the Cloud and beyond. Our goal is to continue on this mission in an open and collaborative way, both as a team and community. Up until now most of our ideas and development have revolved around discussions in [Slack](https://slack.micro.mu).
 
 This repo serves as an open forum for collaboration, design docs and the roadmap.
 
