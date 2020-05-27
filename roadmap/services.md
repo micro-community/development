@@ -43,39 +43,44 @@ External entrypoints also within the micro server
 
 A non-comprehensive list of high-level services:
 
-- Message
-- Location
-- Status
-- Image
-- Stream
+- Alerting
 - Audio
-- Voice
-- Video
-- Place
-- Timeline
-- Maps
+- Backups
 - Broadcast
-- Payment
-- Notification
+- Checkout
+- Customer
+- Database
 - Email
-- User
-- Search
 - Event
+- Food (markets)
+- Fraud/Risk
+- Gamify (scores / leaderboard)
+- geocoding
+- i18n
+- Image
+- Location
+- Maps
+- Message
+- Monitoring
+- Notes / todo / lists
+- Notification
+- Payment
+- Personalisation
+- Place
+- Popup (locations)
 - Review (hyper local ephemeral reviews)
 - Reward (points / tokens)
-- Gamify (scores / leaderboard)
-- Popup (locations)
-- Food (markets)
-- i18n
-- geocoding
-- translation
-- notes / todo / lists
-- Personalisation
+- Search
+- Secrets
+- Status
+- Stream
 - Support
-- Customer
-- Store/Item/Basket/Checkout
-- Fraud/Risk
-
+- Timeline
+- translation
+- User
+- Video
+- Voice
+  
 Testing & security services:
 
 - **Fuzzing** - Sends random garbage to rpc endpoints
