@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Getting Started with Micro
+title: Getting Started
 keywords: micro
 tags: [micro]
 permalink: /getting-started.html
