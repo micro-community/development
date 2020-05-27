@@ -33,3 +33,13 @@ Services included:
 - **Debug** - Stats, logs and tracing for debugging
 - **Auth** - User and service authentication and authorization
 - **Config** - Dynamic configuration service
+
+## TODO
+
+Open source related requirements
+
+- [x] Micro as a server
+- [x] Code generated gRPC clients
+- [ ] Clean idiomatic libraries wrapping the gRPC clients
+- [ ] Angular based web templates
+- [ ] API service interface and code generation 
