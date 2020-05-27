@@ -78,12 +78,6 @@ Delivery by end of August 2020 (Enabled in September)
   * Leveraging existing APIs (Stripe, Twilio, etc)
   * Single API account for providers managed by Micro
 
-- Examples:
-  * Database, secrets, backups
-  * End-to-end testing
-  * Monitoring and alerting
-  * Payments, sms, email
-
 ## Q4 OKRs
 
 Delivery by end of year 2020 (Launch end of January 2021)
