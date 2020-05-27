@@ -7,7 +7,7 @@ title: Home
 nav_order: 1
 ---
 
-# Micro - A development platform for cloud services
+# A development platform for cloud services
 
 Micro is a system for building and managing distributed systems.
 
