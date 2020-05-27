@@ -9,15 +9,15 @@ nav_order: 1
 
 # Documentation
 
-### Learn the ins and outs of Micro and how to become a Micro services ninja!
+### Learn the ins and outs of Micro and become a Micro services ninja!
 
 Micro is a development platform for Cloud services.
 
 Key components of Micro are as follows:
 
 * **[Framework](https:github.com/micro-go/micro)**: a Go development framework for writing Micro services.
-* **[Server](https:github.com/micro/micro)**: a distributed systems runtime; auth, config, discovery, networking, storage. 
-* **[Clients](https://github.com/micro/clients)**: multi-language clients to enable other programs to access Micro services.
+* **[Server](https:github.com/micro/micro)**: a Micro services runtime; auth, config, discovery, networking, storage. 
+* **[Clients](https://github.com/micro/clients)**: multi-language clients to enable access to Micro services.
 
 <br />
 
