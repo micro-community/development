@@ -165,6 +165,49 @@ Registry [service] Registering node: go.micro.service.helloworld-213b807a-15c2-4
 
 So since our service is running happily, let's try to call it! That's what services are for.
 
+## Updating a service
+
+Now since the example service is running (can be easily verified by `micro status`), we should not use `micro run`, but rather `micro update` to deploy it.
+
+We can simply issue the update command (remember to switch back to the root directory of the example service first)
+
+```
+micro update helloworld
+```
+
+And verify both with the micro server output:
+
+```
+Updating service example-service version latest source /home/username/example-service
+Processing update event example-service:latest in namespace default
+```
+
+and micro status:
+
+```
+$ micro status example-service
+NAME			VERSION	SOURCE							STATUS		BUILD	UPDATED		METADATA
+example-service	latest	/home/username/example-service	starting	n/a		10s ago		owner=n/a,group=n/a
+```
+
+that it was updated.
+
+If things for some reason go haywire, we can try the time tested "turning it off and on again" solution and do:
+
+```
+micro kill helloworld
+micro run helloworld
+```
+
+to start with a clean slate.
+
+So once we did update the example service, we should see the following in the logs:
+
+```
+$ micro logs example-service
+key: mykey, value: Hi there
+```
+
 ## Calling a service
 
 We have a couple of options to call a service running on our `micro server`.
@@ -370,53 +413,6 @@ func main() {
 }
 
 ```
-
-We are almost done! But first we have to learn how to update a service.
-
-## Updating or stopping a service
-
-Now since the example service is running (can be easily verified by `micro status`), we should not use `micro run`, but rather `micro update` to deploy it.
-
-We can simply issue the update command (remember to switch back to the root directory of the example service first)
-
-```
-micro update helloworld
-```
-
-And verify both with the micro server output:
-
-```
-Updating service example-service version latest source /home/username/example-service
-Processing update event example-service:latest in namespace default
-```
-
-and micro status:
-
-```
-$ micro status example-service
-NAME			VERSION	SOURCE							STATUS		BUILD	UPDATED		METADATA
-example-service	latest	/home/username/example-service	starting	n/a		10s ago		owner=n/a,group=n/a
-```
-
-that it was updated.
-
-If things for some reason go haywire, we can try the time tested "turning it off and on again" solution and do:
-
-```
-micro kill helloworld
-micro run helloworld
-```
-
-to start with a clean slate.
-
-So once we did update the example service, we should see the following in the logs:
-
-```
-$ micro logs example-service
-key: mykey, value: Hi there
-```
-
-Nice! The example service read the value from the store successfully.
 
 ## Clients
 
