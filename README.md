@@ -26,11 +26,11 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 
 This is a high level overview for the open source. See the product [roadmap](roadmap).
 
-- [X] consolidate all [libraries](design/libraries.md) into go-micro
+- [X] consolidate all libraries into go-micro
 - [X] gRPC API for the micro proxy
 - [X] quic as a default transport
 - [X] nats as a default broker
-- [x] [gRPC](grpc.md) integration and interop
+- [x] [gRPC](design/framework/grpc.md) integration and interop
 - [x] embedded nats as the default broker
 - [x] go, java, typescript, ruby, python [client](design/clients.md) libraries
 - [x] standalone micro server
@@ -41,7 +41,7 @@ This is a high level overview for the open source. See the product [roadmap](roa
 - [ ] improved micro api configuration 
 - [ ] graphql handler for the micro api
 - [ ] wireguard support in the micro network
-- [ ] define the mucp [protocol](design/protocol.md)
+- [ ] define the mucp [protocol](design/ideas/protocol.md)
 - [ ] reusable foundation [services](roadmap/services.md) 
 - [ ] define the [mu](design/language.md) definition
 
