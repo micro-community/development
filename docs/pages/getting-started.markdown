@@ -426,6 +426,6 @@ This is just a brief getting started guide for quickly getting up and running wi
 Come back from time to time to learn more as this guide gets continually upgraded. If you're 
 interested in learning more Micro magic, have a look at the following sources:
 
-- Read the [docs](https://micro.mu.docs)
-- Learn by [examples](https://github.com/micro/examples)
-- Come join us on [Slack](https://slack.micro.mu) and ask quesions
+- Read the [docs](https://micro.mu/docs)
+- Learn by [example](https://github.com/micro/examples)
+- Ask questions on [Slack](https://slack.micro.mu)
