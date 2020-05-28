@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $(".navigation .navigation-list ul").addClass("navigation-list-child-list");
   // this waits until the document is fully loaded
   // Put custom logic here
 
