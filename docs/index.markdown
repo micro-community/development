@@ -12,7 +12,9 @@ nav_order: 1
 Learn the ins and outs of Micro and become a Micro services ninja!
 {: .fs-6 .fw-300 }
 
-Micro is an open source development platform for Cloud services. Key components of Micro are as follows:
+Micro is an open source development platform for Cloud services.
+
+Key components of Micro are as follows:
 
 * **[Framework](https:github.com/micro-go/micro)**: a Go development framework for writing Micro services.
 * **[Server](https:github.com/micro/micro)**: a Micro services runtime; auth, config, discovery, networking, storage. 
