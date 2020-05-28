@@ -14,5 +14,5 @@ permalink: /community
 
 Join the community to learn, share and collaborate.
 
-- [Slack](https://slack.micro.mu)
-- [Discourse](https://community.micro.mu)
+- [Slack](https://slack.micro.mu) - chat in realtime
+- [Discourse](https://community.micro.mu) - start a discussion
