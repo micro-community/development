@@ -19,6 +19,7 @@ Key components of Micro are as follows:
 * **[Framework](https:github.com/micro-go/micro)**: a Go development framework for writing Micro services.
 * **[Server](https:github.com/micro/micro)**: a Micro services runtime; auth, config, discovery, networking, storage. 
 * **[Clients](https://github.com/micro/clients)**: multi-language clients to enable access to Micro services.
+* **[Plugins](https://github.com/micro/go-plugins)**: extend the platform with extensible drop in plugins.
 
 <br />
 
