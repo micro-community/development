@@ -6,6 +6,7 @@ tags: [micro]
 permalink: /getting-started
 summary: A getting started guide for Micro
 nav_order: 2
+toc_list: true
 ---
 
 # Getting Started
