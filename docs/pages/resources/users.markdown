@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Companies Using Micro
+title: Users
 keywords: users
 tags: [users]
 sidebar: home_sidebar
-permalink: /companies-using-micro
+permalink: /users
 nav_order: 2
 toc_list: false
-parent: External Resources
+parent: Resources
 ---
 
-# Companies Using Micro
+# Users
 
-If you're using Micro, feel free to add your company.
+A list of users of Micro that we know of.
 
 - [AdCamie](http://adcamie.com/) - Social media Ads solution
 - [Agora.io](http://agora.io) -- Real-Time video, audio, and live interactive broadcasting Communication API solution
