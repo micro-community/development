@@ -14,6 +14,7 @@ permalink: /tutorials
 
 This is a list of external resources, videos, tutorials and blog posts are below. Feel free to contribute.
 
+- [Microservices in Go using Micro](https://www.youtube.com/watch?v=OcjMi9cXItY) with Brian Ketelsen
 - [Microservices in Golang](https://ewanvalentine.io/microservices-in-golang-part-1/) by Ewan Valentine
 - Micro in Action by Che Dan
     - [Part 1: Getting Started](https://itnext.io/micro-in-action-getting-started-a79916ae3cac) 
