@@ -14,14 +14,16 @@ Below are the packages and interfaces which we're developing or planning to add 
 Package	|	Function	|	Description
 -------	|	--------	|	-----------
 [Service](https://godoc.org/github.com/micro/go-micro#Service)	|	Communication	| Request/Response, Streaming, PubSub
+[Auth](https://godoc.org/github.com/micro/go-micro/auth) | Authentication | Authentication and authorization
 [Config](https://godoc.org/github.com/micro/go-micro/config)	|	Configuration	|	Dynamic config, safe fallbacks, etc
-[Sync](https://godoc.org/github.com/micro/go-micro/sync)	|	Synchronisation	|	Data, time, locking
-[Runtime](https://godoc.org/github.com/micro/go-micro/runtime)	|	Runtime	|	Service runtime
 [Debug](https://godoc.org/github.com/micro/go-micro/debug)	|	Debugging	|	Logging, tracing, metrics, healthchecks
-[Monitor](https://godoc.org/github.com/micro/go-micro/monitor)	|	Monitoring	|	Debug analysis and resolution
 [Network](https://godoc.org/github.com/micro/go-micro/network) |	Networking	|	Multi-DC networking
-[Auth](https://godoc.org/github.com/micro/go-micro/auth)	|	Authentication	|	Authentication, authorization, identity
-Flow |	Orchestration	|	State machine for managing complex flows of business logic
+[Runtime](https://godoc.org/github.com/micro/go-micro/runtime)	|	Runtime	|	Service runtime
+[Sync](https://godoc.org/github.com/micro/go-micro/sync)	|	Synchronisation	|	Locking, leadership election
+Events  | Event Streaming | Event streaming and timeseries database
+Flow |	Orchestration	|	State machine for managing complex workflows of business logic
+Model | Data Model  | A data modeling and crud interface
+
 
 ## Micro
 
