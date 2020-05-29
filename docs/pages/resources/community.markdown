@@ -16,3 +16,4 @@ Join the community to learn, share and collaborate.
 
 - [Slack](https://slack.micro.mu) - chat in realtime
 - [Discourse](https://community.micro.mu) - start a discussion
+- [Discord](https://discord.gg/hbmJEct) - talk to us
