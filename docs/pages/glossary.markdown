@@ -59,7 +59,7 @@ many different configuration formats also.
 
 ## Debug
 
-TODO
+Micro provides a built in debugging experience through stats, logs and tracing. Debugging is a separate concern from monitoring. Debugging is a form of observability that's deeply integrated into the go-micro framework. The idea here is to mimic Go's runtime tooling or thereabouts e.g runtime stats, stdout and stderr logs, debug stack traces.
 
 ## Server
 
