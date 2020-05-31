@@ -11,6 +11,8 @@ higher level authority where it's an irreversible decision or one that has high 
 For the most part this should accelerate the delivery of any objective and enable us to work with a higher degree of freedom 
 to ultimately execute on the mission of the company.
 
+## Mission
+
 Our mission is to be the fastest way to build, share and collaborate on services.
 
 ## Rule 1: Do not ask, just do
