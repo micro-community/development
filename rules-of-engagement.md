@@ -30,4 +30,6 @@ hop on a call, whatever it takes to resolve the issue.
 When you know it's something of high impact that affects the mission or could have profound impact on the direction of the 
 mission or product, this is the time to get consensus or higher level authority. The mission is the most important thing above all else and all things should be laser focused through a funnel so that we're always firing in a straight line.
 
+## Finish
+
 These are the rules of engagement and nothing else. Do your best work, focus on what matters, execute on the mission.
