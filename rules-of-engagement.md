@@ -28,5 +28,4 @@ hop on a call, whatever it takes to resolve the issue.
 ## Rule 3: Engage when mission critical
 
 When you know it's something of high impact that affects the mission or could have profound impact on the direction of the 
-mission, this is the time to get consensus or higher level authority. The mission is the most important thing above all else 
-and all things should be laser focused through a funnel so that we're always firing in a straight line.
+mission or product, this is the time to get consensus or higher level authority. The mission is the most important thing above all else and all things should be laser focused through a funnel so that we're always firing in a straight line.
