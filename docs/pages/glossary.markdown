@@ -22,10 +22,12 @@ toc_list: true
 
 This is a glossary of terms in the Micro universe.
 
+Detailed design docs can be found in [development/design](https://github.com/micro/development/tree/master/design).
+
 
 ## Auth
 
-TODO
+Auth is built in as a first class citizen. Authentication and authorization enable secure zero trust networking by providing every service an identity and certificates. This additionally includes rule based access control.
 
 ## Broker
 
