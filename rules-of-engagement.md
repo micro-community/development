@@ -6,9 +6,7 @@ Rules of engagement are a model of operation within Micro
 
 We use rules of engagement to determine how we actually make decisions autonomously and what otherwise requires higher 
 level authority or consensus. In the majority of cases we should be able to make decisions independently and only require 
-higher level authority where it's an irreversible decision or one that has high impact. 
-
-For the most part this should accelerate the delivery of any objective and enable us to work with a higher degree of freedom 
+higher level authority where it's an irreversible decision or one that has high impact. For the most part this should accelerate the delivery of any objective and enable us to work with a higher degree of freedom 
 to ultimately execute on the mission of the company.
 
 ## Mission
