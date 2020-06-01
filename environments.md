@@ -11,7 +11,7 @@ just a quick overview/summary of architecture in some ways. For the most part th
 
 - Local - the developers laptop serving :8080/8081/8082
 - Staging - our staging environment served at `*.m3o.dev`
-- Platform - the live environment served at `*.micro.mu`
+- Platform - the live environment served at `*.m3o.com`
 
 ## URLs
 
@@ -21,9 +21,9 @@ In the short term we're in UK south in Azure.
 
 Example
 
-- api.micro.mu - the micro api gateway (serves http/json)
-- web.micro.mu - the micro web dashboard (serves the browser)
-- proxy.micro.mu - the micro proxy (serves grpc)
+- api.m3o.com - the micro api gateway (serves http/json)
+- web.m3o.com - the micro web dashboard (serves the browser)
+- proxy.m3o.com - the micro proxy (serves grpc)
 
 The equivalent exists for m3o.dev for staging
 
