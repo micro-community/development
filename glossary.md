@@ -86,3 +86,11 @@ we are creating a line between Apps and Services.
 - Services - are a Dev centric services consumed via RPC or APIs
 
 Apps can also reference serverless Apps thought of as applications.
+
+## Cloud Services
+
+What are cloud services and why are we a "development platform for cloud services"?
+
+A cloud service is essentially an end service delivered to a user through the Cloud. The future of software development is cloud-native and the tools we provide are largely geared towards that model therefore Micro is a development platform for cloud services.
+
+For more on Cloud services https://www.citrix.com/glossary/what-is-a-cloud-service.html
