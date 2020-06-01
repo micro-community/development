@@ -23,6 +23,7 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 - [rules of engagement](rules-of-engagement.md) - how to make decisions
 - [style guide](#style-guide) - coding style guide
 - [wishlist](wishlist.md) - things we really want to build but only in the future
+- [vision](vision.md) - vision distillation
 
 ## Roadmap
 
