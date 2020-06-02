@@ -5,6 +5,7 @@ keywords: micro
 tags: [micro]
 permalink: /getting-started
 summary: A getting started guide for Micro
+parent: Tutorials
 nav_order: 2
 toc_list: true
 ---
@@ -413,6 +414,78 @@ So once we did update the example service, we should see the following in the lo
 ```
 $ micro logs example-service
 key: mykey, value: Hi there
+```
+
+## Config
+
+Configuration and secrets is an essential part of any production system - let's see how the Micro config works.
+
+### CLI
+
+The most basic example of config usage is the following:
+
+```sh
+$ micro config set key val
+$ micro config get key
+val
+```
+
+While this alone is enough for a great many use cases, for purposes of organisation, Micro also support dot notation of keys. Let's overwrite our keys set previously:
+
+```sh
+$ micro config set key.subkey val
+$ micro config get key.subkey
+val
+```
+
+This is fairly straightforward, but what happens when we get `key`?
+
+```sh
+$ micro config get key
+{"subkey":"val"}
+```
+
+As it can be seen, leaf level keys will return only the value, while node level keys return the whole subtree as a JSON document:
+
+```sh
+$ micro config set key.othersubkey val2
+$ micro config get key
+{"othersubkey":"val2","subkey":"val"}
+```
+
+### With the framework
+
+Micro configs work very similarly when being called from [Go code too](https://pkg.go.dev/github.com/micro/go-micro/v2/config?tab=doc):
+
+```go
+package main
+
+import (
+	"fmt"
+	"os"
+	"time"
+
+	"github.com/micro/go-micro/v2"
+)
+
+func main() {
+	// New Service
+	service := micro.NewService(
+		micro.Name("go.micro.service.config-read"),
+		micro.Version("latest"),
+	)
+	service.Init()
+	c := service.Options().Config
+
+	// read config value
+	fmt.Println("Value of key.subkey: ", c.Get("key", "subkey").String(""))
+}
+```
+
+Assuming the folder name for this service is still `example-service` (to update the existing service, [see updating a service](#-updating-a-service)):
+```
+$ micro logs example-service
+Value of key.subkey:  val
 ```
 
 ## Further reading
