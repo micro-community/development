@@ -6,7 +6,7 @@ first focus.
 
 ## Origin
 
-Micro started life on the basic premise that developing software at scale was complex, difficult and for the 
+Micro started life on the basic premise that developing software at scale was complex and for the 
 most part not a core operational concern of a business but rather something that needed to be solved to 
 drive forth the business requirement.
 
