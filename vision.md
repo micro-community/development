@@ -27,7 +27,7 @@ I'd regret not trying to make it happen.
 
 In 2014 I set out to pitch investors to make this happen. You can read that first pitch [here](https://gist.github.com/asim/f064d99b37c15c09aa46a9c7ee1c09ba). 
 Ultimately no matter what I tried, it wasn't meant to be, but I refused to give up or I should say, the idea 
-refused to give up on me. I consumed by the need to do this. I open sourced Go Micro in January 2015 and even 
+refused to give up on me. Consumed by the need to do this, I open sourced Go Micro in January 2015 and even 
 after failing to raise funding, quit Hailo to pursue the dream of Micro.
 
 ## Reality
