@@ -15,6 +15,8 @@ that its not our priority.
 - [ ] dynamic cli that turns any command into a service call - `micro store write foo bar` => go.micro.store Store.Write {"foo": "bar"}
 - [ ] cross organisation collaboration on products and services on the Micro platform
 - [ ] a developer ecosystem as large as a FANG company all self employed and empowered by the Micro Network
+- [ ] a Micro services network which powers the future worlds AR devices, spatial and ubiquitous computing platforms
+- [ ] Everything as a Service
 
 ## Ben's Dream
 
