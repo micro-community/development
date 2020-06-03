@@ -37,7 +37,7 @@ This is a high level overview for the open source. See the product [roadmap](roa
 - [x] embedded nats as the default broker
 - [x] go, java, typescript, ruby, python [client](design/clients.md) libraries
 - [x] standalone micro server
-- [ ] better documentation and end to end tutorials
+- [x] better documentation and end to end tutorials
 - [ ] simpler kubernetes integration by default
 - [ ] pluggable wrappers for go-micro itself
 - [ ] dynamically defined cli, flags and env vars
