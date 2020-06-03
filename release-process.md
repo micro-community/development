@@ -23,7 +23,7 @@ New release candidates will be cut from the `develop` branch roughly every 2 wee
 
 If all clear after 7 days we will promote the release candidate to full version and cut a new release which means
 1. merging the branch to `master`
-1. tagging the `master` branch with the new release version `X.X.X`
+1. tagging the `master` branch with the new release version `vX.X.X`
 1. merging the branch to `develop`
 1. deleting the release branch
 
@@ -47,3 +47,9 @@ Testing will include
 
 ### Versioning
 We follow the [semantic versioning](https://semver.org/) approach to release names. 
+
+Just before we cut a new major release (v3, v4, etc) we should also create a branch of master to be maintained as the ongoing branch for the current release. This will allow us to provide bugfix support more easily for the release while the master branch moves on to the next major release. For example, if we're about to create `v3`:
+1. Create a new branch from `master` as `v2`
+2. Merge the changes for v3 (in branch `release-3.0.0`) to `master`
+3. Tag the `master` branch as `v3.0.0`
+4. Merge the `master` branch to `develop`
