@@ -52,7 +52,7 @@ Micro is an opportunity to create the foundation of a technology platform that c
 all software in the future. My belief is that in a decade from now the most important services of our generation 
 will live and breath on the M3O platform, just as the most important pieces of software exist on GitHub.
 
-By establishing, M3O, as a platform for Micro services development we create the ability to unlock developer 
+By establishing, [M3O](https://m3o.com), as a platform for Micro services development we create the ability to unlock developer 
 productivity in a way that only exists within the largest tech companies today and to offer developers a place 
 to collaborate and build the next generation of services by building on the foundations of each others work.
 
