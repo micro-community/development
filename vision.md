@@ -17,7 +17,7 @@ that same organisation is what would allow us to accelerate the business and sol
 
 ## History
 
-This was an insight from Google and then experiences building the [H2O platform](https://speakerdeck.com/davegardnerisme/hailo-tech-platform) at Hailo. 
+This was an insight from Google and then experiences building the [H2O platform](https://github.com/hailo-platform/H2O) at Hailo. 
 Google has spent decades building upon its own foundations to become an integral and indispensable part of society. 
 Two decades ago this company did not exist and today it is the living breathing organism that powers our very lives. 
 How did that happen? At Hailo we started to experience some of this magic as uncovered in a model for development 
