@@ -113,4 +113,4 @@ The workflow is as follows:
 
 Office hours are times we are available to the community. This is an experimental feature we're testing. 
 
-Fridays 2-5pm GMT we'll have an open call anyone can join to chat, ask questions, etc.
+Fridays 2-5pm GMT we'll have an open call anyone can join to chat, ask questions, etc on [Discord](https://discord.gg/hbmJEct).
