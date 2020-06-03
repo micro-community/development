@@ -61,7 +61,7 @@ Delivery by end of February 2020 (Onboarding through March)
 
 Delivery by end of May 2020 (Onboarding through June)
 
-- Paid product - M3O fully managed private platform
+- [Paid product](https://m3o.com) - M3O fully managed private platform
   * Provides "Micro as a Service" to customers
   * Namespace per customer in Kubernetes
   * Subscription based $35/user/month
