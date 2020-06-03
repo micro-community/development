@@ -78,9 +78,10 @@ platform and network. Key pieces of the ecosystem.
 
 ## Apps vs Services
 
-We are continuously evolving the meaning of Service where today it stands for a backend Micro service consumed by other services 
-but in future will be far more business and consumer centric in that we offer Services to end users. For the time being 
-we are creating a line between Apps and Services.
+We are continuously evolving the meaning of Service where today it stands for a backend Micro service consumed by other services,
+but in the future there will be far more businesses and consumers centric in us offering Services to end users. 
+
+For the time being we are creating a line between Apps and Services.
 
 - Apps - are User centric services consumed via Web or Mobile
 - Services - are a Dev centric services consumed via RPC or APIs
