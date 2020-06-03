@@ -56,4 +56,4 @@ By establishing, [M3O](https://m3o.com), as a platform for Micro services develo
 productivity in a way that only exists within the largest tech companies today and to offer developers a place 
 to collaborate and build the next generation of services by building on the foundations of each others work.
 
-M3O is a place where we imagine everything as a service. A platform, a service, a network. The future of software.
+[M3O](https://m3o.com) is a place where we imagine everything as a service. A platform, a service, a network. The future of software.
