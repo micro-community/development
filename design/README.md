@@ -14,4 +14,3 @@ our existing knowledge in written form to help others who want to collaborate le
 - [platform](platform) - The fundamentals of the platform
 - [plugins](plugins) - Extending beyond core functionality
 - [clients](clients) - Multi-language clients
-- [ideas](ideas) - Scratch space for new ideas
