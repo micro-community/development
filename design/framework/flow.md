@@ -193,7 +193,7 @@ const (
 
 ## Status
 
-Incomplete. Lacks of timeout, retries. Dont have proper supports to pause/resume/stop/restart flow execution.
+Incomplete. Lacks of timeout, retries. Don't have proper supports to pause/resume/stop/restart flow execution.
 But its easy to add after minimal working code has been merged.
 
 
