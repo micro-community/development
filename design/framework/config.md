@@ -19,7 +19,7 @@ You don't have to handle ad-hoc hup reloading or whatever else, just keep readin
 to be notified.
 
 - **Safe Recovery** - In case config loads badly or is completely wiped away for some unknown reason, you can specify fallback 
-values when accessing any config values directly. This ensures you'll always be reading some sane default in the event of a problem.
+values when accessing any config values directly. This ensures you'll always be reading something default in the event of a problem.
 
 ## Getting Started
 
@@ -150,8 +150,8 @@ It manages reading, syncing, watching from multiple backend sources and represen
 
 // Config is an interface abstraction for dynamic configuration
 type Config interface {
-        // provide the reader.Values interface
-        reader.Values
+	// provide the reader.Values interface
+	reader.Values
 	// Stop the config loader/watcher
 	Close() error
 	// Load config sources
