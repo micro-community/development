@@ -29,5 +29,3 @@ but without having to actually build a full fledged UI.
 -  https://github.com/grpc/grpc-web
 - https://github.com/gogo/letmegrpc
 - https://github.com/grpc-ecosystem/awesome-grpc#gui
-
-- 
