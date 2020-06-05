@@ -10,7 +10,7 @@ that its not our priority.
 
 ## The List
 
-- [x] dev.micro.mu - a portal for interactive tutorials and learning
+- [ ] Dev - as adeveloper portal for interactive tutorials, learning and writing code
 - [ ] micro env clone [env-from] [env-to] - I want to be able to deploy my local app with one command to an other env. Env setup must be similarly simple 1 command solution (`micro env create`)
 - [ ] dynamic cli that turns any command into a service call - `micro store write foo bar` => go.micro.store Store.Write {"foo": "bar"}
 - [ ] cross organisation collaboration on products and services on the Micro platform
