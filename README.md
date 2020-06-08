@@ -11,6 +11,7 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 ## Contents
 
 - [collaboration](collaboration.md) - the tools we use or will use for collaboration
+- [culture](culture.md) - a small piece about culture
 - [design](design) - where the design docs live
 - [docs](docs) - for the public docs at dev.micro.mu
 - [environments](environments.md) - details our environments and architecture
