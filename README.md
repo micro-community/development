@@ -51,6 +51,7 @@ This is a high level overview for the open source. See the product [roadmap](roa
 - [ ] reusable foundation [services](roadmap/services.md) 
 - [ ] define the mucp [protocol](design/ideas/protocol.md)
 - [ ] define the [mu](design/ideas/language.md) language
+- [ ] implement the [wasm](https://github.com/bytecodealliance/wasm-micro-runtime) runtime
 
 ## Philosophy
 
