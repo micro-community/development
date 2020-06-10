@@ -11,7 +11,7 @@ an ever morphing thing, like our objectives and personal goals. They change with
 define the culture of Micro but instead speak about the types of ideals Micro attempts to embody.
 
 1. Micro is mission driven. Focused on empowering developers to be as productive as possible.
-2. Micro is inclusive and open to new ideas, people and embraces their differences as a strength.
-3. Micro is lean and focused, driven to pursue efficiency in all ways as we are engineers.
+2. Micro is inclusive. Open to new ideas, people and embraces their differences as a strength.
+3. Micro is lean. Driven to pursue efficiency in all ways as we are engineers.
 
 The culture of Micro is ever morphing but one that prides itself on mission, inclusion and efficiency.
