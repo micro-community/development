@@ -18,5 +18,3 @@ Join the community to learn, share and collaborate.
 - [Discord](https://discord.gg/hbmJEct) - let's get talking
 - [LinkedIn](https://www.linkedin.com/company/micro-services-inc) - for the professionals
 - [Twitter](https://twitter.com/microhq) - follow the latest
-
-Also check out awesome micro projects on [Awesome Micro](https://github.com/asim/awesome-micro).
