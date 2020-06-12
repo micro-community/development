@@ -50,5 +50,5 @@ A throwback to an old picture from the blog.
 
 <img src="https://m3o.com/assets/images/regions.png" />
 
-https://micro.mu/blog/2016/04/18/micro-architecture.html
+https://m3o.com/blog/2016/04/18/micro-architecture.html
 
