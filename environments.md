@@ -48,7 +48,7 @@ Cloud environments operate in a very similar model to H2 at Hailo with an api ga
 
 A throwback to an old picture from the blog. 
 
-<img src="https://micro.mu/blog/assets/images/regions.png" />
+<img src="https://m3o.com/assets/images/regions.png" />
 
 https://micro.mu/blog/2016/04/18/micro-architecture.html
 
