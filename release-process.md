@@ -27,7 +27,6 @@ If all clear after 7 days we will promote the release candidate to full version 
 1. merging the branch to `develop`
 1. deleting the release branch
 
-
 #### Testing
 Before a release is given the all clear we must run a full suite of tests. Testing will include being built and run against:
 - the current latest versioned release of `micro` 
@@ -36,7 +35,7 @@ Before a release is given the all clear we must run a full suite of tests. Testi
 We will also encourage users to start using releaase candidates in their testing CI and testing environments and ask them to report back with any issues. 
 
 
-### micro
+## micro
 
 The `micro` project is generally consumed as both tagged releases *and* directly from `master`. Users will `go install` both with and without an explicit release version. So it should follow the same branching and release process as defined for `go-micro` above which protects `master` as much as possible. 
 
@@ -53,3 +52,7 @@ Just before we cut a new major release (v3, v4, etc) we should also create a bra
 2. Merge the changes for v3 (in branch `release-3.0.0`) to `master`
 3. Tag the `master` branch as `v3.0.0`
 4. Merge the `master` branch to `develop`
+
+
+## Automation
+We have a few helper scripts to help with the release process. They can be found in the [scripts folder](./scripts)
