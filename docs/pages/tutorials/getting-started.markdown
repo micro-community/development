@@ -6,7 +6,7 @@ tags: [micro]
 permalink: /getting-started
 summary: A getting started guide for Micro
 parent: Tutorials
-nav_order: 2
+nav_order: 1
 toc_list: true
 ---
 

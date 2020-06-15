@@ -27,13 +27,13 @@
                       {%- if child.toc_list and (page.url == child.url or page.parent == child.title) -%}
                         {% include toc.html sanitize=true html=child.content class="navigation-list-child-list" item_class="navigation-list-item" anchor_class="navigation-list-link" %}
                       {%- endif -%}
-                      {%- if child.has_children -%}
+                      {%- if child.has_children and (page.url == child.url or page.parent == child.title) -%}
                           {%- assign grand_children_list = site.html_pages | where: "parent", child.title | sort:"nav_order" -%}
                           <ul class="navigation-list-child-list">
                           {%- for grand_child in grand_children_list -%}
                             <li class="navigation-list-item {% if page.url == grand_child.url %} active{% endif %}">
                               <a href="{{ grand_child.url | absolute_url }}" class="navigation-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}</a>
-                              {%- if grand_child.toc_list -%}
+                              {%- if grand_child.toc_list and page.url == grand_child.url -%}
                                 {% include toc.html sanitize=true html= grand_child.content class="navigation-list-child-list" item_class="navigation-list-item" anchor_class="navigation-list-link" %}
                               {%- endif -%}
                             </li>
