@@ -18,12 +18,12 @@ We need to also think about both local codes (`micro run .`) and urls (`micro ru
 
 This document proposes the following solution to the private dependency issue:
 
-1. User acquires a [personal access token from GitHub](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) and does a `micro config set [key to be decided] [access token]`
-2. The runtime can then use said token to access source code
-  2.a Default runtime might need to do specific setup steps because every machine is different [This article contains some ideas, although it is docker specific](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
-  2.b K8s runtime can have prebuilt images which handles all this given the token is passed down to it.*
+- User acquires a [personal access token from GitHub](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) and does a `micro config set [key to be decided] [access token]`
+- The runtime can then use said token to access source code
+  - Default runtime might need to do specific setup steps because every machine is different [This article contains some ideas, although it is docker specific](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
+  - K8s runtime can have prebuilt images which handles all this given the token is passed down to it.*
 
-* This takes us to our next point
+(*) This takes us to our next point
 
 ## Running code in k8s without CI
 
