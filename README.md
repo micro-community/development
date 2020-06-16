@@ -13,7 +13,7 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 - [collaboration](collaboration.md) - the tools we use or will use for collaboration
 - [culture](culture.md) - a small piece about culture
 - [design](design) - where the design docs live
-- [docs](docs) - for the public docs at dev.micro.mu
+- [docs](docs) - for the public docs at dev.m3o.com
 - [environments](environments.md) - details our environments and architecture
 - [evolution](evolution.md) - on the evolution of micro
 - [glossary](glossary.md) - a glossary of terms and explanation of brand, company, project, product
