@@ -14,9 +14,7 @@ $ micro env
 
 ## 1. `micro env add customEnv proxy.micro.mu && micro env set customEnv`
 
-With this step the user clearly states her desired environment name. But at this point she does not have an account.
-
-At this point commands should return "Not logged in" or a similar error message:
+With this step the user clearly states her desired environment name. But at this point she does not have an account, so  commands should return "Not logged in" or a similar error message:
 ```
 $ micro run github.com/micro/examples/helloworld
 Not logged in to env 'envName' hosted at 'proxy.micro.mu'.
