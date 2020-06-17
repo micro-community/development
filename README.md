@@ -10,24 +10,16 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 
 ## Contents
 
-- [collaboration](collaboration.md) - the tools we use or will use for collaboration
-- [culture](culture.md) - a small piece about culture
+- [company](company) - collaboration, culture, growth, rules of engagement, vision
 - [design](design) - where the design docs live
 - [docs](docs) - for the public docs at dev.m3o.com
-- [environments](environments.md) - details our environments and architecture
-- [evolution](evolution.md) - on the evolution of micro
 - [glossary](glossary.md) - a glossary of terms and explanation of brand, company, project, product
-- [growth](growth.md) - personal growth and development
 - [ideas](ideas) - a scratch space for new ideas and things in flux
 - [issues](https://github.com/micro/development/issues) - where we track work
 - [office hours](#office-hours) - times we are available to the community
-- [onboarding](onboarding.md) - onboarding guide for new hires
 - [philosophy](#philosophy) - how we design and work
 - [roadmap](roadmap) - where the full roadmap lives
-- [rules of engagement](rules-of-engagement.md) - how to make decisions
 - [style guide](#style-guide) - coding style guide
-- [wishlist](wishlist.md) - things we really want to build but only in the future
-- [vision](vision.md) - vision distillation
 
 ## Roadmap
 
