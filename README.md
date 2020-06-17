@@ -18,6 +18,7 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 - [issues](https://github.com/micro/development/issues) - where we track work
 - [office hours](#office-hours) - times we are available to the community
 - [philosophy](#philosophy) - how we design and work
+- [release](release-process.md) - our release process
 - [roadmap](roadmap) - where the full roadmap lives
 - [style guide](#style-guide) - coding style guide
 
