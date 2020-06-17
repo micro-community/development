@@ -20,7 +20,7 @@ them. A brain is nothing more than a massive event processing system with state 
 A singularity is not something you can just create, it's something that must emerge, but if you understand 
 the properties required to nurture such a system into existence then there is the possibility of producing it.
 
-Google and others are attempting to move beyond vertical based deep learning to a more general approach. [Jeff Dean](https://en.wikipedia.org/wiki/Jeff_Dean_(computer_scientist) 
+Google and others are attempting to move beyond vertical based deep learning to a more general approach. [Jeff Dean](https://en.wikipedia.org/wiki/Jeff_Dean_(computer_scientist))
 has spent his career building the systems that have shaped Google from the foundation up. This did not start with 
 general AI but instead raw data processing at scale. GFS, BigTable, Borg, MapReduce, Search, Ads. All these 
 led to Google Brain and what came after related to TensorFlow.
