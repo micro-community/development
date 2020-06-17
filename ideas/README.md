@@ -18,3 +18,4 @@ Some of the major ideas
 - [routing](routing.md) - Label and weight based routing which enables feature testing and dynamic routing
 - [trust](trust.md) - Reputation based scoring of services to get a better understanding of quality of service
 - [language](language.md) - A new type of emergent language built on top of services as a DSL of sorts
+- [network](network.md) - an open global services network powered by Micro
