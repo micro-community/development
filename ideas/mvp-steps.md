@@ -1,9 +1,11 @@
 # MVP user journey
 Including an overview of differences between local and m3o env implementations where applicable.
 
-Assuming the user is already familiar with [basic Micro commands](https://dev.m3o.com/getting-started) she can immediately get started:
+Assumptions:
+- the user is already familiar with [basic Micro commands](https://dev.m3o.com/getting-started).
+- micro cli is installed on the users machine
 
-The environment of the user will be either `local` or - more likely - `server` if she ever used `micro server` locally:
+Note `proxy.micro.mu` should likely become `proxy.m3o.com` or similar (leaving proxy out is likely more elegant).
 
 ```sh
 $ micro env
@@ -12,18 +14,25 @@ $ micro env
   platform                          proxy.micro.mu
 ```
 
-## 1. `micro env add customEnv proxy.micro.mu && micro env set customEnv`
+## 1. `micro env set platform`
 
-With this step the user clearly states her desired environment name. But at this point she does not have an account, so  commands should return "Not logged in" or a similar error message:
+With this step the user switches to using our platform as oppose to her `micro server`. But at this point she does not have an account, so  commands should return "Not logged in" or a similar error message:
 ```
 $ micro run github.com/micro/examples/helloworld
-Not logged in to env 'envName' hosted at 'proxy.micro.mu'.
+Not logged in to env 'server' hosted at 'proxy.micro.mu'.
 Please see `micro login help`
 ```
 
-## 2. Introduce `micro login --new` or `micro register`
+## 2. Introduce `micro login --new`
 
-In this step we will create an account for the user. We can take the environment name from the call and create the environment in the same step too.
+- In this step we will create an account for the user.
+- We should also create a new namespace for her on the backend automatically.
+- The output of this call should return the generated namespace name and that should be written to the local Micro CLI user config file (found at path `~/.micro` by default currently). This can be in any format in that file, it is unimportant and can be changed later. This value will be embedded on each call to the platform in the `Micro-Namespace` header.
+
+Note: For the MVP we decided to hide the concept of namespaces from the users to leave us more time to work out the details.
+
+**Things to work out**:
+- **"Right now "micro login" uses the auth of the namespace you're currently in. If we're changing this to always talk to the platform it'll mean the users auth account isn't valid when making a call via the CLI."**
 
 At this point the user can either use the environment or get a payment required error message - this is up to us.
 
@@ -43,16 +52,15 @@ Your current balance is: $0. To top up please go to m3o.com/pay?email=user@gmail
 
 The user does not need to log in on the website as the email address which is part of the Stripe payment window/data and can be used to reconcile who paid what amount.
 
-At this point the user can use her environment hosted on m3o.com just like an environment she hosts herself with `micro server` on any box - to the extent of her account.
+At this point the user can use the `platform` environment hosted on m3o.com just like an environment she hosts herself with `micro server` on any box - to the extent of her account.
 
-## 4. Use the m3o platform with the custom environment
+## 4. The `platform` environment is ready to be used
 
 ```
 $ micro env
   local                             none
   server                            127.0.0.1:8081
-  platform                          proxy.micro.mu
-* envName                           proxy.micro.mu
+* platform                          proxy.micro.mu
 ```
 
 With the accont paid for and the environment selected, the Micro commands will work the same way, albeit using different implementations:
