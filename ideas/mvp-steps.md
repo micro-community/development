@@ -32,7 +32,7 @@ Please see `micro login help`
 Note: For the MVP we decided to hide the concept of namespaces from the users to leave us more time to work out the details.
 
 **Things to work out**:
-- **"Right now "micro login" uses the auth of the namespace you're currently in. If we're changing this to always talk to the platform it'll mean the users auth account isn't valid when making a call via the CLI."**
+- **"Right now `micro login` uses the auth of the namespace you're currently in. If we're changing this to always talk to the platform it'll mean the users auth account isn't valid when making a call via the CLI."**
 
 At this point the user can either use the environment or get a payment required error message - this is up to us.
 
