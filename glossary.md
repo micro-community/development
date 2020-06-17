@@ -46,7 +46,7 @@ At a high level Micro provides the following as open source:
 - Framework - Go framework for Micro services development
 - Runtime - A runtime environment (aka operating system) for Micro services
 - Platform - A managed Cloud platform to run Micro as a Service
-- Network - Multi-cloud networking. Connect from anywhere.
+- Network - Build, share and collaborate on services from anywhere.
 - Services - A set of reusable Micro services. Building blocks.
 
 ### Dual Meaning
