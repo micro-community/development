@@ -48,13 +48,13 @@ enabling that via higher level clients makes the most sense.
 ## Serving
 
 Looking at the developer experience for adopting an api, cache, search, database or anything else it's clear the experience 
-needs to be dropping a server and then providing client libraries in any language. This is sort of a frictionless thing 
+needs to be a drop-in server and then providing client libraries in any language. This is sort of a frictionless thing 
 which augments the app development experience without having to totally buy into a framework.
 
 Micro can now be booted using a single command which provides a vastly superior developer experience.
 
 ```
-micro
+micro server
 ```
 
 This launches all the services which exist as interfaces in go-micro but will also have equivalent protos to call the services. 
