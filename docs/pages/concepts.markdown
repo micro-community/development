@@ -1,0 +1,19 @@
+---
+layout: page
+title: Concepts
+keywords: concepts
+tags: [concepts]
+sidebar: home_sidebar
+permalink: /concepts
+summary: A high level overview of concepts in Micro
+nav_order: 2
+has_children: true
+toc_list: true
+---
+
+
+# Concepts
+{: .no_toc }
+
+Here we provide an overview of concepts that make up Micro
+
