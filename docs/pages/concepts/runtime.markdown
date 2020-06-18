@@ -22,7 +22,7 @@ of a platform. Micro deals with the complexity of distributed systems and provid
 Below is an overview of how Micro is constructed.
 
 <br>
-<img src="https://micro.mu/images/runtime.svg?5" style="width: 100%; height: auto;" />
+<img src="https://m3o.com/images/runtime.svg" style="width: 100%; height: auto;" />
 
 Micro focuses on the concept of <b>Development Runtime Infrastructure</b>, creating separation between the varying 
 concerns of development and infrastructure using a runtime as an abstraction layer, then providing entry points 
