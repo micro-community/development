@@ -32,7 +32,7 @@ aux_links:
   "micro community on GitHub":
     - "//github.com/micro-community"
 
-footer_content: "Copyright &copy; 2020 Micro Community, Org. Powered by<a href=\"https://github.com/micro-community\">micro-community team.</a>"
+footer_content: "Copyright &copy; 2020 Micro Community, Org. Powered by <a href=\"https://github.com/micro-community\">micro-community team.</a>"
 
 #ga_tracking: UA-70478210-5
 
