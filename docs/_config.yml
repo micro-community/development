@@ -26,7 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: microhq
 github_username:  micro
-footer_content: "Copyright &copy; 2020 Micro Services, Inc."
+footer_content: "Copyright &copy; 2020 Micro Community, Org."
 ga_tracking: UA-70478210-5
 
 # Build settings
