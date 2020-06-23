@@ -42,13 +42,24 @@ Not logged in to env 'server' hosted at 'proxy.micro.mu'.
 Please see `micro login help`
 ```
 
-### 2. Introduce `micro login --new`
+### 2. Send an email after user issues `micro login [email address]`
 
-- In this step we will create an account for the user.
-- We ask for their email address, when they submit it we
+- In this step we will create an account for the user:
   1. Create an account in `unverified` status
-  1. Send an email with details on how to pay for their subscription - likely this is a link to a single page which allows them to pay via stripe
-- When they pay we'll ask them to submit their payment confirmation code which will put their status in `complete`. Either we pause the `micro login --new` call here and expect that the user keeps the terminal window running while they do all the payment stuff OR we have return from that command and have a second command `micro login --confirm|verify` which takes the confirmation code (this is a little bit nicer because it means the user can carry on where they left off in the event of an issue) 
+  1. Send the following email with a one time token:
+```txt
+Hi there,
+
+You've just issued a `micro login` command with this email address.
+To complete registration, copypaste this command to your terminal: `micro login da11a78e30171057bc320ec36dcc5a7db5611053`.
+This is a one time token that is alive for 60 minutes.
+
+The command will prompt you for payment during your registration.
+
+Cheers,
+The Micro Team
+```
+- During this command, we will ask them to go to a url and subscribe through Stripe, then we'll ask them to submit their payment confirmation code which will put their status in `complete`. Either we pause the `micro login` call here and expect that the user keeps the terminal window running while they do all the payment stuff OR we have return from that command and have a second command `micro login --confirm|verify` which takes the confirmation code (this is a little bit nicer because it means the user can carry on where they left off in the event of an issue) 
 - Only once in `complete` status will we create a namespace for them on the backend and return the generated namespace name and that should be written to the local Micro CLI user config file (found at path `~/.micro` by default currently). This can be in any format in that file, it is unimportant and can be changed later. This value will be embedded on each call to the platform in the `Micro-Namespace` header.
 - If an account is `unverified` they shouldn't be able to do anything on m3o
 
