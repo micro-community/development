@@ -51,8 +51,9 @@ Please see `micro login help`
 Hi there,
 
 You've just issued a `micro login` command with this email address.
-To complete registration, copypaste this command to your terminal: `micro login da11a78e30171057bc320ec36dcc5a7db5611053`.
-This is a one time token that is alive for 60 minutes.
+To complete registration, copy and paste this command to your terminal: 
+`micro login da11a78e30171057bc320ec36dcc5a7db5611053`.
+This one-time token is valid for 60 minutes.
 
 The command will prompt you for payment during your registration.
 
