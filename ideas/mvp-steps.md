@@ -44,15 +44,14 @@ Please see `micro login help`
 
 ### 2. Send an email after user issues `micro login [email address]`
 
-- In this step we will create an account for the user:
-  1. Create an account in `unverified` status
-  1. Send the following email with a one time token:
+- The user will be sent an email and the CLI will output `We have sent a verification email to your address. Please paste it here:`
+  The CLI will wait for input at this point.
+  The email text will be the following
 ```txt
 Hi there,
 
 You've just issued a `micro login` command with this email address.
-To complete registration, copy and paste this command to your terminal: 
-`micro login da11a78e30171057bc320ec36dcc5a7db5611053`.
+To continue please copy and paste this command to your terminal: `da11a78e30171057bc320ec36dcc5a7db5611053`.
 This one-time token is valid for 60 minutes.
 
 The command will prompt you for payment during your registration.
@@ -60,9 +59,11 @@ The command will prompt you for payment during your registration.
 Cheers,
 The Micro Team
 ```
-- During this command, we will ask them to go to a url and subscribe through Stripe, then we'll ask them to submit their payment confirmation code which will put their status in `complete`. Either we pause the `micro login` call here and expect that the user keeps the terminal window running while they do all the payment stuff OR we have return from that command and have a second command `micro login --confirm|verify` which takes the confirmation code (this is a little bit nicer because it means the user can carry on where they left off in the event of an issue) 
-- Only once in `complete` status will we create a namespace for them on the backend and return the generated namespace name and that should be written to the local Micro CLI user config file (found at path `~/.micro` by default currently). This can be in any format in that file, it is unimportant and can be changed later. This value will be embedded on each call to the platform in the `Micro-Namespace` header.
-- If an account is `unverified` they shouldn't be able to do anything on m3o
+- This login token will be saved in a `Login Service` (**does not exist yet**).
+- After the user pastes the login token to the `micro login` terminal flow, the user account will still not be created. This is to avoid access to platform by users who have not paid, as we have no way to differentiate between different states of users yet.
+- In the next step the user will receive the following message in the terminal: `Please go to https://m3o.com/subscribe.html` to get a payment token. Please paste the payment token here:`. The CLI will wait for the payment token to that can be acquired from the site.
+- Once the payment token is there, we can create the subscription (`payments/provider/stripe` service) and create the user account.
+- Then we create a namespace for the user on the backend and return the generated namespace name and that should be written to the local Micro CLI user config file (found at path `~/.micro` by default currently). This can be in any format in that file, it is unimportant and can be changed later. This value will be embedded on each call to the platform in the `Micro-Namespace` header.
 
 Note: For the MVP we decided to hide the concept of namespaces from the users to leave us more time to work out the details.
 
