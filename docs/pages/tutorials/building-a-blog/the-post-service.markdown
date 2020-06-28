@@ -7,6 +7,7 @@ sidebar: home_sidebar
 toc_list: false
 nav_order: 1
 parent: Building A Blog
+grand_parent: Tutorials
 permalink: /the-post-service
 ---
 
