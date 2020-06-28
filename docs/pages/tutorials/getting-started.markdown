@@ -25,7 +25,7 @@ toc_list: true
 Using Go:
 
 ```sh
-go install github.com/micro/micro/v2
+go get github.com/micro/micro/v2
 ```
 
 Or by downloading the binary
