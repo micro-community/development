@@ -31,6 +31,7 @@ ga_tracking: UA-70478210-5
 
 # Build settings
 highlighter: rouge
+theme: just-the-docs
 remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
