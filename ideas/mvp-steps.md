@@ -82,7 +82,7 @@ Payment is required. Please see `micro account help` for payment information.
 $ micro env
   local                             none
   server                            127.0.0.1:8081
-* platform                          proxy.micro.mu
+* platform                          proxy.m3o.com
 ```
 
 ## Existing User Journey
