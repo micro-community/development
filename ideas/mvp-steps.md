@@ -26,7 +26,7 @@ Note `proxy.micro.mu` should likely become `proxy.m3o.com` or similar (leaving p
 $ micro env
   local                             none
 * server                            127.0.0.1:8081
-  platform                          proxy.micro.mu
+  platform                          proxy.m3o.com
 ```
 
 ## New User Journey
