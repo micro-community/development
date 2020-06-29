@@ -20,8 +20,6 @@ Assumptions:
 - the user is already familiar with [basic Micro commands](https://dev.m3o.com/getting-started).
 - micro cli is installed on the users machine
 
-Note `proxy.micro.mu` should likely become `proxy.m3o.com` or similar (leaving proxy out is likely more elegant).
-
 ```sh
 $ micro env
   local                             none
