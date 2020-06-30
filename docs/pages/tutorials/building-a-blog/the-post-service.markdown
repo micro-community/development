@@ -35,7 +35,7 @@ As a reminder, we have to make sure `micro server` is running in an other termin
 $ micro env
   local                             none
 * server                            127.0.0.1:8081
-  platform                          proxy.micro.mu
+  platform                          proxy.m3o.com
 ```
 
 has the server environment picked. If not, we can issue `micro env set server` to remedy.   
