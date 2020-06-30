@@ -25,7 +25,7 @@ toc_list: true
 Using Go:
 
 ```sh
-go install github.com/micro/micro/v2
+go get github.com/micro/micro/v2
 ```
 
 Or by downloading the binary
@@ -86,7 +86,7 @@ All those services are ones started by our `micro server`. This is pretty cool, 
 The command to run services is `micro run`.
 
 ```
-micro run helloworld
+micro run github.com/micro/examples/helloworld
 ```
 
 
@@ -100,7 +100,7 @@ Processing create event helloworld:latest
 We can also have a look at logs of the service to verify it's running.
 
 ```sh
-$ micro logs helloworld
+$ micro logs micro/examples/helloworld
 Starting [service] go.micro.service.helloworld
 Server [grpc] Listening on [::]:36577
 Registry [service] Registering node: go.micro.service.helloworld-213b807a-15c2-496f-93ac-7949ad38aadf

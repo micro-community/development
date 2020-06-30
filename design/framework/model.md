@@ -34,7 +34,6 @@ type Model interface {
 	// Model implementation
 	String() string
 }
-
 ```
 
 Additionally there is the potential to create an `Entity` value aligned with Message/Request in Client/Server that extracts the common 
@@ -76,7 +75,7 @@ codec by default so that we have efficient serialisation of data especially with
 m := model.NewModel(
 	mode.Codec(codec),
 )
-``
+```
 
 ## Usage
 
