@@ -11,4 +11,4 @@ permalink: /resources
 A collection of third party resources to help with learning Micro
 {: .fs-6 .fw-300 }
 
-Also checkout [Awesome Micro](https://github.com/asim/awesome-micro) projects.
+Also checkout [Awesome Micro](https://github.com/micro-community/awesome-micro) projects.
