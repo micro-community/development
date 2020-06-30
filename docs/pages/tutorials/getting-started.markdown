@@ -93,8 +93,8 @@ micro run github.com/micro/examples/helloworld
 If we take a look at the running `micro server`, we should see something like
 
 ```
-Creating service helloworld version latest source /tmp/helloworld
-Processing create event helloworld:latest
+Creating service micro/examples/helloworld version latest source github.com/micro/examples/helloworld
+Processing create event for service micro/examples/helloworld:latest in namespace micro
 ```
 
 We can also have a look at logs of the service to verify it's running.
@@ -124,13 +124,11 @@ $ micro call go.micro.service.helloworld Helloworld.Call '{"name":"Jane"}'
 
 ```
 
-That worked! If we wonder what endpoints a service has we can run the following command:
+That worked! If we wonder what nodes and endpoints a service has we can run the following command:
 
 ```sh
 micro get service go.micro.service.helloworld
 ```
-
-You can also browse to the UI at [http://localhost:8082](http://localhost:8082/service/go.micro.service.helloworld) to see live info.
 
 ### With the framework
 
@@ -147,7 +145,7 @@ import (
 	"fmt"
 
 	"github.com/micro/go-micro/v2"
-	proto "github.com/micro/helloworld/proto"
+	proto "github.com/micro/examples/helloworld/proto"
 )
 
 func main() {
@@ -182,13 +180,13 @@ After doing a `cd example-service && go mod init example`, we are ready to run t
 micro run .
 ```
 
-An other useful command to see what is running, is `micro status`. At this point we should have two services running:
+`micro run`s, when successful, do not print any output. A useful command to see what is running, is `micro status`. At this point we should have two services running:
 
 ```
 $ micro status
-NAME			VERSION	SOURCE										STATUS		BUILD	UPDATED		METADATA
-example-service	latest	/home/username/example-service				starting	n/a		4s ago		owner=n/a,group=n/a
-helloworld		latest	/tmp/github.com-micro-services/helloworld	running		n/a		6m5s ago	owner=n/a,group=n/a
+NAME						VERSION	SOURCE										STATUS		BUILD	UPDATED		METADATA
+example-service				latest	/home/username/example-service				starting	n/a		4s ago		owner=n/a,group=n/a
+micro/examples/helloworld	latest	github.com/micro/examples/helloworld		running		n/a		unknown		owner=n/a,group=n/a
 ```
 
 Now, since our example-service client is also running, we should be able to see it's logs:
@@ -377,10 +375,10 @@ func main() {
 
 Now since the example service is running (can be easily verified by `micro status`), we should not use `micro run`, but rather `micro update` to deploy it.
 
-We can simply issue the update command (remember to switch back to the root directory of the example service first)
+We can simply issue the update command (remember to switch back to the root directory of the example service first):
 
 ```
-micro update helloworld
+micro update .
 ```
 
 And verify both with the micro server output:
@@ -395,7 +393,7 @@ and micro status:
 ```
 $ micro status example-service
 NAME			VERSION	SOURCE							STATUS		BUILD	UPDATED		METADATA
-example-service	latest	/home/username/example-service	starting	n/a		10s ago		owner=n/a,group=n/a
+example-service	latest	example-service.tar.gz			running	n/a	unknown	owner=n/a,group=n/a
 ```
 
 that it was updated.
@@ -403,8 +401,8 @@ that it was updated.
 If things for some reason go haywire, we can try the time tested "turning it off and on again" solution and do:
 
 ```
-micro kill helloworld
-micro run helloworld
+micro kill example-service
+micro run example-service
 ```
 
 to start with a clean slate.
