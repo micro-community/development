@@ -494,4 +494,4 @@ interested in learning more Micro magic, have a look at the following sources:
 
 - Read the [docs](https://micro.mu/docs)
 - Learn by [example](https://github.com/micro/examples)
-- Ask questions on [Slack](https://slack.micro.mu)
+- Ask questions on [Slack](https://slack.m3o.com)
