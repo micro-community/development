@@ -14,7 +14,7 @@ permalink: /community
 
 Join the community to learn, share and collaborate.
 
-- [Slack](https://slack.micro.mu) - chat in realtime
+- [Slack](https://slack.m3o.com) - chat in realtime
 - [Discord](https://discord.gg/hbmJEct) - let's get talking
 - [LinkedIn](https://www.linkedin.com/company/micro-services-inc) - for the professionals
 - [Twitter](https://twitter.com/microhq) - follow the latest
