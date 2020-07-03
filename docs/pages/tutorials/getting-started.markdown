@@ -143,6 +143,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"time"
 
 	"github.com/micro/go-micro/v2"
 	proto "github.com/micro/examples/helloworld/proto"
