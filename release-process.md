@@ -28,6 +28,8 @@ If all clear after 7 days we will promote the release candidate to full version 
 2. merging the release branch to `master`
 3. the `release-X.X` branch is *not* deleted. It will be retained for any future patch fixes that may be required.
 
+> :warning: remember to update the version in cmd/version.go
+
 #### Patching
 Bug fixes should be made on the `release-X.X` branch, tagged, and then merged back to `master`
 
