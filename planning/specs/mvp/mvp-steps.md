@@ -40,7 +40,7 @@ Not logged in to env 'server' hosted at 'proxy.micro.mu'.
 Please see `micro login help`
 ```
 
-### 2. Send an email after user issues `micro login [email address]`
+### 2. Send an email after user issues `micro login --otp [email address]`
 
 - The user will be sent an email and the CLI will output `We have sent a verification email to your address. Please paste it here:`
   The CLI will wait for input at this point.
@@ -66,8 +66,6 @@ The Micro Team
 
 Note: For the MVP we decided to hide the concept of namespaces from the users to leave us more time to work out the details.
 
-**Things to work out**:
-- ~~"Right now `micro login` uses the auth of the namespace you're currently in. If we're changing this to always talk to the platform it'll mean the users auth account isn't valid when making a call via the CLI."~~ EDIT: We'll give them a single global account for m3o that they login with and has access to do "platform" things. Since we only give them one namespace right now it shouldn't matter.
 
 ```
 $ micro run github.com/micro/examples/helloworld

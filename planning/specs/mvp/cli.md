@@ -44,9 +44,6 @@ Command to call endpoints on a micro service
 ## `micro config`
 Command to set and get values in the config store. 
 
-:warning: Out of scope
-- Encryption at rest
-
 :question: Questions
 - Is it OK for secrets?
 

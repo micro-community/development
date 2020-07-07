@@ -1,26 +1,17 @@
 # MVP 
 
-The MVP is a cloud (k8s) based managed micro platform. 
+The MVP is a cloud (k8s) based managed micro platform. Interaction is focussed around the CLI with only a minimal web presence for taking payments.
 
 ## CLI commands
 The CLI commands supported in the MVP are defined in [cli.md](cli.md).
 
 ## User signup / onboarding
-`micro env set platform` - point the user’s CLI to m3o platform
-
-`micro login --otp`
-
-Login and signup is handled using email OTP. Command generates an email with a token to be used as OTP on the command line. 
-
-After inputting the password: 
-- if the user has an account they will be auth’ed and a token returned which is stored on the machine in `.config` 
-- if the user does not have an account the user will be asked to visit m3o.com/subscribe.html 
-
-The subscribe page will ask for payment, once payment is taken a token is returned. Account and namespace are created at this point
-This payment token is input in to the CLI which completes user account creation and returns a token to be stored in `.config` for future interactions.
+See [here](mvp-steps.md)
 
 ## Other
 User’s only have 1 namespace for MVP plus access to the `micro` namespace where the core services run. No cross talk across namespaces. 
+
+All users are paid "developer" accounts and charged $35/month.
 
 ## Non functional requirements
 ### Stores
