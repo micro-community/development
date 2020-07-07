@@ -31,7 +31,7 @@ Encryption at rest?
 Manual scaling up of compute/memory as required, by a micro admin.
 
 ### SLA 
-GMT business hours support via slack
+GMT business hours support via slack. Will have a slack channel dedicated to this. 
 
 ### Security
 mTLS for all communication within m3o.
