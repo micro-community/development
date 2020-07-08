@@ -16,16 +16,20 @@ All users are paid "developer" accounts and charged $35/month.
 ## Non functional requirements
 ### Stores
 Which stores are supported?
-The default store (as configured via `MICRO_STORE`) is `service` which means all store requests will hit our m3o store service which is a distributed, persistent store. 
+The default store (as configured via `MICRO_STORE`) is `service` which means all store requests will hit our m3o store service which is a distributed, persistent store backed by cockroach. 
 
-Users may also choose to use 
-- Memory
-- File - :warning: this essentially only lasts the lifetime of the process since m3o is Kubernetes based :warning:
+If users deviate from the model of using `DefaultStore` they might be running 
+- Memory - which should work as expected
+- File - :warning: this essentially only lasts the lifetime of the process since m3o is Kubernetes based so will not work as expected :warning:
+
+In case of any support queries we should be pushing users to the `DefaultStore` model.
 
 :question: Questions
 Data durability guarantees? Do we do backups? 
-What’s the RPO, RTO?
+No guarantees and no backups
+
 Encryption at rest?
+No encryption
 
 ### Scalability
 Manual scaling up of compute/memory as required, by a micro admin.
