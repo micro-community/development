@@ -1,21 +1,6 @@
 # MVP user journey
 Including an overview of differences between local and m3o env implementations where applicable.
 
-The MVP supports the following commands:
-
-- micro new
-- micro server
-- micro run <local or public github>
-- micro status
-- micro logs 
-- micro call
-- micro config
-- micro update
-- micro kill 
-- micro env (set / add)
-- micro login
-
-
 Assumptions:
 - the user is already familiar with [basic Micro commands](https://dev.m3o.com/getting-started).
 - micro cli is installed on the users machine
@@ -40,8 +25,9 @@ Not logged in to env 'server' hosted at 'proxy.micro.mu'.
 Please see `micro login help`
 ```
 
-### 2. Send an email after user issues `micro login [email address]`
+### 2. Send an email after user issues `micro login --otp [email address]`
 
+- Sign up is currently invite only so we need to check their email is in the allowlist.
 - The user will be sent an email and the CLI will output `We have sent a verification email to your address. Please paste it here:`
   The CLI will wait for input at this point.
   The email text will be the following
@@ -66,8 +52,6 @@ The Micro Team
 
 Note: For the MVP we decided to hide the concept of namespaces from the users to leave us more time to work out the details.
 
-**Things to work out**:
-- ~~"Right now `micro login` uses the auth of the namespace you're currently in. If we're changing this to always talk to the platform it'll mean the users auth account isn't valid when making a call via the CLI."~~ EDIT: We'll give them a single global account for m3o that they login with and has access to do "platform" things. Since we only give them one namespace right now it shouldn't matter.
 
 ```
 $ micro run github.com/micro/examples/helloworld
