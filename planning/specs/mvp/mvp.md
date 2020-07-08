@@ -40,3 +40,8 @@ Security sense check. No pen testing but ensure
 - adequate auth on things like config etc so users can't see things they shouldn't (e.g. dump all our secret keys)
 - isolation of core infra like Cockroach and etcd. Only accessed via relevant services.
 
+### Config
+Config should only be readable by something with an account for that namespace. For now it is OK for something to have namespace wide access but eventually config will be scoped per service with only accounts with admin role being able to view everything.
+
+:warning: Out of scope
+- encrypted config
