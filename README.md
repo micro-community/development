@@ -32,7 +32,7 @@ This is a high level overview for the open source. See the product [roadmap](roa
 - [X] nats as a default broker
 - [x] [gRPC](design/framework/grpc.md) integration and interop
 - [x] embedded nats as the default broker
-- [x] go, java, typescript, ruby, python [client](design/clients.md) libraries
+- [x] go, java, typescript, ruby, python [client](design/clients/README.md) libraries
 - [x] standalone micro server
 - [x] better documentation and end to end tutorials
 - [ ] simpler kubernetes integration by default
@@ -42,7 +42,7 @@ This is a high level overview for the open source. See the product [roadmap](roa
 - [ ] graphql handler for the micro api
 - [ ] wireguard support in the micro network
 - [ ] reusable foundation [services](roadmap/services.md) 
-- [ ] define the mucp [protocol](design/ideas/protocol.md)
+- [ ] define the mucp [protocol](ideas/protocol.md)
 - [ ] define the [mu](ideas/language.md) language
 - [ ] implement the [wasm](https://github.com/bytecodealliance/wasm-micro-runtime) runtime
 

@@ -61,7 +61,7 @@ Delivery by end of February 2020 (Onboarding through March)
 
 Delivery by end of May 2020 (Onboarding through June)
 
-- [Paid product](https://m3o.com) - M3O fully managed private platform
+- [Paid product](https://m3o.com) - Fully managed Micro Platform
   * Provides "Micro as a Service" to customers
   * Namespace per customer in Kubernetes
   * Subscription based $35/user/month
@@ -71,7 +71,7 @@ Delivery by end of May 2020 (Onboarding through June)
 
 Delivery by end of August 2020 (Enabled in September)
 
-- [Services](services.md) - Value add Micro services on the M3O platform
+- [Services](services.md) - Value add Micro services on the Micro platform
   * Free and paid services to consume
   * All services built in [micro/services](https://github.com/micro/services)
   * Comprehensive list of [services](services.md)
@@ -83,11 +83,11 @@ Delivery by end of August 2020 (Enabled in September)
 Delivery by end of year 2020 (Launch end of January 2021)
 
 - [Network](network.md) - A marketplace to buy, sell and share services
-  * Ability to buy and sell services on the M3O platform
+  * Ability to buy and sell services on the Micro platform
   * Transactional model: Percentage per request/service or flat 30%
   * Ability to run external "Resources" such as redis, postgres, etc
 
 ## 2021
 
-- License M3O Services
+- License Micro Services
 - Otherwise TBD
