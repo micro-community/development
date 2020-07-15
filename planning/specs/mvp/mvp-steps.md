@@ -1,5 +1,10 @@
-# MVP user journey
-Including an overview of differences between local and m3o env implementations where applicable.
+# MVP User Journey
+
+A full workflow for a user of the Micro Platform
+
+## Overview
+
+Below includes an overview of the new user journey and any differences between local and m3o env implementations of a user journey.
 
 Assumptions:
 - the user is already familiar with [basic Micro commands](https://dev.m3o.com/getting-started).
