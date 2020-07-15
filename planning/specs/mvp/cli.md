@@ -8,6 +8,21 @@ Below is the bare minimum commands required to build, run and manage Micro servi
 
 Note: All other commands can be seen in `--help` but not guaranteed to work. 
 
+```
+micro server
+micro signup
+micro login
+micro env
+micro new
+micro run
+micro update
+micro kill
+micro status
+micro logs
+micro call
+micro config
+```
+
 ## `micro new`
 Command generates new skeleton micro service from a template - service, function, api, web. 
 Where possible the skeleton should be complete and successfully compile straight away with no further changes. This is not possible for `api` and `web` services since they have dependencies on some other service(s) that cannot be inferred 
