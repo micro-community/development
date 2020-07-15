@@ -4,7 +4,7 @@ A full workflow for a user of the Micro Platform
 
 ## Overview
 
-Below includes an overview of the new user journey and any differences between local and m3o env implementations of a user journey.
+Below includes an overview of the new user journey and any differences between local and m3o env implementations.
 
 #### Assumptions
 
