@@ -4,7 +4,7 @@ title: Framework
 keywords: concepts, framework, go-micro, interfaces
 tags: [concepts, framework, go-micro, interfaces]
 permalink: /concepts/framework
-summary: A Go framework for distrbuted systems development
+summary: A Go framework for distributed systems development
 nav_order: 1
 parent: Concepts
 toc_list: true
