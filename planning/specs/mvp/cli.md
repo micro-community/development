@@ -1,5 +1,11 @@
 # MVP CLI 
 
+The following is a list of CLI commands for the MVP
+
+## Overview
+
+Below is the bare minimum commands required to build, run and manage Micro services
+
 Note: All other commands can be seen in `--help` but not guaranteed to work. 
 
 ## `micro new`
@@ -50,8 +56,11 @@ Command to set and get values in the config store.
 ## `micro env`
 Command to set / add the environment being used (local machine, m3o, something else). m3o details should be baked in to the micro binary.
 
-## `micro login`
-Command to login to the platform; either via OTP or user/pass (user accounts will probably just be OTP, user/pass for micro team admins)
+## `micro signup`
 
+Command to signup to the platform. Initially a built-in command, will ask for email/password and verify email via OTP
+
+## `micro login`
+Command to login to the platform; Will simply be username / password prompt where we use email as the username.
 
 
