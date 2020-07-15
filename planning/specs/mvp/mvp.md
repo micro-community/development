@@ -6,7 +6,7 @@ The MVP is Micro as a Service. A cloud native development platform built on k8s 
 The CLI commands supported in the MVP are defined in [cli.md](cli.md).
 
 ## User signup / onboarding
-See [here](mvp-steps.md)
+See [user journey](user-journey.md)
 
 ## Other
 User’s only have 1 namespace for MVP plus access to the `micro` namespace where the core services run. No cross talk across namespaces. 
