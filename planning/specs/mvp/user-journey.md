@@ -6,7 +6,8 @@ A full workflow for a user of the Micro Platform
 
 Below includes an overview of the new user journey and any differences between local and m3o env implementations of a user journey.
 
-Assumptions:
+#### Assumptions
+
 - the user is already familiar with [basic Micro commands](https://dev.m3o.com/getting-started).
 - micro cli is installed on the users machine
 
