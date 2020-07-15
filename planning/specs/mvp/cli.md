@@ -10,6 +10,7 @@ Note: All other commands can be seen in `--help` but not guaranteed to work.
 
 ```
 micro server
+micro signup
 micro login
 micro env
 micro new
