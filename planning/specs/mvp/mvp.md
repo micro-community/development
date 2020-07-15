@@ -1,6 +1,10 @@
 # MVP 
 
-The MVP is Micro as a Service. A cloud native development platform built on k8s in the cloud. Interaction is primarily CLI driven with only a minimal web presence for taking payments.
+The MVP is Micro as a Service.
+
+## Overview
+
+The Micro Platform is a cloud native platform built for developers. Its a fully managed Micro built on k8s in the cloud. For MVP the interaction is primarily CLI driven with only a minimal web presence for taking payments. 
 
 ## CLI commands
 The CLI commands supported in the MVP are defined in [cli.md](cli.md).
