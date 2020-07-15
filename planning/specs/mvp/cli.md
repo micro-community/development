@@ -33,7 +33,7 @@ Command runs full micro platform. Runs all the component pieces required.
 ##  `micro run`
 Command to run a service on the platform. Should work with both local and m3o with the same format. 
 
-Multiple modes
+#### Multiple modes
 - `micro run <path to local directory>` - deploys and runs source code found on local machine on the micro server
 - `micro run <gitHub.com/public/repo>` - deploys and runs code found at the github location
 - `micro run <something under github.com/micro/services>` - run one of the services defined in the github.com/micro/services repo. For example, `micro run payments` will deploy and run github.com/micro/services/payments
