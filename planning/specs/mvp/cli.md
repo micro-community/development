@@ -10,7 +10,6 @@ Note: All other commands can be seen in `--help` but not guaranteed to work.
 
 ```
 micro server
-micro signup
 micro login
 micro env
 micro new
@@ -73,9 +72,9 @@ Command to set / add the environment being used (local machine, m3o, something e
 
 ## `micro signup`
 
-Command to signup to the platform. Initially a built-in command, will ask for email/password and verify email via OTP
+Command to signup to the platform. Initially a built-in command, will direct the user to `micro login --otp`
 
 ## `micro login`
-Command to login to the platform; Will simply be username / password prompt where we use email as the username.
+Command to login to the platform; Will simply be username / password prompt where we use email as the username. For MVP we'll expect --otp for signup.
 
 
