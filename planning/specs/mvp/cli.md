@@ -66,7 +66,7 @@ Command to call endpoints on a micro service
 ## `micro config`
 Command to set and get values in the config store. 
 
-:question: Questions
+#### :question: Questions
 - Is it OK for secrets?
 
 ## `micro env`
