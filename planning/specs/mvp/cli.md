@@ -40,7 +40,7 @@ Command to run a service on the platform. Should work with both local and m3o wi
 
 The above order is also precedence order, so if a user has a directory `payments` in the current working directory then `micro run payments` will run the code in that directory rather than deploying github.com/micro/services/payments.
 
-:warning: Out of scope
+#### :warning: Out of scope
 - Uploading and running local code on m3o 
 - Private github.com repos
 
@@ -56,8 +56,9 @@ Command to display status of the currently running services in this namespace.
 ## `micro logs`
 Command to display logs for the service. 
 
-:warning: Out of scope
-Streaming logs from the platform.
+#### :warning: Out of scope
+
+- Streaming logs from the platform
 
 ## `micro call`
 Command to call endpoints on a micro service 
