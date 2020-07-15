@@ -64,6 +64,11 @@ $ micro run github.com/micro/examples/helloworld
 Payment is required. Please see `micro account help` for payment information. 
 ```
 
+Ideally for the most part we split signup/login into two commands and may get there.
+
+- `micro signup` - prompts for email/password, asks to make payment and verify OTP
+- `micro login` - simply provides email/password login
+
 ### 3. The `platform` environment is ready to be used
 
 ```
