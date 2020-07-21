@@ -1,7 +1,13 @@
-# MVP user journey
-Including an overview of differences between local and m3o env implementations where applicable.
+# MVP User Journey
 
-Assumptions:
+A full workflow for a user of the Micro Platform
+
+## Overview
+
+Below includes an overview of the new user journey and any differences between local and m3o env implementations.
+
+#### Assumptions
+
 - the user is already familiar with [basic Micro commands](https://dev.m3o.com/getting-started).
 - micro cli is installed on the users machine
 
@@ -46,7 +52,7 @@ The Micro Team
 ```
 - This login token will be saved in a `Login Service` (**does not exist yet**).
 - After the user pastes the login token to the `micro login` terminal flow, the user account will still not be created. This is to avoid access to platform by users who have not paid, as we have no way to differentiate between different states of users yet.
-- In the next step the user will receive the following message in the terminal: `Please go to https://m3o.com/subscribe.html` to get a payment token. Please paste the payment token here:`. The CLI will wait for the payment token to that can be acquired from the site.
+- In the next step the user will receive the following message in the terminal: `Please go to https://m3o.com/subscribe` to get a payment token. Please paste the payment token here:`. The CLI will wait for the payment token to that can be acquired from the site.
 - Once the payment token is there, we can create the subscription (`payments/provider/stripe` service) and create the user account.
 - Then we create a namespace for the user on the backend and return the generated namespace name and that should be written to the local Micro CLI user config file (found at path `~/.micro` by default currently). This can be in any format in that file, it is unimportant and can be changed later. This value will be embedded on each call to the platform in the `Micro-Namespace` header.
 
@@ -57,6 +63,13 @@ Note: For the MVP we decided to hide the concept of namespaces from the users to
 $ micro run github.com/micro/examples/helloworld
 Payment is required. Please see `micro account help` for payment information. 
 ```
+
+#### Post MVP
+
+Ideally for the most part we split signup/login into two commands and may get there.
+
+- `micro signup` - prompts for email/password, asks to make payment and verify OTP
+- `micro login` - simply provides email/password login
 
 ### 3. The `platform` environment is ready to be used
 
