@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Building A Blog
-nav_order: 2
+nav_order: 3
 has_children: true
 parent: Tutorials
 summary: From a toy blog to a full blown CMS
