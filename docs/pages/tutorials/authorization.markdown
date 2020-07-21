@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Authorization
+title: Authentication
 keywords: micro
 tags: [micro]
-permalink: /authorization
+permalink: /authentication
 summary: Authentication and authorization
 parent: Tutorials
 nav_order: 2
