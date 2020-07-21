@@ -20,7 +20,7 @@ toc_list: true
 {:toc}
 ---
 
-Micro and the `micro server` comes find fine tunable authentication and authorization tools.
+Micro and the `micro server` comes with fine tunable authentication and authorization tools.
 Out of the box, the `micro server` is open. This means you can call any endpoints, look at all data, config, and so on.
 
 ## Basics - Securing an installation
