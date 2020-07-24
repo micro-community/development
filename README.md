@@ -15,7 +15,7 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 - [docs](docs) - for the public docs at dev.m3o.com
 - [glossary](glossary.md) - a glossary of terms and explanation of brand, company, project, product
 - [ideas](ideas) - a scratch space for new ideas and things in flux
-- [issues](https://github.com/micro/development/issues) - where we track work
+- [issues](https://github.com/m3o/development/issues) - where we track work
 - [office hours](#office-hours) - times we are available to the community
 - [philosophy](#philosophy) - how we design and work
 - [release](release-process.md) - our release process
@@ -84,7 +84,7 @@ Here's how we approach taking on new problems.
 ## Contributing
 
 - Open an [Issue](https://github.com/micro/development/issues) to start a discussion with the community
-- Open a [Pull Request](https://github.com/micro/development/pulls) to add a design doc where you've already got strong ideas
+- Open a [Pull Request](https://github.com/m3o/development/pulls) to add a design doc where you've already got strong ideas
 - Help shape the roadmap for Micro and be a part of the microservice movement
 - Take any real time conversations to the [#development](https://micro-services.slack.com/messages/CJ544CH8W/) channel on Slack
 
