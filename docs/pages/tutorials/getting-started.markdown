@@ -86,21 +86,21 @@ All those services are ones started by our `micro server`. This is pretty cool, 
 The command to run services is `micro run`.
 
 ```
-micro run github.com/micro/examples/helloworld
+micro run github.com/micro/services/helloworld
 ```
 
 
 If we take a look at the running `micro server`, we should see something like
 
 ```
-Creating service micro/examples/helloworld version latest source github.com/micro/examples/helloworld
+Creating service micro/services/helloworld version latest source github.com/micro/services/helloworld
 Processing create event for service micro/examples/helloworld:latest in namespace micro
 ```
 
 We can also have a look at logs of the service to verify it's running.
 
 ```sh
-$ micro logs micro/examples/helloworld
+$ micro logs micro/services/helloworld
 Starting [service] go.micro.service.helloworld
 Server [grpc] Listening on [::]:36577
 Registry [service] Registering node: go.micro.service.helloworld-213b807a-15c2-496f-93ac-7949ad38aadf
@@ -146,7 +146,7 @@ import (
 	"time"
 
 	"github.com/micro/go-micro/v2"
-	proto "github.com/micro/examples/helloworld/proto"
+	proto "github.com/micro/services/helloworld/proto"
 )
 
 func main() {
@@ -187,7 +187,7 @@ micro run .
 $ micro status
 NAME						VERSION	SOURCE										STATUS		BUILD	UPDATED		METADATA
 example-service				latest	/home/username/example-service				starting	n/a		4s ago		owner=n/a,group=n/a
-micro/examples/helloworld	latest	github.com/micro/examples/helloworld		running		n/a		unknown		owner=n/a,group=n/a
+micro/examples/helloworld	latest	github.com/micro/services/helloworld		running		n/a		unknown		owner=n/a,group=n/a
 ```
 
 Now, since our example-service client is also running, we should be able to see it's logs:
@@ -494,5 +494,5 @@ Come back from time to time to learn more as this guide gets continually upgrade
 interested in learning more Micro magic, have a look at the following sources:
 
 - Read the [docs](https://micro.mu/docs)
-- Learn by [example](https://github.com/micro/examples)
+- Learn by [example](https://github.com/micro/services)
 - Ask questions on [Slack](https://slack.m3o.com)
