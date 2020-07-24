@@ -8,7 +8,7 @@ Below includes an overview of the new user journey and any differences between l
 
 #### Assumptions
 
-- the user is already familiar with [basic Micro commands](https://dev.m3o.com/getting-started).
+- the user is already familiar with [basic Micro commands](https://m3o.dev/getting-started).
 - micro cli is installed on the users machine
 
 ```sh

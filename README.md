@@ -12,7 +12,7 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 
 - [company](company) - collaboration, culture, growth, rules of engagement, vision
 - [design](design) - where the design docs live
-- [docs](docs) - for the public docs at dev.m3o.com
+- [docs](docs) - for the public docs at m3o.dev
 - [glossary](glossary.md) - a glossary of terms and explanation of brand, company, project, product
 - [ideas](ideas) - a scratch space for new ideas and things in flux
 - [issues](https://github.com/m3o/development/issues) - where we track work
