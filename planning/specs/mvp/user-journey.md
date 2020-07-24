@@ -103,7 +103,7 @@ Checks out git repositories to a local folder (eg. `$TMPDIR/github-com-micro-exa
 
 #### K8s implementation
 
-A generic Go image downloads checks out the git repositories and runs the code from there. **We need to modify how `micro server` is ran in live, see [discussion here](https://github.com/micro/development/pull/221)**
+A generic Go image downloads checks out the git repositories and runs the code from there. **We need to modify how `micro server` is ran in live, see [discussion here](https://github.com/m3o/development/pull/221)**
 
 For MVP we will not do anything with private repos since that needs ability to pass secrets etc. The workaround is for the user to clone the private repo to their local machine and use the `micro run [local path]` command below.
 
