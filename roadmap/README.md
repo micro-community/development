@@ -10,17 +10,8 @@ runtime and a platform for Micro services development.
 
 ## Contents
 
-- [Open Source](#open-source) - Open source software on GitHub
 - [Objectives](#objectives) - Objectives for the product
 - [Timeline](#timeline) - Timelines of delivery
-
-## Open source
-
-Available on [GitHub](https://github.com/micro)
-
-- [Framework](framework.md) - Go Micro services development framework
-- [Server](server.md) -  A distributed system runtime for the Cloud
-- [Clients](clients.md) - Multi-language clients for the runtime
 
 ## Objectives
 
