@@ -10,7 +10,7 @@ This directory contains company related docs
 - [evolution](evolution.md) - on the evolution of micro
 - [glossary](../glossary.md) - a glossary of terms and explanation of brand, company, project, product
 - [growth](growth.md) - personal growth and development
-- [issues](https://github.com/micro/development/issues) - where we track work
+- [issues](https://github.com/m3o/development/issues) - where we track work
 - [onboarding](onboarding.md) - onboarding guide for new hires
 - [roadmap](../roadmap) - where the full roadmap lives
 - [rules of engagement](rules-of-engagement.md) - how to make decisions

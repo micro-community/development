@@ -25,7 +25,7 @@ service interface.
 ## Interfaces
 
 Below is a high level overview of the packages/interfaces within the framework. Detailed design docs can be found in 
-[development/design](https://github.com/micro/development/tree/master/design). Anything you can't find here 
+[development/design](https://github.com/m3o/development/tree/master/design). Anything you can't find here 
 just check out [pkg.go.dev](https://pkg.go.dev/github.com/micro/go-micro/v2).
 
 ### Auth

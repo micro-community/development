@@ -124,7 +124,7 @@ import (
 	log "github.com/micro/go-micro/v2/logger"
 	"github.com/micro/go-micro/v2/store"
 
-	post "github.com/micro/examples/blog/post/proto/post"
+	post "github.com/micro/services/blog/post/proto/post"
 )
 
 type Posts struct {
@@ -144,12 +144,12 @@ Now, the `main.go`:
 package main
 
 import (
-	"github.com/micro/examples/blog/posts/handler"
-	"github.com/micro/examples/blog/posts/subscriber"
+	"github.com/micro/services/blog/posts/handler"
+	"github.com/micro/services/blog/posts/subscriber"
 	"github.com/micro/go-micro/v2"
 
 	log "github.com/micro/go-micro/v2/logger"
-	posts "github.com/micro/examples/blog/posts/proto/posts"
+	posts "github.com/micro/services/blog/posts/proto/posts"
 )
 
 func main() {
@@ -599,7 +599,7 @@ This brings us to the end of the initial posts tutorial series.
 There are many more features we will add later, like saving and querying by tags, but this post alreadt taught us enough to digest.
 We will cover those aspect in later parts of this series.
 
-For the latest version of the code, we can consult the [github folder of the Posts service](https://github.com/micro/examples/tree/master/blog/posts).
+For the latest version of the code, we can consult the [github folder of the Posts service](https://github.com/micro/services/tree/master/blog/posts).
 It might contain some (or even many) additional things not covered in the post, as it is the latest version.
 
 Recreating the version outlined in this post is left as an exercises for the reader.
