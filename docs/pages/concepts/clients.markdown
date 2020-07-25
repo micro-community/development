@@ -14,7 +14,7 @@ toc_list: true
 # Clients
 {: .no_toc }
 
-Clients are soon to be released multi-language clients for Micro.
+Clients are multi-language clients for accessing Micro services.
 
 Find the repository at [github.com/micro/clients](https://github.com/micro/clients).
 
