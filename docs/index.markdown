@@ -16,15 +16,14 @@ Micro is an open source development platform for Cloud services.
 
 Key components of Micro are as follows:
 
-* **[Framework](https://github.com/micro/go-micro)**: a Go development framework for writing Micro services.
-* **[Runtime](https://github.com/micro/micro)**: a Micro services runtime to build, run and manage services.
+* **[Framework](https://github.com/micro/micro)**: a framework build, run and manage Micro services.
 * **[Clients](https://github.com/micro/clients)**: multi-language clients to enable access to Micro services.
-* **[Plugins](https://github.com/micro/go-plugins)**: extend the platform with extensible drop in plugins.
+* **[Services](https://github.com/micro/services)**: real world example Micro service applications.
 
 <br />
 
 [Get Started](/getting-started){: .btn .btn-blue } &nbsp;
-[Github](https://github.com/micro){: .btn }  &nbsp;
+[Github](https://github.com/m3o){: .btn }  &nbsp;
 [Website](https://m3o.com/){: .btn }
 
 <div style="height: 320px"></div>
