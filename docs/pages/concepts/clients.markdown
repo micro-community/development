@@ -14,7 +14,7 @@ toc_list: true
 # Clients
 {: .no_toc }
 
-Clients are soon to be released multi-language clients for Micro.
+Clients are multi-language clients for accessing Micro services.
 
 Find the repository at [github.com/micro/clients](https://github.com/micro/clients).
 
@@ -30,7 +30,7 @@ access to Micro services. Web has javascript, enterprise has Java, mobile has ob
 
 ## Design
 
-Find the start of the design doc [here](https://github.com/m3o/development/tree/master/design/clients)
+Find the start of the design doc [here](https://github.com/m3o/dev/tree/master/design/clients)
 
 Multi language clients will first start by being code generated from the protos of each service in the 
 [Runtime](https://github.com/micro/micro) e.g registry, broker, store, etc. We code generate these in 
