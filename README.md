@@ -22,30 +22,6 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 - [roadmap](roadmap) - where the full roadmap lives
 - [style guide](#style-guide) - coding style guide
 
-## Roadmap
-
-This is a high level overview for the open source. See the product [roadmap](roadmap).
-
-- [X] consolidate all libraries into go-micro
-- [X] gRPC API for the micro proxy
-- [X] quic as a default transport
-- [X] nats as a default broker
-- [x] [gRPC](design/framework/grpc.md) integration and interop
-- [x] embedded nats as the default broker
-- [x] go, java, typescript, ruby, python [client](design/clients/README.md) libraries
-- [x] standalone micro server
-- [x] better documentation and end to end tutorials
-- [ ] simpler kubernetes integration by default
-- [ ] pluggable wrappers for go-micro itself
-- [ ] dynamically defined cli, flags and env vars
-- [ ] improved micro api configuration 
-- [ ] graphql handler for the micro api
-- [ ] wireguard support in the micro network
-- [ ] reusable foundation [services](roadmap/services.md) 
-- [ ] define the mucp [protocol](ideas/protocol.md)
-- [ ] define the [mu](ideas/language.md) language
-- [ ] implement the [wasm](https://github.com/bytecodealliance/wasm-micro-runtime) runtime
-
 ## Philosophy
 
 Micro is the simplest way to build microservices. We have a developer first focus. Our goal is to make developers incredibly productive, 
