@@ -39,6 +39,9 @@ remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
 
+sass:
+    sass_dir: _sass
+
 # Just the docs configs, see https://pmarsceill.github.io/just-the-docs/docs/configuration/ 
 #logo: "/assets/images/logo.png"
 search_enabled: true
