@@ -18,14 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Micro Dev
+title: M3O Dev
 email: support@micro.mu
 description: >- # this means to ignore newlines until "baseurl:"
   Micro developers site - documentations, tutorials and more.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: microhq
-github_username:  micro
+twitter_username: m3oservices
+github_username:  m3o
 footer_content: "Copyright &copy; 2020 Micro Services, Inc."
 ga_tracking: UA-70478210-5
 
@@ -37,7 +37,7 @@ plugins:
   - jekyll-feed
 
 # Just the docs configs, see https://pmarsceill.github.io/just-the-docs/docs/configuration/ 
-logo: "/assets/images/logo.png"
+#logo: "/assets/images/logo.png"
 search_enabled: true
 heading_anchors: true
 # Enable support for hyphenated search words:
