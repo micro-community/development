@@ -7,9 +7,9 @@ title: Home
 nav_order: 1
 ---
 
-# Micro Dev
+# M3O Development
 
-Learn the ins and outs of Micro and become a Micro services ninja!
+Learn the ins and outs of M3O and become a Micro services ninja!
 {: .fs-6 .fw-300 }
 
 Micro is an open source development platform for Cloud services.

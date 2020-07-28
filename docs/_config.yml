@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Micro developers site - documentations, tutorials and more.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: microhq
+twitter_username: m3oservices
 github_username:  micro-community
 
 # Aux links for the upper right navigation
@@ -38,13 +38,21 @@ footer_content: "Copyright &copy; 2020 Micro Community, Org. Powered by <a href=
 
 # Build settings
 highlighter: rouge
-theme: just-the-docs
+
+# unhash for local development
+# theme: just-the-docs
+
 remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
 
+sass:
+    sass_dir: _sass
+include:
+  - _sass/
+
 # Just the docs configs, see https://pmarsceill.github.io/just-the-docs/docs/configuration/ 
-logo: "/assets/images/logo.png"
+#logo: "/assets/images/logo.png"
 search_enabled: true
 heading_anchors: true
 # Enable support for hyphenated search words:
