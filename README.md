@@ -1,6 +1,6 @@
 # Micro Development
 
-The Micro development roadmap, docs, team and contribution guide.
+The Micro-Community development roadmap, docs, team and contribution guide.
 
 # Overview 
 
