@@ -91,7 +91,7 @@ syntax = "proto3";
 package go.micro.service.post;
 
 service Posts {
-	rpc Post(PostRequest) returns (PostResponse) {}
+	rpc Save(SaveRequest) returns (SaveResponse) {}
 }
 
 message Post {
@@ -132,8 +132,8 @@ type Posts struct {
 	Client client.Client
 }
 
-func (t *Posts) Post(ctx context.Context, req *post.PostRequest, rsp *post.PostResponse) error {
-    log.Info("Received Posts.Post request")
+func (t *Posts) Save(ctx context.Context, req *post.SaveRequest, rsp *post.SaveResponse) error {
+    log.Info("Received Posts.Save request")
     return nil
 }
 ```
@@ -258,8 +258,8 @@ func (t *Posts) Post(ctx context.Context, req *posts.PostRequest, rsp *posts.Pos
 After a `micro update .` in project root, we can start saving posts!
 
 ```
-micro call go.micro.service.posts Posts.Post '{"id":"1","title":"Post one", "Content":"First saved post"}'
-micro call go.micro.service.posts Posts.Post '{"id":"2","title":"Post two", "Content":"Second saved post"}'
+micro call go.micro.service.posts Posts.Save '{"id":"1","title":"Post one", "Content":"First saved post"}'
+micro call go.micro.service.posts Posts.Save '{"id":"2","title":"Post two", "Content":"Second saved post"}'
 ```
 
 WOW! We are on a roll! We've just saved two posts. There is one problem however. There is no way yet to get the posts out of the post service.
@@ -336,7 +336,7 @@ const (
 	timestampPrefix = "timestamp"
 )
 
-func (t *Posts) Post(ctx context.Context, req *posts.PostRequest, rsp *posts.PostResponse) error {
+func (t *Posts) Save(ctx context.Context, req *posts.SaveRequest, rsp *posts.SaveResponse) error {
 	if len(req.Post.Id) == 0 || len(req.Post.Title) == 0 || len(req.Post.Content) == 0 {
 		return errors.New("ID, title or content is missing")
 	}
@@ -436,8 +436,8 @@ We can again invoke the Micro CLI to play around with our service after a `micro
 Let's insert two posts through the service we wote:
 
 ```
-micro call go.micro.service.posts Posts.Post '{"post":{"id":"1","title":"How to Micro","content":"Simply put, Micro is awesome."}}'
-micro call go.micro.service.posts Posts.Post '{"post":{"id":"2","title":"Fresh posts are fresh","content":"This post is fresher than the How to Micro one"}}'
+micro call go.micro.service.posts Posts.Save '{"post":{"id":"1","title":"How to Micro","content":"Simply put, Micro is awesome."}}'
+micro call go.micro.service.posts Posts.Save '{"post":{"id":"2","title":"Fresh posts are fresh","content":"This post is fresher than the How to Micro one"}}'
 ```
 
 ## Querying posts
@@ -453,7 +453,7 @@ package go.micro.service.posts;
 service Posts {
 	// Query currently only supports read by slug or timestamp, no listing.
 	rpc Query(QueryRequest) returns (QueryResponse) {}
-	rpc Post(PostRequest) returns (PostResponse) {}
+	rpc Save(SaveRequest) returns (SaveResponse) {}
 	rpc Delete(DeleteRequest) returns (DeleteResponse) {}
 }
 
@@ -476,11 +476,11 @@ message QueryResponse {
 	repeated Post posts = 1;
 }
 
-message PostRequest {
+message SaveRequest {
 	Post post = 1;
 }
 
-message PostResponse {
+message SaveResponse {
 	Post post = 1;
 }
 
