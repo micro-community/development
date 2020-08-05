@@ -55,7 +55,7 @@ $ cd post; # step into project root
 $ cat proto/post/post.proto 
 syntax = "proto3";
 
-package go.micro.service.posts;
+package posts;
 
 service Posts {
 	rpc Call(Request) returns (Response) {}
@@ -88,7 +88,7 @@ Let's start with the post method. Modify our `proto/post/post.proto` file to mat
 ```proto
 syntax = "proto3";
 
-package go.micro.service.post;
+package post;
 
 service Posts {
 	rpc Save(SaveRequest) returns (SaveResponse) {}
@@ -155,7 +155,7 @@ import (
 func main() {
 	// New Service
 	service := micro.NewService(
-		micro.Name("go.micro.service.posts"),
+		micro.Name("posts"),
 		micro.Version("latest"),
 	)
 
@@ -169,7 +169,7 @@ func main() {
 	})
 
 	// Register Struct as Subscriber
-	micro.RegisterSubscriber("go.micro.service.posts", service.Server(), new(subscriber.Posts))
+	micro.RegisterSubscriber("posts", service.Server(), new(subscriber.Posts))
 
 	// Run service
 	if err := service.Run(); err != nil {
@@ -182,8 +182,8 @@ At this point `micro run .` in project root should deploy our post service. Let'
 
 ```
 $ micro logs blog/posts
-Auth [service] Authenticated as go.micro.service.posts-b6c818ad-c5b3-44de-949b-2a1cbfee4d04 issued by go.micro
-Starting [service] go.micro.service.posts
+Auth [service] Authenticated as posts-b6c818ad-c5b3-44de-949b-2a1cbfee4d04 issued by go.micro
+Starting [service] posts
 Server [grpc] Listening on [::]:36265
 Broker [service] Connected to 127.0.0.1:8001
 ```
@@ -258,15 +258,15 @@ func (t *Posts) Post(ctx context.Context, req *posts.PostRequest, rsp *posts.Pos
 After a `micro update .` in project root, we can start saving posts!
 
 ```
-micro call go.micro.service.posts Posts.Save '{"id":"1","title":"Post one", "Content":"First saved post"}'
-micro call go.micro.service.posts Posts.Save '{"id":"2","title":"Post two", "Content":"Second saved post"}'
+micro call posts Posts.Save '{"id":"1","title":"Post one", "Content":"First saved post"}'
+micro call posts Posts.Save '{"id":"2","title":"Post two", "Content":"Second saved post"}'
 ```
 
 WOW! We are on a roll! We've just saved two posts. There is one problem however. There is no way yet to get the posts out of the post service.
 Now luckily, `micro store` commands are designed to interact with the saved data. `micro store list` will list all keys saved (but not values):
 
 ```
-$ micro store list --table=go.micro.service.posts
+$ micro store list --table=posts
 post-one
 post-two
 ```
@@ -274,16 +274,16 @@ post-two
 Why are these keys there? Remember we saved the posts by slug. Okay, but where are the values? `micro store read` comes to our rescue:
 
 ```
-$ micro store read --table=go.micro.service read post-one
+$ micro store read --table=posts post-one
 {"id":"1","title":"Post one", "content":"First saved post", "create_timestamp":1591970869, "update_timestamp":1591970869}
-$ micro store read --table=go.micro.service read post-two
+$ micro store read --table=posts post-two
 {"id":"2","title":"Post two", "content":"Second saved post",  "create_timestamp":1591970870, "update_timestamp":1591970870}
 ```
 
 It's a bit annoying however to read values one by one, that' why the `--prefix` flag exists:
 
 ```
-$ micro store read --table=go.micro.service --prefix post
+$ micro store read --table=posts --prefix post
 {"id":"1","title":"Post one", "Content":"First saved post", "create_timestamp":1591970869, "update_timestamp":1591970869}
 {"id":"2","title":"Post two", "Content":"Second saved post",  "create_timestamp":1591970870, "update_timestamp":1591970870}
 ```
@@ -310,13 +310,13 @@ We should also note that all records are listed in an alphabetical order of thei
 We can exploit this, coupled with the `--offset` and `--limit` concepts to implement paging, ie.
 
 ```
-micro store read --table=go.micro.service --prefix --offset 0 --limit 20 post
+micro store read --table=posts --prefix --offset 0 --limit 20 post
 ```
 
 would give back the first 20 posts, 
 
 ```
-micro store read --table=go.micro.service --prefix --offset 20 --limit 20 post
+micro store read --table=posts --prefix --offset 20 --limit 20 post
 ```
 
 would return the second 20 posts - the second page essentially - and so on.
@@ -436,19 +436,19 @@ We can again invoke the Micro CLI to play around with our service after a `micro
 Let's insert two posts through the service we wote:
 
 ```
-micro call go.micro.service.posts Posts.Save '{"post":{"id":"1","title":"How to Micro","content":"Simply put, Micro is awesome."}}'
-micro call go.micro.service.posts Posts.Save '{"post":{"id":"2","title":"Fresh posts are fresh","content":"This post is fresher than the How to Micro one"}}'
+micro call posts Posts.Save '{"post":{"id":"1","title":"How to Micro","content":"Simply put, Micro is awesome."}}'
+micro call posts Posts.Save '{"post":{"id":"2","title":"Fresh posts are fresh","content":"This post is fresher than the How to Micro one"}}'
 ```
 
 ## Querying posts
 
-While we can query the data through `micro store list --table=go.micro.service.posts`, we still can't do that through the service.
+While we can query the data through `micro store list --table=posts`, we still can't do that through the service.
 Implementing the `Query` handler will enable doing that, but first we need to amend and regenerate [our proto](#posts-proto). We will also define the `Delete` endpoint in this step so we don't have to touch this file again soon:
 
 ```
 syntax = "proto3";
 
-package go.micro.service.posts;
+package posts;
 
 service Posts {
 	// Query currently only supports read by slug or timestamp, no listing.
@@ -540,7 +540,7 @@ func (t *Posts) Query(ctx context.Context, req *post.QueryRequest, rsp *post.Que
 After doing a `micro update .` in the project root, we can now query the posts:
 
 ```
-$ micro call go.micro.service.posts Posts.Query '{"limit": 10}'
+$ micro call posts Posts.Query '{"limit": 10}'
 {
 	"posts": [
 		{
