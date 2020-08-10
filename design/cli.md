@@ -2,10 +2,9 @@
 
 ## Dynamic CLI Commands
 
-Micro supports dynamic CLI commands, allowing users to call their services without needing to manually
-add commands to Micro. For example:
+Micro supports dynamic CLI commands, allowing users to call their services without needing to manually add commands to Micro. For example:
 
-• `micro helloworld` will call helloworld Helloworld.Call. If one argument is provided, it's assumed this is the name of the service, and we want to execute the Call RPC call.
+• `micro helloworld` will call helloworld Helloworld.Call. If one argument is provided, it's assumed this is the name of the service, and we want to execute the Call RPC.
 • `micro helloworld foo` will call helloworld Helloworld.Foo. If a second argument is provided, we use this as the method name, and keep the service name as the handler. 
 • `micro helloworld debug health` will call helloworld Debug.Health. The second and third arguments are combined to create the RPC endpoint.
 
