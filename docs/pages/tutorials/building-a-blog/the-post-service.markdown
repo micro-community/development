@@ -33,26 +33,25 @@ As a reminder, we have to make sure `micro server` is running in an other termin
 
 ```
 $ micro env
-  local                             none
-* server                            127.0.0.1:8081
+* local															127.0.0.1:8081
   platform                          proxy.m3o.com
 ```
 
-has the server environment picked. If not, we can issue `micro env set server` to remedy.   
+has the local environment picked. If not, we can issue `micro env set local` to remedy.   
 
 Now back to the `micro new` command:
 
 ```
-$ micro new post
-$ ls post
-Dockerfile  generate.go  go.mod  handler  main.go  Makefile  plugin.go  proto  README.md  subscriber
+$ micro new posts
+$ ls posts
+Dockerfile	Makefile	README.md	generate.go	go.mod		handler		main.go		proto
 ```
 
 Great! The best way to start a service is to define the proto. The generated default should be something similar to this:
 
 ```sh
-$ cd post; # step into project root
-$ cat proto/post/post.proto 
+$ cd posts; # step into project root
+$ cat proto/posts.proto 
 syntax = "proto3";
 
 package posts;
@@ -78,17 +77,18 @@ message Response {
 ```
 
 In our post service, we want 3 methods:
-- `Post` for blog post insert and update
+- `Save` for blog insert and update
 - `Query` for reading and listing
 - `Delete` for deletion
 
-Let's start with the post method. Modify our `proto/post/post.proto` file to match the following:
+Let's start with the post method. Modify our `proto/posts.proto` file to match the following:
 
 <a name="posts-proto"></a>
 ```proto
 syntax = "proto3";
 
 package post;
+option go_package = "proto;posts";
 
 service Posts {
 	rpc Save(SaveRequest) returns (SaveResponse) {}
@@ -102,11 +102,11 @@ message Post {
 	int64 timestamp = 5;
 	repeated string tagNames = 6;
 }
-message PostRequest {
+message SaveRequest {
 	Post post = 1;
 }
 
-message PostResponse {
+message SaveResponse {
 	Post post = 1;
 }
 ```
@@ -118,23 +118,18 @@ Let's adjust the handler to match our proto!
 package handler
 
 import (
-    "context"
+	"context"
 
-	"github.com/micro/go-micro/v2/client"
-	log "github.com/micro/go-micro/v2/logger"
-	"github.com/micro/go-micro/v2/store"
+	"github.com/micro/micro/v3/service/logger"
 
-	post "github.com/micro/services/blog/post/proto/post"
+	pb "posts/proto"
 )
 
-type Posts struct {
-	Store  store.Store
-	Client client.Client
-}
+type Posts struct {}
 
-func (t *Posts) Save(ctx context.Context, req *post.SaveRequest, rsp *post.SaveResponse) error {
-    log.Info("Received Posts.Save request")
-    return nil
+func (p *Posts) Save(ctx context.Context, req *pb.SaveRequest, rsp *pb.SaveResponse) error {
+	logger.Info("Received Posts.Save request")
+	return nil
 }
 ```
 
@@ -144,58 +139,58 @@ Now, the `main.go`:
 package main
 
 import (
-	"github.com/micro/services/blog/posts/handler"
-	"github.com/micro/services/blog/posts/subscriber"
-	"github.com/micro/go-micro/v2"
+	"posts/handler"
+	pb "posts/proto"
 
-	log "github.com/micro/go-micro/v2/logger"
-	posts "github.com/micro/services/blog/posts/proto/posts"
+	"github.com/micro/micro/v3/service"
+	"github.com/micro/micro/v3/service/logger"
 )
 
 func main() {
 	// New Service
-	service := micro.NewService(
-		micro.Name("posts"),
-		micro.Version("latest"),
+	srv := service.New(
+		service.Name("posts"),
+		service.Version("latest"),
 	)
 
-	// Initialise service
-	service.Init()
-
 	// Register Handler
-	post.RegisterPostsHandler(service.Server(), &handler.Posts{
-		Store:  service.Options().Store,
-		Client: service.Client(),
-	})
-
-	// Register Struct as Subscriber
-	micro.RegisterSubscriber("posts", service.Server(), new(subscriber.Posts))
+	pb.RegisterPostsHandler(srv.Server(), new(handler.Posts))
 
 	// Run service
-	if err := service.Run(); err != nil {
-		log.Fatal(err)
+	if err := srv.Run(); err != nil {
+		logger.Fatal(err)
 	}
 }
 ```
 
-At this point `micro run .` in project root should deploy our post service. Let's verify with `micro logs blog/posts`:
+At this point `micro run .` in project root should deploy our post service. Let's verify with `micro logs posts`:
 
 ```
-$ micro logs blog/posts
-Auth [service] Authenticated as posts-b6c818ad-c5b3-44de-949b-2a1cbfee4d04 issued by go.micro
+$ micro logs posts
 Starting [service] posts
-Server [grpc] Listening on [::]:36265
-Broker [service] Connected to 127.0.0.1:8001
+Server [grpc] Listening on [::]:53031
+Registry [service] Registering node: posts-b36361ae-f2ae-48b0-add5-a8d4797508be
 ```
 
 (The exact output might depend on the actual config format configuraton.)
 
 ## Saving posts
 
-Let's make our service do something useful now: save a post.
-First we define our model, the `Post` type, to match the proto:
+Let's make our service do something useful now: save a post. We define our model, the `Post` type, to match the proto 
+and then modify the handler. The handler should now look like:
 
 ```go
+package handler
+
+import (
+	"context"
+	pb "posts/proto"
+
+	"github.com/micro/micro/v3/service/errors"
+)
+
+type Posts struct {}
+
 type Post struct {
 	ID              string   `json:"id"`
 	Title           string   `json:"title"`
@@ -205,14 +200,10 @@ type Post struct {
 	UpdateTimestamp int64    `json:"update_timestamp"`
 	TagNames        []string `json:"tagNames"`
 }
-```
 
-After this, we modify the Post endpoint. Let's start with some basic input validation:
-
-```go
-func (t *Posts) Post(ctx context.Context, req *posts.PostRequest, rsp *posts.PostResponse) error {
+func (p *Posts) Save(ctx context.Context, req *pb.SaveRequest, rsp *pb.SaveResponse) error {
 	if len(req.Post.Id) == 0 || len(req.Post.Title) == 0 || len(req.Post.Content) == 0 {
-		return errors.New("ID, title or content is missing")
+		return errors.BadRequest("posts.Save", "ID, title or content is missing")
 	}
 
 	return nil
@@ -226,30 +217,39 @@ Since UUIDs are not too nice, we will use a slug generated by the `github.com/go
 
 (A slug is a urlified version of a title, ie. `How to Micro` becomes `how-to-micro`.)
 
+
 ```go
-func (t *Posts) Post(ctx context.Context, req *posts.PostRequest, rsp *posts.PostResponse) error {
+import (
+	// other imports
+	"github.com/micro/micro/v3/service/store"
+	gostore "github.com/micro/go-micro/v3/store"
+)
+
+// ...
+
+// Save a post
+func (p *Posts) Save(ctx context.Context, req *pb.SaveRequest, rsp *pb.SaveResponse) error {
 	if len(req.Post.Id) == 0 || len(req.Post.Title) == 0 || len(req.Post.Content) == 0 {
-		return errors.New("ID, title or content is missing")
+		return errors.BadRequest("posts.Save", "ID, title or content is missing")
 	}
 
-	postSlug := slug.Make(req.Post.Title)
-	now := time.Now().Unix()
 	post := &Post{
 		ID:              req.Post.Id,
 		Title:           req.Post.Title,
 		Content:         req.Post.Content,
-		Slug:            postSlug,
+		Slug:            slug.Make(req.Post.Title),
 		TagNames:        req.Post.TagNames,
-		CreateTimestamp: now,
-		UpdateTimestamp: now,
+		CreateTimestamp: time.Now().Unix(),
+		UpdateTimestamp: time.Now().Unix(),
 	}
+	
 	bytes, err := json.Marshal(post)
 	if err != nil {
 		return err
 	}
 
-	return 	t.Store.Write(&store.Record{
-		Key:   postSlug,
+	return 	store.Write(&gostore.Record{
+		Key:   post.Slug,
 		Value: bytes,
 	})
 }
@@ -258,8 +258,8 @@ func (t *Posts) Post(ctx context.Context, req *posts.PostRequest, rsp *posts.Pos
 After a `micro update .` in project root, we can start saving posts!
 
 ```
-micro call posts Posts.Save '{"id":"1","title":"Post one", "Content":"First saved post"}'
-micro call posts Posts.Save '{"id":"2","title":"Post two", "Content":"Second saved post"}'
+micro posts save --post_id=1 --post_title="Post one" --post_content="First saved post"
+micro posts save --post_id=2 --post_title="Post two" --post_content="Second saved post"
 ```
 
 WOW! We are on a roll! We've just saved two posts. There is one problem however. There is no way yet to get the posts out of the post service.
@@ -331,42 +331,42 @@ The following code piece might be a bit longer than the previous ones, but it co
 
 ```go
 const (
-	idPrefix		= "id"
-	slugPrefix 		= "slug"
+	idPrefix        = "id"
+	slugPrefix      = "slug"
 	timestampPrefix = "timestamp"
 )
 
-func (t *Posts) Save(ctx context.Context, req *posts.SaveRequest, rsp *posts.SaveResponse) error {
+func (p *Posts) Save(ctx context.Context, req *pb.SaveRequest, rsp *pb.SaveResponse) error {
 	if len(req.Post.Id) == 0 || len(req.Post.Title) == 0 || len(req.Post.Content) == 0 {
-		return errors.New("ID, title or content is missing")
+		return errors.BadRequest("posts.Save", "ID, title or content is missing")
 	}
 
 	// read by parent ID so we can check if it exists without slug changes getting in the way.
-	records, err := t.Store.Read(fmt.Sprintf("%v:%v", idPrefix, req.Post.Id))
-	if err != nil && err != store.ErrNotFound {
+	records, err := store.Read(fmt.Sprintf("%v:%v", idPrefix, req.Post.Id))
+	if err != nil && err != gostore.ErrNotFound {
 		return err
 	}
 	postSlug := slug.Make(req.Post.Title)
 
 	// If no existing record is found, create a new one
 	if len(records) == 0 {
-		post := &Post{
+		return p.savePost(ctx, nil, &Post{
 			ID:              req.Post.Id,
 			Title:           req.Post.Title,
 			Content:         req.Post.Content,
 			TagNames:        req.Post.TagNames,
 			Slug:            postSlug,
 			CreateTimestamp: time.Now().Unix(),
-		}
-		return t.savePost(ctx, nil, post)
+		})
 	}
 
 	record := records[0]
+
 	oldPost := &Post{}
-	err = json.Unmarshal(record.Value, oldPost)
-	if err != nil {
+	if err := json.Unmarshal(record.Value, oldPost); err != nil {
 		return err
 	}
+
 	post := &Post{
 		ID:              req.Post.Id,
 		Title:           req.Post.Title,
@@ -378,55 +378,56 @@ func (t *Posts) Save(ctx context.Context, req *posts.SaveRequest, rsp *posts.Sav
 	}
 
 	// Check if slug exists
-	recordsBySlug, err := t.Store.Read(fmt.Sprintf("%v:%v", slugPrefix, postSlug))
-	if err != nil && err != store.ErrNotFound {
+	recordsBySlug, err := store.Read(fmt.Sprintf("%v:%v", slugPrefix, postSlug))
+	if err != nil && err != gostore.ErrNotFound {
 		return err
 	}
 	otherSlugPost := &Post{}
-	err = json.Unmarshal(record.Value, otherSlugPost)
-	if err != nil {
+	if err := json.Unmarshal(record.Value, otherSlugPost); err != nil {
 		return err
 	}
 	if len(recordsBySlug) > 0 && oldPost.ID != otherSlugPost.ID {
-		return errors.New("An other post with this slug already exists")
+		return errors.BadRequest("posts.Save", "An other post with this slug already exists")
 	}
 
-	return t.savePost(ctx, oldPost, post)
+	return p.savePost(ctx, oldPost, post)
 }
 
-func (t *Posts) savePost(ctx context.Context, oldPost, post *Post) error {
+func (p *Posts) savePost(ctx context.Context, oldPost, post *Post) error {
 	bytes, err := json.Marshal(post)
 	if err != nil {
 		return err
 	}
 
 	// Save post by ID
-	err = t.Store.Write(&store.Record{
+	record := &gostore.Record{
 		Key:   fmt.Sprintf("%v:%v", idPrefix, post.ID),
 		Value: bytes,
-	})
-	if err != nil {
+	}
+	if err := store.Write(record); err != nil {
 		return err
 	}
+
 	// Delete old slug index if the slug has changed
 	if oldPost.Slug != post.Slug {
-		err = t.Store.Delete(fmt.Sprintf("%v:%v", slugPrefix, post.Slug))
-		if err != nil {
+		if err := store.Delete(fmt.Sprintf("%v:%v", slugPrefix, post.Slug)); err != nil {
 			return err
 		}
 	}
+
 	// Save post by slug
-	err = t.Store.Write(&store.Record{
+	slugRecord := &gostore.Record{
 		Key:   fmt.Sprintf("%v:%v", slugPrefix, post.Slug),
 		Value: bytes,
-	})
-	if err != nil {
+	}
+	if err := store.Write(slugRecord); err != nil {
 		return err
 	}
+
 	// Save post by timeStamp
-	return t.Store.Write(&store.Record{
+	return store.Write(&gostore.Record{
 		// We revert the timestamp so the order is chronologically reversed
-		Key:   fmt.Sprintf("%v:%v", timeStampPrefix, math.MaxInt64-post.CreateTimestamp),
+		Key:   fmt.Sprintf("%v:%v", timestampPrefix, math.MaxInt64-post.CreateTimestamp),
 		Value: bytes,
 	})
 }
@@ -436,8 +437,8 @@ We can again invoke the Micro CLI to play around with our service after a `micro
 Let's insert two posts through the service we wote:
 
 ```
-micro call posts Posts.Save '{"post":{"id":"1","title":"How to Micro","content":"Simply put, Micro is awesome."}}'
-micro call posts Posts.Save '{"post":{"id":"2","title":"Fresh posts are fresh","content":"This post is fresher than the How to Micro one"}}'
+micro posts save --post_id="1" --post_title="How to Micro" --post_content="Simply put, Micro is awesome."
+micro posts save --post_id="2" --post_title="Fresh posts are fresh" --post_content="This post is fresher than the How to Micro one"
 ```
 
 ## Querying posts
@@ -445,10 +446,11 @@ micro call posts Posts.Save '{"post":{"id":"2","title":"Fresh posts are fresh","
 While we can query the data through `micro store list --table=posts`, we still can't do that through the service.
 Implementing the `Query` handler will enable doing that, but first we need to amend and regenerate [our proto](#posts-proto). We will also define the `Delete` endpoint in this step so we don't have to touch this file again soon:
 
-```
+```proto
 syntax = "proto3";
 
 package posts;
+option go_package = "proto;posts";
 
 service Posts {
 	// Query currently only supports read by slug or timestamp, no listing.
@@ -489,43 +491,46 @@ message DeleteRequest {
 }
 
 message DeleteResponse {}
-
 ```
 
 A `make proto` issued in the command root should regenerate the Go proto files and we should be ready to define our new handler:
 
 ```go
-func (t *Posts) Query(ctx context.Context, req *post.QueryRequest, rsp *post.QueryResponse) error {
-	var records []*store.Record
-	var err error
+// Query the posts
+func (p *Posts) Query(ctx context.Context, req *pb.QueryRequest, rsp *pb.QueryResponse) error {
+	var opts []gostore.ReadOption
+	var key string
+
+	// detemine the key
 	if len(req.Slug) > 0 {
-		key := fmt.Sprintf("%v:%v", slugPrefix, req.Slug)
-		log.Infof("Reading post by slug: %v", req.Slug)
-		records, err = t.Store.Read(key, store.ReadPrefix())
+		key = fmt.Sprintf("%v:%v", slugPrefix, req.Slug)
 	} else {
-		key := fmt.Sprintf("%v:", timeStampPrefix)
-		var limit uint
-		limit = 20
-		if req.Limit > 0 {
-			limit = uint(req.Limit)
-		}
-		log.Infof("Listing posts, offset: %v, limit: %v", req.Offset, limit)
-		records, err = t.Store.Read(key, store.ReadPrefix(),
-			store.ReadOffset(uint(req.Offset)),
-			store.ReadLimit(limit))
+		key = fmt.Sprintf("%v:", timestampPrefix)
+		opts = append(opts, gostore.ReadPrefix())
 	}
 
+	// set the limit
+	if req.Limit > 0 {
+		opts = append(opts, gostore.ReadLimit(uint(req.Limit)))
+	} else {
+		opts = append(opts, gostore.ReadLimit(20))
+	}
+
+	// execute the query
+	records, err := store.Read(key, opts...)
 	if err != nil {
 		return err
 	}
-	rsp.Posts = make([]*post.Post, len(records))
+
+	// serialize the response
+	rsp.Posts = make([]*pb.Post, len(records))
 	for i, record := range records {
 		postRecord := &Post{}
-		err := json.Unmarshal(record.Value, postRecord)
-		if err != nil {
+		if err := json.Unmarshal(record.Value, postRecord); err != nil {
 			return err
 		}
-		rsp.Posts[i] = &post.Post{
+
+		rsp.Posts[i] = &pb.Post{
 			Id:       postRecord.ID,
 			Title:    postRecord.Title,
 			Slug:     postRecord.Slug,
@@ -535,12 +540,17 @@ func (t *Posts) Query(ctx context.Context, req *post.QueryRequest, rsp *post.Que
 	}
 	return nil
 }
+
+// Delete a post
+func (p *Posts) Delete(ctx context.Context, req *pb.DeleteRequest, rsp *pb.DeleteResponse) error {
+	return nil
+}
 ```
 
 After doing a `micro update .` in the project root, we can now query the posts:
 
 ```
-$ micro call posts Posts.Query '{"limit": 10}'
+$ micro posts query --limit=10
 {
 	"posts": [
 		{
@@ -560,33 +570,32 @@ Stellar! Now only `Delete` remains to be implemented to have a basic post servic
 Since we have already defined `Delete` in our proto, we only have to implement the handler:
 
 ```go
-func (t *Posts) Delete(ctx context.Context, req *posts.DeleteRequest, rsp *posts.DeleteResponse) error {
-	log.Info("Received Post.Delete request")
-	records, err := t.Store.Read(fmt.Sprintf("%v:%v", idPrefix, req.Id))
-	if err != nil && err != store.ErrNotFound {
+// Delete a post
+func (p *Posts) Delete(ctx context.Context, req *pb.DeleteRequest, rsp *pb.DeleteResponse) error {
+	records, err := store.Read(fmt.Sprintf("%v:%v", idPrefix, req.Id))
+	if err == gostore.ErrNotFound {
+		return errors.NotFound("posts.Delete", "Post not found")
+	} else if err != nil {
 		return err
 	}
-	if len(records) == 0 {
-		return fmt.Errorf("Post with ID %v not found", req.Id)
-	}
+
 	post := &Post{}
-	err = json.Unmarshal(records[0].Value, post)
-	if err != nil {
+	if err := json.Unmarshal(records[0].Value, post); err != nil {
 		return err
 	}
 
 	// Delete by ID
-	err = t.Store.Delete(fmt.Sprintf("%v:%v", idPrefix, post.ID))
-	if err != nil {
+	if err = store.Delete(fmt.Sprintf("%v:%v", idPrefix, post.ID)); err != nil {
 		return err
 	}
+
 	// Delete by slug
-	err = t.Store.Delete(fmt.Sprintf("%v:%v", slugPrefix, post.Slug))
-	if err != nil {
+	if err := store.Delete(fmt.Sprintf("%v:%v", slugPrefix, post.Slug)); err != nil {
 		return err
 	}
+
 	// Delete by timeStamp
-	return t.Store.Delete(fmt.Sprintf("%v:%v", timeStampPrefix, post.CreateTimestamp))
+	return store.Delete(fmt.Sprintf("%v:%v", timestampPrefix, post.CreateTimestamp))
 }
 ```
 
