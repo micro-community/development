@@ -60,7 +60,7 @@ nats-operator    1/1     1            1           4d14h
 ```
 
 ```
-kubectl set image deployments/micro-runtime runtime=micro/micro:tag
+kubectl set image deployments micro=micro/micro:tag -l micro=runtime
 ```
 
 Please note `tag` must be changed to your specific tag.
