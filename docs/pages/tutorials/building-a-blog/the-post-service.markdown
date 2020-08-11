@@ -120,15 +120,12 @@ package handler
 import (
 	"context"
 
-	"github.com/micro/go-micro/v3/client"
 	"github.com/micro/micro/v3/service/logger"
 
 	pb "posts/proto"
 )
 
-type Posts struct {
-	Client client.Client
-}
+type Posts struct {}
 
 func (p *Posts) Save(ctx context.Context, req *pb.SaveRequest, rsp *pb.SaveResponse) error {
 	logger.Info("Received Posts.Save request")
@@ -157,9 +154,7 @@ func main() {
 	)
 
 	// Register Handler
-	pb.RegisterPostsHandler(srv.Server(), &handler.Posts{
-		Client: srv.Client(),
-	})
+	pb.RegisterPostsHandler(srv.Server(), new(handler.Posts))
 
 	// Run service
 	if err := srv.Run(); err != nil {
@@ -191,13 +186,10 @@ import (
 	"context"
 	pb "posts/proto"
 
-	"github.com/micro/go-micro/v3/client"
 	"github.com/micro/micro/v3/service/errors"
 )
 
-type Posts struct {
-	Client client.Client
-}
+type Posts struct {}
 
 type Post struct {
 	ID              string   `json:"id"`
