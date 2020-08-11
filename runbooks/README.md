@@ -9,6 +9,8 @@ Currently a single file but parts will be moved out once they become overly long
    * [Add new user to beta](#add-new-user-to-beta)
    * [Services](#services)
       * [Redeploying services](#redeploying-services)
+         * [Micro](#micro-(server))
+         * [M3O](#m3o-(runtime-services))
    * [Getting access](#getting-access)
       * [Scaleway](#scaleway)
       * [Kubernetes cluster](#kubernetes-cluster)
@@ -35,6 +37,8 @@ micro invite create --email="me@domwong.com"
 # Services
 
 ## Redeploying services
+
+### Micro (Server)
 
 Assuming you have access to [Kubernetes](#-kubernetes-cluster).
 
@@ -64,6 +68,11 @@ kubectl set image deployments micro=micro/micro:tag -l micro=runtime
 ```
 
 Please note `tag` must be changed to your specific tag.
+
+### M3O (Runtime Services)
+
+To update an M3O service, run `micro update [source]`, e.g: 
+`micro update github.com/m3o/services/status`
 
 # Getting access
 
