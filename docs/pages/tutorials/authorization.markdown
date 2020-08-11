@@ -113,7 +113,7 @@ the login functionality can be called by users who are not logged in :)). Let's 
 
 ```sh
 # This command creates a rule that enables anyone to call login and auth related endpoints
-micro auth create rule  --access=granted --scope='' --resource="service:go.micro.auth:*" authpublic
+micro auth create rule  --access=granted --scope='' --resource="service:auth:*" authpublic
 ```
 
 Now, let's remove the default rule.
@@ -128,7 +128,7 @@ Now, from this point all calls should fail:
 
 ```sh
 $ micro auth list rules
-Error listing rules: {"Id":"go.micro.auth","Code":401,"Detail":"Unauthorized call made to go.micro.auth:Rules.List","Status":"Unauthorized"}
+Error listing rules: {"Id":"auth","Code":401,"Detail":"Unauthorized call made to auth:Rules.List","Status":"Unauthorized"}
 ```
 
 Let's hope we remember our password and we can log in (hint: it's `mystrongpass`):
@@ -145,7 +145,7 @@ After login, `micro auth list rules` and other commands should be functional aga
 ```sh
 $ micro auth list rules
 ID              Scope           Access      Resource                  Priority
-authpublic      <public>        GRANTED     service:go.micro.auth:*   0
+authpublic      <public>        GRANTED     service:auth:*   0
 onlyloggedin    *               GRANTED     *:*:*                     0
 ```
 
