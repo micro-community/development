@@ -23,6 +23,7 @@ Currently a single file but parts will be moved out once they become overly long
       * [Killing all pods](#killing-all-pods)
    * [Regression Testing](#regression-testing)
       * [Manually](#manually)
+   * [Deploying the Platform](#deploying-platform)
 
 # Users
 
@@ -180,3 +181,160 @@ kubectl get pods -n micro | awk '{print $1}' | grep -v NAME | xargs -I % sh -c '
     - We can’t see any store data that we shouldn’t be able to
     - We can’t call any services we shouldn’t be able to
     - We can’t see any bits of infra (etcd, cockroach, k8s) that we shouldn’t be able to
+
+# Deploying Platform
+
+## Prerequisites
+
+Before deploying the platform you will need:
+- Access to Scaleway
+- Access to Cloudflare
+- The slack API key
+- The stripe API key
+- The Sendgrid API key
+- A Cloudflare API token, with access to m3o.com & m3o.app with Zone.Zone and Zone.DNS permissions.
+- The reference of the latest stable micro docker image snapshot.
+
+### Setup
+
+### Create the cluster
+
+Create the cluster in Scaleway, running Kubernetes 1.18.6. The default pool should use the "GP1-S” tier which has 32GB of ram. Do not enable auto-scaling.
+
+Wait for the node pools to become Ready. Whilst you wait, download the Kubeconfig and set it locally `export KUBECONFIG=~/Download/micro-platform.yaml`
+
+### Deploy the infra, certs and services
+
+Go to micro/micro/platform/kubernetes and run `bash install.sh production`. This script will install the certs, infra and all the micro services (e.g. runtime).
+
+Once the script has finished, you need to manually add the cloud flare and slack tokens. Do this by running `kubectl edit secret micro-secrets` and adding the keys 'cloudflare' and 'slack' The values should be base64 encoded.
+
+Wait for all the pods to be “Running”.
+
+### Update micro to the latest snapshot
+
+Update micro to the latest stable docker image snapshot using the following command and then wait for the services to all have the status "Running".
+
+```bash
+kubectl set image deployments micro=micro/micro:tag -l micro=runtime
+```
+
+### Update DNS
+
+Update the DNS records in cloudflare to point to the k8s service Public IP for proxy and api. Once this is done, you should be able to call the service via the API and proxy using the following commands:
+
+```bash
+micro env set platform
+micro call store Debug.Health
+curl https://api.m3o.com/store/Debug/Health
+```
+### Remove default accounts
+
+Firstly, login as admin:
+```bash
+micro login --email=admin --password=micro
+```
+
+Create yourself an account, noting down the name and secret which is generated.
+```bash
+micro auth create account [name]
+```
+
+Login as your new account
+```bash
+micro login --email=[name] --password=[password]
+```
+
+Delete the admin account: 
+```bash
+micro auth delete account admin
+```
+
+ Verify it worked by listing the accounts. The only one listed should be the one you just created
+```bash
+micro auth list accounts
+```
+
+### Setup Stripe
+
+Create the product and plan in stripe. The response contains an ID, you'll need that for the next command so note it down.
+```bash
+curl https://api.stripe.com/v1/products \
+  -u [strip api key]: \
+  -d name="Micro"
+```
+
+Then create the plan. Use the product ID from above. This will return you a plan ID which is needed in the next step.
+```bash
+curl https://api.stripe.com/v1/plans \
+  -u [stripe api key]: \
+  -d amount=3500 \
+  -d currency=usd \
+  -d interval=month \
+  -d product=[product id, created above]
+```
+
+### Set Config
+
+Set the required config. Replace the substituted values with the production API keys etc.
+```bash
+micro config set micro.alert.slack_token [slack api key]
+micro config set micro.payments.stripe.api_key [stripe api key]
+micro config set micro.signup.sendgrid.api_key [sendgrid api key]
+micro config set micro.signup.sendgrid.template_id d-240bf196257143569539b3b6b82127c0;
+micro config set micro.signup.plan_id [stripe plan id];
+micro config set micro.signup.email_from "Micro Team <support@m3o.com>";
+micro config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,kubernetes,invite,payment.stripe";
+```
+
+Verify the config by calling`“micro config get micro`. This will output the config as JSON.
+
+### Setup the rules
+
+Setup the auth rules to restrict access to the m3o services before we deploy them:
+```bash
+micro auth create rule --resource="service:alert:*" alert
+micro auth create rule --resource="service:status:*" status
+micro auth create rule --resource="service:auth:*" auth
+micro auth create rule --resource="service:signup:*" signup
+micro auth create rule --scope='*' --resource="*:*:*" onlyloggedin
+micro auth delete rule default
+```
+
+### Run the M3O Services
+
+Run the M3O services which make up the platform:
+```bash
+micro run github.com/m3o/services/payments/provider/stripe
+micro run github.com/m3o/services/alert
+micro run github.com/m3o/services/signup
+micro run github.com/m3o/services/tests
+micro run github.com/m3o/services/status
+micro run github.com/m3o/services/invite
+micro run github.com/m3o/services/api/client
+micro run github.com/m3o/services/events
+micro run github.com/m3o/services/kubernetes
+micro run github.com/m3o/services/notifications
+```
+
+Wait for the services to all be running. This can be checked by running `micro services`
+
+### Configure Kubernetes Service
+
+The kubernetes service needs elevated privileges to create / list k8s namespaces. Firstly, create the RBAC resources by running:
+```bash
+kubectl create -f https://raw.githubusercontent.com/m3o/services/master/kubernetes/rbac.yaml -n micro
+```
+
+Then, edit the kubernetes deployment to use this service name.
+```bash
+kubectl edit deployment m3o-services-kubernetes-latest -n micro
+```
+
+Add the following the container spec:
+```
+serviceAccount: kubernetes-srv
+serviceAccountName: kubernetes-srv
+```
+
+We’re done!
