@@ -1,6 +1,6 @@
-# Runbooks
+# Runbook
 
-This directory is a repository of runbooks for various parts of the M3O system and should act as an operations manual for things like outages etc.  
+This directory is a repository for runbooks for various parts of the M3O system and should act as an operations manual for things like outages etc.  
 Currently a single file but parts will be moved out once they become overly long. To regenerate the table of contents, use [this tool](https://github.com/ekalinin/github-markdown-toc) and do `cat ./README.md | gh-md-toc -`.
 
 # Table of Contents
@@ -261,7 +261,8 @@ Create the product and plan in stripe. The response contains an ID, you'll need 
 ```bash
 curl https://api.stripe.com/v1/products \
   -u [strip api key]: \
-  -d name="Micro"
+  -d name="M3O Platform" \
+  -d description="M3O Platform Subscription"
 ```
 
 Then create the plan. Use the product ID from above. This will return you a plan ID which is needed in the next step.
