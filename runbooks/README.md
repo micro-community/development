@@ -175,7 +175,7 @@ kubectl get pods -n micro | awk '{print $1}' | grep -v NAME | xargs -I % sh -c '
 ## Manually
 
 - Do full signup flow
-- Get github.com/micro/services/blog/posts running
+- Get github.com/micro/services/blog/posts running. Example calls in service readmes if [posts](https://github.com/micro/services/tree/master/blog/posts) and [tags](https://github.com/micro/services/tree/master/blog/tags)
 - Do some surface testing to ensure
     - We’re not leaking creds
     - We can’t see any store data that we shouldn’t be able to
