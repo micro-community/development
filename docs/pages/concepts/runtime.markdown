@@ -50,9 +50,6 @@ class citizen. Notify other services of events without needing to worry about a 
 - **config:** Manage dynamic config in a centralised location for your services to access. Has the ability to load config from multiple 
 sources and enables you to update config without needing to restart services.
 
-- **debug:** Built in aggregation of stats, logs and tracing info for debugging. The debug service scrapes all services for their info to 
-help understand the overall scope of the system from one location. 
-
 - **network:** A drop in service to service networking solution. Offload service discovery, load balancing and fault tolerance to the network.
 The micro network dynamically builds a latency based routing table based on the local registry. It includes support for multi-cloud networking.
 
