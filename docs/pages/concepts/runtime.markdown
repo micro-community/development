@@ -19,11 +19,6 @@ it as a cloud native development platform. Micro addresses the key requirements 
 It leverages the microservices architecture pattern and provides a set of services which act as the building blocks 
 of a platform. Micro deals with the complexity of distributed systems and provides simpler programmable abstractions to build on.
 
-Below is an overview of how Micro is constructed.
-
-<br>
-<img src="https://m3o.com/images/runtime.svg" style="width: 100%; height: auto;" />
-
 Micro focuses on the concept of <b>Development Runtime Infrastructure</b>, creating separation between the varying 
 concerns of development and infrastructure using a runtime as an abstraction layer, then providing entry points 
 for external systems to access services run with Micro.
