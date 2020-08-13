@@ -7,7 +7,7 @@ sidebar: home_sidebar
 toc_list: false
 nav_order: 1
 parent: Resources
-permalink: /development
+permalink: /resources/development
 ---
 
 # Development

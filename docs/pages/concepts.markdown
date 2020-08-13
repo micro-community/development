@@ -6,7 +6,7 @@ tags: [concepts]
 sidebar: home_sidebar
 permalink: /concepts
 summary: A high level overview of concepts in Micro
-nav_order: 2
+nav_order: 3
 has_children: true
 toc_list: true
 ---

@@ -5,7 +5,7 @@ nav_order: 3
 has_children: true
 parent: Tutorials
 summary: From a toy blog to a full blown CMS
-permalink: /building-a-blog
+permalink: /tutorials/building-a-blog
 ---
 
 # Building a Blog

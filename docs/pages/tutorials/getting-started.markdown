@@ -1,16 +1,16 @@
 ---
 layout: page
-title: Getting Started
+title: Helloworld
 keywords: micro
 tags: [micro]
-permalink: /getting-started
-summary: A getting started guide for Micro
+permalink: /tutorials/helloworld
+summary: A helloworld getting started guide for Micro
 parent: Tutorials
 nav_order: 1
 toc_list: true
 ---
 
-# Getting Started
+# Helloworld
 {: .no_toc }
 
 ## Table of contents

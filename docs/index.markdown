@@ -12,9 +12,9 @@ nav_order: 1
 Learn the ins and outs of M3O and become a Micro services ninja!
 {: .fs-6 .fw-300 }
 
-[M3O](https://m3o.com) is a cloud native platform offering Micro as a Service.
+[Micro](https://micro.mu) is an open source framework for cloud native development.
 
-Micro is an open source framework for cloud native development.
+[M3O](https://m3o.com) is a cloud native platform offering Micro as a Service.
 
 Key components of Micro are as follows:
 
@@ -22,7 +22,7 @@ Key components of Micro are as follows:
 * **[Clients](https://github.com/micro/clients)**: multi-language clients to enable access to Micro services.
 * **[Services](https://github.com/micro/services)**: real world example Micro service applications.
 
-Learn more about the platform in the [Concepts](/concepts) section.
+Learn more about the M3O platform in the [Concepts](/concepts) section or go straight to the [Getting Started](/getting-started) guide.
 
 <br />
 
