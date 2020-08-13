@@ -41,14 +41,9 @@ Clients are entrypoints into the system. They enable access to your services thr
 
 - **api:** An api gateway which acts as a single entry point for the frontend with dynamic request routing using service discovery. 
 
-- **bot:** A slack bot which enables you to query and interact with Micro directly from within slack. It's great for ChatOps.
-
 - **cli:** Access services via the terminal. Every good developer tool needs a CLI as a defacto standard for operating a system. 
 
-- **proxy:** An identity away proxy which allows you to access remote environments without painful configuration or vpn.
-
-- **web:** A dashboard to explore services, describe their endpoints, the request and response formats and
-query them directly.
+- **proxy:** An identity aware proxy which allows you to access remote environments without painful configuration or vpn.
 
 ### Services
 
