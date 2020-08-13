@@ -27,9 +27,6 @@ for external systems to access services run with Micro.
 
 The runtime is composed of the following features:
 
-- **Clients** - Clients act as external entrypoints into the system
-- **Services** - Core services abstract away the underlying infrastructure
-
 ### Clients
 
 Clients are entrypoints into the system. They enable access to your services through well known entrypoints.
