@@ -23,7 +23,7 @@ We're currently in invite only mode so ask the team in #m3o-platform for an invi
 Install Micro to build, run and manage services locally or on the M3O platform.
 
 ```
-go get github.com/micro/micro/v3
+curl -fsSL https://install.m3o.com/micro | /bin/bash
 ```
 
 This command makes the rest of your CLI commands run on the M3O platform.
