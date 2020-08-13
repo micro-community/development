@@ -12,11 +12,11 @@ permalink: /resources/development
 
 # Development
 
-The [development](https://github.com/m3o/dev) repo is a place for design docs, philosophy, roadmap, etc.
+The [m3o/dev](https://github.com/m3o/dev) repo is a place for design docs, runbooks, roadmap, etc.
 
 - Design docs
-- Company philosophy
+- Company info
 - Contribution guide
+- Product Roadmap
 - User docs (this site)
-- Roadmap
 - Team issue tracker
