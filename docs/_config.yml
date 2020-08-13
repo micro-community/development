@@ -21,7 +21,7 @@
 title: M3O Dev
 email: support@micro.mu
 description: >- # this means to ignore newlines until "baseurl:"
-  Micro developers site - documentations, tutorials and more.
+  M3O dev site - getting started, docs, tutorials and more.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: m3oservices
