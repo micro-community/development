@@ -26,7 +26,7 @@ Learn more about the M3O platform in the [Concepts](/concepts) section or go str
 
 <br />
 
-[Get Started](/getting-started){: .btn .btn-blue } &nbsp;
+[Get Started](/getting-started){: .btn } &nbsp;
 [Github](https://github.com/m3o){: .btn }  &nbsp;
 [Website](https://m3o.com/){: .btn }
 
