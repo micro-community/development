@@ -43,6 +43,7 @@ sass:
     sass_dir: _sass
 include:
   - _sass/
+color_scheme: m3o
 
 # Just the docs configs, see https://pmarsceill.github.io/just-the-docs/docs/configuration/ 
 logo: "/assets/images/logo.png"
