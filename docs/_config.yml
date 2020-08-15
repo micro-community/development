@@ -33,7 +33,7 @@ ga_tracking: UA-70478210-5
 highlighter: rouge
 
 # unhash for local development
-# theme: just-the-docs
+theme: just-the-docs
 
 remote_theme: pmarsceill/just-the-docs
 plugins:
