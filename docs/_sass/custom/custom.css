@@ -4,3 +4,6 @@
 .site-title {
   font-weight: bold;
 }
+.site-title:hover {
+  background-image: none;
+}
