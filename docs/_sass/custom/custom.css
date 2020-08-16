@@ -1,6 +1,10 @@
 .side-bar {
   background: white;
 }
+.site-footer {
+  display: none;
+}
+
 .site-title {
   font-weight: bold;
 }
