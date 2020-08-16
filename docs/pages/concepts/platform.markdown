@@ -39,7 +39,13 @@ As a developer you should just be able to focus on writing code but not just a s
 and various design patterns in a way that's not limiting but removes choice and friction in a way that let's 
 you be super productive. Micro + M3O is just that!
 
-So how does it work?
+### Hosting
+
+M3O hosts Micro in the cloud using various cloud providers in different regions. Initially during the beta phase 
+we're starting with Scaleway in Europe so that we can focus primarily on users needs and do it in a cost effective 
+manner. Over time we'll move on to AWS, GCP and Azure in the US and Asia.
+
+So how do you access it?
 
 ### Environments
 
