@@ -7,4 +7,16 @@
 .site-title:hover {
   background-image: none;
 }
-
+@media (min-width: 50rem) {
+  .site-nav {
+    padding-top: 1rem;
+  }
+  .site-header {
+    border-bottom: 0;
+  }
+}
+@media (min-width: 1020px) {
+  .side-bar {
+    max-width: 250px;
+  }
+}
