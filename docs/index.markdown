@@ -22,7 +22,7 @@ Key components of Micro are as follows:
 * **[Services](https://github.com/micro/services)**: real world example Micro service applications.
 * **[Clients](https://github.com/micro/clients)**: multi-language clients for accessing Micro services.
 
-Learn more about the M3O platform in the [Concepts](/concepts) section or go straight to the [Getting Started](/getting-started) guide.
+Learn more about the M3O platform in the [Concepts](/concepts) section or [Get Started](/getting-started).
 
 <br />
 
