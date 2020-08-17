@@ -22,7 +22,7 @@ M3O is Micro as a Service. We take the open source framework (v3 and beyond) and
 Think managed kubernetes, elasticsearch, etc or how we prefer to see it git and github. Git is a phenomenal tool 
 for distributed version control and GitHub provides essentially git hosting as a service.
 
-Micro as a fantastic tool for writing cloud native services. M3O is Micro hosted as a service.
+Micro is a fantastic tool for writing cloud native services. M3O is Micro hosted as a service.
 
 ## Getting Started
 
