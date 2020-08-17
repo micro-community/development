@@ -19,8 +19,8 @@ Learn the ins and outs of M3O and become a Micro services ninja!
 Key components of Micro are as follows:
 
 * **[Framework](https://github.com/micro/micro)**: a framework to build, run and manage Micro services.
-* **[Clients](https://github.com/micro/clients)**: multi-language clients to enable access to Micro services.
 * **[Services](https://github.com/micro/services)**: real world example Micro service applications.
+* **[Clients](https://github.com/micro/clients)**: multi-language clients for accessing Micro services.
 
 Learn more about the M3O platform in the [Concepts](/concepts) section or go straight to the [Getting Started](/getting-started) guide.
 
