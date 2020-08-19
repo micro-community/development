@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Private Repositories
+title: Private Repos
 nav_order: 1
-permalink: /private-repositories
+permalink: /getting-started/private-repos
 parent: Get Started
 ---
 
-# Using private repositories
+# Using Private Repos
 
 Please note that currently only saving one credential is supported, ie. no way to specify it separately for different providers.
 
