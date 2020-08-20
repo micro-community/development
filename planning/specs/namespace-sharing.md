@@ -6,7 +6,9 @@ A v0.1 of our long term goal https://github.com/m3o/dev/issues/379.
 
 ## Invite and signup
 
-1. User A invites user B by issuing
+1. User A invites user B
+
+By issuing:
 
 ```
 micro invite user --email userb@gmail.com --my-namespace=yes
