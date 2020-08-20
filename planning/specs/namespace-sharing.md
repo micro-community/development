@@ -11,7 +11,8 @@ A v0.1 of our long term goal https://github.com/m3o/dev/issues/379.
 By issuing:
 
 ```
-micro invite user --email userb@gmail.com --my-namespace=yes
+micro invite user --email joe@example.com --namespace foobar
+# alternatively micro invite user --email joe@example.com --namespace $(micro user namespace)
 ```
 
 2.  User B registers
