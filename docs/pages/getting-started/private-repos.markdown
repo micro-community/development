@@ -8,7 +8,12 @@ parent: Get Started
 
 # Using Private Repos
 
-Please note that currently only saving one credential is supported, ie. no way to specify it separately for different providers.
+M3O supports private repos by passing your git credentials securely to our runtime as secrets. To enable private 
+repos simply store your credentials locally with the following command.
+
+```
+micro user config set git.credentials.[org]
+```
 
 ## GitHub
 
@@ -16,7 +21,7 @@ Please note that currently only saving one credential is supported, ie. no way t
 
 Issue this command locally to save your personal access token to your local Micro config:
 ```
-micro user config set git.credential $your-personal-access-token
+micro user config set git.credentials.github $your-personal-access-token
 ```
 
 ## GitLab
@@ -25,7 +30,7 @@ micro user config set git.credential $your-personal-access-token
 
 Issue this command locally to save your personal access token to your local Micro config:
 ```
-micro user config set git.credential $your-personal-access-token
+micro user config set git.credentials.gitlab $your-personal-access-token
 ```
 
 ## Bitbucket
@@ -34,7 +39,7 @@ micro user config set git.credential $your-personal-access-token
 
 Issue this command locally to save your personal access token to your local Micro config:
 ```
-micro user config set git.credential $bitbucket-username:$your-personal-access-token
+micro user config set git.credentials.bitbucket $bitbucket-username:$your-personal-access-token
 ```
 
 Please note the `username` requirement above.
