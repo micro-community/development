@@ -36,6 +36,8 @@ Looks like you have been invited to an existing namespace 'namespace-name' by 'u
 Do you want to join this namespace or create your own? [own|join]?
 ```
 
+### Expectations
+
 If user selects 'own' namespace, everything happens like before.
 If user selects 'join', instead of generating a new namespace, we simply skip that part and create a new account in an existing namespace.
 Code here https://github.com/m3o/services/blob/master/signup/handler/signup.go#L340. 
