@@ -47,6 +47,25 @@ should be billed to the owner of that namespace.
 
 Sharing a namespace aka collaborating should be a namespacing scoping feature that allows separate accounts to work together.
 
+## Collaboration
+
+Collaboration is the ability to share separate namespaces. A user is issued an account scope which gives them access to other namespaces. 
+This exists in the scope field of an account token so that it can be checked in flight. It is likely mapped as a separate table in 
+the auth service which allows us to see what namespaces an account has access to. When a token is created, we inject the scopes 
+for all the namespaces into the token or the one specified. 
+
+- User A has their own account
+- User B is invited to create an account
+- User A invites user B to collaborate on a namespace
+
+```
+# invite user B to M3O
+micro invite user --email joe@example.com
+
+# invite user B to collaborate
+micro invite collaborator --email joe@example.com --namespace $(micro user namespace)
+```
+
 ## Related tickets
 
 - https://github.com/m3o/dev/issues/384
