@@ -84,6 +84,7 @@ our namespace via scopes rather than having their account created within the sam
 
 - Ability to remove users
 - Ability to remove collaborators
+- Ability to scope collaborator access with fine grained rules
 
 ## Related tickets
 
