@@ -31,7 +31,7 @@ Top down:
 
 We serve any environment through 3 global endpoints:
 
-- api.micro.com- the `micro api` served over https
+- api.micro.com - the `micro api` served over https
 - proxy.micro.com - the `micro proxy` served over https
 
 The api is used as the http/json inbound. The proxy uses gRPC for remote access via the CLI and other services.
