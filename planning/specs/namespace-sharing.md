@@ -33,7 +33,7 @@ If user selects 'own' namespace, everything happens like before.
 If user selects 'join', instead of generating a new namespace, we simply skip that part and create a new account in an existing namespace.
 Code here https://github.com/m3o/services/blob/master/signup/handler/signup.go#L340. 
 
-The user should not be asked to enter payment details when joining a namespace. 
+Note: The user should not be asked to enter payment details when joining a namespace. 
 
 ## Billing
 
