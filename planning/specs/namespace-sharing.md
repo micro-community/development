@@ -6,6 +6,8 @@ Namespace sharing is the ability to have multiple accounts share a single namesp
 
 This document proposes the ability for micro users to invite other future micro users to their namespace.
 Sharing a namespace enables a group of users to collaborate on the same set of services, data, config etc when building on M3O.
+
+
 A v0.1 of our long term goal https://github.com/m3o/dev/issues/379.
 
 ## Invite and signup
