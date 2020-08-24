@@ -1,42 +1,27 @@
 # Platform
 
-The micro platform (M3O) is a cloud based serverless platform for microservices development.
+The micro platform (M3O) is a cloud native platform for microservices development.
 
 ## Overview
 
 This document serves as the design document for our cloud infrastructure and a reference 
 point for anyone who wants to understand how it works.
 
+Historically
+```
 We're operating on all major cloud providers (AWS, Azure, GCP) in a multi-cloud and multi-region 
 deployment across US, EU and Asia. We're leveraging DO as a control plane and CloudFlare for 
 global load balancing along with KV storage for anything that needs global state.
+```
+
+Today we operate in a single region in Europe using managed kubernetes on scaleway. Our plan 
+will be to scale up that region and then move on to others based on a need driven by customers.
 
 ## Design
 
-The platform exists in the repository [micro/platform](https://github.com/micro/platform) and builds on
-the [Micro](https://github.com/micro/micro) runtime.
-
-<img src="../images/platform.png" />
-
-## Architecture
-
-TODO by @jake
-
-<img src="../images/cloud.jpg" />
-
-## Features
-
-The features which will be included in the platform
-
-- **Cloud Automation** - Full terraform automation to bootstrap platform
-- **Account Management** - GitHub account management via teams
-- **Alerting** - Event notification and alerting via email/sms/slack
-- **Billing** - Metered billing of services used
-- **Dashboard** - A full UX experience via a web dashboard
-- **Multi-Cloud** - Ability to manage and deploy services across multiple clouds and regions
-- **GitOps** - Source to Running via GitHub actions
-- **K8s Native** - Built to run on Kubernetes
-- More soon...
+The platform exists in the repository [micro/platform](https://github.com/micro/micro/tree/master/platform) and builds on
+[Micro](https://github.com/micro/micro) itself. We build services in [m3o/services](https://github.com/m3o/services) so 
+that we can provide Micro as a Service.
 
 ## Components
 
@@ -46,15 +31,14 @@ Top down:
 
 We serve any environment through 3 global endpoints:
 
-- api.micro.mu - the `micro api` served over https
-- web.micro.mu - the `micro web` served over https
-- network.micro.mu - the `micro network` served over quic/tunnel
+- api.micro.com- the `micro api` served over https
+- proxy.micro.com - the `micro proxy` served over https
 
-The api is used as the http/json inbound. The web dashboard is used to serve web apps. The network is used to interconnect different regions.
+The api is used as the http/json inbound. The proxy uses gRPC for remote access via the CLI and other services.
 
-## Runtime
+### Runtime
 
-Internally we're running the entire `micro runtime` as single replicas to abstract away the underlying infrastructure.
+Internally we're running `Micro` as single replicas to abstract away the underlying infrastructure.
 
 ## Infrastructure
 
