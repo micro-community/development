@@ -33,6 +33,11 @@ If user selects 'own' namespace, everything happens like before.
 If user selects 'join', instead of generating a new namespace, we simply skip that part and create a new account in an existing namespace.
 Code here https://github.com/m3o/services/blob/master/signup/handler/signup.go#L340
 
+## Billing
+
+The account owner who created the namespace and the billing subscription is billed for the additional users which join a namespace. 
+If the user is simply invited to the platform they are billed separate and given their own namespace.
+
 ## Limitations
 
 Currently when a user is invited to join a namespace they are not given their own. This is a limitation which we need to rectify. If 
