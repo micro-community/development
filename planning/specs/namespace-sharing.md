@@ -15,6 +15,7 @@ A v0.1 of our long term goal https://github.com/m3o/dev/issues/379.
 By issuing:
 
 ```
+# invite the user and send them an email
 micro invite user --email joe@example.com --namespace foobar
 # alternatively micro invite user --email joe@example.com --namespace $(micro user namespace)
 ```
@@ -60,10 +61,10 @@ for all the namespaces into the token or the one specified.
 - User A invites user B to collaborate on a namespace
 
 ```
-# invite user B to M3O
+# invite user B to M3O and send them an email
 micro invite user --email joe@example.com
 
-# invite user B to collaborate
+# invite user B to collaborate and send them an email
 micro invite collaborator --email joe@example.com --namespace $(micro user namespace)
 ```
 
