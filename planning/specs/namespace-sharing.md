@@ -12,6 +12,8 @@ A v0.1 of our long term goal https://github.com/m3o/dev/issues/379.
 
 ## Invite and signup
 
+Below we describe the flow for inviting and user and the followup signup.
+
 1. User A invites user B
 
 By issuing:
