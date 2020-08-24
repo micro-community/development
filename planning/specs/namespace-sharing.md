@@ -16,9 +16,11 @@ Below we describe the flow for inviting and user and the followup signup.
 
 ### Steps
 
-1. User A invites user B
+1. User A invites user B via cli
+2. User B registers via signup
 
-By issuing:
+
+Invite user
 
 ```
 # invite the user and send them an email
@@ -26,9 +28,7 @@ micro invite user --email joe@example.com --namespace foobar
 # alternatively micro invite user --email joe@example.com --namespace $(micro user namespace)
 ```
 
-2.  User B registers
-
-The signup flow for new users who are already invited to an existing namespace will change slightly:
+Signup flow for new users who are already invited to an existing namespace will change slightly:
 
 ```
 micro signup
