@@ -49,11 +49,13 @@ requests to an RPC format and sends to the appropriate backend service based on 
 endpoint definitions encoded in the service endpoint metadata.
 
 Scaling
+
   - Can be scaled horizontally
   - All state lives in the registry or other sources
   - Uses Let's encrypt for TLS (limitations noted under [certificates](#certificates)
   
 Limitations
+
   - Does not perform any rate limiting
   - Calls underlying services for routing and auth
   - In the event the system fails it fails
@@ -68,11 +70,13 @@ Limitations
   that service is say local dev to prod/staging.
   
   Scaling
+  
     - Can be scaled horizontally
     - All state lives in the router and other sources
     - Uses Let's encrypt for TLS (limitations noted under [certificates](#certificates)
     
   Limitations
+  
     - Similar limitations to the API
     - Uses first part of gRPC path for service name rather than host
     - Set to use network via MICRO_PROXY, probably not the best config
@@ -85,10 +89,12 @@ Limitations
   is per region unless replicated.
   
   Scaling
+  
     - Can be horizontally scaled
     - ...
     
   Limitations
+  
     - Potentially the bottleneck for all usage
     - Maintains internal memory map of namespaces
     - Schema may need to be evaluated for scaling
@@ -104,10 +110,12 @@ Limitations
   implementation. We use NATS in production and point to point http locally.
   
   Scaling
+  
     - Can be scaled horizontally
     - Depends on the underlying NATs for scaling
  
   Limitations
+  
     - Isolation is done by prefixing namespace to the topic
     - Not adequately tested in a production situation
     - Does not provide any rate limiting
@@ -118,9 +126,11 @@ Limitations
   Config is a dynamic configuration service for all level requirements
   
   Scaling
+  
     - Can scale horizontally
   
   Limitations
+  
     - Its unclear of its security properties, could potentially leak config to others
     - Config paths are error prone
     - There is no versioning history
@@ -133,10 +143,12 @@ Limitations
   a counterpart to NATS, soon to be merged into NATS itself.
   
   Scaling
-    - Can scale horizontall
+  
+    - Can scale horizontally
     - Depends on nats-streaming-server cluster and cockroach store
  
   Limitations
+  
     - Is a per region deployment
     - Requires hard coded topics for storage
     - Does not have any synchronization for races
@@ -149,9 +161,11 @@ Limitations
   on the registry router at present to load routes and uses the Router interface along with the Proxy interface.
   
   Scaling
+  
     - Can be scaled horizontally
     
   Limitations
+  
     - Routes are per region
     - Will fail in the event of registry failure
     - May throwaway routes where services fail to register and expire out
@@ -163,10 +177,12 @@ Limitations
   given period. We use etcd to persist entries.
   
   Scaling
+  
     - Can scale horizontally
     - Depends on etcd cluster in production
     
   Limitations
+  
     - Mainains internal leases in the etcd go-micro implementation
     - Should theoeretically continue to operate when registering against a different node
     - Etcd has an upperbound limit of 8Gb for storage
@@ -179,9 +195,11 @@ Limitations
   queries based on route fields like address, network, etc.
   
   Scaling
+  
     - Can scale horizontally
   
   Limitations
+  
     - If it fails to read the registry then we have no routes
     - Can potentially have stale routes for up to 2 minutes
     - Operates in a per region context based on the registry
@@ -199,11 +217,13 @@ Limitations
   changed. This reduces the load on the database.
   
   Scaling
+  
     - Operates on a per region basis based on whats written to the store aka cockroach
     - Can do global replication with a global storage such as cloudflare KV workers (API rate limited)
     - Can be scaled horizontally
     
   Limitations
+  
     - Each node maintains some internal state which may be a race condition when getting status
     - Operates on a regional basis based on the storage
     - Does not provide the ability to define the number of replicas
@@ -214,11 +234,13 @@ Limitations
   uses file storage and in production uses cockroach DB. Mimics a cassandra like experience.
   
   Scaling
+  
     - Can be scaled horizontally
     - Requires cockroach DB nodes to be scaled in a cluster
     - Mostly just an RPC access layer
     
   Limitations
+  
     - Can fail read queries where a table doesn't yet exist
     - Does not perform any type of isolation or rate limiting as of yet
     - Could be a weak point for security if compromised
@@ -240,16 +262,19 @@ for the custom domains they support. A challenge stores a txt record to validate
 stores the certificates so that we can persist across restarts.
 
 Scaling
+
   - Can be scaled horizontally in a region
   - A shared cockroach DB means multiple instances of api/proxy use the same certs in a region
   - Random renewal interval ensures only one node will renew on any given day (attempted 7 days before expiry)
 
 Limitations
+
   - There is no locking around renewal so if multiple instances have coordinated random renewal it may have multiple attempts
   - Certs are stored in cockroach which means unless cockroach is replicated globally each region will renew independently
   - Let's encrypt has a rate limit. In the event of a failure we will block ourselves
   
 TODO
+
   - Introduce synchronization around renewal
   - Replicate one certificate globally per domain e.g s3 storage
   - Potentially offload the cert management to a different ingress
@@ -266,10 +291,12 @@ broker/events and storage.
 Used for the runtime to manage the lifecycle of processes and services
 
 Scaling
+
   - Can scale nodes horizontally using managed K8s
   - Not yet autoscaled
   
 Limitations
+
   - Kubernetes operates on a per region basis
   - We are currently limited to Europe on Scaleway
   
@@ -278,9 +305,11 @@ Limitations
 Used as the service registry to maintain a single source of truth for services and endpoints
 
 Scaling
+
   - Operates as a cluster so can be scaled horizontally using helm
   
 Limitations
+
   - Has a max upperbound of 8Gb for storage
   - Clusters need to be 3, 7, 9 nodes for raft concensus
   - Can be the single failure point for all things ala zookeeper at hailo
@@ -292,10 +321,12 @@ Limitations
 Nats is used for the broker (async messaging) and for events using nats-streaming-server
 
 Scaling
+
   - Can be scaled horizontally as a cluster
   - Using helm to scale the number of replicas
   
 Limitations
+
   - Must scale in a coordinated fashion like etcd we believe
   - Nats-streaming requires a persistent volume (currently set at 1GB)
   - Per region deployment
@@ -307,11 +338,13 @@ form of storage called Pebble. We are running this in production as 1 node but w
 scaled up.
 
 Scaling
+
   - Can scale horizontally
   - Currently run as 1 node
   - Uses 100Gb persistent volume per node
 
 Limitations
+
   - Per region deployment for now
   - Global replication might be an enterprise feature
   - All the problems of a distributed data store on k8s
