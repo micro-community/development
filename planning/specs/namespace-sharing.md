@@ -49,7 +49,7 @@ Sharing a namespace aka collaborating should be a namespacing scoping feature th
 
 ## Related tickets
 
-https://github.com/m3o/dev/issues/384
-https://github.com/m3o/dev/issues/283
-https://github.com/m3o/dev/issues/356
-https://github.com/m3o/dev/issues/365
+- https://github.com/m3o/dev/issues/384
+- https://github.com/m3o/dev/issues/283
+- https://github.com/m3o/dev/issues/356
+- https://github.com/m3o/dev/issues/365
