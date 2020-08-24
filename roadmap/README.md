@@ -27,20 +27,18 @@ Our goals for 2020
 Timeline, objectives and key results
 
 - [2020](#2020-milestones)
-  * [Q1](#q1-okrs) - M3O Platform - MVP delivery
-  * [Q2](#q2-okrs) - M3O Release - Paid offering
-  * [Q3](#q3-okrs) - M3O Services - Value add services
-  * [Q4](#q4-okrs) - M3O Network - Marketplace for services
+  * [Q1](#q1-okrs) - Micro Platform - Product testing
+  * [Q2](#q2-okrs) - M3O Platform MVP - Developer Tier
+  * [Q3](#q3-okrs) - M3O Public Launch - Invite waitlist
+  * [Q4](#q4-okrs) - M3O Team Tier - Collaboration features
 - [2021](#2021)
-  * TBD
+- [2021](#2022)
 
 ## 2020 Milestones
 
 High level goals defined for each quarter. We don't go into detail because reasons.
 
 ## Q1 OKRs
-
-Delivery by end of February 2020 (Onboarding through March)
 
 - [Platform](platform.md) - a cloud platform for microservices development
   * Provides "Micro as a Service"
@@ -50,8 +48,6 @@ Delivery by end of February 2020 (Onboarding through March)
 
 ## Q2 OKRs
 
-Delivery by end of May 2020 (Onboarding through June)
-
 - [Paid product](https://m3o.com) - Fully managed Micro Platform
   * Provides "Micro as a Service" to customers
   * Namespace per customer in Kubernetes
@@ -60,25 +56,37 @@ Delivery by end of May 2020 (Onboarding through June)
 
 ## Q3 OKRs
 
-Delivery by end of August 2020 (Enabled in September)
+- M3O Platform MVP - Paid developer tier
+  * Invite only
+  * Public launch
+  * Signup 100 customers
+ 
+## Q4 OKRs
+
+- M3o Team Tier - Collaboration features
+  * Shared namespaces
+  * Per namespace quotas
+  * SLAs
+  
+## 2021
+
+Delivery by end of July 2021 (Enabled in September)
 
 - [Services](services.md) - Value add Micro services on the Micro platform
   * Free and paid services to consume
-  * All services built in [micro/services](https://github.com/micro/services)
+  * All services built in [m3o/services](https://github.com/m3o/services)
   * Comprehensive list of [services](services.md)
   * Leveraging existing APIs (Stripe, Twilio, etc)
   * Single API account for providers managed by Micro
 
-## Q4 OKRs
-
-Delivery by end of year 2020 (Launch end of January 2021)
+Delivery by end of year 2021
 
 - [Network](network.md) - A marketplace to buy, sell and share services
   * Ability to buy and sell services on the Micro platform
   * Transactional model: Percentage per request/service or flat 30%
   * Ability to run external "Resources" such as redis, postgres, etc
 
-## 2021
+## 2022
 
 - License Micro Services
 - Otherwise TBD
