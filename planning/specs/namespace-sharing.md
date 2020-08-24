@@ -66,6 +66,15 @@ micro invite user --email joe@example.com
 micro invite collaborator --email joe@example.com --namespace $(micro user namespace)
 ```
 
+The user account must exist on the platform for us to invite as a collaborator to the namespace otherwise we have to email them an 
+invite to the platform separately before they can become a collaborator. Inviting a collaborator means they have access to 
+our namespace via scopes rather than having their account created within the same namespace.
+
+## Future Works
+
+- Ability to remove users
+- Ability to remove collaborators
+
 ## Related tickets
 
 - https://github.com/m3o/dev/issues/384
