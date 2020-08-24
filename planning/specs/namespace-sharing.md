@@ -83,3 +83,4 @@ our namespace via scopes rather than having their account created within the sam
 - https://github.com/m3o/dev/issues/283
 - https://github.com/m3o/dev/issues/356
 - https://github.com/m3o/dev/issues/365
+- https://github.com/m3o/dev/issues/394
