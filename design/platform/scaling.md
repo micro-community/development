@@ -8,7 +8,8 @@ Here we explain the individual scaling properties of every Micro service and any
 The design may evolve and this document may change but it serves as the place to look when thinking about 
 scaling up.
 
-TODO: We need to make each section uniform with TLDR bullets e.g Can be scaled horizontally (green tick).
+TODO: We need to make each section uniform with TLDR bullets e.g Can be scaled horizontally (green tick). Potentially one 
+high level table overview is better.
 
 ## Design
 
