@@ -296,7 +296,7 @@ micro config set micro.signup.sendgrid.api_key [sendgrid api key]
 micro config set micro.signup.sendgrid.template_id d-240bf196257143569539b3b6b82127c0;
 micro config set micro.signup.plan_id [stripe plan id];
 micro config set micro.signup.email_from "Micro Team <support@m3o.com>";
-micro config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,kubernetes,invite,payment.stripe";
+micro config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,platform,invite,payment.stripe";
 ```
 
 Verify the config by calling`“micro config get micro`. This will output the config as JSON.
