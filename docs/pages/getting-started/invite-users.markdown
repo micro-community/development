@@ -7,7 +7,7 @@ parent: Get Started
 ---
 # Invite Users
 
-Here we outline how to invite other users to the M3O platform, share namespaces and collaborate in future.
+Here we outline how to invite other users to the M3O platform, share namespaces and collaborate.
 
 ## Invite to the Platform
 
@@ -41,7 +41,8 @@ micro signup
 The user should see the following print out during signup asking them to join the namespace or create their own.
 
 ```
-
+You have been invited to the 'splicing-earthlike-salvage' namespace.
+Do you want to join it or create your own namespace? Please type "own" or "join": join
 ```
 
 Now you both have the ability to work together.
