@@ -59,7 +59,6 @@ What about say publishing events?
 ```
 import "github.com/micro/micro/v3/events"
 
-
 events.Publish("event-topic", map[string]string{"foo": "bar"})
 ```
 
