@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Create a Service
+title: Create Services
 nav_order: 1
-permalink: /getting-started/create-a-service
+permalink: /getting-started/create-services
 parent: Get Started
 ---
-# Create a Service
+# Create Services
 
 M3O is Micro as a Service. Use the open source tools to build your services and deploy to the platform.
 
