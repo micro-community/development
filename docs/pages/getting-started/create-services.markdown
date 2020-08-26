@@ -16,7 +16,7 @@ You'll likely need
 - Go => [https://golang.org/dl/]()
 - Git => [https://git-scm.com/downloads]()
 - Micro => [https://github.com/micro/micro]()
-- Protobuf (Sorry) => [https://github.com/protocolbuffers/protobuf/releases/tag/v3.13.0]()
+- Protobuf => [https://github.com/protocolbuffers/protobuf/releases/tag/v3.13.0]()
 
 ## New Service
 
