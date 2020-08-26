@@ -76,10 +76,10 @@ nats-operator    1/1     1            1           4d14h
 ```
 
 ```
-kubectl set image deployments micro=micro/micro:tag -l micro=runtime
+kubectl set image deployments micro=micro/micro:<INSERT_TAG_NAME_HERE> -l micro=runtime
 ```
 
-Please note `tag` must be changed to your specific tag.
+Where `<INSERT_TAG_NAME_HERE>` is your container image tag.
 
 ### M3O (Runtime Services)
 
