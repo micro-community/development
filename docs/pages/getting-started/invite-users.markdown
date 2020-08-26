@@ -38,7 +38,7 @@ Now they should go through signup as per normal
 micro signup
 ```
 
-The user should see the following print out during signup asking them to join the namespace or create their own.
+The user should see the following print out during signup.
 
 ```
 You have been invited to the 'splicing-earthlike-salvage' namespace.
