@@ -7,7 +7,7 @@ title: Home
 nav_order: 1
 ---
 
-# M3O Development
+# Welcome to M3O
 
 Learn the ins and outs of M3O and become a Micro services ninja!
 {: .fs-6 .fw-300 }
@@ -27,7 +27,7 @@ Learn more about the M3O platform in the [Concepts](/concepts) section or [Get S
 <br />
 
 [Get Started](/getting-started){: .btn } &nbsp;
-[Github](https://github.com/m3o){: .btn }  &nbsp;
+[Github](https://github.com/micro/micro){: .btn }  &nbsp;
 [Website](https://m3o.com/){: .btn }
 
 <div style="height: 320px"></div>
