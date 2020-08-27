@@ -14,15 +14,28 @@ toc_list: true
 # Platform
 
 
-[M3O](https://m3o.com) is a platform for cloud native development.
+[**M3O**](https://m3o.com) is a platform for cloud native development.
 
 ## Overview
 
-M3O is Micro as a Service. We take the open source framework (v3 and beyond) and host it as a service in the cloud. 
-Think managed kubernetes, elasticsearch, etc or how we prefer to see it git and github. Git is a phenomenal tool 
-for distributed version control and GitHub provides essentially git hosting as a service.
+M3O is Micro as a Service. We take the open source [**Micro**](https://github.com/micro/micro) framework (v3 and beyond) 
+and host it as a service in the cloud. Think managed kubernetes, elasticsearch, etc or how we prefer to see it git 
+and github. Git is a phenomenal tool for distributed version control and GitHub provides essentially git hosting as a service.
 
 Micro is a fantastic tool for writing cloud native services. M3O is Micro hosted as a service.
+
+## Features
+
+We're starting with a Dev tier focused on small teams and individuals. You likely don't want to manage infrastructure 
+and want to focus on Go based microservices development in the cloud. That's what we're here for. Where Netlify 
+is the frontend. Micro is the backend and M3O is the host.
+
+We're offering a Dev tier to start which provides the following:
+
+- Fully managed Micro as a Service
+- Upto 5 collaborators
+- Upto 10 services
+- Fair usage limits
 
 ## Getting Started
 

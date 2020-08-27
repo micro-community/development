@@ -31,3 +31,6 @@ body {
 .nav-list .nav-list-item .nav-list-link:hover, .nav-list .nav-list-item .nav-list-link.active {
   background-image: none;
 }
+.main-content a {
+  font-weight: bold;
+}
