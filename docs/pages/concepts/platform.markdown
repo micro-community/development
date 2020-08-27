@@ -33,6 +33,8 @@ is the frontend. Micro is the backend and M3O is the host.
 We're offering a Dev tier to start which provides the following:
 
 - Fully managed Micro as a Service
+- Public API endpoints
+- Private repo support
 - Upto 5 collaborators
 - Upto 10 services
 - Fair usage limits
