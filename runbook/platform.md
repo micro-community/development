@@ -296,7 +296,7 @@ micro config set micro.signup.sendgrid.api_key [sendgrid api key]
 micro config set micro.signup.sendgrid.template_id d-240bf196257143569539b3b6b82127c0;
 micro config set micro.signup.plan_id [stripe plan id];
 micro config set micro.signup.email_from "Micro Team <support@m3o.com>";
- microadmin config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,platform,invite,payment.stripe,customers,namespaces,subscriptions";
+micro config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,platform,invite,payment.stripe,customers,namespaces,subscriptions";
  ```
 
 Verify the config by calling`“micro config get micro`. This will output the config as JSON.
@@ -333,22 +333,22 @@ micro run github.com/m3o/services/namespaces
 
 Wait for the services to all be running. This can be checked by running `micro services`
 
-## Configure Kubernetes Service
+## Configure Platform Service
 
-The kubernetes service needs elevated privileges to create / list k8s namespaces. Firstly, create the RBAC resources by running:
+The platform service needs elevated privileges to create / list k8s namespaces. Firstly, create the RBAC resources by running:
 ```bash
 kubectl create -f https://raw.githubusercontent.com/m3o/services/master/kubernetes/rbac.yaml -n micro
 ```
 
 Then, edit the kubernetes deployment to use this service name.
 ```bash
-kubectl edit deployment m3o-services-kubernetes-latest -n micro
+kubectl edit deployment m3o-services-platform-latest -n micro
 ```
 
 Add the following the container spec:
 ```
-serviceAccount: kubernetes-srv
-serviceAccountName: kubernetes-srv
+serviceAccount: platform-srv
+serviceAccountName: platform-srv
 ```
 
 We’re done!
