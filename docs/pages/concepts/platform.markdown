@@ -106,6 +106,19 @@ account we'll keep track and invoice this as "M3O Additonal Users" on your invoi
 Beyond 10 services, we bill every additional service at $3/month. Additional service meaning anything with a new unique name 
 e.g users, customers, orders. We'll add a line item on your invoice called "M3O Additional Services" automatically.
 
+## Fair Usage Limits
+
+We invoke fair usage limits on the platform by capping everything to sane defaults for all services. Over time we may 
+make this configurable or allow you to pay for additional resources. For now the caps are as below per service
+
+- CPU - 1 core
+- Mem - 128 mb
+- Disk - 512 mb
+
+We additionally apply caps across your namespace to limit overall resource usage which is just an upperbound multiple on services. 
+Caps may evolve or change in future to include different resource types but the goal is to provide a fair system that 
+can be shared by all.
+
 ## Future 
 
 In the future we'll introduce different pricing tiers for teams and enterprise that include support and SLAs along with 

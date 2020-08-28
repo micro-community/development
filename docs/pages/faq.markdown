@@ -23,3 +23,14 @@ them or just plain create the account we'll keep track and invoice this as "M3O 
 
 Beyond 10 services, we bill every additional service at $3/month. Additional service meaning anything with a new unique name
 e.g users, customers, orders. We'll add a line item on your invoice called "M3O Additional Services" automatically.
+
+## Fair Usage Policy
+
+Our fair usage policy applies caps to usage on a per service and per namespace basis. This is so we can maintain a shared system 
+for everyone to use in coordination and have a great experience. The limits are below but may change, vary or include new resource types.
+
+Per service limits
+
+CPU - 1 core
+Memory - 128 mb
+Disk - 512 mb
