@@ -16,7 +16,7 @@ Currently there is no password recovery functionality, please contact us on Slac
 ## Additional Users
 
 You can add upto 5 additional users on the dev tier. Every additional user added to your account is billed at $35/month. Whether you invite 
-them or just plain create theaccount we'll keep track and invoice this as "M3O Additonal Users" on your invoices. See 
+them or just plain create the account we'll keep track and invoice this as "M3O Additonal Users" on your invoices. See 
 [Get Started > Invite Users](/getting-started/invite-users) to see how to invite them.
 
 ## Additional Services
