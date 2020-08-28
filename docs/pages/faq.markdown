@@ -31,6 +31,6 @@ for everyone to use in coordination and have a great experience. The limits are 
 
 Per service limits
 
-CPU - 1 core
-Memory - 128 mb
-Disk - 512 mb
+- CPU - 1 core
+- Memory - 128 mb
+- Disk - 512 mb
