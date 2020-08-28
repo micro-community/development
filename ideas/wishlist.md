@@ -10,9 +10,9 @@ that its not our priority.
 
 ## The List
 
-- [ ] Dev - as adeveloper portal for interactive tutorials, learning and writing code
+- [ ] M3O Dev - as a developer portal for interactive tutorials, learning and writing code
 - [ ] micro env clone [env-from] [env-to] - I want to be able to deploy my local app with one command to an other env. Env setup must be similarly simple 1 command solution (`micro env create`)
-- [ ] dynamic cli that turns any command into a service call - `micro store write foo bar` => go.micro.store Store.Write {"foo": "bar"}
+- [x] dynamic cli that turns any command into a service call - `micro store write foo bar` => go.micro.store Store.Write {"foo": "bar"}
 - [ ] cross organisation collaboration on products and services on the Micro platform
 - [ ] a developer ecosystem as large as a FANG company all self employed and empowered by the Micro Network
 - [ ] a Micro services network which powers the future worlds AR devices, spatial and ubiquitous computing platforms

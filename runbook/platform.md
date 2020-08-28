@@ -76,10 +76,10 @@ nats-operator    1/1     1            1           4d14h
 ```
 
 ```
-kubectl set image deployments micro=micro/micro:tag -l micro=runtime
+kubectl set image deployments micro=micro/micro:<INSERT_TAG_NAME_HERE> -l micro=runtime
 ```
 
-Please note `tag` must be changed to your specific tag.
+Where `<INSERT_TAG_NAME_HERE>` is your container image tag.
 
 ### M3O (Runtime Services)
 
@@ -296,8 +296,8 @@ micro config set micro.signup.sendgrid.api_key [sendgrid api key]
 micro config set micro.signup.sendgrid.template_id d-240bf196257143569539b3b6b82127c0;
 micro config set micro.signup.plan_id [stripe plan id];
 micro config set micro.signup.email_from "Micro Team <support@m3o.com>";
-micro config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,platform,invite,payment.stripe";
-```
+micro config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,platform,invite,payment.stripe,customers,namespaces,subscriptions";
+ ```
 
 Verify the config by calling`“micro config get micro`. This will output the config as JSON.
 
@@ -324,9 +324,11 @@ micro run github.com/m3o/services/tests
 micro run github.com/m3o/services/status
 micro run github.com/m3o/services/invite
 micro run github.com/m3o/services/api/client
-micro run github.com/m3o/services/events
 micro run github.com/m3o/services/platform
 micro run github.com/m3o/services/notifications
+micro run github.com/m3o/services/customers
+micro run github.com/m3o/services/subscriptions
+micro run github.com/m3o/services/namespaces
 ```
 
 Wait for the services to all be running. This can be checked by running `micro services`

@@ -70,8 +70,8 @@ not exclude those who want to self host and access the system as if it were part
 
 ### Summarised view
 
-- [x] Micro services network - a shared platform for service development
-- [x] Multi-Cloud {AWS, Azure, GCP, DO} - highly available and invisible to the user
+- [x] Micro Platform - a shared platform for service development
+- [ ] Multi-Cloud {AWS, Azure, GCP, DO} - highly available and invisible to the user
 - [ ] Multi-Client {Go, Python, Ruby, Javascript, Rust} - empower developers in any language
 - [ ] Services {Platform, Utility, Orchestration, Web} - base level services delivered by micro itself
 
@@ -87,7 +87,7 @@ not exclude those who want to self host and access the system as if it were part
   * Establish go-micro as micro server
   * Enable connectivity beyond the cloud
   * Continue development of core services
-- [x] **Debugging** {Logging, tracing, metrics}
+- [ ] **Debugging** {Logging, tracing, metrics}
   * Build in observability features
   * Runtime stats; cpu, mem, threads, requests, errors
   * Logs; historic logs for a finite time
@@ -116,7 +116,7 @@ not exclude those who want to self host and access the system as if it were part
   * Ability to define healthchecks
   * Events, emails and paging where necessary
   * Scheduling of on-call (stretch goal 6-12 months)
-- [ ] **Commands**
+- [x] **Commands**
   * Auto generate CLI commands based on available services
  - [ ] **Multi-Lang Apps**
   * Add additional languages (rust, java, etc}

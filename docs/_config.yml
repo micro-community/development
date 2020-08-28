@@ -33,7 +33,7 @@ ga_tracking: UA-70478210-5
 highlighter: rouge
 
 # unhash for local development
-# theme: just-the-docs
+theme: just-the-docs
 
 remote_theme: pmarsceill/just-the-docs
 plugins:
@@ -43,9 +43,10 @@ sass:
     sass_dir: _sass
 include:
   - _sass/
+color_scheme: m3o
 
 # Just the docs configs, see https://pmarsceill.github.io/just-the-docs/docs/configuration/ 
-#logo: "/assets/images/logo.png"
+logo: "/assets/images/logo.png"
 search_enabled: true
 heading_anchors: true
 # Enable support for hyphenated search words:
