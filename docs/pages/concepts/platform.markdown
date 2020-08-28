@@ -96,6 +96,16 @@ Cloud and serverless pricing is anxiety inducing in a way that mostly now requir
 doesn't make sense to us. We believe to start developers should be given a fair flat subscription price 
 and then we charge for additional services you use that are separate to the platform itself. 
 
+### Additional Users
+
+Every additional user added to your account is billed at $35/month. Whether you invite them or just plain create the 
+account we'll keep track and invoice this as "M3O Additonal Users" on your invoices.
+
+### Additional Services
+
+Beyond 10 services, we bill every additional service at $3/month. Additional service meaning anything with a new unique name 
+e.g users, customers, orders. We'll add a line item on your invoice called "M3O Additional Services" automatically.
+
 ## Future 
 
 In the future we'll introduce different pricing tiers for teams and enterprise that include support and SLAs along with 
