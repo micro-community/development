@@ -65,7 +65,7 @@ So how do you access it?
 ### Environments
 
 Micro has the concept of environments or an "env" built in. These are basically different hosted Micro servers 
-you can switch between to do development and run Micro services. There are two built ins, "local" and "platform. 
+you can switch between to do development and run Micro services. There are two built ins, "local" and "platform". 
 Local refers to a local server running on "127.0.0.1:8081" and platform refers to the m3o platform where 
 we provide an external proxy on "proxy.m3o.com:443".
 
