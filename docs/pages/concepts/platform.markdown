@@ -89,11 +89,17 @@ away the underlying infrastructure so you don't have to worry about it.
 
 ## Pricing
 
-Our pricing is a flat subscription of $35/month and you get unlimited hosting for your services. That's it.
+Our pricing is a subscription of $35/dev/month. For that you get the ability to deploy upto 10 services, invite 5 people to 
+collaborate with, support for private git repos and secure public api endpoints for your services. 
 
 Cloud and serverless pricing is anxiety inducing in a way that mostly now requires pricing calculators. This 
 doesn't make sense to us. We believe to start developers should be given a fair flat subscription price 
 and then we charge for additional services you use that are separate to the platform itself. 
+
+## Future 
+
+In the future we'll introduce different pricing tiers for teams and enterprise that include support and SLAs along with 
+additional features for metrics, logs, etc. For now we really want to help small teams and individual developers.
 
 ## Next Steps
 
