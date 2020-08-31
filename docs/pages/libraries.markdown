@@ -10,7 +10,7 @@ has_children: false
 ---
 
 
-## More Docs
+## More Docs [Only for Micro/Go-Micro V2]
 
 {: .fs-6 .fw-300 }
 [More Library Docs](https://micro-community.github.io/website/docs/)
