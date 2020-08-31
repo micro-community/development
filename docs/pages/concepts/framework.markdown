@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Framework
-keywords: concepts, framework, go-micro, interfaces
-tags: [concepts, framework, go-micro, interfaces]
+keywords: concepts, framework, runtime, server
+tags: [concepts, framework, runtime, server]
 permalink: /concepts/framework
-summary: A Go framework for distributed systems development
+summary: A framework for cloud native development
 nav_order: 1
 parent: Concepts
 toc_list: true
@@ -12,85 +12,82 @@ toc_list: true
 
 
 # Framework
-{: .no_toc }
 
-Micro includes a framework called [go-micro](https://github.com/micro/go-micro) (sometimes referred to as Go Micro) which is 
-used for distributed systems development. Think Rails or Spring but for Go cloud services. Go Micro builds on the Go programming language 
-to create a set of strongly defined abstractions for writing services.
+[Micro](https://micro.mu) is a framework for cloud native development.
+
+## Overview
+
+Micro addresses the key requirements for building distributed systems. 
+It leverages the microservices architecture pattern and provides a set of services which act as the building blocks 
+of a platform. Micro deals with the complexity of distributed systems and provides simpler programmable abstractions to build on.
+
+## Features
+
+Micro focuses on the concept of <b>Development Runtime Infrastructure</b>, creating separation between the varying 
+concerns of development and infrastructure using a runtime as an abstraction layer, then providing entry points 
+for external systems to access services run with Micro.
+
+The framework is composed of the following features:
+
+- **Server:** A distributed systems runtime composed of building block services which abstract away the underlying infrastructure 
+and provide a programmable abstraction layer. Authentication, configuration, messaging, storage and more built in.
+
+- **Clients:** Multiple entrypoints through which you can access your services. Write services once and access them through every means 
+you've already come to know. A HTTP api, gRPC proxy and commmand line interface.
+
+- **Library:** A Go library which makes it drop dead simple to write your services without having to piece together lines and lines of 
+boilerplate. Auto configured and initialised by default, just import and get started quickly.
+
+
+## Runtime Components
+
+The runtime is composed of the following features:
+
+### Clients
+
+Clients are entrypoints into the system. They enable access to your services through well known entrypoints.
+
+- **api:** An api gateway which acts as a single entry point for the frontend with dynamic request routing using service discovery. 
+
+- **cli:** Access services via the terminal. Every good developer tool needs a CLI as a defacto standard for operating a system. 
+
+- **proxy:** An identity aware proxy which allows you to access remote environments without painful configuration or vpn.
+
+### Services
+
+Services are the core services that makeup the runtime. They provide a programmable abstraction layer for distributed systems infrastructure.
+
+- **auth:** Authentication and authorization is a core requirement for any production ready platform. Micro builds in an auth service 
+for managing service to service and user to service authentication.
+
+- **broker:** A message broker allowing for async messaging. Microservices are event driven architectures and should provide messaging as a first
+class citizen. Notify other services of events without needing to worry about a response.
+
+- **config:** Manage dynamic config in a centralised location for your services to access. Has the ability to load config from multiple 
+sources and enables you to update config without needing to restart services.
+
+- **network:** A drop in service to service networking solution. Offload service discovery, load balancing and fault tolerance to the network.
+The micro network dynamically builds a latency based routing table based on the local registry. It includes support for multi-cloud networking.
+
+- **registry:** The registry provides service discovery to locate other services, store feature rich metadata and endpoint information. It's a
+service explorer which lets you centrally and dynamically store this info at runtime.
+
+- **runtime:** A service runtime which manages the lifecycle of your service, from source to running. The runtime service can run natively locally 
+or on kubernetes, providing a seamless abstraction across both.
+
+- **store:** State is a fundamental requirement of any system. We provide a key-value store to provide simple storage of state which can be shared
+between services or offload long term to keep microservices stateless and horizontally scalable.
+
+## Service Library
+
+Micro includes a pre-initialised service library built on [go-micro](https://github.com/micro/go-micro) used for distributed systems development. 
+Think Rails or Spring but for Go cloud services. Micro builds on the Go programming language to create a set of strongly defined abstractions for writing services.
 
 Normally you'll spend a lot of time hacking a way at boilerplate code in your main function or battling with distributed systems 
-design patterns. Go Micro tries to remove all of this pain for you and create simple building blocks all encapsulated in a single 
+design patterns. Micro tries to remove all of this pain for you and create simple building blocks all encapsulated in a single 
 service interface.
 
-## Interfaces
-
-Below is a high level overview of the packages/interfaces within the framework. Detailed design docs can be found in 
-[development/design](https://github.com/m3o/dev/tree/master/design). Anything you can't find here 
-just check out [pkg.go.dev](https://pkg.go.dev/github.com/micro/go-micro/v2).
-
-### Auth
-
-Auth is built in as a first class citizen. Authentication and authorization enable secure zero trust networking by providing every service an identity and certificates. This additionally includes rule based access control.
-
-### Broker
-
-The broker provides an interface to a message broker for asynchronous pub/sub communication. This is one of the fundamental requirements of an event 
-driven architecture and microservices. By default we use an inbox style point to point HTTP system to minimise the number of dependencies required 
-to get started. However there are many message broker implementations available in go-plugins e.g RabbitMQ, NATS, NSQ, Google Cloud Pub Sub.
-
-### Client
-
-The client provides an interface to make requests to services. Again like the server, it builds on the other packages to provide a unified interface 
-for finding services by name using the registry, load balancing using the selector, making synchronous requests with the transport and asynchronous 
-messaging using the broker. 
-
-The  above components are combined at the top-level of micro as a **Service**.
-
-We additionally provide some other components for distributed systems development:
-
-### Codec
-
-The codec is used for encoding and decoding messages before transporting them across the wire. This could be json, protobuf, bson, msgpack, etc. 
-Where this differs from most other codecs is that we actually support the RPC format here as well. So we have JSON-RPC, PROTO-RPC, BSON-RPC, etc. 
-It separates encoding from the client/server and provides a powerful method for integrating other systems such as gRPC, Vanadium, etc.
-
-### Config
-
-Config is an interface for dynamic config loading from any number of sources which can be combined and merged. Most systems actively require configuration 
-that changes independent of the code. Having a config interface which can dynamically load these values as needed is powerful. It supports 
-many different configuration formats also.
-
-### Debug
-
-Micro provides a built in debugging experience through stats, logs and tracing. Debugging is a separate concern from monitoring. Debugging is a form of observability that's deeply integrated into the go-micro framework. The idea here is to mimic Go's runtime tooling or thereabouts e.g runtime stats, stdout and stderr logs, debug stack traces.
-
-### Server
-
-The server is the building block for writing a service. Here you can name your service, register request handlers, add middeware, etc. The service 
-builds on the above packages to provide a unified interface for serving requests. The built in server is an RPC system. In the future there maybe 
-other implementations. The server also allows you to define multiple codecs to serve different encoded messages.
-
-### Store
-
-The store is a simple key-value storage interface used to abstract away lightweight data storage. We're not trying to implement a full blown sql dialect 
-or storage, just simply the ability to hold state that would otherwise be lost in stateless services. They store interface will become a building block 
-for all forms of storage in the future.
-
-### Registry
-
-The registry provides a service discovery mechanism to resolve names to addresses. It can be backed by consul, etcd, zookeeper, dns, gossip, etc. 
-Services should register using the registry on startup and deregister on shutdown. Services can optionally provide an expiry TTL and reregister 
-on an interval to ensure liveness and that the service is cleaned up if it dies.
-
-### Selector
-
-The selector is a load balancing abstraction which builds on the registry. It allows services to be "filtered" using filter functions and "selected" 
-using a choice of algorithms such as random, roundrobin, leastconn, etc. The selector is leveraged by the Client when making requests. The client 
-will use the selector rather than the registry as it provides that built in mechanism of load balancing. 
-
-### Transport
-
-The transport is the interface for synchronous request/response communication between services. It's akin to the golang net package but provides 
-a higher level abstraction which allows us to switch out communication mechanisms e.g http, rabbitmq, websockets, NATS. The transport also 
-supports bidirectional streaming. This is powerful for client side push to the server.
+Each service in the runtime has a corresponding package in [github.com/micro/micro/v3/service](https://github.com/micro/micro/tree/master/service) which 
+you can import and use for any need. If you want to publish a message use the broker. If you need to persist data use the store. Or if you just need 
+to make service to service calls use the client.
 

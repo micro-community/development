@@ -12,18 +12,21 @@ nav_order: 1
 Learn the ins and outs of Micro and become a Micro services ninja!
 {: .fs-6 .fw-300 }
 
-Micro is an open source development platform for Cloud services.
+[Micro](https://micro.mu) is an open source framework for cloud native development.
+
+[M3O](https://m3o.com) is a cloud native platform offering Micro as a Service.
 
 Key components of Micro are as follows:
 
 * **[Framework](https://github.com/micro/micro)**: a framework to build, run and manage Micro services.
-* **[Platform](https://m3o.com)**: A cloud native development platform for Micro services.
-* **[Clients](https://github.com/micro/clients)**: multi-language clients to enable access to Micro services.
 * **[Services](https://github.com/micro/services)**: real world example Micro service applications.
+* **[Clients](https://github.com/micro/clients)**: multi-language clients for accessing Micro services.
+
+Learn more about the M3O platform in the [Concepts](/concepts) section or [Get Started](/getting-started).
 
 <br />
 
-[Get Started](/getting-started){: .btn .btn-blue } &nbsp;
+[Get Started](/getting-started){: .btn } &nbsp;
 [Github](https://github.com/micro-community){: .btn }  &nbsp;
 [Website](https://micro.arch.run/){: .btn }  &nbsp;
 [Website-CN](https://microhq.cn/){: .btn }  &nbsp;

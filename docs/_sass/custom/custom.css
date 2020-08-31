@@ -1,6 +1,36 @@
+body {
+  padding: 25px;
+}
 .side-bar {
+  padding-right: 10px;
   background: white;
 }
+.site-footer {
+  display: none;
+}
+
 .site-title {
+  font-weight: bold;
+}
+.site-title:hover {
+  background-image: none;
+}
+@media (min-width: 50rem) {
+  .site-nav {
+    padding-top: 1rem;
+  }
+  .site-header {
+  }
+}
+@media (min-width: 1020px) {
+  .side-bar {
+    max-width: 250px;
+  }
+}
+
+.nav-list .nav-list-item .nav-list-link:hover, .nav-list .nav-list-item .nav-list-link.active {
+  background-image: none;
+}
+.main-content a {
   font-weight: bold;
 }

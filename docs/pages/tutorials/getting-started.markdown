@@ -1,16 +1,16 @@
 ---
 layout: page
-title: Getting Started
+title: Helloworld
 keywords: micro
 tags: [micro]
-permalink: /getting-started
-summary: A getting started guide for Micro
+permalink: /tutorials/helloworld
+summary: A helloworld getting started guide for Micro
 parent: Tutorials
 nav_order: 1
 toc_list: true
 ---
 
-# Getting Started
+# Helloworld
 {: .no_toc }
 
 ## Table of contents
@@ -25,7 +25,7 @@ toc_list: true
 Using Go:
 
 ```sh
-go get github.com/micro/micro/v2
+go get github.com/micro/micro/v3
 ```
 
 Or by downloading the binary
@@ -52,36 +52,23 @@ First, we have to start the `micro server`. The command to do that is:
 micro server
 ```
 
-If all goes well you'll see log output from the various services initialising; this terminal will continue to output logs as we go through the rest of the tutorial so keep it running.
-
-To talk to this server, we just have to tell Micro CLI to address our server instead of using the default implementations - micro can work without a server too, but [more about that later](#-environments).
-
-The following command tells the CLI to talk to our server:
+If all goes well you'll see log output from the server listing the services as it starts them. Just to verify that everything is in order, let's see what services are running:
 
 ```
-micro env set server
+$ micro services
+api
+auth
+broker
+config
+network
+proxy
+registry
+runtime
+server
+store
 ```
 
-Great! We are ready to roll. Just to verify that everything is in order, let's see what services are running:
-
-```
-$ micro list services
-go.micro.api
-go.micro.auth
-go.micro.bot
-go.micro.broker
-go.micro.config
-go.micro.debug
-go.micro.network
-go.micro.proxy
-go.micro.registry
-go.micro.router
-go.micro.runtime
-go.micro.server
-go.micro.web
-```
-
-All those services are ones started by our `micro server`. This is pretty cool, but still it's not something we launched! Let's start a service for which existence we can actually take credit for. If we go to [github.com/micro](https://github.com/micro), we see a bunch of services written by micro authors. One of them is the `helloworld`. Try our luck, shall we?
+All those services are ones started by our `micro server`. This is pretty cool, but still it's not something we launched! Let's start a service for which existence we can actually take credit for. If we go to [github.com/micro/services](https://github.com/micro/services), we see a bunch of services written by micro authors. One of them is the `helloworld`. Try our luck, shall we?
 
 The command to run services is `micro run`.
 
@@ -90,20 +77,20 @@ micro run github.com/micro/services/helloworld
 ```
 
 
-If we take a look at the running `micro server`, we should see something like
-
+If we take a look at the running services using `micro status`, we should see the service listed:
 ```
-Creating service micro/services/helloworld version latest source github.com/micro/services/helloworld
-Processing create event for service micro/examples/helloworld:latest in namespace micro
+NAME		VERSION	SOURCE		STATUS	BUILD	UPDATED	METADATA
+helloworld	latest	helloworld	running	n/a	unknown	owner=n/a,group=n/a
 ```
 
 We can also have a look at logs of the service to verify it's running.
 
 ```sh
-$ micro logs micro/services/helloworld
-Starting [service] go.micro.service.helloworld
-Server [grpc] Listening on [::]:36577
-Registry [service] Registering node: go.micro.service.helloworld-213b807a-15c2-496f-93ac-7949ad38aadf
+$ micro logs helloworld
+micro@Bens-MBP-3 micro % micro logs helloworld
+2020-08-11 15:18:33  file=service/service.go:192 level=info Starting [service] helloworld
+2020-08-11 15:18:33  file=grpc/grpc.go:902 level=info Server [grpc] Listening on [::]:49602
+2020-08-11 15:18:33  file=grpc/grpc.go:728 level=info Registry [service] Registering node: helloworld-c49ee2a3-e9d0-4411-9b9b-5fe6aea6b49d
 ```
 
 So since our service is running happily, let's try to call it! That's what services are for.
@@ -114,10 +101,11 @@ We have a couple of options to call a service running on our `micro server`.
 
 ### With the CLI
 
-The easiest is perhaps with the CLI:
+Micro auto-generates CLI commands for your service in the form: `micro [service] [method]`, with the
+default method being "Call". Arguments can be passed as flags, hence we can call our service using:
 
 ```sh
-$ micro call go.micro.service.helloworld Helloworld.Call '{"name":"Jane"}'
+$ micro helloworld --name=Jane
 {
 	"msg": "Hello Jane"
 }
@@ -127,7 +115,7 @@ $ micro call go.micro.service.helloworld Helloworld.Call '{"name":"Jane"}'
 That worked! If we wonder what nodes and endpoints a service has we can run the following command:
 
 ```sh
-micro get service go.micro.service.helloworld
+micro get service helloworld
 ```
 
 ### With the framework
@@ -145,32 +133,31 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/micro/go-micro/v2"
+	"github.com/micro/micro/v3/service"
 	proto "github.com/micro/services/helloworld/proto"
 )
 
 func main() {
 	// create and initialise a new service
-	service := micro.NewService()
-	service.Init()
+	srv := service.New()
 
-	// create the proto client for helloworld
-	client := proto.NewHelloworldService("go.micro.service.helloworld", service.Client())
+		// create the proto client for helloworld
+		client := proto.NewHelloworldService("helloworld", srv.Client())
 
-	// call an endpoint on the service
-	rsp, err := client.Call(context.Background(), &proto.Request{
-		Name: "John",
-	})
-	if err != nil {
-		fmt.Println("Error calling helloworld: ", err)
-		return
-	}
+		// call an endpoint on the service
+		rsp, err := client.Call(context.Background(), &proto.Request{
+			Name: "John",
+		})
+		if err != nil {
+			fmt.Println("Error calling helloworld: ", err)
+			return
+		}
 
-	// print the response
-	fmt.Println("Response: ", rsp.Msg)
-	
-	// let's delay the process for exiting for reasons you'll see below
-	time.Sleep(time.Second * 5)
+		// print the response
+		fmt.Println("Response: ", rsp.Msg)
+		
+		// let's delay the process for exiting for reasons you'll see below
+		time.Sleep(time.Second * 5)
 }
 ```
 
@@ -185,9 +172,9 @@ micro run .
 
 ```
 $ micro status
-NAME						VERSION	SOURCE										STATUS		BUILD	UPDATED		METADATA
-example-service				latest	/home/username/example-service				starting	n/a		4s ago		owner=n/a,group=n/a
-micro/examples/helloworld	latest	github.com/micro/services/helloworld		running		n/a		unknown		owner=n/a,group=n/a
+NAME							VERSION		SOURCE																	STATUS		BUILD	UPDATED		METADATA
+example-service		latest		example-service													starting	n/a		4s ago		owner=n/a,group=n/a
+helloworld				latest		github.com/micro/services/helloworld		running		n/a		unknown		owner=n/a,group=n/a
 ```
 
 Now, since our example-service client is also running, we should be able to see it's logs:
@@ -209,7 +196,7 @@ To create a new service, use the `micro new` command. It should output something
 
 ```sh
 $ micro new helloworld
-Creating service go.micro.service.helloworld in helloworld
+Creating service helloworld in helloworld
 
 .
 ├── main.go
@@ -233,7 +220,7 @@ download protobuf for micro:
 brew install protobuf
 go get -u github.com/golang/protobuf/proto
 go get -u github.com/golang/protobuf/protoc-gen-go
-go get github.com/micro/micro/v2/cmd/protoc-gen-micro@master
+go get github.com/micro/micro/v3/cmd/protoc-gen-micro@master
 
 compile the proto file helloworld.proto:
 
@@ -254,7 +241,7 @@ Currently Micro is  Go focused (apart from the [clients](#-from-other-languages)
 So once all tools are installed, being inside the service root, we can issue the following command to generate the Go code from the protos:
 
 ```
-protoc --proto_path=.:$GOPATH/src --go_out=. --micro_out=. proto/helloworld/helloworld.proto
+protoc --proto_path=.:$GOPATH/src --go_out=. --micro_out=. proto/helloworld.proto
 ```
 
 The generated code must be committed to source control, to enable other services to import the proto when making service calls (see previous section [Calling a service](#-calling-a-service).
@@ -292,7 +279,7 @@ First, let's go over the more basic store CLI commands.
 To save a value, we use the write command:
 
 ```sh
-micro store write key1 value1
+$ micro store write key1 value1
 ```
 
 The UNIX style no output meant it was happily saved. What about reading it?
@@ -302,9 +289,10 @@ $ micro store read key1
 val1
 ```
 
-Or to display it in a fancier way, we can use the `--verbose` or `-v` flags:
+Or to display it in a fancier way, we can use the `--verbose` or `-v` flags.
 
 ```
+$ micro store read -v key1
 KEY    VALUE   EXPIRY
 key1   val1    None
 ```
@@ -314,7 +302,7 @@ This view is especially useful when we use the `--prefix` or `-p` flag, which le
 To demonstrate that first let's save an other value:
 
 ```
-micro store write key2 val2
+$ micro store write key2 val2
 ```
 
 After this, we can list both `key1` and `key2` keys as they both share commond prefixes:
@@ -326,7 +314,7 @@ key1   val1    None
 key2   val2    None
 ```
 
-There are more to the store, but this knowledge already enables us to be dangerous!
+There is more to the store, but this knowledge already enables us to be dangerous!
 
 #### With the framework
 
@@ -335,7 +323,7 @@ First let's create an entry that our service can read. This time we will specify
 
 
 ```
-micro store write --table go.micro.service.example mykey "Hi there"
+micro store write --table=example mykey "Hi there"
 ```
 
 Let's modify [the example service we wrote previously](#-calling-a-service-with-go-micro) so instead of calling a service, it reads the above value from a store.
@@ -347,15 +335,15 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/micro/go-micro/v2"
+	"github.com/micro/micro/v3/service"
+	"github.com/micro/micro/v3/service/store"
 )
 
 func main() {
-	service := micro.NewService()
+	srv := service.New(service.Name("example"))
+	srv.Init()
 
-	service.Init(micro.Name("go.micro.service.example"))
-
-	records, err := service.Options().Store.Read("mykey")
+	records, err := store.Read("mykey")
 	if err != nil {
 		fmt.Println("Error reading from store: ", err)
 	}
@@ -369,7 +357,6 @@ func main() {
 
 	time.Sleep(1 * time.Hour)
 }
-
 ```
 
 ## Updating a service
@@ -454,30 +441,25 @@ $ micro config get key
 
 ### With the framework
 
-Micro configs work very similarly when being called from [Go code too](https://pkg.go.dev/github.com/micro/go-micro/v2/config?tab=doc):
+Micro configs work very similarly when being called from [Go code too](https://pkg.go.dev/github.com/micro/go-micro/v3/config?tab=doc):
 
 ```go
 package main
 
 import (
 	"fmt"
-	"os"
-	"time"
 
-	"github.com/micro/go-micro/v2"
+	"github.com/micro/micro/v3/service"
+	"github.com/micro/micro/v3/service/config"
 )
 
 func main() {
-	// New Service
-	service := micro.NewService(
-		micro.Name("go.micro.service.config-read"),
-		micro.Version("latest"),
-	)
-	service.Init()
-	c := service.Options().Config
+	// setup the service
+	srv := service.New(service.Name("example"))
+	srv.Init()
 
 	// read config value
-	fmt.Println("Value of key.subkey: ", c.Get("key", "subkey").String(""))
+	fmt.Println("Value of key.subkey: ", config.Get("key", "subkey").String(""))
 }
 ```
 
