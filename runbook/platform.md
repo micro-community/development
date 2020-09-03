@@ -1,13 +1,12 @@
 # Platform Runbook
 
 This is the runbook for the M3O platform and should act as an operations manual for things like outages etc.  
-
-# Table of Contents
-
-  * [Platform Runbook](#platform-runbook)
+<!--ts-->
+   * [Platform Runbook](#platform-runbook)
    * [Table of Contents](#table-of-contents)
    * [Users](#users)
-   * [Add new user to beta](#add-new-user-to-beta)
+      * [Add new user to beta](#add-new-user-to-beta)
+      * [User deleted their account](#user-deleted-their-account)
    * [Services](#services)
       * [Redeploying services](#redeploying-services)
          * [Micro (Server)](#micro-server)
@@ -34,17 +33,35 @@ This is the runbook for the M3O platform and should act as an operations manual 
       * [Setup the rules](#setup-the-rules)
       * [Run the M3O Services](#run-the-m3o-services)
 
-To regenerate the table of contents, use [this tool](https://github.com/ekalinin/github-markdown-toc) and do `cat ./platform.md | gh-md-toc -`.
+<!-- Added by: domwong, at: Thu  3 Sep 2020 09:52:54 BST -->
 
+<!--te-->
+To regenerate the table of contents, use [this tool](https://github.com/ekalinin/github-markdown-toc) and do `gh-md-toc --insert platform.md`
 # Users
 
-# Add new user to beta
+## Add new user to beta
 
-Users need to have their email added to the "allow" list of the invite service.
+Users need to have their email added to the "allow" list of the invite service. This will also send an email to the user. 
 
 ```
-micro invite create --email="me@domwong.com"
+micro invite create --email="dom@m3o.com"
 ```
+
+## User deleted their account
+
+If a user managed to delete their account by accident (`micro auth delete account foo`) then we need to recreate it. Note: nothing else should be required, creating the auth account should be enough to relink everything.
+
+Find the user's namespace
+```
+micro namespaces list --owner=dom@m3o.com 
+```
+
+Generate their account. Use a strong password for the secret (e.g. https://strongpasswordgenerator.com/) 
+```
+micro call auth Auth.Generate '{"id":"<email address>" , "type":"user" , "options":{"namespace": "<namespace>"}, "secret" : "<strong password>" }'
+```
+
+Send details to user via DM. Create a one time message in privnote to give them the password (https://privnote.com/). Also, ask the user to change their password once they've successfully logged in https://m3o.dev/faq#changing-your-password
 
 # Services
 
