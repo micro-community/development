@@ -61,6 +61,8 @@ Successfully logged in.
 
 and change the password (Note: this is not implemented yet), or create a new account and delete the default. It's a good practice to not leave default accounts in an installation for security reasons, so let's do the latter.
 
+NOTE: By running this command you're deleting the account owner/admin. Make sure you have other accounts available before doing so.
+
 ```sh
 # This command deletes the 'default' user account
 micro auth delete account default
@@ -79,6 +81,8 @@ a9b3102f-81d8-4dc4-a811-c8bf1e22ba6c        service     n/a
 ```
 
 Nice! Now we just have to create an account with the `micro auth create account` command:
+
+Note: Creating new accounts on the platform are billed as "Additional Users" at a monthly fee of $35/month.
 
 ```sh
 # This command creates an admin account to be used.
