@@ -41,16 +41,11 @@ If we list the current accounts on the micro server, we can see the following:
 ```sh
 $ micro auth list accounts
 ID                                          Scopes      Metadata
-163fcd54-1da4-43a6-be1b-d5019dec3952        service     n/a
-307066c3-2fb4-4652-ab4c-5f252175e398        service     n/a
-59f83328-84ac-4044-8bac-4c59a39c4061        service     n/a
-99df788f-f4ad-4474-8516-db35667569f0        service     n/a
-a9b3102f-81d8-4dc4-a811-c8bf1e22ba6c        service     n/a
-default                                     admin       n/a
+admin                                       admin       n/a
 ```
 
-Let's ignore the service accounts for now and focus on the 'admin' scoped account with the id 'default'.
-Now, we have to options before removing the default account: either log in as admins with username 'default' and password 'password':
+Let's ignore the service accounts for now and focus on the 'admin' scoped account with the id 'admin'.
+Now, we have to options before removing the default account: either log in as admins with username 'admin' and password 'micro':
 
 ```sh
 $ micro login
@@ -59,28 +54,9 @@ Enter Password:
 Successfully logged in.
 ```
 
-and change the password (Note: this is not implemented yet), or create a new account and delete the default. It's a good practice to not leave default accounts in an installation for security reasons, so let's do the latter.
+and change the password with `micro user password set`, or create a new account and delete the default. It's a good practice to not leave default accounts in an installation for security reasons, so let's do the latter.
 
-NOTE: By running this command you're deleting the account owner/admin. Make sure you have other accounts available before doing so.
-
-```sh
-# This command deletes the 'default' user account
-micro auth delete account default
-```
-
-To verify that the account is gone, we can list accounts again:
-
-```sh
-$ micro auth list accounts
-ID                                          Scopes      Metadata
-163fcd54-1da4-43a6-be1b-d5019dec3952        service     n/a
-307066c3-2fb4-4652-ab4c-5f252175e398        service     n/a
-59f83328-84ac-4044-8bac-4c59a39c4061        service     n/a
-99df788f-f4ad-4474-8516-db35667569f0        service     n/a
-a9b3102f-81d8-4dc4-a811-c8bf1e22ba6c        service     n/a
-```
-
-Nice! Now we just have to create an account with the `micro auth create account` command:
+We can do this by creating an account with the `micro auth create account` command:
 
 Note: Creating new accounts on the platform are billed as "Additional Users" at a monthly fee of $35/month.
 
@@ -93,6 +69,18 @@ Account created.
 ```sh
 $ micro auth list accounts | grep me
 me@email.com					admin		n/a
+```
+
+After our account is ready, we can log in with `micro login` and delete the default 'admin' account:
+
+```sh
+$ micro login
+Enter email address: me@email.com
+Enter Password: 
+Successfully logged in.
+
+$ micro auth delete account admin
+Account deleted.
 ```
 
 Now we just have to change the rules to not allow unauthenticated requests. First, let's add a new rule which we will name `onlyloggedin` as the aim is to only allow
