@@ -37,6 +37,8 @@ default     <public>        GRANTED     *:*:*           0
 
 The `default` rule enables access to all resources. Now, if we want to limit access, we can replace this with a rule that will only enable logged in users to access the `micro server`.
 
+Before changing the rules, let's secure the accounts.
+
 If we list the current accounts on the micro server, we can see the following:
 
 ```sh
@@ -45,7 +47,7 @@ ID                                          Scopes      Metadata
 admin                                       admin       n/a
 ```
 
-Before changing the rules, let's secure the accounts: either log in as admins with username 'admin' and password 'micro':
+Since this account has an id of 'admin' and password 'micro', it's not too secure. To fix this, we either log in as admins with username 'admin' and password 'micro':
 
 ```sh
 $ micro login
