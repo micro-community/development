@@ -45,7 +45,7 @@ ID                                          Scopes      Metadata
 admin                                       admin       n/a
 ```
 
-Now, we have to options to secure our installation: either log in as admins with username 'admin' and password 'micro':
+Before changing the rules, let's secure the accounts: either log in as admins with username 'admin' and password 'micro':
 
 ```sh
 $ micro login
@@ -83,7 +83,7 @@ $ micro auth delete account admin
 Account deleted.
 ```
 
-Now we just have to change the rules to not allow unauthenticated requests. First, let's add a new rule which we will name `onlyloggedin` as the aim is to only allow
+After this, the account should be secure, so we just have to change the rules to not allow unauthenticated requests. First, let's add a new rule which we will name `onlyloggedin` as the aim is to only allow
 logged in users to call `micro server:
 
 ```sh
