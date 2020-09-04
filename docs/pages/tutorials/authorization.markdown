@@ -20,6 +20,8 @@ toc_list: true
 {:toc}
 ---
 
+This tutorial is mainly aimed at the `local` env, but the same commands should work with your M3O `platform` account too.
+
 Micro and the `micro server` comes with fine tunable authentication and authorization capabilities.
 Out of the box, the `micro server` is open. This means anyone can call any endpoints, look at all data, config, and so on.
 
@@ -33,8 +35,7 @@ ID          Scope           Access      Resource        Priority
 default     <public>        GRANTED     *:*:*           0
 ```
 
-The `default` rule enables access to all resources. Now, if we want to limit access, we can replace this with a rule
-that will only enable logged in users to access the `micro server`.
+The `default` rule enables access to all resources. Now, if we want to limit access, we can replace this with a rule that will only enable logged in users to access the `micro server`.
 
 If we list the current accounts on the micro server, we can see the following:
 
@@ -44,8 +45,7 @@ ID                                          Scopes      Metadata
 admin                                       admin       n/a
 ```
 
-Let's ignore the service accounts for now and focus on the 'admin' scoped account with the id 'admin'.
-Now, we have to options before removing the default account: either log in as admins with username 'admin' and password 'micro':
+Now, we have to options to secure our installation: either log in as admins with username 'admin' and password 'micro':
 
 ```sh
 $ micro login
