@@ -52,6 +52,15 @@ First, we have to start the `micro server`. The command to do that is:
 micro server
 ```
 
+Before interacting with the `micro server`, we need to log in with the id 'admin' and password 'micro':
+
+```sh
+$ micro login
+Enter email address: admin
+Enter Password:
+Successfully logged in.
+```
+
 If all goes well you'll see log output from the server listing the services as it starts them. Just to verify that everything is in order, let's see what services are running:
 
 ```
