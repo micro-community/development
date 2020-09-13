@@ -30,6 +30,6 @@ Learn more about the M3O platform in the [Concepts](/concepts) section or [Get S
 [Github](https://github.com/micro-community){: .btn }  &nbsp;
 [Website](https://micro.arch.run/){: .btn }  &nbsp;
 [Website-CN](https://microhq.cn/){: .btn }  &nbsp;
-[More Library Docs](https://micro-community.github.io/website/docs/){: .btn }
+[More Library Docs](https://micro-community.github.io/m3o-web/docs/){: .btn }
 
 <div style="height: 320px"></div>
