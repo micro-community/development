@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Micro-Community Dev
-email: support@micro.mu
+title: Micro-Community Dev Channel
+email: mail@arch.wiki
 description: >- # this means to ignore newlines until "baseurl:"
   M3O dev site - getting started, docs, tutorials and more.
 baseurl: "" # the subpath of your site, e.g. /blog
