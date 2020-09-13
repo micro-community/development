@@ -22,14 +22,6 @@ toc_list: true
 
 ## Installation
 
-Using Go:
-
-```sh
-go get github.com/micro/micro/v3
-```
-
-Or by downloading the binary
-
 ```sh
 # MacOS
 curl -fsSL https://raw.githubusercontent.com/micro/micro/master/scripts/install.sh | /bin/bash
@@ -50,6 +42,15 @@ First, we have to start the `micro server`. The command to do that is:
 
 ```sh
 micro server
+```
+
+Before interacting with the `micro server`, we need to log in with the id 'admin' and password 'micro':
+
+```sh
+$ micro login
+Enter email address: admin
+Enter Password:
+Successfully logged in.
 ```
 
 If all goes well you'll see log output from the server listing the services as it starts them. Just to verify that everything is in order, let's see what services are running:
