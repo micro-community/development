@@ -68,3 +68,15 @@ config.Set("path.to.secret", "Very Secret Value!", config.Secret(true))
 # getting the value out
 config.Get("path.to.secret", config.Secret(true))
 ```
+
+## Handling encryption keys
+
+### Proposal 1
+
+Keep it simple. Have a one key to encrypt all secret values across all namespaces.
+
+### Proposal 2
+
+Create a different random generated encryption key per namespace and store these keys encrypted in the store.
+This is so if users manage to get the key with brute force (they might save a simple value and try keys over and over to get back that value since they know the encryption due to open source)
+they still won't have the key to everyone else's namespace.
