@@ -56,3 +56,15 @@ type Config interface {
 - Removed `Source`, `Loader`, `Watcher`, `ChangeSet` (auditing) concepts entirely
 - `Values` interface now supports options (needed for secrets and for a `Key` option which will drive namespacing now that store interaction is pushed into the config implementation, this previously happened in the config server handler)
 - Config service interface `Read` etc endpoints were renamed to match `Get` `Set`terminology
+
+## Example of using secrets
+
+Given that the `Config` instance has access to an encoding key (likely an option called `SecretKey`) secrets can be used in the following way:
+
+```
+# the value saved here will be encrypted at rest
+config.Set("path.to.secret", "Very Secret Value!", config.Secret(true))
+
+# getting the value out
+config.Get("path.to.secret", config.Secret(true))
+```
