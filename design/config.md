@@ -73,7 +73,7 @@ config.Get("path.to.secret", config.Secret(true))
 
 ### Proposal 1
 
-Keep it simple. Have a one key to encrypt all secret values across all namespaces.
+Keep it simple. Have one key to encrypt all secret values across all namespaces.
 
 ### Proposal 2
 
