@@ -13,10 +13,14 @@ permalink: /faq
 Issue `micro signup --recover --email=youremail` which will email you instructions on how to log in to namespaces you have access to.
 Currently there is no password recovery functionality, please contact us on Slack to do that.
 
+## Pricing
+
+The platform is priced at $35/user/month. We separately provide a free Dev environment which you can read about below.
+
 ## Additional Users
 
-You can add upto 5 additional users on the dev tier. Every additional user added to your account is billed at $35/month. Whether you invite 
-them or just plain create the account we'll keep track and invoice this as "M3O Additonal Users" on your invoices. See 
+You can invite up to 5 additional users on the platform. Every additional user added to your account is billed at $35/month. 
+Whether you invite them or just plain create the account we'll keep track and invoice this as "M3O Additonal Users" on your invoices. See 
 [Get Started > Invite Users](/getting-started/invite-users) to see how to invite them.
 
 ## Additional Services
