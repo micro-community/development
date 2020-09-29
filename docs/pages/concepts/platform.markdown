@@ -65,11 +65,12 @@ So how do you access it?
 ### Environments
 
 Micro has the concept of environments or an "env" built in. These are basically different hosted Micro servers 
-you can switch between to do development and run Micro services. There are two built ins, "local" and "platform". 
-Local refers to a local server running on "127.0.0.1:8081" and platform refers to the m3o platform where 
-we provide an external proxy on "proxy.m3o.com:443".
+you can switch between to do development and run Micro services. There are three built ins, "local", "dev" and "platform". 
 
-You can swap between your local env and the platform like so.
+Local is your local server running on "127.0.0.1:8081". Dev is a free environment in the cloud for small projects 
+and testing. The platform refers to the M3O platform for secure, scalable and supported production workloads.
+
+You can swap between local, dev and the platform like so.
 
 ```
 # platform
@@ -77,6 +78,9 @@ micro env set platform
 
 # local
 micro env set local
+
+# dev
+micro env set dev
 ```
 
 ### Services
