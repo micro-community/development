@@ -46,7 +46,6 @@ micro signup
 
 # login
 micro login 
-
 ```
 
 The Dev env is also subject to fair usage. There are no SLAs or support. The quota is capped at 1 core and 1GB total resources.
