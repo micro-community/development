@@ -32,15 +32,12 @@ Use the following command to change password (you must already be logged in):
 micro user set password
 ```
 
-## Free Dev Environment
+## Dev Environment
 
 The Dev environment is a free tier hosted by us as a best effort service. It's a place for hobbyists and side projects. To get 
 access please talk to #m3o-platform on [slack](https://slack.m3o.com). To login see the following.
 
 ```
-# add the environment
-micro env add dev proxy.m3o.dev
-
 # set the dev env
 micro env set dev
 

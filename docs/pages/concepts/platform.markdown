@@ -121,15 +121,12 @@ We additionally apply caps across your namespace to limit overall resource usage
 Caps may evolve or change in future to include different resource types but the goal is to provide a fair system that 
 can be shared by all.
 
-## Free Dev Environment
+## Dev Environment
 
 The Dev environment is a free tier hosted by us as a best effort service. It's a place for hobbyists and side projects. To get 
 access please talk to #m3o-platform on [slack](https://slack.m3o.com). To login see the following.
 
 ```
-# add the environment
-micro env add dev proxy.m3o.dev
-
 # set the dev env
 micro env set dev
 
