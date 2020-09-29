@@ -93,7 +93,7 @@ nats-operator    1/1     1            1           4d14h
 ```
 
 ```
-kubectl set image deployments micro=micro/micro:<INSERT_TAG_NAME_HERE> -l micro=runtime
+kubectl set image deployments micro=micro/platform:<INSERT_TAG_NAME_HERE> -l micro=runtime
 ```
 
 Where `<INSERT_TAG_NAME_HERE>` is your container image tag.
@@ -244,7 +244,7 @@ Wait for all the pods to be “Running”.
 Update micro to the latest stable docker image snapshot using the following command and then wait for the services to all have the status "Running".
 
 ```bash
-kubectl set image deployments micro=micro/micro:tag -l micro=runtime
+kubectl set image deployments micro=micro/platform:tag -l micro=runtime
 ```
 
 ## Update DNS
@@ -314,7 +314,7 @@ micro config set micro.signup.sendgrid.template_id d-240bf196257143569539b3b6b82
 micro config set micro.subscriptions.plan_id [stripe plan id];
 micro config set micro.subscriptions.additional_users_price_id [stripe additional users price id];
 micro config set micro.signup.email_from "Micro Team <support@m3o.com>";
-micro config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,platform,invite,payment.stripe,customers,namespaces,subscriptions";
+micro config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,platform,invite,payment.stripe,customers,namespaces,subscriptions,emails,alert,billing";
  ```
 
 Verify the config by calling`“micro config get micro`. This will output the config as JSON.
@@ -343,6 +343,7 @@ micro run github.com/m3o/services/status
 micro run github.com/m3o/services/invite
 micro run github.com/m3o/services/api/client
 micro run github.com/m3o/services/platform
+micro run github.com/m3o/services/platform/gitops
 micro run github.com/m3o/services/notifications
 micro run github.com/m3o/services/customers
 micro run github.com/m3o/services/subscriptions
@@ -350,23 +351,3 @@ micro run github.com/m3o/services/namespaces
 ```
 
 Wait for the services to all be running. This can be checked by running `micro services`
-
-## Configure Platform Service
-
-The platform service needs elevated privileges to create / list k8s namespaces. Firstly, create the RBAC resources by running:
-```bash
-kubectl create -f https://raw.githubusercontent.com/m3o/services/master/kubernetes/rbac.yaml -n micro
-```
-
-Then, edit the kubernetes deployment to use this service name.
-```bash
-kubectl edit deployment m3o-services-platform-latest -n micro
-```
-
-Add the following the container spec:
-```
-serviceAccount: platform-srv
-serviceAccountName: platform-srv
-```
-
-We’re done!
