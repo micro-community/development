@@ -96,6 +96,8 @@ Cloud and serverless pricing is anxiety inducing in a way that mostly now requir
 doesn't make sense to us. We believe to start developers should be given a fair flat subscription price 
 and then we charge for additional services you use that are separate to the platform itself. 
 
+Separately we provide a free Dev environment for testing and hobbyist side projects.
+
 ### Additional Users
 
 Every additional user added to your account is billed at $35/month. Whether you invite them or just plain create the 
@@ -118,6 +120,25 @@ make this configurable or allow you to pay for additional resources. For now the
 We additionally apply caps across your namespace to limit overall resource usage which is just an upperbound multiple on services. 
 Caps may evolve or change in future to include different resource types but the goal is to provide a fair system that 
 can be shared by all.
+
+## Free Dev Environment
+
+The Dev environment is a free tier hosted by us as a best effort service. It's a place for hobbyists and side projects. To get 
+access please talk to #m3o-platform on [slack](https://slack.m3o.com). To login see the following.
+
+```
+# add the environment
+micro env add dev proxy.m3o.dev
+
+# set the dev env
+micro env set dev
+
+# signup > use the credit card '4242 4242 4242 4242'
+micro signup
+
+# login
+micro login 
+```
 
 ## Future 
 

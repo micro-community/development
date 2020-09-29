@@ -13,14 +13,6 @@ permalink: /faq
 Issue `micro signup --recover --email=youremail` which will email you instructions on how to log in to namespaces you have access to.
 Currently there is no password recovery functionality, please contact us on Slack to do that.
 
-## Changing Your Password
-
-Use the following command to change password (you must already be logged in):
-
-```
-micro user set password
-```
-
 ## Additional Users
 
 You can add upto 5 additional users on the dev tier. Every additional user added to your account is billed at $35/month. Whether you invite 
@@ -32,9 +24,35 @@ them or just plain create the account we'll keep track and invoice this as "M3O 
 Beyond 10 services, we bill every additional service at $3/month. Additional service meaning anything with a new unique name
 e.g users, customers, orders. We'll add a line item on your invoice called "M3O Additional Services" automatically.
 
-## Cancellation
+## Changing Your Password
 
-If you'd like to cancel your subscription please email [support@m3o.com](mailto:support@m3o.com).
+Use the following command to change password (you must already be logged in):
+
+```
+micro user set password
+```
+
+## Free Dev Environment
+
+The Dev environment is a free tier hosted by us as a best effort service. It's a place for hobbyists and side projects. To get 
+access please talk to #m3o-platform on [slack](https://slack.m3o.com). To login see the following.
+
+```
+# add the environment
+micro env add dev proxy.m3o.dev
+
+# set the dev env
+micro env set dev
+
+# signup > use the credit card '4242 4242 4242 4242'
+micro signup
+
+# login
+micro login 
+
+```
+
+The Dev env is also subject to fair usage. There are no SLAs or support. The quota is capped at 1 core and 1GB total resources.
 
 ## Fair Usage Policy
 
@@ -46,3 +64,8 @@ Per service limits
 - CPU - 1 core
 - Memory - 128 mb
 - Disk - 512 mb
+
+## Cancellation
+
+If you'd like to cancel your subscription please email [support@m3o.com](mailto:support@m3o.com).
+
