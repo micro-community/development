@@ -13,6 +13,14 @@ permalink: /faq
 Issue `micro signup --recover --email=youremail` which will email you instructions on how to log in to namespaces you have access to.
 Currently there is no password recovery functionality, please contact us on Slack to do that.
 
+## Billing Portal
+
+To access your billing portal to adjust billing info or retrieve invoices run the following command to get your unique link.
+
+```
+micro billing portal
+```
+
 ## Pricing
 
 The platform is priced at $35/user/month. We separately provide a free Dev environment which you can read about below.
