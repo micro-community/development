@@ -16,7 +16,9 @@ Learn the ins and outs of M3O and become a Micro services ninja!
 
 [M3O](https://m3o.com) is a cloud native platform offering Micro as a Service.
 
-## Features
+The goal. Drastically simplify backend and API service development for the masses.
+
+## Features of M3O
 
 Key Features of M3O:
 
@@ -29,6 +31,8 @@ Proxy.
 
 - **Source to Running**: We believe developers should focus on writing code not managing infrastructure. That include's the build pipeline, 
 containers and kubernetes. We abstract away everything. Write your code, run it from local or a hosted git repo on github, gitlab or bitbucket. 
+
+## Features of Micro
 
 Because M3O is Micro as a Service you get the following features on the platform:
 
@@ -49,6 +53,8 @@ enable you to query services by name. Micro is all about microservices and multi
 
 - **API Gateway**: Finally there's an API gateway that automatically exposes your services to the outside world over HTTP. Internally writing 
 service to service using gRPC makes sense, but at the end of the day we want to build APIs consumed from clients via HTTP.
+
+## Learn More
 
 Learn more about the M3O platform in the [Concepts](/concepts) section or [Get Started](/getting-started).
 
