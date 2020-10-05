@@ -65,11 +65,12 @@ So how do you access it?
 ### Environments
 
 Micro has the concept of environments or an "env" built in. These are basically different hosted Micro servers 
-you can switch between to do development and run Micro services. There are two built ins, "local" and "platform". 
-Local refers to a local server running on "127.0.0.1:8081" and platform refers to the m3o platform where 
-we provide an external proxy on "proxy.m3o.com:443".
+you can switch between to do development and run Micro services. There are three built ins, "local", "dev" and "platform". 
 
-You can swap between your local env and the platform like so.
+Local is your local server running on "127.0.0.1:8081". Dev is a free environment in the cloud for small projects 
+and testing. The platform refers to the M3O platform for secure, scalable and supported production workloads.
+
+You can swap between local, dev and the platform like so.
 
 ```
 # platform
@@ -77,6 +78,9 @@ micro env set platform
 
 # local
 micro env set local
+
+# dev
+micro env set dev
 ```
 
 ### Services
@@ -95,6 +99,8 @@ collaborate with, support for private git repos and secure public api endpoints 
 Cloud and serverless pricing is anxiety inducing in a way that mostly now requires pricing calculators. This 
 doesn't make sense to us. We believe to start developers should be given a fair flat subscription price 
 and then we charge for additional services you use that are separate to the platform itself. 
+
+Separately we provide a free Dev environment for testing and hobbyist side projects.
 
 ### Additional Users
 
@@ -118,6 +124,22 @@ make this configurable or allow you to pay for additional resources. For now the
 We additionally apply caps across your namespace to limit overall resource usage which is just an upperbound multiple on services. 
 Caps may evolve or change in future to include different resource types but the goal is to provide a fair system that 
 can be shared by all.
+
+## Dev Environment
+
+The Dev environment is a free tier hosted by us as a best effort service. It's a place for hobbyists and side projects. To get 
+access please talk to #m3o-platform on [slack](https://slack.m3o.com). To login see the following.
+
+```
+# set the dev env
+micro env set dev
+
+# signup > use the credit card '4242 4242 4242 4242'
+micro signup
+
+# login
+micro login 
+```
 
 ## Future 
 
