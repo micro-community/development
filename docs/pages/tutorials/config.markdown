@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Config
+title: Dynamic Config
 keywords: micro
 tags: [micro]
 permalink: /tutorials/config
