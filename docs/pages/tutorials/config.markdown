@@ -4,7 +4,7 @@ title: Config
 keywords: micro
 tags: [micro]
 permalink: /tutorials/config
-summary: Configuration
+summary: Using dynamic configuration
 parent: Tutorials
 nav_order: 4
 toc_list: true
