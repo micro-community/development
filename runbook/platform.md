@@ -333,6 +333,11 @@ micro auth delete rule default
 
 ## Run the M3O Services
 
+Run the build service and wait for it to start before running anything else:
+```bash
+micro run github.com/m3o/services/build
+```
+
 Run the M3O services which make up the platform:
 ```bash
 micro run github.com/m3o/services/payments/provider/stripe
