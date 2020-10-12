@@ -314,7 +314,7 @@ micro config set micro.signup.sendgrid.template_id d-240bf196257143569539b3b6b82
 micro config set micro.subscriptions.plan_id [stripe plan id];
 micro config set micro.subscriptions.additional_users_price_id [stripe additional users price id];
 micro config set micro.signup.email_from "Micro Team <support@m3o.com>";
-micro config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,platform,invite,payment.stripe,customers,namespaces,subscriptions,emails,alert,billing";
+micro config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,platform,invite,payment.stripe,customers,namespaces,subscriptions,emails,alert,billing,build";
  ```
 
 Verify the config by calling`“micro config get micro`. This will output the config as JSON.
