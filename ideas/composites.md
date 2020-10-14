@@ -19,4 +19,12 @@ expected result. This is a form of mapreduce.
 
 ## Implementation
 
-TBD
+Composites work at the API level by taking the `~` operator as a aggregator function for various service calls. 
+
+A simple example like so
+
+```
+curl http://localhost:8080/ping~pong
+```
+
+This will make a request to the ping service endpoint Ping.Call and then push the response into pong service Pong.Call.
