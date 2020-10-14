@@ -239,7 +239,7 @@ Once the script has finished, you need to manually add the cloud flare and slack
 
 Wait for all the pods to be “Running”.
 
-## Update micro to the latest snapshot
+## Update micro to the latest snapshot
 
 Update micro to the latest stable docker image snapshot using the following command and then wait for the services to all have the status "Running".
 
@@ -247,7 +247,7 @@ Update micro to the latest stable docker image snapshot using the following comm
 kubectl set image deployments micro=micro/platform:tag -l micro=runtime
 ```
 
-## Update DNS
+## Update DNS
 
 Update the DNS records in cloudflare to point to the k8s service Public IP for proxy and api. Once this is done, you should be able to call the service via the API and proxy using the following commands:
 
@@ -306,6 +306,7 @@ curl https://api.stripe.com/v1/plans \
 ## Set Config
 
 Set the required config. Replace the substituted values with the production API keys etc.
+
 ```bash
 micro config set micro.alert.slack_token [slack api key]
 micro config set micro.payments.stripe.api_key [stripe api key]
@@ -315,7 +316,16 @@ micro config set micro.subscriptions.plan_id [stripe plan id];
 micro config set micro.subscriptions.additional_users_price_id [stripe additional users price id];
 micro config set micro.signup.email_from "Micro Team <support@m3o.com>";
 micro config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,platform,invite,payment.stripe,customers,namespaces,subscriptions,emails,alert,billing,build";
- ```
+```
+ 
+If the environment should run as a "free" tier with no stripe payments then you should set the following config
+
+```bash
+micro config set micro.signup.no_payment true
+micro config set micro.signup.message "Finishing signup for %s"
+```
+
+TODO: update docs to define exactly which services are required for free vs paid.
 
 Verify the config by calling`“micro config get micro`. This will output the config as JSON.
 
