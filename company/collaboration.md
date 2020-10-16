@@ -1,7 +1,7 @@
 # Collaboration
 
 We're building a globally distributed technology company. That means we're going to be remote first 
-and will need to invest in the tools for collaboration.
+and will need to invest in the tools for collaboration. Below are a list of some of the tools we use.
 
 ## Overview
 
