@@ -309,13 +309,18 @@ Set the required config. Replace the substituted values with the production API 
 
 ```bash
 micro config set micro.alert.slack_token [slack api key]
+micro config set micro.alert.slack_enabled true
 micro config set micro.payments.stripe.api_key [stripe api key]
-micro config set micro.signup.sendgrid.api_key [sendgrid api key]
+micro config set micro.emails.sendgrid.api_key [sendgrid api key]
+micro config set micro.emails.email_from "Micro Team <support@m3o.com>";
+micro config set micro.emails.enabled true;
 micro config set micro.signup.sendgrid.template_id d-240bf196257143569539b3b6b82127c0;
+micro config set micro.signup.sendgrid.recovery_template_id d-08c2330ae2824de5b2730e49e298e97e;
+micro config set micro.invite.sendgrid.invite_template_id d-2d107482af6d47f8a721315906ada753;
 micro config set micro.subscriptions.plan_id [stripe plan id];
 micro config set micro.subscriptions.additional_users_price_id [stripe additional users price id];
 micro config set micro.signup.email_from "Micro Team <support@m3o.com>";
-micro config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,platform,invite,payment.stripe,customers,namespaces,subscriptions,emails,alert,billing,build";
+micro config set micro.status.services "api,auth,broker,config,network,proxy,registry,runtime,status,store,signup,platform,invite,payment,customers,namespaces,subscriptions,emails,alert,billing";
 ```
  
 If the environment should run as a "free" tier with no stripe payments then you should set the following config
@@ -350,19 +355,26 @@ micro run github.com/m3o/services/build
 
 Run the M3O services which make up the platform:
 ```bash
-micro run github.com/m3o/services/payments/provider/stripe
+micro run github.com/m3o/services/payments
 micro run github.com/m3o/services/alert
 micro run github.com/m3o/services/signup
-micro run github.com/m3o/services/tests
+micro run github.com/m3o/services/emails
 micro run github.com/m3o/services/status
 micro run github.com/m3o/services/invite
 micro run github.com/m3o/services/api/client
 micro run github.com/m3o/services/platform
-micro run github.com/m3o/services/platform/gitops
-micro run github.com/m3o/services/notifications
+micro run github.com/m3o/services/platform
+micro run github.com/m3o/services/gitops
 micro run github.com/m3o/services/customers
 micro run github.com/m3o/services/subscriptions
 micro run github.com/m3o/services/namespaces
 ```
 
 Wait for the services to all be running. This can be checked by running `micro services`
+
+## Tag owners for namespaces
+The `default` and `micro` namespaces need to be correctly tagged as being owned by us so add label `owner: micro` to the metadata labels for these namespaces 
+```
+kubectl edit namespace default 
+kubectl edit namespace micro 
+```
