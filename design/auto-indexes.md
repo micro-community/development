@@ -124,8 +124,9 @@ type Index struct {
 func By(fieldName string) Index
 
 type Query {
-    FieldName string
     Type string
+    FieldName string
+    Value interface{}
 }
 
 func Eq(fieldName string, value interface{}) Query
