@@ -35,3 +35,22 @@ but one week before release is not the time to rewrite the whole interface so th
 - Create an experimental package to implement the gocassa-like library on top of the store
 
 Title says it all really. We can even include info about this package in the reference. I propose `micro/experimental`.
+
+
+## Concerns about existing implementation/interface
+
+I will use this document to outline some thoughs I've had while pondering the store:
+
+## The problem of offsets
+
+Most key value stores like Cassandra doesn't support offsets, and pagination happens with a `from/start` string ie. the database finds that string in the ordered key set and returns the first X number (ie the `limit` parameter) of them.
+
+Us supporting the `offset` parameter reduces the portability of our store (finder to implement it on a "pure" KV store like Cassandra).
+However it's way way better from a UX standpoint to have `offset` than `start`. Still thought about mentioning this.
+
+## List call
+
+`List` should probably called `ListKeys`, or merged with `Read` (which might be called `Read`, `Query` or `List`).
+Read and List is confusing when they refer to different things (Read records, List keys).
+
+If one wants only keys, it could be an option to the `Read` endpoint to not return the values.
