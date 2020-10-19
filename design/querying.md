@@ -10,7 +10,7 @@ There are a couple of way to go about this but I'm proposing the following:
 - Add suppport to passing in multiple IDs to the read function, the following would be a low impact change. The reason for this is twofold: 1, it is a very basic use case in itself 2. it doesn't force our hand to denormalize and duplicate the full entry for each index when maintaining the indexes. Regardless if a given gocassa like library decides to denormalize or not, they should be added.
 
 ```go
-func IDs(ids []string) Option {
+func IDs(ids ...string) Option {
 	return func(r *Options) {
 		r.Ids = p
 	}
