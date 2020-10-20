@@ -40,3 +40,15 @@ micro signup
 ```
 
 See [m3o.com/start](https://m3o.com/start) for the rest of the guide.
+
+## Free Tier
+
+We offer a 'Dev' environment for free usage. It's great for small projects and individual devs.
+
+To use it simply set your environment to the dev env and follow the usual signup flow.
+
+```
+micro env set dev
+```
+
+External API url's for your services are served on `*.m3o.dev` rather than `*.m3o.app` used by the paid platform.
