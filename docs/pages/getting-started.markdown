@@ -51,4 +51,4 @@ To use it simply set your environment to the dev env and follow the usual signup
 micro env set dev
 ```
 
-External API url's for your services are served on `*.m3o.dev` rather than `*.m3o.app` used by the paid platform.
+External API url's for your services are served on `*.m3o.dev` rather than `*.m3o.app` used by the paid tier.
