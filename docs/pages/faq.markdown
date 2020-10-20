@@ -53,7 +53,7 @@ access please talk to #m3o-platform on [slack](https://slack.m3o.com). To login 
 # set the dev env
 micro env set dev
 
-# signup > use the credit card '4242 4242 4242 4242'
+# signup for free
 micro signup
 
 # login
