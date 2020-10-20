@@ -16,7 +16,15 @@ Learn the ins and outs of Micro and become a Micro services ninja!
 
 [M3O](https://m3o.com) is a cloud native platform offering Micro as a Service.
 
-The goal. Drastically simplify backend and API service development for the masses.
+
+## Overview
+
+Too much time is being lost on walking the maze that is the CNCF landscape. Too much time is being lost 
+to managing the complexity of cloud infrastructure. Developers need to get back to what matters, absolute 
+productivity in the software they're building. For us that means making backend developers super 
+productive. If you're writing Go based microservices in the Cloud, we're here to help.
+
+Our goal. Drastically simplify backend and API service development for the masses.
 
 ## Features of M3O
 

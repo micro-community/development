@@ -23,7 +23,7 @@ micro billing portal
 
 ## Pricing
 
-The platform is priced at $35/user/month. We separately provide a free Dev environment which you can read about below.
+The Platform environment is priced at $35/user/month. We separately provide a free Dev environment which you can read about below.
 
 ## Additional Users
 
@@ -77,3 +77,6 @@ Per service limits
 
 If you'd like to cancel your subscription please email [support@m3o.com](mailto:support@m3o.com).
 
+## Support
+
+If you're a paying customer you can join #m3o-support on [slack](https://slack.m3o.com) or email [support@m3o.com](mailto:support@m3o.com). Otherwise you can join #m3o-dev or #m3o-platform for general discussions around each environment.

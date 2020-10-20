@@ -24,10 +24,8 @@ This repo serves as an open forum for collaboration, design docs and the roadmap
 
 ## Philosophy
 
-Micro is the simplest way to build microservices. We have a developer first focus. Our goal is to make developers incredibly productive, 
-to remove friction from their workflow and abstract away the complexities of distributed systems and cloud-native technology. 
-
-Our approach to this is very clear. Any new project or any change that we make must come from a developer's perspective. 
+Micro is the simplest way to build microservices. Our goal is to make developers incredibly productive, 
+remove friction from their workflow and abstract away the complexities of distributed systems and cloud-native technology. 
 
 Here's how we approach taking on new problems.
 
@@ -37,18 +35,17 @@ Here's how we approach taking on new problems.
 	- We can understand if we're even solving a problem
 1. Define the overall scope of the project and name it.
 	-  e.g Auth, Config, Debug. This is the domain boundary
-	- Go Micro deals with inter-service communication
-	- Go Config deals with dynamic configuration
-	- Micro API is an API gateway for HTTP requests
-2. Start with a Go library/package, this is always our starting point, we want to solve for the developer in Go first. 
-	- Define separate packages for sub-scopes of the domain
+	- Network deals with inter-service communication
+	- Config deals with dynamic configuration
+	- API is an API gateway for HTTP requests
+2. Start with a Go interface, this is always our starting point, we want to solve for the developer in Go first. 
 	- Start with the high level interface that will be used. Implement it and make it pluggable
 3. Ship quickly and iterate, test the ideas with the community.
-	- Go Micro was being used 2 weeks after the first line of code was written. It was called something else back then.
-4. Encapsulate as a command/service in the Micro toolkit so that it solves the problem across all languages
-	- Go Micro is at the core of all the toolkit components for discovery and inter-service communication
-	- go-micro/api is the basis for the Micro api
-	- go-micro/config will be turned into a dynamic config server with a gRPC or HTTP api
+	- Go Micro was being used 2 weeks after the first line of code was written..
+4. Encapsulate as a command/service in Micro so that it solves the problem across all languages
+	- Config starts as an interface/importable package for user usage
+	- Implemented as the config service built on the interface
+	- Embedded as a command `micro service config`
 5. Everything that we do focuses on simplifying the experience for the developer
 	- Provide a zero dependency default experience while being pluggable
 	- Abstract away cloud-native and distributed systems. Operations is a separate concern
