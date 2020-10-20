@@ -90,6 +90,8 @@ For example to route to the helloworld service in the foobar namespace you would
 curl https://foobar.m3o.app/helloworld
 ```
 
+In the `dev` environment custom URLs are served on the domain `*.m3o.dev`.
+
 ## Authorization
 
 Your namespace is managed by your own set of rules which you can read about in the Authorization guide soon 
