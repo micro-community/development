@@ -13,7 +13,7 @@ Query and access your services in the following ways.
 
 ## URL
 
-The public api is available at `https://api.m3o.com`.
+The public api is available at `https://api.m3o.com` or `api.m3o.dev` for the `dev` environment.
 
 ## Authentication
 
