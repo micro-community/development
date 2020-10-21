@@ -30,13 +30,13 @@ We're starting with a Dev tier focused on small teams and individuals. You likel
 and want to focus on Go based microservices development in the cloud. That's what we're here for. Where Netlify 
 is the frontend. Micro is the backend and M3O is the host.
 
-We're offering a Dev tier to start which provides the following:
+We're offering a free Dev tier to start which provides the following:
 
 - Fully managed Micro as a Service
 - Public API endpoints
 - Private repo support
 - Upto 5 collaborators
-- Upto 10 services
+- Upto 5 services
 - Fair usage limits
 
 ## Getting Started
@@ -91,20 +91,32 @@ This includes authentication, config, messaging, service discovery, service-to-s
 Micro comes with a pre-initialised Go library to run on a Micro server and the platform basically abstracts 
 away the underlying infrastructure so you don't have to worry about it.
 
+## Dev Environment
+
+The Dev environment is a free tier hosted by us as a best effort service. It's a place for small projects and individual developers. 
+Our goal is to unlock large scale developer productivity and cross team, cross org collaboration. What GitHub did for source code 
+we feel we could do for services.
+
+
+See [m3o.com/start](https://m3o.com/start) for a quick start guide.
+
 ## Pricing
 
-Our pricing is a subscription of $35/dev/month. For that you get the ability to deploy upto 10 services, invite 5 people to 
-collaborate with, support for private git repos and secure public api endpoints for your services. 
+Dev is a free environment for small projects and individual developers. This might be great for getting something up and 
+running super fast. Maybe spin up a cool side project and show it off on HackerNews.
+
+Our paid `platform` environment is a secure, scalable and supported production environment billed on a subscription pricing 
+plan of $35/user/month. For that you get the ability to deploy upto 10 services with 2x the resource limits of Dev, invite 5 
+people to collaborate with, support for private git repos and secure public api endpoints for your services. This includes 
+support and business day response times.
 
 Cloud and serverless pricing is anxiety inducing in a way that mostly now requires pricing calculators. This 
 doesn't make sense to us. We believe to start developers should be given a fair flat subscription price 
 and then we charge for additional services you use that are separate to the platform itself. 
 
-Separately we provide a free Dev environment for testing and hobbyist side projects.
-
 ### Additional Users
 
-Every additional user added to your account is billed at $35/month. Whether you invite them or just plain create the 
+Every additional user added to your platform account is billed at $35/month. Whether you invite them or just plain create the 
 account we'll keep track and invoice this as "M3O Additonal Users" on your invoices.
 
 ### Additional Services
@@ -117,29 +129,21 @@ e.g users, customers, orders. We'll add a line item on your invoice called "M3O 
 We invoke fair usage limits on the platform by capping everything to sane defaults for all services. Over time we may 
 make this configurable or allow you to pay for additional resources. For now the caps are as below per service
 
-- CPU - 1 core
-- Mem - 128 mb
-- Disk - 512 mb
+Each namespace gets the following limits
 
-We additionally apply caps across your namespace to limit overall resource usage which is just an upperbound multiple on services. 
+- 1 core
+- 1 Gb memory
+- 10 Gb disk space
+
+Services are individually capped like so
+
+- 1 core
+- 128 mb memory
+- 512 mb disk space
+
+We apply caps across your namespace to limit overall resource usage which is just an upperbound multiple on services. 
 Caps may evolve or change in future to include different resource types but the goal is to provide a fair system that 
 can be shared by all.
-
-## Dev Environment
-
-The Dev environment is a free tier hosted by us as a best effort service. It's a place for small projects and individual developers. 
-To signup and login see the following.
-
-```
-# set the dev env
-micro env set dev
-
-# signup for free
-micro signup
-
-# login
-micro login 
-```
 
 ## Future 
 

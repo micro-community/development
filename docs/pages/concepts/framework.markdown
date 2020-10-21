@@ -13,7 +13,7 @@ toc_list: true
 
 # Framework
 
-[Micro](https://micro.mu) is a framework for cloud native development.
+[Micro](https://m3o.org) is a framework for cloud native development.
 
 ## Overview
 
@@ -80,7 +80,7 @@ between services or offload long term to keep microservices stateless and horizo
 
 ## Service Library
 
-Micro includes a pre-initialised service library built on [go-micro](https://github.com/micro/go-micro) used for distributed systems development. 
+Micro includes a pre-initialised service library built on the previously standalone library [go-micro](https://github.com/micro/go-micro) used for distributed systems development. 
 Think Rails or Spring but for Go cloud services. Micro builds on the Go programming language to create a set of strongly defined abstractions for writing services.
 
 Normally you'll spend a lot of time hacking a way at boilerplate code in your main function or battling with distributed systems 
