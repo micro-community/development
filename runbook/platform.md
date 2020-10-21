@@ -308,8 +308,8 @@ curl https://api.stripe.com/v1/plans \
 Set the required config. Replace the substituted values with the production API keys etc.
 
 ```bash
-micro config set micro.alert.slack_token [slack api key]
-micro config set micro.alert.slack_enabled true
+micro config set micro.alert.slack.token [slack api key]
+micro config set micro.alert.slack.enabled true
 micro config set micro.payments.stripe.api_key [stripe api key]
 micro config set micro.emails.sendgrid.api_key [sendgrid api key]
 micro config set micro.emails.email_from "Micro Team <support@m3o.com>";
