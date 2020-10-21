@@ -46,8 +46,8 @@ micro user set password
 
 ## Dev Environment
 
-The Dev environment is a free tier hosted by us as a best effort service. It's a place for hobbyists and side projects. To get 
-access please talk to #m3o-platform on [slack](https://slack.m3o.com). To login see the following.
+The Dev environment is a free tier hosted by us as a best effort service. It's a place for hobbyists and side projects. 
+To signup and login see the following.
 
 ```
 # set the dev env
