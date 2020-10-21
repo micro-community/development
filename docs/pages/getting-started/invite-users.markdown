@@ -12,7 +12,8 @@ Here we outline how to invite other users to the M3O platform, share namespaces 
 ## Invite to the Platform
 
 Every user gets 5 invites to send to other users. These can either just be invites to the platform or 
-additional users as part of your own subscription and billing e.g you share a namespace.
+additional users as part of your own subscription and billing e.g you share a namespace (when using 
+the paid plan).
 
 To invite users to the platform
 
@@ -22,9 +23,8 @@ micro invite user --email joe@example.com
 
 ## Sharing a namespace
 
-Sharing a namespace means adding additional users to your account and subscription. You'll see this 
-as "M3O Additional Users" on your invoice. These users basically share your namespace and it allows 
-you all to work together in one place.
+Sharing a namespace means adding additional users to your account. These users basically share your 
+namespace and it allows you all to work together in one place.
 
 To invite a user to your namespace
 
@@ -46,6 +46,11 @@ Do you want to join it or create your own namespace? Please type "own" or "join"
 ```
 
 Now you both have the ability to work together.
+
+## Additional User Billing
+
+In the case of additional users being added to your namespace, if you're using the paid 'platform' environment 
+these will be billed as extra users in your account and subscription.
 
 ## Cross Namespace Collaboration
 

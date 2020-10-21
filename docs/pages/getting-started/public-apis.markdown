@@ -13,7 +13,28 @@ Query and access your services in the following ways.
 
 ## URL
 
-The public api is available at `https://api.m3o.com` or `api.m3o.dev` for the `dev` environment.
+The public APIs for M3O
+
+#### Dev environment
+api.m3o.dev
+
+#### Platform environment
+api.m3o.com
+
+#### Your services on Dev
+$namespace.m3o.dev
+
+#### Your services on Platform
+$namespace.m3o.app
+
+## Namespace
+
+Namespace is a unique namespace provided only to you and your collaborators.
+
+```
+# get user namespace
+micro user namespace
+```
 
 ## Authentication
 
@@ -24,7 +45,7 @@ Most of our core services are locked down so you'll need to use an API token to 
 MICRO_API_TOKEN=`micro user token`
 
 # curl the api
-curl -H "Authorization: Bearer $MICRO_API_TOKEN" https://api.m3o.com/
+curl -H "Authorization: Bearer $MICRO_API_TOKEN" https://api.m3o.dev/
 ```
 
 You should see below or thereabouts
@@ -44,17 +65,17 @@ We do this very simply in the manner shown below.
 
 ```
 # Call helloworld service with Helloworld.Call endpoint
-https://api.m3o.com/helloworld/call
+https://api.m3o.dev/helloworld/call
 
 # Call hellworld service with Greeting.Message endpoint
-https://api.m3o.com/helloworld/greeting/message
+https://api.m3o.dev/helloworld/greeting/message
 ```
 
 As you can see if an endpoint matches the service name we can collapse the path so there's no redundancy. 
 We additionally map the Call endpoint much like index.html for the web so that you can simply do
 
 ```
-https://api.m3o.com/helloworld
+https://api.m3o.dev/helloworld
 ```
 
 A convenient hack just like the web.
@@ -73,24 +94,24 @@ NAMESPACE=`micro user namespace`
 Then simply set as the header in your call
 
 ```
-curl -H "Micro-Namespace: $NAMESPACE" https://api.m3o.com/helloworld
+curl -H "Micro-Namespace: $NAMESPACE" https://api.m3o.dev/helloworld
 ```
 
 This will route to your helloworld service as opposed to someone else's!
 
 ## Custom URLs
 
-Each user gets a custom URL based on their namespace which is `https://[namespace].m3o.app`
+Each user gets a custom URL based on their namespace which is `https://[namespace].m3o.dev`
 
-Each of your services is then path based e.g `https://[namespace].m3o.app/[service]`.
+Each of your services is then path based e.g `https://[namespace].m3o.dev/[service]`.
 
 For example to route to the helloworld service in the foobar namespace you would do
 
 ```
-curl https://foobar.m3o.app/helloworld
+curl https://foobar.m3o.dev/helloworld
 ```
 
-In the `dev` environment custom URLs are served on the domain `*.m3o.dev`.
+In the `platform` environment customer URLs are served on the domain `*m3o.app`.
 
 ## Authorization
 

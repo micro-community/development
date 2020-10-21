@@ -14,10 +14,6 @@ The fast guide to using the M3O platform
 
 Visit [m3o.com/start](https://m3o.com/start) to get started in minutes.
 
-## Invite
-
-We're currently in invite only mode so ask the team in #m3o-platform for an invite on [slack](https://slack.m3o.com).
-
 ## Usage
 
 
@@ -27,13 +23,13 @@ Install Micro to build, run and manage services locally or on the M3O platform.
 curl -fsSL https://install.m3o.com/micro | /bin/bash
 ```
 
-This command makes the rest of your CLI commands run on the M3O platform.
+Set your environment to 'dev' for the free environment.
 
 ```
-micro env set platform
+micro env set dev
 ```
 
-Signup to the M3O platform and follow the instructions
+Signup and follow the instructions
 
 ```
 micro signup
@@ -41,14 +37,22 @@ micro signup
 
 See [m3o.com/start](https://m3o.com/start) for the rest of the guide.
 
-## Free Tier
+## Paid Tier
 
-We offer a 'Dev' environment for free usage. It's great for small projects and individual devs.
+Dev is an environment for free usage. It's great for small projects and individual devs but if you want 
+to run a scalable production ready service or product you'll want to use the M3O Platform paid plan. 
+We'll provide higher resource limits and more scalable infrastructure along with support and SLAs.
 
-To use it simply set your environment to the dev env and follow the usual signup flow.
+To use the M3O Platform set the env to 'platform' and signup for a paid subscription.
 
 ```
-micro env set dev
+# use the platform
+micro env set platform
+
+# signup to the platform
+micro signup
 ```
 
-External API url's for your services are served on `*.m3o.dev` rather than `*.m3o.app` used by the paid tier.
+Your service API URLs on the platform are served at `*.m3o.app` rather than `*.m3o.dev`.
+
+See [**m3o.com/platform**](https://m3o.com/platform) for the quick start.
