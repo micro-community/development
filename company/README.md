@@ -13,5 +13,5 @@ This directory contains company related docs
 - [issues](https://github.com/m3o/development/issues) - where we track work
 - [onboarding](onboarding.md) - onboarding guide for new hires
 - [roadmap](../roadmap) - where the full roadmap lives
-- [rules of engagement](rules-of-engagement.md) - how to make decisions
+- [consensus](consensus.md) - how to make decisions
 - [vision](vision.md) - vision distillation
