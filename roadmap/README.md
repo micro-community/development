@@ -34,7 +34,7 @@ Timeline, objectives and key results
 
 High level goals defined for each quarter. We don't go into detail because reasons.
 
-- [Platform](platform.md) - a cloud platform for microservices development
+- [Platform MVP](platform.md) - a cloud platform for microservices development
   * Provides "Micro as a Service"
   * Invite only for community
   * Public cloud hosting (free)
