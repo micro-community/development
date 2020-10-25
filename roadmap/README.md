@@ -46,10 +46,11 @@ High level goals defined for each quarter. We don't go into detail because reaso
   * Subscription based $35/user/month
   * SaaS Community, Developer and Team tiers
 
-- M3O Platform Launch - Paid developer tier
-  * Invite only
+- [Platform Launch](https://github.com/m3o/dev/issues/357) - Announce to the world
   * Public launch
-  * Signup 100 customers
+  * Signup 100+ customers
+  * Docs, blogs, tutorials, hackathons
+  * Customer feedback and iteration
  
 ## 2021
 
