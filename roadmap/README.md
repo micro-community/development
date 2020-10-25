@@ -29,6 +29,7 @@ Timeline, objectives and key results
 - [2020](#2020)
 - [2021](#2021)
 - [2022](#2022)
+- [2023](#2023)
 
 ## 2020
 
@@ -73,6 +74,9 @@ High level goals defined for each quarter. We don't go into detail because reaso
   * Ability to buy and sell services on the Micro platform
   * Transactional model: Percentage per request/service or flat 30%
   * Ability to run external "Resources" such as redis, postgres, etc
+  
+## 2023
+
 - License M3O distribution
   * M3O self-hosted as a service
   * Focus on small cloud providers
