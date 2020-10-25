@@ -15,10 +15,10 @@ runtime and a platform for Micro services development.
 
 ## Objectives
 
-Our goals for 2020
+Our goals over the long term
 
-- Bootstrap **M3O** - Micro as a Service - a fully managed microservices platform
-- Onboard Users - Invite Micro Community first to build services on the platform
+- Build **M3O** - Micro as a Service - a fully managed microservices platform
+- Onboard Users - Invite the community first to build services on the platform
 - Create Services - Create value add Micro services on the platform for users
 - Launch Marketplace - Offer the ability to buy, sell and share Micro services 
 
