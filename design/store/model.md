@@ -1,6 +1,8 @@
-# Automatic indexes on top of Store
+# Model
 
-## The problem
+The model provides a simple crud abstraction data modelling layer on top of the store.
+
+## Overview
 
 The querying capabilities of simple key-value stores can be extended by saving the data in a way that will enable querying with a specifc query in mind.
 Ie. let's say we want to list all object where the field `A` equals to `15`:
