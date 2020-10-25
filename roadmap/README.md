@@ -19,7 +19,7 @@ Our goals over the long term
 
 ## Phase 1
 
-High level goals defined for each quarter. We don't go into detail because reasons.
+Build Micro as a Service. Launch an MVP. Test a business model. Grow adoption.
 
 - [Platform MVP](platform.md) - a cloud platform for microservices development
   * Provides "Micro as a Service"
@@ -39,6 +39,8 @@ High level goals defined for each quarter. We don't go into detail because reaso
  
 ## Phase 2
 
+Create pricing tiers. Enable scaleup beyond base tiers. Drive sales.
+
 - [M3O Team Tier](https://github.com/m3o/dev/issues/379) - Collaboration features
   * Shared namespaces
   * Per namespace quotas
@@ -49,6 +51,8 @@ High level goals defined for each quarter. We don't go into detail because reaso
   * Multi-region deployments
 
 ## Phase 3
+
+Provide value add beyond the platform. Enable customers to thrive based on their efforts.
 
 - [Services](services.md) - Value add Micro services on the Micro platform
   * Free and paid services to consume
@@ -62,6 +66,8 @@ High level goals defined for each quarter. We don't go into detail because reaso
   * Ability to run external "Resources" such as redis, postgres, etc
   
 ## Phase 4
+
+Build a federate distributed model for Micro. Empower others to become Micro as a Service providers.
 
 - License M3O distribution
   * M3O self-hosted as a service
