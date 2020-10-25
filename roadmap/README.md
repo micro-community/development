@@ -39,13 +39,11 @@ High level goals defined for each quarter. We don't go into detail because reaso
   * Invite only for community
   * Public cloud hosting (free)
   * Onboard users 10 at a time
-
 - [Paid product](https://m3o.com) - Fully managed Micro Platform
   * Provides "Micro as a Service" to customers
   * Namespace per customer in Kubernetes
   * Subscription based $35/user/month
   * SaaS Community, Developer and Team tiers
-
 - [Platform Launch](https://github.com/m3o/dev/issues/357) - Announce to the world
   * Public launch
   * Signup 100+ customers
