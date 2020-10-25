@@ -114,12 +114,12 @@ We could either give different indexes with different query characteristics thei
 
 
 ```go
-type ModelDB interface {
+type Model interface {
     Save(interface{}) error
     List(Query) ([]interface, error)
 }
 
-func NewModelDB(store store.Store, entity interface{}, []Index) ModelDB
+func NewModel(store store.Store, entity interface{}, []Index) Model
 
 type Index struct {
     FieldName string
