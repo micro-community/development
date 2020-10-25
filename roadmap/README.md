@@ -78,4 +78,4 @@ Build a federate distributed model for Micro. Empower others to become Micro as 
   * Focus on small cloud providers
 - Enable Federation between environments
   * Enable sharing across multiple environment
-  *.Create a way to publish the registry globally
+  * Create a way to publish the registry globally
