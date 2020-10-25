@@ -59,7 +59,7 @@ High level goals defined for each quarter. We don't go into detail because reaso
 - M3O Cloud Tier - Isolated environments
   * Spinup of isolated environments
   * Scaleway, AWS, GCP, Azure
-  * Multi-region
+  * Multi-region deployments
 
 ## 2022
 
