@@ -58,6 +58,10 @@ High level goals defined for each quarter. We don't go into detail because reaso
   * Shared namespaces
   * Per namespace quotas
   * SLAs
+- M3O Cloud Tier - Isolated environments
+  * Spinup of isolated environments
+  * Scaleway, AWS, GCP, Azure
+  * Multi-region
 
 ## 2022
 
@@ -71,4 +75,6 @@ High level goals defined for each quarter. We don't go into detail because reaso
   * Ability to buy and sell services on the Micro platform
   * Transactional model: Percentage per request/service or flat 30%
   * Ability to run external "Resources" such as redis, postgres, etc
-- License M3O
+- License M3O distribution
+  * M3O self-hosted as a service
+  * Focus on small cloud providers
