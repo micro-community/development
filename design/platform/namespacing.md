@@ -1,4 +1,4 @@
-# Multi-Tenancy Auth
+# Namespacing
 
 Each module in go-micro (registry, router etc) has a domain specific name for "namespace" and every
 implementation should support this argument. For example, the registry has a "domain" option which 
