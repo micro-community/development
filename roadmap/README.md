@@ -22,16 +22,7 @@ Our goals over the long term
 - Create Services - Create value add Micro services on the platform for users
 - Launch Marketplace - Offer the ability to buy, sell and share Micro services 
 
-## Timeline
-
-Timeline, objectives and key results
-
-- [2020](#2020)
-- [2021](#2021)
-- [2022](#2022)
-- [2023](#2023)
-
-## 2020
+## Phase 1
 
 High level goals defined for each quarter. We don't go into detail because reasons.
 
@@ -51,7 +42,7 @@ High level goals defined for each quarter. We don't go into detail because reaso
   * Docs, blogs, tutorials, hackathons
   * Customer feedback and iteration
  
-## 2021
+## Phase 2
 
 - [M3O Team Tier](https://github.com/m3o/dev/issues/379) - Collaboration features
   * Shared namespaces
@@ -62,7 +53,7 @@ High level goals defined for each quarter. We don't go into detail because reaso
   * Scaleway, AWS, GCP, Azure
   * Multi-region deployments
 
-## 2022
+## Phase 3
 
 - [Services](services.md) - Value add Micro services on the Micro platform
   * Free and paid services to consume
@@ -75,7 +66,7 @@ High level goals defined for each quarter. We don't go into detail because reaso
   * Transactional model: Percentage per request/service or flat 30%
   * Ability to run external "Resources" such as redis, postgres, etc
   
-## 2023
+## Phase 4
 
 - License M3O distribution
   * M3O self-hosted as a service
