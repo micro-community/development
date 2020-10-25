@@ -52,7 +52,7 @@ High level goals defined for each quarter. We don't go into detail because reaso
  
 ## 2021
 
-- M3O Team Tier - Collaboration features
+- [M3O Team Tier](https://github.com/m3o/dev/issues/379) - Collaboration features
   * Shared namespaces
   * Per namespace quotas
   * SLAs
