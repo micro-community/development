@@ -161,6 +161,12 @@ err := db.Save(Tag{
 res, err := db.List(Eq("type", "post-tag"))
 ```
 
+## Transactions
+
+The model will not support true transactions or rollbacks but may provide distributed locking to avoid read-modify-write race conditions that occur 
+through parallel data access. The simple solution here is to give the model a `Sync` interface for locking and back that by Go's sync package locally 
+and etcd in production.
+
 ## Future Models
 
 When the `Model` interface is designed, this can be implemented by any future model that honours the interface, in this way we can move on to supporting 
