@@ -4,6 +4,12 @@ The model provides a simple crud abstraction data modelling layer on top of the 
 
 ## Overview
 
+The store provides basic key-value storage with some additions but this isn't sufficient for crud based operation. We need something that provides 
+higher level functionality in the rails did. Rails promoted the model-view-controller (MVC) whereas in micro we want to promote client-server-model (CSM). 
+In this case, a model is fairly important to our requirements for not only calling/handling requests but also persisting data.
+
+## Rationale
+
 The querying capabilities of simple key-value stores can be extended by saving the data in a way that will enable querying with a specifc query in mind.
 Ie. let's say we want to list all object where the field `A` equals to `15`:
 
@@ -97,16 +103,14 @@ typeKey := fmt.Sprintf("%v:%v:%v", typePrefix, tag.Type, tagSlug)
 
 Here, an additional requirement popped up: maintaining counters for the number of distinct values in a set.
 
-## The solution
-
-### Design
+## Design
 
 Abstract out common indexing and query pattern to a library on top of the Store.
 This library will only use the Store for persistence. Save differnet required indexes under different prefixes and maintain these automatically.
 
 We could either give different indexes with different query characteristics their separate type signature like [gocassa](github.com/gocassa/gocassa) does it, and gain some level of type safety at the sacrifice of convenience and elegance or we could specify future query requirements in a constructor and throw an runtime error (runtime as in not compile time) if an unexpected query (one that has no prebuilt index) happens. The former has gocassa as an example, so I will only outline the latter below (which is my preferred solution nowadays anyway - unlike when I wrote gocassa).
 
-### Interface/API
+### Interface
 
 
 ```go
