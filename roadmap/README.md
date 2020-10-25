@@ -26,19 +26,13 @@ Our goals for 2020
 
 Timeline, objectives and key results
 
-- [2020](#2020-milestones)
-  * [Q1](#q1-okrs) - Micro Platform - Product testing
-  * [Q2](#q2-okrs) - M3O Platform MVP - Developer Tier
-  * [Q3](#q3-okrs) - M3O Public Launch - Invite waitlist
-  * [Q4](#q4-okrs) - M3O Team Tier - Collaboration features
+- [2020](#2020)
 - [2021](#2021)
-- [2021](#2022)
+- [2022](#2022)
 
-## 2020 Milestones
+## 2020
 
 High level goals defined for each quarter. We don't go into detail because reasons.
-
-## Q1 OKRs
 
 - [Platform](platform.md) - a cloud platform for microservices development
   * Provides "Micro as a Service"
@@ -46,31 +40,25 @@ High level goals defined for each quarter. We don't go into detail because reaso
   * Public cloud hosting (free)
   * Onboard users 10 at a time
 
-## Q2 OKRs
-
 - [Paid product](https://m3o.com) - Fully managed Micro Platform
   * Provides "Micro as a Service" to customers
   * Namespace per customer in Kubernetes
   * Subscription based $35/user/month
   * SaaS Community, Developer and Team tiers
 
-## Q3 OKRs
-
-- M3O Platform MVP - Paid developer tier
+- M3O Platform Launch - Paid developer tier
   * Invite only
   * Public launch
   * Signup 100 customers
  
-## Q4 OKRs
+## 2021
 
 - M3O Team Tier - Collaboration features
   * Shared namespaces
   * Per namespace quotas
   * SLAs
-  
-## 2021
 
-Delivery by end of July 2021 (Enabled in September)
+## 2022
 
 - [Services](services.md) - Value add Micro services on the Micro platform
   * Free and paid services to consume
@@ -78,15 +66,8 @@ Delivery by end of July 2021 (Enabled in September)
   * Comprehensive list of [services](services.md)
   * Leveraging existing APIs (Stripe, Twilio, etc)
   * Single API account for providers managed by Micro
-
-Delivery by end of year 2021
-
 - [Network](network.md) - A marketplace to buy, sell and share services
   * Ability to buy and sell services on the Micro platform
   * Transactional model: Percentage per request/service or flat 30%
   * Ability to run external "Resources" such as redis, postgres, etc
-
-## 2022
-
-- License Micro Services
-- Otherwise TBD
+- License M3O
