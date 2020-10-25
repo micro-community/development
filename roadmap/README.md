@@ -41,7 +41,7 @@ Build Micro as a Service. Launch an MVP. Test a business model. Grow adoption.
 
 Create pricing tiers. Enable scaleup beyond base tiers. Drive sales.
 
-- M3O Platform Tier - Enable real production workloads on M3O
+- [M3O Platform Tier](platform.md) - Enable real production workloads on M3O
   * Secure, scalable and supported environment
   * Events, Logs, Metrics, Tracing aggregation
   * SLAs and support guarantees
