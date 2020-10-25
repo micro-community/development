@@ -161,3 +161,12 @@ err := db.Save(Tag{
 res, err := db.List(Eq("type", "post-tag"))
 ```
 
+## Future Models
+
+When the `Model` interface is designed, this can be implemented by any future model that honours the interface, in this way we can move on to supporting 
+many different data models; SQL, Key-Value, Cache, Document, Columnar, Graph, Timeseries, Ledger. It is not likely that micro builds in all these primitives 
+but understanding that there are different data models and developers might need to make use of them is important. Not all apps will need the CRUD data 
+model, but some might require SQL or Timeseries, etc.
+
+The next model we likely support is SQL.
+
