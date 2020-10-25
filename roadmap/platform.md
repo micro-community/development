@@ -77,12 +77,12 @@ not exclude those who want to self host and access the system as if it were part
 
 ### Further breakdown
 
-- [x] **Multi-Cloud**
+- [ ] **Multi-Cloud**
   * Run on DO, AWS, Azure, GCP
-- [x] **Network** {Micro Services Network}
+- [ ] **Network** {Micro Services Network}
   * Global service network
   * Shared system for building microservices
-- [x] **Platform** {Micro Server, Proxy, Runtime, Sync, Network}
+- [ ] **Platform** {Micro Server, Proxy, Runtime, Sync, Network}
   * Evolve the platform => build, run, manage
   * Establish go-micro as micro server
   * Enable connectivity beyond the cloud
