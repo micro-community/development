@@ -8,11 +8,6 @@ Micro is a developer first focused company. Our primary goal is to enable develo
 to build, share and collaborate on Micro services. We do this via an open source framework, 
 runtime and a platform for Micro services development.
 
-## Contents
-
-- [Objectives](#objectives) - Objectives for the product
-- [Timeline](#timeline) - Timelines of delivery
-
 ## Objectives
 
 Our goals over the long term
