@@ -13,6 +13,7 @@ This directory contains company related docs
 - [issues](https://github.com/m3o/development/issues) - where we track work
 - [licensing](licensing.md) - how we license micro software
 - [onboarding](onboarding.md) - onboarding guide for new hires
+- [product](../product) - product outlines, specs, etc
 - [roadmap](../roadmap) - where the full roadmap lives
 - [consensus](consensus.md) - how to make decisions
 - [vision](vision.md) - vision distillation
