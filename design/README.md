@@ -1,6 +1,6 @@
 # Design Docs
 
-This is the location of design docs
+This is the location of technical design docs
 
 ## Overview
 
