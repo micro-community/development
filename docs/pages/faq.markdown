@@ -33,7 +33,7 @@ Whether you invite them or just plain create the account we'll keep track and in
 
 ## Additional Services
 
-Beyond 10 services, we bill every additional service at $3/month. Additional service meaning anything with a new unique name
+Beyond 10 services, we bill every additional service at $5/month. Additional service meaning anything with a new unique name
 e.g users, customers, orders. We'll add a line item on your invoice called "M3O Additional Services" automatically.
 
 ## Changing Your Password
