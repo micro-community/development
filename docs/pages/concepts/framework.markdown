@@ -13,7 +13,7 @@ toc_list: true
 
 # Framework
 
-[Micro](https://m3o.org) is a framework for cloud native development.
+[Micro](https://micro.mu) is a framework for cloud native development.
 
 ## Overview
 
