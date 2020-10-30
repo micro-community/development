@@ -126,24 +126,28 @@ e.g users, customers, orders. We'll add a line item on your invoice called "M3O 
 
 ## Fair Usage Limits
 
-We invoke fair usage limits on the platform by capping everything to sane defaults for all services. Over time we may 
-make this configurable or allow you to pay for additional resources. For now the caps are as below per service
+We invoke fair usage limits on the platform by capping everything to sane defaults for all namespaces. Over time we may 
+make this configurable or allow you to pay for additional resources. For now the caps are as below per namespace.
 
-Each namespace gets the following limits
+### Dev
 
-- 1 core
-- 1 Gb memory
-- 10 Gb disk space
+The per namespace limits of the Dev environment
 
-Services are individually capped like so
+- CPU - 1 core
+- Memory - 1 Gb
+- Disk - 10 Gb
 
-- 1 core
-- 128 mb memory
-- 512 mb disk space
+### Platform
 
-We apply caps across your namespace to limit overall resource usage which is just an upperbound multiple on services. 
-Caps may evolve or change in future to include different resource types but the goal is to provide a fair system that 
-can be shared by all.
+The per namespace limits of the Platform environment
+
+- CPU - 2 cores
+- Memory - 2 Gb
+- Disk - 20 Gb
+
+We apply caps across your namespace to limit overall resource usage. Caps may evolve or change in future to include 
+different resource types but the goal is to provide a fair system that can be shared by all. You can cut up these 
+resources however you like with 10 services running 1 instance each or 1 service running 10 instances.
 
 ## Future 
 
