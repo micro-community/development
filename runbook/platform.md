@@ -3,7 +3,6 @@
 This is the runbook for the M3O platform and should act as an operations manual for things like outages etc.  
 <!--ts-->
    * [Platform Runbook](#platform-runbook)
-   * [Table of Contents](#table-of-contents)
    * [Users](#users)
       * [Add new user to beta](#add-new-user-to-beta)
       * [User deleted their account](#user-deleted-their-account)
@@ -27,13 +26,17 @@ This is the runbook for the M3O platform and should act as an operations manual 
    * [Setup](#setup)
       * [Create the cluster](#create-the-cluster)
       * [Deploy the infra, certs and services](#deploy-the-infra-certs-and-services)
+      * [Update micro to the latest snapshot](#update-micro-to-the-latest-snapshot)
+      * [Update DNS](#update-dns)
       * [Remove default accounts](#remove-default-accounts)
       * [Setup Stripe](#setup-stripe)
       * [Set Config](#set-config)
       * [Setup the rules](#setup-the-rules)
       * [Run the M3O Services](#run-the-m3o-services)
+      * [Tag owners for namespaces](#tag-owners-for-namespaces)
+      * [Set up the Cockroach backups](#set-up-the-cockroach-backups)
 
-<!-- Added by: domwong, at: Thu  3 Sep 2020 09:52:54 BST -->
+<!-- Added by: domwong, at: Thu 22 Oct 2020 16:25:07 BST -->
 
 <!--te-->
 To regenerate the table of contents, use [this tool](https://github.com/ekalinin/github-markdown-toc) and do `gh-md-toc --insert platform.md`
@@ -308,8 +311,8 @@ curl https://api.stripe.com/v1/plans \
 Set the required config. Replace the substituted values with the production API keys etc.
 
 ```bash
-micro config set micro.alert.slack_token [slack api key]
-micro config set micro.alert.slack_enabled true
+micro config set micro.alert.slack.token [slack api key]
+micro config set micro.alert.slack.enabled true
 micro config set micro.payments.stripe.api_key [stripe api key]
 micro config set micro.emails.sendgrid.api_key [sendgrid api key]
 micro config set micro.emails.email_from "Micro Team <support@m3o.com>";
@@ -378,3 +381,6 @@ The `default` and `micro` namespaces need to be correctly tagged as being owned 
 kubectl edit namespace default 
 kubectl edit namespace micro 
 ```
+
+## Set up the Cockroach backups
+See [previous section](#backups)
