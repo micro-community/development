@@ -96,7 +96,7 @@ nats-operator    1/1     1            1           4d14h
 ```
 
 ```
-kubectl set image deployments micro=micro/platform:<INSERT_TAG_NAME_HERE> -l micro=runtime
+kubectl set image deployments micro=ghcr.io/m3o/platform:<INSERT_TAG_NAME_HERE> -l micro=runtime
 ```
 
 Where `<INSERT_TAG_NAME_HERE>` is your container image tag.
@@ -247,7 +247,7 @@ Wait for all the pods to be “Running”.
 Update micro to the latest stable docker image snapshot using the following command and then wait for the services to all have the status "Running".
 
 ```bash
-kubectl set image deployments micro=micro/platform:tag -l micro=runtime
+kubectl set image deployments micro=ghcr.io/m3o/platform:tag -l micro=runtime
 ```
 
 ## Update DNS
